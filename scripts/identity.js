@@ -136,7 +136,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<!--<li><a href="../blutanium/pages/index.html"><span>Blutanium</span></a><div><ul></ul></div></li>-->
+<li><a href="../blutanium/pages/index.html"><span>Blutanium</span></a><div><ul></ul></div></li><!---->
 
 <!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 
