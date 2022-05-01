@@ -8,11 +8,11 @@
     <meta name="author" content="George Maxwell">
     <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
     <link href='../styles/css/normalize.css' rel='stylesheet'>  
-    <link href='../styles/css/gmes-normalize.css' rel='stylesheet'>
+    <link href='../styles/css/gmes_normalize.css' rel='stylesheet'>
     <link href='../styles/css/defaults.css' rel='stylesheet'><!---->
     <link href='../styles/css/fw_identity.css' rel='stylesheet'>
-    
 </head>
 <body>
 
@@ -5425,43 +5425,16 @@
     <footer></footer>
 
     <!-- 
-        Importante: Os buttons e switches dão problema sem o atributo 'defer'. 
-        (Mesmo com o atributo 'defer', os <script>'s devem ser colocados no final 
-        do arquivo HTML para garantir que a página seja renderizada corretamente.)
+        Importante: Mesmo com o atributo 'defer', os <script>'s devem ser colocados no 
+        final do arquivo HTML para garantir que a página seja renderizada corretamente.
     -->
 
     <script defer src="../scripts/defaults.js"></script> 
     <script defer src="../scripts/identity.js"></script>
+    <script async src="../scripts/development.js"></script>
 
 </body> 
 </html>
-
-<!-- 
-
-    Emmets: Element#ID_$@I.Class_1.Class_2[Atrib_1=... Atrib_2]{Content $}*N 
-    
-    hsla(0, 100%, 50%, 0.)
-    
-    Referências De Entidade de Caracteres: 
-    Espaço: &nbsp; | <: &lt;
-    
-    Fontes Seguras da Web: 
-    font-family: 'Times New Roman', Times, Georgia, Helvetica, Arial, Verdana, 'Courier New', Courier; 
-    
-    Texto genérico 1:  Abcde fghij klmno pqrst uvwxyz.  
-
-    Texto genérico 2:  ABCDE FGHIJ KLMNO PQRST UVWXYZ.
-    
-    Configuração Do Aplicativo Textastic:
-    Font: Menlo; Font Size: 11 pt 
-
-    .slider:hover { 
-    /*width: 1122px; margin-left: -61px;*/  width: 110vw; margin-left: calc(-1 * ((110vw - 1000px)/2)); 
-    padding-top: 40px; padding-bottom: 40px; 
-    border: 1px solid rgb(221, 221, 221); border-radius: 25px; ;
-    background-color: rgb(243, 243, 243); }
-
---> 
 
 <!--
             <h3>Imagens Responsivas Semânticas</h3> 
