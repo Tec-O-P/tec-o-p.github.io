@@ -628,7 +628,7 @@ TODO: Skills - Table
   background-color: #fefee7;
 }
 
-.skills_table td.Effect .Interrupt {
+.skills_table td.Effect .React {
   color: #f59f00;
   border: 1px solid #ffa600;
   background-color: #fff8eb;
@@ -670,7 +670,7 @@ TODO: Skills - Table
   background-color: #f6f5ff;
 }
 
-.skills_table td.Effect .Assimilate {
+.skills_table td.Effect .Integrate {
   color: #00c2c2;
   border: 1px solid #00c2c2;
   background-color: azure;
