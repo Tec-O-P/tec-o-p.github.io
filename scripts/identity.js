@@ -136,11 +136,11 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<li><a href="../blutanium/pages/index.html"><span>Blutanium</span></a><div><ul></ul></div></li><!---->
+<li><a href="../hi-techCore/pages/index.html"><span>Hi-Tech Core</span></a><div><ul></ul></div></li><!---->
 
 <!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 
-<li><a aria-label="Hide bar"><img src="../blutanium/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
+<li><a aria-label="Hide bar"><img src="../hi-techCore/images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
 
@@ -247,7 +247,7 @@ var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
 var nav_divs = document.querySelectorAll('.nav-menu > ul > li > div') 
 var nav_options_anchorClicked_index = 'none'
-// var bg_nav_selector = 'url(../../../blutanium/images/bgs/nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
+// var bg_nav_selector = 'url(../../../hi-techCore/images/bgs/nav_selector.png)  center/100% 100%' // VÍNCULO: Váriável CSS
 
 var nav_html_scrollbar_allowedEnable = false /*  <- Variável necessária para impedir que a scrollbar 
                                                                                         do <html> apareça em momentos em que não se deseja 
@@ -501,33 +501,33 @@ document.querySelector('footer').innerHTML = `
 
                     <li>
                         <a href="mailto:support@company.com.br" class="button_icon rounded"> 
-                            <img class="piece_icon" src="../blutanium/images/icons/email.svg" alt=""> 
+                            <img class="piece_icon" src="../hi-techCore/images/icons/email.svg" alt=""> 
                         </a> 
                     </li> 
 
                     <li>
                         <a class="button_icon rounded green" onclick="lightbox('(68) 2425-8804')"> 
-                            <img class="piece_icon" src="../blutanium/images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
+                            <img class="piece_icon" src="../hi-techCore/images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
                         </a> 
                     </li> 
 
                     <li>
                         <a href="#" class="button_icon rounded red"> 
-                            <img class="piece_icon" src="../blutanium/images/icons/youtube.svg" alt="">
+                            <img class="piece_icon" src="../hi-techCore/images/icons/youtube.svg" alt="">
                         </a> 
                     </li> 
 
                     <!--
                     <li>
                         <a href="#" class="button_icon rounded"> 
-                            <img class="piece_icon" src="../blutanium/images/icons/facebook.svg" alt="">
+                            <img class="piece_icon" src="../hi-techCore/images/icons/facebook.svg" alt="">
                         </a>
                     </li>
                     --> 
 
                     <li>
                         <a href="#" class="button_icon rounded yellow"> 
-                            <img class="piece_icon" src="../blutanium/images/icons/instagram.svg" alt="">
+                            <img class="piece_icon" src="../hi-techCore/images/icons/instagram.svg" alt="">
                         </a> 
                     </li> 
                 </ul>

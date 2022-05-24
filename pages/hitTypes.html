@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Hit Types</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Set Textastic to Pages: width=482px -->
+<link href='..//hi-techCore/styles/css/gmes_normalize.css' rel='stylesheet'>
+<link href='..//hi-techCore/styles/css/defaults.css' rel='stylesheet'><!-- 
+<link href='styles/setup_pages.css' rel='stylesheet'> --><!-- Set Textastic to Pages: href='styles/setup_textastic.css' -->
+<script src="..//hi-techCore/scripts/development.js"></script>
+<style>
+
+.hitTypes_table tr:nth-of-type(2):hover {
+
+    background-color: transparent;
+}
+
+.Underground {
+
+    display: none;
+}
+
+</style>
+</head>
+<body>
+
+<table class="hitTypes_table type_2">
+    <!-- <tr><th>Hit Type</th><th>Considers User ACC</th><th>Considers Target FEV/DEV</th><th>Hits Characters Of Types</th><th>Hits Underground</th><th>Hits Flying</th><th>Counterattacked By</th></tr> -->
+
+    <tr><th rowspan="2">Hit Type</th><th colspan="2">Considers</th><th rowspan="2">Counterattacked By</th><th colspan="3">Hits</th></tr>
+    <tr style="border-bottom: 1px solid deepskyblue;"><th>User ACC</th><th>Target FEV/DEV</th><th>Types</th><th class="Underground">Underground</th><th>Floor</th><th>Flying</th></tr>
+    <tr>
+        <td class="Hit_Type">Near - Offensive</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Near Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes, if flying</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Near - Assist</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes, if flying</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Projectile</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Projectile Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Blast</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Inevitable</td><!-- Míssil seguidor, habilidades instantâneas tipo de gravidade, habilidades dos parceiros -->
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Always</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Eruption</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by" style="color: magenta;">????</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying" style="color: magenta;">????</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Terrain</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">×</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Explosion</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Wave</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Virus</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">DEV</td>
+        <td class="Counterattacked_by">Digital Counter</td>
+        <td class="Types_Of_Characters">Cybernetic, Digital, Machine</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Data</td> <!-- Ex.: Deepfake -->
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">DEV</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">Cybernetic, Digital, Machine</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+    <tr>
+        <td class="Hit_Type">Vaccine</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">Cybernetic, Digital, Machine</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    </tr>
+</table>
+
+<script src="script.js"></script>
+<script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
