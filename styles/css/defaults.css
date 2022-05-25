@@ -1550,6 +1550,11 @@ table.type_2 {
   max-width: none;
   border-width: 0;
   border-bottom: 1px solid DeepSkyBlue;
+  /*     
+    th:nth-child(1) {
+        color: $color_text;
+    }
+ */
 }
 
 table.type_2 tr :nth-child(1) {
@@ -1562,10 +1567,6 @@ table.type_2 tr:nth-of-type(1) {
 
 table.type_2 th {
   border-width: 0;
-}
-
-table.type_2 th:nth-child(1) {
-  color: black;
 }
 
 table.type_2 td + td {

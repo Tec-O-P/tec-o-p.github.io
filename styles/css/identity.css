@@ -637,19 +637,19 @@ TODO: Skills - Table
 .skills_table td.Effect .Critical {
   color: #eb0000;
   border: 1px solid #ff7a7a;
-  background-color: #fff5f5;
+  background-color: #fff0f0;
 }
 
 .skills_table td.Effect .State {
   color: #00b0eb;
   border: 1px solid #29c9ff;
-  background-color: #fafeff;
+  background-color: #f5fcff;
 }
 
 .skills_table td.Effect .Call {
   color: #00d600;
   border: 1px solid #00d600;
-  background-color: #f5fff5;
+  background-color: honeydew;
 }
 
 .skills_table td.Effect .Recover {
