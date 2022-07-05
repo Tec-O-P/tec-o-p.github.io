@@ -9,11 +9,16 @@ gmes-defaults.css
 TODO: Variables
 ────────────────────────────────────────────────────── */
 
+/* 
 $font_default: 'Times New Roman', Times, Georgia, serif;
-$font_monospace: 'Courier New', Courier, monospace;
 $font_size: 19rem; 
+ */
+$font_default: 'Cyber-BoldBook';
+$font_size: 14rem; 
+
+$font_monospace: 'Courier New', Courier, monospace;
 $font_small: 16rem;
-$font_smaller: 14rem;
+$font_smaller: 13rem;
 $central_maxWidth: 800px; /* Padrão: 600-700px. */
 $margin_horizontal: 20px; /* Apple: 16px em 320w, e 22px em 736w. */
 $margin_vertical: 16rem;
@@ -457,7 +462,17 @@ $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%;
 
 /*  
 ──────────────────────────────────────────────────────
-Global Alternative Box Model
+TODO: Download Fonts
+────────────────────────────────────────────────────── */
+
+@font-face {
+    font-family: "Cyber-BoldBook";
+    src: url("/fonts/Cyber-BoldBook.ttf");
+} 
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Global New Box Model
 ────────────────────────────────────────────────────── */
 
 html {
