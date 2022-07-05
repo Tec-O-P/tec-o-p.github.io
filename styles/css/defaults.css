@@ -7,10 +7,6 @@ gmes-defaults.css
 ──────────────────────────────────────────────────────
 TODO: Variables
 ────────────────────────────────────────────────────── */
-/* 
-$font_default: 'Times New Roman', Times, Georgia, serif;
-$font_size: 19rem; 
- */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  
@@ -53,16 +49,7 @@ $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95);
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Download Fonts
-────────────────────────────────────────────────────── */
-@font-face {
-  font-family: "Cyber-BoldBook";
-  src: url("/fonts/Cyber-BoldBook.ttf");
-}
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Global New Box Model
+Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 html {
   box-sizing: border-box;
@@ -173,7 +160,7 @@ p, dl, label {
 TODO: Texts
 ────────────────────────────────────────────────────── */
 html {
-  font-family: "Cyber-BoldBook";
+  font-family: "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
   color: black;
 }
@@ -182,7 +169,7 @@ span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd,
 abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote,
 q, cite, figcaption, form, label, input, textarea, select, button, fieldset,
 legend, table, tr, td, th, caption {
-  font-size: 14rem;
+  font-size: 19rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -497,7 +484,7 @@ h20 {
 }
 
 .mini_topic {
-  font-size: 14rem;
+  font-size: 19rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -568,7 +555,7 @@ dfn, var, address, cite {
 }
 
 var, kbd, samp, code {
-  font-family: "Cyber-BoldBook";
+  font-family: "Times New Roman", Times, Georgia, serif;
 }
 
 kbd {
@@ -591,7 +578,7 @@ pre {
 }
 
 .font_size {
-  font-size: 14rem;
+  font-size: 19rem;
 }
 
 .font_monospace {
@@ -603,7 +590,7 @@ pre {
 }
 
 .font_smaller, table caption {
-  font-size: 13rem;
+  font-size: 14rem;
 }
 
 /*
@@ -620,7 +607,7 @@ pre {
 }
 */
 .container_text {
-  font-size: 14rem;
+  font-size: 19rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -844,7 +831,7 @@ span.token.black {
 }
 
 .list_featured li div {
-  font-size: 14rem;
+  font-size: 19rem;
 }
 
 .list_featured li + li {
@@ -1273,7 +1260,7 @@ TODO:        >> Expanded
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 14rem;
+  font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -1412,7 +1399,7 @@ TODO:    > Footer
 
 .footer-content .copyright {
   margin-top: 0;
-  font-size: 13rem;
+  font-size: 14rem;
   text-indent: 0;
   text-align: center;
 }
@@ -4157,7 +4144,7 @@ TODO:    > Lightbox
 }
 
 .lightbox_text {
-  font-size: 14rem;
+  font-size: 19rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
   line-height: 1.5;
