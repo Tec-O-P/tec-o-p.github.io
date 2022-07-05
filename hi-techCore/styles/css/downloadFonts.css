@@ -1,0 +1,12 @@
+
+/* 
+──────────────────────────────────────────────────────
+downloadFonts.css
+────────────────────────────────────────────────────── */
+
+/*  */
+
+@font-face {
+  font-family: "Cyber-BoldBook";
+  src: url("/fonts/Cyber-BoldBook.ttf");
+} 

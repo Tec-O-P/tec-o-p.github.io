@@ -53,15 +53,6 @@ $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95);
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Download Fonts
-────────────────────────────────────────────────────── */
-@font-face {
-  font-family: "Cyber-BoldBook";
-  src: url("/fonts/Cyber-BoldBook.ttf");
-}
-
-/*  
-──────────────────────────────────────────────────────
 TODO: Global New Box Model
 ────────────────────────────────────────────────────── */
 html {
