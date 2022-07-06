@@ -49,14 +49,24 @@ $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95);
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Global New Box Model
+TODO: Geral
 ────────────────────────────────────────────────────── */
+/* Global New Box Model */
 html {
   box-sizing: border-box;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+}
+
+/* Cores */
+.color_theme {
+  color: DeepSkyBlue;
+}
+
+.bgc_color_theme {
+  background-color: DeepSkyBlue;
 }
 
 /*  
@@ -159,6 +169,28 @@ p, dl, label {
 ──────────────────────────────────────────────────────
 TODO: Texts
 ────────────────────────────────────────────────────── */
+.TNR {
+  font-family: 'Times New Roman';
+  font-size: 19px;
+}
+
+.Cyber-BoldBook {
+  font-family: 'Cyber-BoldBook';
+  font-size: 14rem;
+  text-shadow: 0.2px 0px 0px;
+  line-height: 1.8;
+}
+
+.Myfont-Regular {
+  font-family: 'Myfont-Regular';
+  font-size: 19px;
+}
+
+.courier {
+  font-family: 'Courier';
+  font-size: 17px;
+}
+
 html {
   font-family: "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
@@ -508,13 +540,28 @@ ul, ol {
   margin-right: 20px;
 }
 
+ol > li::after {
+  display: inline;
+  content: '.';
+}
+
 dt {
   font-weight: bold;
   margin-top: 16rem;
 }
 
+dt::after {
+  display: inline;
+  content: ':';
+}
+
 dd {
   margin-left: 0;
+}
+
+dd::after {
+  display: inline;
+  content: '.';
 }
 
 dt + dd {
@@ -575,6 +622,7 @@ pre {
   margin-left: 20px;
   margin-right: 20px;
   font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
 }
 
 .font_size {
@@ -583,6 +631,7 @@ pre {
 
 .font_monospace {
   font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
 }
 
 .font_small {
@@ -4814,21 +4863,4 @@ TODO: Classes JS
 
 .overflow_hidden {
   overflow: hidden;
-}
-
-.TNR, .TNR * {
-  font-family: 'Times New Roman';
-  font-size: 19px;
-}
-
-.Cyber-BoldBook, .Cyber-BoldBook * {
-  font-family: 'Cyber-BoldBook';
-  font-size: 14rem;
-  text-shadow: 0.2px 0px 0px;
-  line-height: 1.8;
-}
-
-.Myfont-Regular, .Myfont-Regular * {
-  font-family: 'Myfont-Regular';
-  font-size: 19px;
 }

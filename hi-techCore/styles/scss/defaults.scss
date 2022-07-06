@@ -13,6 +13,7 @@ TODO: Variables
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
 $font_monospace: 'Courier New', Courier, monospace;
+$font_monospace_size: 17px;
 $font_small: 16rem;
 $font_smaller: 13rem;
 $central_maxWidth: 800px; /* Padrão: 600-700px. */
@@ -458,8 +459,10 @@ $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%;
 
 /*  
 ──────────────────────────────────────────────────────
-TODO: Global New Box Model
+TODO: Geral
 ────────────────────────────────────────────────────── */
+
+/* Global New Box Model */
 
 html {
     
@@ -469,6 +472,16 @@ html {
 *, *::before, *::after {
     
     box-sizing: inherit;
+}
+
+/* Cores */
+
+.color_theme {
+    color: $color_theme;
+}
+
+.bgc_color_theme {
+    background-color: $color_theme;
 }
 
 /*  
@@ -621,13 +634,35 @@ TODO: Margins
 TODO: Texts
 ────────────────────────────────────────────────────── */
 
+.TNR {
+    font-family: 'Times New Roman'; 
+    font-size: 19px;
+}
+
+.Cyber-BoldBook {
+    font-family: 'Cyber-BoldBook';
+    font-size: 14rem;
+    text-shadow: 0.2px 0px 0px; 
+    line-height: 1.8; 
+} 
+
+.Myfont-Regular {
+    font-family: 'Myfont-Regular';
+    font-size: 19px;
+}
+
+.courier {
+    font-family: 'Courier';
+    font-size: $font_monospace_size;
+}
+
+
+
 html {
     font-family: $font_default;
     font-size: 1px;
     color: $color_text; 
 }
-
-
 
 span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd, 
 abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote, 
@@ -722,6 +757,11 @@ ul, ol {
 // ul ul { list-style-type: "-› "; } // <- Não funciona no safari.
 // ul ul ul { list-style-type: "- "; } // <- Não funciona no safari.
 
+ol > li::after {
+    display: inline;
+    content: '.';
+}
+
 dl {
     @extend %margins;
 }
@@ -730,9 +770,19 @@ dt {
     font-weight: bold; 
     margin-top: $margin_vertical;
 }
+
+dt::after {
+    display: inline;
+    content: ':';
+}
  
 dd {
     margin-left: 0;
+}
+
+dd::after {
+    display: inline;
+    content: '.';
 }
 
 dt + dd {
@@ -796,6 +846,7 @@ pre {
     margin-left: $margin_horizontal;
     margin-right: $margin_horizontal;
     font-family: $font_monospace;
+    font-size: $font_monospace_size;
 }
 
 .font_size {
@@ -804,6 +855,7 @@ pre {
 
 .font_monospace {
     font-family: $font_monospace;
+    font-size: $font_monospace_size;
 }
 
 .font_small {
@@ -5385,21 +5437,3 @@ TODO: Classes JS
 
 
 
-
-
-.TNR, .TNR * {
-    font-family: 'Times New Roman'; 
-    font-size: 19px;
-}
-
-.Cyber-BoldBook, .Cyber-BoldBook * {
-    font-family: 'Cyber-BoldBook';
-    font-size: 14rem;
-    text-shadow: 0.2px 0px 0px; 
-    line-height: 1.8; 
-} 
-
-.Myfont-Regular, .Myfont-Regular * {
-    font-family: 'Myfont-Regular';
-    font-size: 19px;
-}
