@@ -10,6 +10,44 @@ TODO: Framework - Variables
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  
+────────────────────────────
+TODO:    > Specific Elements & Components
+──────────────────────────── */
+/*
+$bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
+$bg_nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
+*/
+/*      
+//$bg_switch_type_button_pill_and_rounded_off: hsl(193, 0%,94%);
+$bg_switch_type_button_pill_and_rounded_off: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 0%, 88%);
+$bg_switch_type_button_pill_and_rounded_on: 
+url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 200% 100% no-repeat,
+hsl(193, 100%, 83%);
+*/
+/*  
+$bg_switch_type_button_icon_piece_text_floating_off: linear-gradient(to bottom, white, hsl(193, 0%, 91%)); // hsl(0, 0%, 98%);
+$color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%); 
+$color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 68%);  
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: hsl(193, 100%, 60%); 
+*/
+/*  
+$color_text_switch_type_image_piece_text_floating_on: hsl(193, 100%, 60%); 
+$color_border_switch_type_image_piece_text_floating_on: hsl(193, 100%, 68%);  
+$bg_switch_type_image_piece_text_floating_on: linear-gradient(to bottom, white, hsl(193, 100%, 92%));  // hsl(193, 100%, 98%);
+$color_box_shadow_switch_type_image_piece_text_floating_on: hsla(193, 100%, 60%, 0.24);
+*/
+/*  
+$color_text_button_type_image_piece_text_floating: hsl(190, 100%, 51%); 
+$color_border_button_type_image_piece_text_floating: hsl(195, 100%, 50%);
+$color_box_shadow_in_button_type_image_piece_text_floating: hsla(195, 100%, 50%, 0.3);
+$color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%, 0.24);
+$bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
+*/
+/*  
 ──────────────────────────────────────────────────────
 TODO: Framework - Classes JS
 ────────────────────────────────────────────────────── */
@@ -26,11 +64,11 @@ TODO: Framework - Classes JS
 TODO: Seções De Layout
 ────────────────────────────────────────────────────── */
 .header-content {
-  max-width: 850px;
+  max-width: 800px;
 }
 
 .central {
-  max-width: 1250px;
+  max-width: 800px;
 }
 
 .presentation_float video {
@@ -93,23 +131,27 @@ table th {
 ──────────────────────────────────────────────────────
 TODO: Slider
 ────────────────────────────────────────────────────── */
-.slider img, .slider picture {
-  max-width: 94.4%;
-}
+.slider {
+  /*  
+    img, picture { 
+        max-width: 94.4%;
+    }
 
-@media (min-width: 501px) {
-  .slider {
-    max-width: calc(100% - (2 * 20px));
-  }
-  .slider .slider img, .slider .slider picture {
-    max-width: 938px;
-  }
-}
+    @media (min-width: $screen_small_widthLimit) {
 
-@media (min-width: calc(938px + (2 * 20px))) {
-  .slider {
-    max-width: 1000px;
-  }
+        max-width: calc(100% - (2 * 20px));  
+
+        .slider img, .slider picture {
+            max-width: 938px;   
+        }
+    }
+
+    @media (min-width: calc(938px + (2 * 20px)) ) {
+    
+        max-width: 1000px;
+
+    }
+    */
 }
 
 /* 
@@ -273,7 +315,7 @@ TODO: Skills - Table
 @media (min-width: 1920px) {
   .FULLHD_STC_conteiner {
     position: fixed;
-    top: 151px;
+    top: 174px;
     left: 0;
     z-index: 1000;
     width: 300px;
@@ -299,6 +341,10 @@ TODO: Skills - Table
 
 .skills_types_choice.choice.dropdown.dropdown_open li {
   border-right: 1px solid white;
+}
+
+.skills_types_choice.choice.dropdown.dropdown_open li span {
+  padding-left: 10px;
 }
 
 .skills_types_choice.choice.dropdown.dropdown_open li:nth-last-of-type(1) {
@@ -479,6 +525,32 @@ TODO: Skills - Table
         display: inline-block;
         min-width: max-content; 
     }  */
+  /*  
+    td > span { 
+
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .icon_state {
+
+        width: 32px;
+        height: 32px;
+        margin-left: 8px;
+        margin-right: 8px; 
+    }
+
+    .icon_state_effect {
+
+        width: 25px;
+        height: 25px;
+    }
+    */
+}
+
+.skills_table td.Hit {
+  color: red;
+  text-decoration: line-through red;
 }
 
 .skills_table tr {
@@ -516,14 +588,110 @@ TODO: Skills - Table
   outline: 1px solid DeepSkyBlue;
 }
 
-.skills_table .type_icon {
+.skills_table .Description, .skills_table .Notes {
+  text-align: left;
+}
+
+.skills_table .icon_type {
   width: 32px;
   height: 32px;
   margin-top: 4px;
 }
 
-.skills_table .type_icon + .type_icon {
-  margin-left: 4px;
+.skills_table .icon_type + .icon_type {
+  margin-left: 9px;
+}
+
+.skills_table td.Effect {
+  font-size: 0;
+}
+
+.skills_table td.Effect > span:empty {
+  display: none;
+}
+
+.skills_table td.Effect > span {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 1000px;
+}
+
+.skills_table td.Effect > span + span {
+  margin-left: 9px;
+}
+
+.skills_table td.Effect .SPD {
+  color: #d6c100;
+  border: 1px solid #dbc900;
+  background-color: #fefee7;
+}
+
+.skills_table td.Effect .React {
+  color: #f59f00;
+  border: 1px solid #ffa600;
+  background-color: #fff8eb;
+}
+
+.skills_table td.Effect .Critical {
+  color: #eb0000;
+  border: 1px solid #ff7a7a;
+  background-color: #fff0f0;
+}
+
+.skills_table td.Effect .State {
+  color: #00b0eb;
+  border: 1px solid #29c9ff;
+  background-color: #f5fcff;
+}
+
+.skills_table td.Effect .Call {
+  color: #00d600;
+  border: 1px solid #00d600;
+  background-color: honeydew;
+}
+
+.skills_table td.Effect .Recover {
+  color: #fa00fa;
+  border: 1px solid magenta;
+  background-color: #fef6fe;
+}
+
+.skills_table td.Effect .Drain {
+  color: #bd00bd;
+  border: 1px solid #bd00bd;
+  background-color: #fcf5ff;
+}
+
+.skills_table td.Effect .Union {
+  color: #907ef1;
+  border: 1px solid #a495f3;
+  background-color: #f6f5ff;
+}
+
+.skills_table td.Effect .Integrate {
+  color: #00c2c2;
+  border: 1px solid #00c2c2;
+  background-color: azure;
+}
+
+.skills_table td.Effect .Field {
+  color: #c5621b;
+  border: 1px solid #c5621b;
+  background-color: #fdf4ed;
+}
+
+.skills_table td.Effect .Block {
+  color: #707070;
+  border: 1px solid #0a0a0a;
+  background-color: #f7f7f7;
+}
+
+.skills_table td.Effect .Special {
+  color: #a3a3a3;
+  border: 1px solid #a8a8a8;
+  background-color: white;
 }
 
 .skills_table .cost + .cost {
@@ -540,6 +708,10 @@ TODO: Skills - Table
 
 .skills_table .cost.tp {
   color: red;
+}
+
+.skills_table .Condition .Equip:not(:empty) + .OtherCond:not(:empty)::before {
+  content: ", ";
 }
 
 .skills_table_box_full {

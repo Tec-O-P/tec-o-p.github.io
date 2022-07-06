@@ -49,7 +49,7 @@ $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95);
 */
 /*  
 ──────────────────────────────────────────────────────
-TODO: Global New Box Model
+Global Alternative Box Model
 ────────────────────────────────────────────────────── */
 html {
   box-sizing: border-box;
@@ -590,7 +590,7 @@ pre {
 }
 
 .font_smaller, table caption {
-  font-size: 13rem;
+  font-size: 14rem;
 }
 
 /*
@@ -1399,7 +1399,7 @@ TODO:    > Footer
 
 .footer-content .copyright {
   margin-top: 0;
-  font-size: 13rem;
+  font-size: 14rem;
   text-indent: 0;
   text-align: center;
 }
@@ -4814,21 +4814,4 @@ TODO: Classes JS
 
 .overflow_hidden {
   overflow: hidden;
-}
-
-.TNR, .TNR * {
-  font-family: 'Times New Roman';
-  font-size: 19px;
-}
-
-.Cyber-BoldBook, .Cyber-BoldBook * {
-  font-family: 'Cyber-BoldBook';
-  font-size: 14rem;
-  text-shadow: 0.2px 0px 0px;
-  line-height: 1.8;
-}
-
-.Myfont-Regular, .Myfont-Regular * {
-  font-family: 'Myfont-Regular';
-  font-size: 19px;
 }
