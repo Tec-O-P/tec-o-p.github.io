@@ -7,10 +7,6 @@ gmes-defaults.css
 ──────────────────────────────────────────────────────
 TODO: Variables
 ────────────────────────────────────────────────────── */
-/* 
-$font_default: 'Times New Roman', Times, Georgia, serif;
-$font_size: 19rem; 
- */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  
@@ -164,7 +160,7 @@ p, dl, label {
 TODO: Texts
 ────────────────────────────────────────────────────── */
 html {
-  font-family: "Cyber-BoldBook";
+  font-family: "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
   color: black;
 }
@@ -173,7 +169,7 @@ span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd,
 abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote,
 q, cite, figcaption, form, label, input, textarea, select, button, fieldset,
 legend, table, tr, td, th, caption {
-  font-size: 14rem;
+  font-size: 19rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -488,7 +484,7 @@ h20 {
 }
 
 .mini_topic {
-  font-size: 14rem;
+  font-size: 19rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -559,7 +555,7 @@ dfn, var, address, cite {
 }
 
 var, kbd, samp, code {
-  font-family: "Cyber-BoldBook";
+  font-family: "Times New Roman", Times, Georgia, serif;
 }
 
 kbd {
@@ -582,7 +578,7 @@ pre {
 }
 
 .font_size {
-  font-size: 14rem;
+  font-size: 19rem;
 }
 
 .font_monospace {
@@ -611,7 +607,7 @@ pre {
 }
 */
 .container_text {
-  font-size: 14rem;
+  font-size: 19rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -835,7 +831,7 @@ span.token.black {
 }
 
 .list_featured li div {
-  font-size: 14rem;
+  font-size: 19rem;
 }
 
 .list_featured li + li {
@@ -1264,7 +1260,7 @@ TODO:        >> Expanded
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 14rem;
+  font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -4148,7 +4144,7 @@ TODO:    > Lightbox
 }
 
 .lightbox_text {
-  font-size: 14rem;
+  font-size: 19rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
   line-height: 1.5;
@@ -4818,4 +4814,21 @@ TODO: Classes JS
 
 .overflow_hidden {
   overflow: hidden;
+}
+
+.TNR, .TNR * {
+  font-family: 'Times New Roman';
+  font-size: 19px;
+}
+
+.Cyber-BoldBook, .Cyber-BoldBook * {
+  font-family: 'Cyber-BoldBook';
+  font-size: 14rem;
+  text-shadow: 0.2px 0px 0px;
+  line-height: 1.8;
+}
+
+.Myfont-Regular, .Myfont-Regular * {
+  font-family: 'Myfont-Regular';
+  font-size: 19px;
 }
