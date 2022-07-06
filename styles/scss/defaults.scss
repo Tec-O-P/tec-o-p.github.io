@@ -9,13 +9,9 @@ gmes-defaults.css
 TODO: Variables
 ────────────────────────────────────────────────────── */
 
-/* 
+
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
- */
-$font_default: 'Cyber-BoldBook';
-$font_size: 14rem; 
-
 $font_monospace: 'Courier New', Courier, monospace;
 $font_small: 16rem;
 $font_smaller: 13rem;
@@ -458,17 +454,7 @@ $color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
 
 // ─────────── Others ───────────
 
-$bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Download Fonts
-────────────────────────────────────────────────────── */
-
-@font-face {
-    font-family: "Cyber-BoldBook";
-    src: url("/fonts/Cyber-BoldBook.ttf");
-} 
+$bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%;
 
 /*  
 ──────────────────────────────────────────────────────
@@ -5387,4 +5373,33 @@ TODO: Classes JS
 .overflow_hidden {
     
     overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TNR, .TNR * {
+    font-family: 'Times New Roman'; 
+    font-size: 19px;
+}
+
+.Cyber-BoldBook, .Cyber-BoldBook * {
+    font-family: 'Cyber-BoldBook';
+    font-size: 14rem;
+    text-shadow: 0.2px 0px 0px; 
+    line-height: 1.8; 
+} 
+
+.Myfont-Regular, .Myfont-Regular * {
+    font-family: 'Myfont-Regular';
+    font-size: 19px;
 }
