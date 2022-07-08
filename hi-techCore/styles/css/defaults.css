@@ -559,7 +559,7 @@ ul > li::before {
 }
 
 ul {
-  margin-left: calc(1 * 20px + /* 23px + 1px */ 24px);
+  margin-left: calc(1 * 20px + 24px);
 }
 
 ul {
@@ -578,6 +578,7 @@ ul ul ul ul {
   list-style-image: url("../../images/icons/list_4.svg");
 }
 
+/*  */
 ol > li::after {
   display: inline;
   content: '.';
@@ -838,6 +839,7 @@ span.token.black {
   width: fit-content;
   /* <- Declarações necessárias 
         para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+  list-style-image: none;
 }
 
 .list_index > ul > li, .list_index > ol > li {
@@ -863,6 +865,7 @@ span.token.black {
 .list_index > ul ul, .list_index > ol ul {
   margin: 0 0 0 18px;
   list-style-type: none;
+  list-style-image: none;
 }
 
 .list_index > ul ol, .list_index > ol ol {
@@ -905,6 +908,7 @@ span.token.black {
 
 .list_featured {
   list-style-type: none;
+  list-style-image: none;
   margin-left: 20px;
 }
 
@@ -1118,6 +1122,7 @@ TODO:        >> Expanded
   margin: 0;
   padding: 0;
   list-style-type: none;
+  list-style-image: none;
   background: linear-gradient(to right, #00a6ff, #8fe7ff, #00a6ff);
   overflow: auto;
 }
