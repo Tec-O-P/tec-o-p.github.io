@@ -788,6 +788,7 @@ ul { margin-left: calc(1 * #{$margin_horizontal} + /* 23px + 1px */ 24px); }
 ul { list-style-image: url("../../images/icons/list_1.svg"); }
 ul ul { list-style-image: url("../../images/icons/list_2.svg"); }
 ul ul ul { list-style-image: url("../../images/icons/list_3.svg"); }
+ul ul ul ul { list-style-image: url("../../images/icons/list_4.svg"); }
 
 
 ol > li::after {

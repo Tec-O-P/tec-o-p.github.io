@@ -574,6 +574,10 @@ ul ul ul {
   list-style-image: url("../../images/icons/list_3.svg");
 }
 
+ul ul ul ul {
+  list-style-image: url("../../images/icons/list_4.svg");
+}
+
 ol > li::after {
   display: inline;
   content: '.';
