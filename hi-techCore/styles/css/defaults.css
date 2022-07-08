@@ -540,6 +540,40 @@ ul, ol {
   margin-right: 20px;
 }
 
+ul {
+  /*  list-style-position: inside;
+    margin-left: calc(1 * 20px + 3px); */
+}
+
+ul > li::before {
+  /*     content: "◉"; 
+    // font-size: 17px;
+    font-size: 16px; */
+  /*     
+    display: inline-block;
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-image: url("../../images/icons/list_1.svg"); 
+    */
+}
+
+ul {
+  margin-left: calc(1 * 20px + /* 23px + 1px */ 24px);
+}
+
+ul {
+  list-style-image: url("../../images/icons/list_1.svg");
+}
+
+ul ul {
+  list-style-image: url("../../images/icons/list_2.svg");
+}
+
+ul ul ul {
+  list-style-image: url("../../images/icons/list_3.svg");
+}
+
 ol > li::after {
   display: inline;
   content: '.';

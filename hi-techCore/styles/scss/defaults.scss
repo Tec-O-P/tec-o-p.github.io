@@ -757,6 +757,39 @@ ul, ol {
 // ul ul { list-style-type: "-› "; } // <- Não funciona no safari.
 // ul ul ul { list-style-type: "- "; } // <- Não funciona no safari.
 
+
+
+ul { 
+    //list-style-type: none; 
+   /*  list-style-position: inside;
+    margin-left: calc(1 * #{$margin_horizontal} + 3px); */
+}
+
+ul > li::before { 
+    
+/*     content: "◉"; 
+    // font-size: 17px;
+    font-size: 16px; */
+
+    /*     
+    display: inline-block;
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-image: url("../../images/icons/list_1.svg"); 
+    */
+    
+    //margin-right: 11px;
+}
+
+
+
+ul { margin-left: calc(1 * #{$margin_horizontal} + /* 23px + 1px */ 24px); }
+ul { list-style-image: url("../../images/icons/list_1.svg"); }
+ul ul { list-style-image: url("../../images/icons/list_2.svg"); }
+ul ul ul { list-style-image: url("../../images/icons/list_3.svg"); }
+
+
 ol > li::after {
     display: inline;
     content: '.';
