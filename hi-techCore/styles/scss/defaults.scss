@@ -693,9 +693,7 @@ a[href^="http"] {
 .check_yes, .check_no {
     color: transparent;
     display: inline-block;
-    width: 17px;
     height: 17px;
-    background-size: 17px 17px;
     line-height: 1.2;
 }
 
@@ -705,11 +703,15 @@ a[href^="http"] {
 } 
 
 .check_yes {
+    width: 22px;
     background-image: url('../../images/icons/check_yes.png');   
+    background-size: 22px 17px;
 }
 
 .check_no {
+    width: 17px;
     background-image: url('../../images/icons/check_no.png');   
+    background-size: 17px 17px;
 }
 
 @for $i from 2 through 6 {
