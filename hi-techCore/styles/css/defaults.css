@@ -221,6 +221,12 @@ a[href^="http"] {
   padding-right: 20px;
 }
 
+.check_yes {
+  background: url("../../images/icons/check_yes.png") no-repeat 100% 0;
+  background-size: 17px 17px;
+  padding-right: 20px;
+}
+
 h2 {
   font-size: calc(58rem - (6 * 2rem));
   margin-top: calc(7rem - 2rem + 16rem);
@@ -668,6 +674,10 @@ pre {
   font-size: 19rem;
 }
 
+ul > li + li, ol > li + li {
+  margin-top: 16rem;
+}
+
 .font_monospace {
   font-family: "Courier New", Courier, monospace;
   font-size: 17px;
@@ -822,8 +832,23 @@ span.token.black {
   color: #858585;
 }
 
+.noListStyle {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+.noListStyle li + li {
+  margin-top: 0;
+}
+
+/* 
 .spaced_items > li + li, .spaced_items > dd + dd {
-  margin-top: 16rem;
+    margin-top: $margin_vertical;
+}
+ */
+.list_compressed > li + li {
+  margin-top: 0;
 }
 
 .list_index {
@@ -831,6 +856,10 @@ span.token.black {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.list_index ul li + li, .list_index ol li + li {
+  margin-top: 0;
 }
 
 .list_index > ul, .list_index > ol {
@@ -929,12 +958,6 @@ span.token.black {
   border-top: 1px solid DeepSkyBlue;
   margin-top: calc(0.5 * 16rem);
   padding-top: calc(0.5 * 16rem);
-}
-
-.list_only_markup {
-  list-style: none;
-  padding: 0;
-  margin-left: 20px;
 }
 
 .success, .attention, .fail, .danger {
@@ -1077,6 +1100,10 @@ TODO:        >> Expanded
   width: 22px;
   margin-right: 8px;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+.header-nav .nav li + li {
+  margin-top: 0;
 }
 
 .header-nav .nav .text_img, .header-nav .nav .text_img_size {
@@ -1409,6 +1436,10 @@ TODO:    > Footer
         
             height: 40px !important;
         }
+
+        li + li {
+            margin-top: 0;
+        }
         
         img {
         
@@ -1465,6 +1496,10 @@ TODO:    > Footer
 
 .footer-content .footer-icons li {
   display: inline-block;
+}
+
+.footer-content .footer-icons li + li {
+  margin-top: 0;
 }
 
 .footer-content .footer-icons a {
@@ -1590,6 +1625,7 @@ table th {
   color: DeepSkyBlue;
   border: 1px solid DeepSkyBlue;
   font-weight: bold;
+  text-transform: capitalize;
   /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
             font-weight: bold; 
@@ -1642,6 +1678,9 @@ table.type_2 {
   max-width: none;
   border-width: 0;
   border-bottom: 1px solid DeepSkyBlue;
+  /*     tr :nth-child(1) {
+        font-weight: bold;
+    } */
   /*     
     th:nth-child(1) {
         color: $color_text;
@@ -1649,12 +1688,14 @@ table.type_2 {
  */
 }
 
-table.type_2 tr :nth-child(1) {
-  font-weight: bold;
-}
-
 table.type_2 tr:nth-of-type(1) {
   border-bottom: 1px solid DeepSkyBlue;
+}
+
+@media (pointer: fine) {
+  table.type_2 tr:not(:nth-of-type(1)):hover {
+    background: linear-gradient(to right, transparent, #f5fdff 5% 95%, transparent);
+  }
 }
 
 table.type_2 th {
@@ -1673,6 +1714,46 @@ table.type_2 td + td {
 }
 
 table.type_3 {
+  width: 100%;
+  max-width: none;
+  border-width: 0;
+  border-bottom: 1px solid DeepSkyBlue;
+  /*     tr :nth-child(1) {
+        font-weight: bold;
+    } */
+  /*     
+    th:nth-child(1) {
+        color: $color_text;
+    }
+ */
+}
+
+table.type_3 tr:nth-of-type(1) {
+  border-top: 1px solid DeepSkyBlue;
+}
+
+@media (pointer: fine) {
+  table.type_3 tr:hover {
+    background: linear-gradient(to right, transparent, #f5fdff 5% 95%, transparent);
+  }
+}
+
+table.type_3 th {
+  border-width: 0;
+}
+
+table.type_3 td + td {
+  border-width: 0;
+}
+
+@media (min-width: 501px) {
+  table.type_3 {
+    width: auto;
+    max-width: calc(100% - 2 * 20px);
+  }
+}
+
+table.type_4 {
   border-width: 0;
   /*tr:hover {
         outline: 1px solid $color_theme;
@@ -1683,66 +1764,66 @@ table.type_3 {
     }*/
 }
 
-table.type_3 tr:hover {
+table.type_4 tr:hover {
   background: 0;
 }
 
-table.type_3 tr + tr {
+table.type_4 tr + tr {
   border-width: 0;
 }
 
-table.type_3 th {
+table.type_4 th {
   border-width: 0;
   text-align: left;
 }
 
-/*----- table.type_4 -----*/
+/*----- table.type_5 -----*/
 @media (min-width: 0) and (max-width: 501px) {
-  table.type_4 {
+  table.type_5 {
     border-width: 0;
     margin-left: calc(2 * 20px);
     margin-right: calc(2 * 20px);
   }
-  table.type_4 tr {
+  table.type_5 tr {
     border-width: 0;
     margin-bottom: 16rem;
   }
-  table.type_4 tr:hover {
+  table.type_5 tr:hover {
     background: 0;
   }
-  table.type_4 tr, table.type_4 th, table.type_4 td {
+  table.type_5 tr, table.type_5 th, table.type_5 td {
     display: block;
   }
-  table.type_4 th {
+  table.type_5 th {
     border-width: 0;
     border-bottom: 1px solid DeepSkyBlue;
     text-align: center;
   }
-  table.type_4 td {
+  table.type_5 td {
     text-align: left;
   }
-  table.type_4 td:nth-of-type(1) {
+  table.type_5 td:nth-of-type(1) {
     margin-top: 16rem;
   }
-  table.type_4 li + li {
+  table.type_5 li + li {
     margin-top: 20rem;
   }
 }
 
 @media (min-width: 501px) {
-  table.type_4 {
+  table.type_5 {
     border-width: 0;
   }
-  table.type_4 tr {
+  table.type_5 tr {
     border-width: 0;
   }
-  table.type_4 tr:hover {
+  table.type_5 tr:hover {
     background: 0;
   }
-  table.type_4 th, table.type_4 td {
+  table.type_5 th, table.type_5 td {
     border-width: 0;
   }
-  table.type_4 td {
+  table.type_5 td {
     text-align: left;
   }
 }
@@ -3240,6 +3321,10 @@ $box_shadow_element_type_button_blue
   list-style-type: none;
 }
 
+.choice.horizontal li + li, .choice.vertical li + li, .choice.dropdown li + li {
+  margin-top: 0;
+}
+
 .choice.horizontal > li a, .choice.vertical > li a, .choice.dropdown > li a {
   display: inline-flex;
   align-items: center;
@@ -3359,7 +3444,7 @@ TODO:        >> Vertical
   justify-content: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 46%), linear-gradient(to bottom, #66d9ff, #24c8ff, deepskyblue);
-  box-shadow: inset 0px 2px 2px 0px #0082ad;
+  box-shadow: inset 2px -2px 9px 4px #009dd1, 0px 0px 0px 1px #8ae2ff;
 }
 
 .choice.vertical > li:nth-of-type(1) a {

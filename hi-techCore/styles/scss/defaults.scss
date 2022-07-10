@@ -182,6 +182,7 @@ $table_border2_width: 1px;
 $color_border_table: hsl(0, 0%, 85%);
 
 $bg_table_tr_hover: $color_theme_clear; 
+$bg_table_tr_hover_2: linear-gradient(to right, transparent, $color_theme_clear 5% 95%, transparent); 
 
 // ─────────── Forms ───────────
 
@@ -649,6 +650,7 @@ TODO: Texts
 .Myfont-Regular {
     font-family: 'Myfont-Regular';
     font-size: 19px;
+    // text-transform: lowercase;
 }
 
 .courier {
@@ -684,6 +686,12 @@ a[href^="http"] {
     color: $color_text;
     text-decoration: underline;
     background: url('../../images/icons/link_external.png') no-repeat 100% 0;   
+    background-size: 17px 17px; 
+    padding-right: 20px; 
+}
+
+.check_yes {
+    background: url('../../images/icons/check_yes.png') no-repeat 100% 0;   
     background-size: 17px 17px; 
     padding-right: 20px; 
 }
@@ -887,6 +895,10 @@ pre {
     font-size: $font_size; 
 }
 
+ul > li + li, ol > li + li {
+    margin-top: $margin_vertical;
+}
+
 .font_monospace {
     font-family: $font_monospace;
     font-size: $font_monospace_size;
@@ -1072,8 +1084,25 @@ span.token.black {
     color: $color_text_token_black;        
 }
 
+.noListStyle {
+
+    list-style: none; 
+    padding: 0; 
+    margin-left: 20px;
+
+    li + li {
+        margin-top: 0;
+    }
+}
+
+/* 
 .spaced_items > li + li, .spaced_items > dd + dd {
     margin-top: $margin_vertical;
+}
+ */
+
+.list_compressed > li + li {
+    margin-top: 0;
 }
 
 //.arrow_2 { list-style-type: "➢ "; }  // <- Não funciona no safari.
@@ -1085,6 +1114,10 @@ span.token.black {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+
+    ul li + li, ol li + li {
+        margin-top: 0;
+    }
 
     > ul, > ol {
     
@@ -1187,13 +1220,6 @@ span.token.black {
         margin-top: calc(0.5 * #{$margin_vertical});
         padding-top: calc(0.5 * #{$margin_vertical});
     }
-}
-
-.list_only_markup {
-
-    list-style: none; 
-    padding: 0; 
-    margin-left: 20px;
 }
 
 .success, .attention, .fail, .danger  {
@@ -1333,6 +1359,10 @@ TODO:    > Header-nav
                 margin-right: 8px;
                 filter: drop-shadow(1px 1px 1px $color_shadow_text);
             }
+        }
+
+        li + li {
+            margin-top: 0;
         }
 
         .text_img, .text_img_size {
@@ -1716,6 +1746,10 @@ TODO:    > Footer
         
             height: 40px !important;
         }
+
+        li + li {
+            margin-top: 0;
+        }
         
         img {
         
@@ -1751,6 +1785,10 @@ TODO:    > Footer
 
         li {
             display: inline-block;
+        }
+
+        li + li {
+            margin-top: 0;
         }
 
         a {
@@ -1929,6 +1967,7 @@ table {
         // background-color: hsl(193,100%,98%);
         border: $table_border1_width solid $color_theme;
         font-weight: bold;
+        text-transform: capitalize;
 
         /*@media (max-width: $screen_small_widthLimit), (max-height: $screen_small_widthLimit) {
             
@@ -1981,17 +2020,26 @@ table.type_1 {
 */
 
 table.type_2 {
+
     width: 100%;
     max-width: none;
     border-width: 0;
     border-bottom: $table_border1_width solid $color_theme;
 
-    tr :nth-child(1) {
+/*     tr :nth-child(1) {
         font-weight: bold;
-    }
+    } */
 
     tr:nth-of-type(1) {
         border-bottom: $table_border1_width solid $color_theme;
+    }
+
+    tr:not(:nth-of-type(1)):hover {  
+
+        @media (pointer: fine) {
+            
+            background: $bg_table_tr_hover_2;
+        }
     }
 
     th {
@@ -2017,6 +2065,51 @@ table.type_2 {
 }
 
 table.type_3 {
+
+    width: 100%;
+    max-width: none;
+    border-width: 0;
+    border-bottom: $table_border1_width solid $color_theme;
+
+/*     tr :nth-child(1) {
+        font-weight: bold;
+    } */
+
+    tr:nth-of-type(1) {
+        border-top: $table_border1_width solid $color_theme;
+    }
+
+    tr:hover {  
+
+        @media (pointer: fine) {
+            
+            background: $bg_table_tr_hover_2;
+        }
+    }
+
+    th {
+        border-width: 0;
+    }
+
+/*     
+    th:nth-child(1) {
+        color: $color_text;
+    }
+ */
+
+    td + td {
+        border-width: 0;
+    }
+}
+
+@media (min-width: $screen_small_widthLimit) {
+    table.type_3 {
+        width: auto;
+        max-width: calc(100% - 2 * #{$margin_horizontal});
+    }
+}
+
+table.type_4 {
     border-width: 0;
 
     /*tr:hover {
@@ -2041,10 +2134,10 @@ table.type_3 {
     }
 }
 
-/*----- table.type_4 -----*/ 
+/*----- table.type_5 -----*/ 
 
 @media (min-width: 0) and (max-width:  $screen_small_widthLimit) {
-    table.type_4 {
+    table.type_5 {
         border-width: 0;
         margin-left: calc(2 * #{$margin_horizontal});
         margin-right: calc(2 * #{$margin_horizontal});
@@ -2083,7 +2176,7 @@ table.type_3 {
 }
 
 @media (min-width: $screen_small_widthLimit) {
-    table.type_4 {
+    table.type_5 {
         border-width: 0;
 
         tr {
@@ -3959,6 +4052,10 @@ $box_shadow_element_type_button_blue
     list-style-type: none;
     //border: 1px solid adjust-color($color_theme, $lightness: -1%);
     // text-shadow: 1px 1px 1px $color_shadow_text; // <- Parte do estilo de choice anterior!
+
+    li + li {
+        margin-top: 0;
+    }
 }
 
 .choice.horizontal > li a, .choice.vertical > li a, .choice.dropdown > li a {
@@ -4159,9 +4256,8 @@ TODO:        >> Vertical
         linear-gradient(to top, hsl(195, 100%, 100%), hsla(195, 100%, 100%, 0.64), hsla(195, 100%, 100%, 0) 46%),
         linear-gradient(to bottom, hsl(195, 100%, 70%), hsl(195, 100%, 57%), hsl(195, 100%, 50%));
 
-        //box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 41%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo!
-
-        box-shadow: inset 0px 2px 2px 0px hsl(195, 100%, 34%); 
+        box-shadow: inset 2px -2px 9px 4px hsl(195, 100%, 41%), 0px 0px 0px 1px hsl(195, 100%, 77%); // <- Parte do estilo de choice novo! // Escuro
+        //box-shadow: inset 0px 2px 2px 0px hsl(195, 100%, 34%); // <- Parte do estilo de choice novo! // Claro
 
         a {
             display: flex;
