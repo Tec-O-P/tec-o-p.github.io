@@ -691,10 +691,19 @@ a[href^="http"] {
 }
 
 .check_yes {
-    background: url('../../images/icons/check_yes.png') no-repeat 100% 0;   
-    background-size: 17px 17px; 
-    padding-right: 20px; 
+    color: transparent;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('../../images/icons/check_yes.png');   
+    background-size: 17px 17px;
+    line-height: 1.2;
 }
+
+.check_yes::selection { 
+    
+    color: transparent;
+} 
 
 @for $i from 2 through 6 {
 
