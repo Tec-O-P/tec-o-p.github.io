@@ -214,9 +214,9 @@ a {
 }
 
 a[href^="http"] {
-  background: url("../../images/icons/web_globe.png") no-repeat 100% 0;
+  background: url("../../images/icons/web_globe.svg") no-repeat 100% 0;
   background-size: 17px 17px;
-  padding-right: 20px;
+  padding-right: 21px;
 }
 
 .check_yes, .check_no {
