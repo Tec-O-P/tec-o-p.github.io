@@ -12,9 +12,9 @@
    <path id="Elipse-1" d="M16 6 C16 4.895 15.105 4 14 4 12.895 4 12 4.895 12 6 12 7.105 12.895 8 14 8 15.105 8 16 7.105 16 6 Z" fill="#0433ff" fill-opacity="1" stroke="none"/>
   </g>
   <path id="Retângulo-arredondado" d="M8 2 C4.686 2 2 4.686 2 8 L2 30 C2 33.314 4.686 36 8 36 L36 36 C39.314 36 42 33.314 42 30 L42 8 C42 4.686 39.314 2 36 2 Z" fill="none" stroke="#0433ff" stroke-width="3" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
-  <path id="Retângulo" d="M1 11 L43 11 43 9 1 9 Z" fill="#0433ff" fill-opacity="1" stroke="none"/>
+  <path id="Retângulo" d="M1 12 L43 12 43 9 1 9 Z" fill="#0433ff" fill-opacity="1" stroke="none"/>
   <g id="New-Group-2">
-   <path id="Retângulo-arredondado-1" d="M14.5 17 C10.91 17 8 19.91 8 23.5 L8 23.5 C8 27.09 10.91 30 14.5 30 L29.5 30 C33.09 30 36 27.09 36 23.5 L36 23.5 C36 19.91 33.09 17 29.5 17 Z" fill="none" stroke="#0433ff" stroke-width="3" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
+   <path id="Retângulo-arredondado-1" d="M15.5 17 C11.91 17 9 19.91 9 23.5 L9 23.5 C9 27.09 11.91 30 15.5 30 L28.5 30 C32.09 30 35 27.09 35 23.5 L35 23.5 C35 19.91 32.09 17 28.5 17 Z" fill="none" stroke="#0433ff" stroke-width="3" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
    <path id="Traçado" d="M18.857 22.806 L21.476 25.444 26.714 20.167" fill="none" stroke="#0433ff" stroke-width="3" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round"/>
   </g>
  </g>
