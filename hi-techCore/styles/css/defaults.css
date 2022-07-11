@@ -597,6 +597,10 @@ strong, b, em, i {
   text-decoration: underline;
 }
 
+abbr {
+  text-decoration: none !important;
+}
+
 address {
   line-height: 1.5;
 }
@@ -967,39 +971,33 @@ TODO:    > Text Icons
 ────────────────────────────
 TODO:        >> Icons With Text Together
 ──────────────────────────── */
-a[href^="http"] {
+.textIcon_link {
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 21px 21px;
-  cursor: pointer;
   background-image: url("../../images/icons/web.svg");
   padding-right: 26px;
 }
 
-a[href^="#"]:not([href="#"]) {
+.textIcon_chain {
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 21px 21px;
-  cursor: pointer;
   background-image: url("../../images/icons/chain.svg");
-  padding-right: 25px;
+  padding-right: 26px;
 }
 
+/* 
 abbr[title] {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  cursor: pointer;
-  text-decoration: none;
-  background-image: url("../../images/icons/interrogation.svg");
-  padding-right: 21px;
+    @include iconsWithTextTogether;
+    background-image: url('../../images/icons/interrogation.svg');
+    padding-right: 21px;
 }
-
-.click {
+ */
+.textIcon_info {
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 21px 21px;
-  cursor: pointer;
   /* 
     background-image: url('../../images/icons/popUp_thin.svg');
     background-size: 23px 18px; 
@@ -1007,22 +1005,6 @@ abbr[title] {
   background-image: url("../../images/icons/popUp_thick.svg");
   background-size: 22px 19px;
   padding-right: 28px;
-  /*padding-left: 4px;
-    padding-right: 4px;
-    
-    border: 1px solid hsl(0, 0%, 76%) !important; 
-    border-radius: 5px;
-    color: hsl(0, 0%, 53%);
-    background: hsl(0, 0%, 95%);*/
-  /*
-    background: $color_text_click;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    text-decoration: none !important;
-    cursor: pointer;
-    */
 }
 
 .attention {

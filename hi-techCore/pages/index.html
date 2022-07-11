@@ -62,13 +62,13 @@
 
                 <h2>Testes</h2>
 
-                <p><a href="https://www.google.com.br">Link externo</a></p>
+                <p><a class="textIcon_link" href="https://www.google.com.br">Link externo</a></p>
 
-                <p><a class="click" href="#" onclick="alert(`Eu tenho a classe 'click' para indicar que sou um texto clicável.`)">Clique aqui!</a></p> 
+                <p><a class="textIcon_info" href="#" onclick="alert(`Eu tenho a classe 'textIcon_info' para indicar que sou um texto clicável.`)">Clique aqui!</a></p> 
 
-                <p>Aqui temos um <a id="quoting" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
+                <p>Aqui temos um <a id="quoting" class="textIcon_chain" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
 
-                <p>&lt;abbr>: Usamos <abbr title="Hypertext Markup Language"><a href="##" onclick="lightbox(`Hypertext Markup Language`)">HTML</a></abbr> para estruturar nossos documentos da web.</p>
+                <p>&lt;abbr>: Usamos <abbr title=""><a class="textIcon_info" href="#" onclick="lightbox(`Hypertext Markup Language`)" >HTML</a></abbr> para estruturar nossos documentos da web.</p>
 
                 <h2>Fonts</h2>
 
@@ -335,7 +335,7 @@ font-size: 43px;
 
                 <div class="lb4"></div>
 
-                <p>Aqui temos um <a id="quoted" href="#quoting"> elemento &lt;a> sendo citado por um elemento</a> mais em cima.</p>
+                <p>Aqui temos um <a id="quoted" class="textIcon_chain" href="#quoting"> elemento &lt;a> sendo citado por um elemento</a> mais em cima.</p>
 
 
                 
@@ -495,8 +495,8 @@ font-size: 43px;
                 
 
                 <p>
-                    Classe(s):  <!--<span class="underline">underline</span>,  <span class="bold">bold</span>, 
-                    <span class="italic">italic</span>, --><span class="font_small">font_small</span>, e <span class="font_smaller">font_smaller</span>.
+                    Classe(s):  <!----><span class="underline">underline</span>,  <span class="bold">bold</span>, 
+                    <span class="italic">italic</span>, <span class="font_small">font_small</span>, e <span class="font_smaller">font_smaller</span>.
                 </p>
                 
                 <p class="font_monospace">Classe 'font_monospace'.</p>

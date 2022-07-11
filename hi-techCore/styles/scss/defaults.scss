@@ -807,6 +807,10 @@ strong, b, em, i {
     text-decoration: underline;
 }
 
+abbr {
+    text-decoration: none !important;
+}
+
 address {
 
     line-height: 1.5;
@@ -1216,36 +1220,37 @@ TODO:    > Text Icons
 TODO:        >> Icons With Text Together
 ──────────────────────────── */
 
-@mixin iconWithTextTogether {
+$icons_text_whiteSpace: 26px;
 
+@mixin iconsWithTextTogether {
     background-repeat: no-repeat;   
     background-position: 100% 0;
     background-size: 21px 21px; 
-    cursor: pointer;
 }
 
-a[href^="http"] {
-    @include iconWithTextTogether;
+.textIcon_link {
+    @include iconsWithTextTogether;
     background-image: url('../../images/icons/web.svg');   
-    padding-right: 26px;
+    padding-right: $icons_text_whiteSpace;
 }
 
-a[href^="#"]:not([href="#"]) {
-    @include iconWithTextTogether;
+.textIcon_chain {
+    @include iconsWithTextTogether;
     background-image: url('../../images/icons/chain.svg');
-    padding-right: 25px; 
+    padding-right: $icons_text_whiteSpace; 
 }
 
+/* 
 abbr[title] {
-    @include iconWithTextTogether;
-    text-decoration: none;
+    @include iconsWithTextTogether;
     background-image: url('../../images/icons/interrogation.svg');
     padding-right: 21px;
 }
+ */
 
-.click { 
+.textIcon_info { 
 
-    @include iconWithTextTogether;
+    @include iconsWithTextTogether;
     /* 
     background-image: url('../../images/icons/popUp_thin.svg');
     background-size: 23px 18px; 
@@ -1254,38 +1259,17 @@ abbr[title] {
     background-size: 22px 19px; 
     
     padding-right: 28px;   
-
- 
-
-    /*padding-left: 4px;
-    padding-right: 4px;
-    
-    border: 1px solid hsl(0, 0%, 76%) !important; 
-    border-radius: 5px;
-    color: hsl(0, 0%, 53%);
-    background: hsl(0, 0%, 95%);*/
-
-    
-    /*
-    background: $color_text_click;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    text-decoration: none !important;
-    cursor: pointer;
-    */
 }
 
 .attention {
-    // @include iconWithTextTogether;
+    // @include iconsWithTextTogether;
     color: red;
     background-image: url('../../images/icons/attention.svg');
     background-position-y: 3px;
     background-repeat: no-repeat;   
     background-size: 21px 21px; 
     // padding-left: 25px; 
-    text-indent: 26px;
+    text-indent: $icons_text_whiteSpace;
 }
 
 
