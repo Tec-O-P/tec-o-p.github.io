@@ -1,0 +1,25 @@
+
+/* 
+──────────────────────────────────────────────────────
+downloadFonts.css
+────────────────────────────────────────────────────── */
+
+/* 
+Os códigos abaixo devem ficar  no início do CSS, antes de qualquer CSS,
+pois as fontes precisam ser importadas antes de serem usadas no site.
+*/
+
+@font-face {
+    font-family: "Cyber-BoldBook";
+    src: url("../../fonts/Cyber-BoldBook.ttf");
+} 
+
+@font-face {
+    font-family: "7 Segments Display";
+    src: url("../../fonts/7 Segments Display.otf");
+}
+
+@font-face {
+    font-family: "Myfont-Regular";
+    src: url("../../fonts/Myfont-Regular.otf");
+}
