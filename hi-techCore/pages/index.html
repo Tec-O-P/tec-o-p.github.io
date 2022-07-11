@@ -8,6 +8,7 @@
     <meta name="author" content="George Maxwell">
     <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
     <link href='../styles/css/downloadFonts.css' rel='stylesheet'>  
     <link href='../styles/css/normalize.css' rel='stylesheet'>  
@@ -64,11 +65,11 @@
 
                 <p><a class="textIcon_link" href="https://www.google.com.br">Link externo</a></p>
 
-                <p><a class="textIcon_info" href="#" onclick="alert(`Eu tenho a classe 'textIcon_info' para indicar que sou um texto clicável.`)">Clique aqui!</a></p> 
+                <p><a class="textIcon_popUp" href="#" onclick="alert(`Eu tenho a classe 'textIcon_popUp' para indicar que sou um texto clicável.`)">Clique aqui!</a></p> 
 
                 <p>Aqui temos um <a id="quoting" class="textIcon_chain" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
 
-                <p>&lt;abbr>: Usamos <abbr title=""><a class="textIcon_info" href="#" onclick="lightbox(`Hypertext Markup Language`)" >HTML</a></abbr> para estruturar nossos documentos da web.</p>
+                <p>&lt;abbr>: Usamos <abbr title=""><a class="textIcon_popUp" href="#" onclick="lightbox(`Hypertext Markup Language`)" >HTML</a></abbr> para estruturar nossos documentos da web.</p>
 
                 <h2>Fonts</h2>
 
@@ -5819,6 +5820,14 @@ font-size: 43px;
     - danger
     - token (em <span>)
       └ blue, red, yellow, green, cyan, orange, pink, purple, purple2, brown, black
+
+
+
+
+
+      textIcon_link
+      textIcon_chain
+textIcon_popUp 
 
     ────────────────────────────
     >> Icons (Alone)
