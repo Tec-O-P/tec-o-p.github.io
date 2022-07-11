@@ -182,7 +182,7 @@ $table_border2_width: 1px;
 $color_border_table: hsl(0, 0%, 85%);
 
 $bg_table_tr_hover: $color_theme_clear; 
-$bg_table_tr_hover_2: linear-gradient(to right, transparent, $color_theme_clear 5% 95%, transparent); 
+$bg_table_tr_hover_2: linear-gradient(to right, hsla(193, 100%, 96%, 0), $color_theme_clear 5% 95%, hsla(193, 100%, 96%, 0)); // Não use a palavra-chave 'transparent' nesta instrução, pois caso contrário vai bugar no Safari
 
 // ─────────── Forms ───────────
 
@@ -685,33 +685,24 @@ a {
 a[href^="http"] {
     // color: $color_text;
     // text-decoration: underline;
-    background: url('../../images/icons/web_globe.svg') no-repeat 100% 0;   
+/*     background: url('../../images/icons/web.svg') no-repeat 100% 0;   
     background-size: 17px 17px; 
-    padding-right: 21px; 
+    padding-right: 21px;  */
+
+    background-image: url('../../images/icons/web.svg');   
+    background-size: 21px 21px; 
+    background-repeat: no-repeat;   
+    padding-left: 26px; 
 }
 
-.check_yes, .check_no {
-    color: transparent;
-    display: inline-block;
-    height: 17px;
-    line-height: 1.2;
-}
-
-.check_yes::selection, .check_no::selection { 
-    
-    color: transparent;
-} 
-
-.check_yes {
-    width: 22px;
-    background-image: url('../../images/icons/check_yes.png');   
-    background-size: 22px 17px;
-}
-
-.check_no {
-    width: 17px;
-    background-image: url('../../images/icons/check_no.png');   
-    background-size: 17px 17px;
+a[href^="#"] {
+    color: purple;
+    // text-decoration: underline;
+    // background: url('../../images/icons/chain_purple.svg') no-repeat 100% 0;   
+    background-image: url('../../images/icons/chain.svg');   
+    background-size: 21px 21px; 
+    background-repeat: no-repeat;   
+    padding-left: 25px; 
 }
 
 @for $i from 2 through 6 {
@@ -782,33 +773,6 @@ ul, ol {
 // ul ul { list-style-type: "● "; } // <- Não funciona no safari.
 // ul ul { list-style-type: "-› "; } // <- Não funciona no safari.
 // ul ul ul { list-style-type: "- "; } // <- Não funciona no safari.
-
-
-
-ul { 
-    //list-style-type: none; 
-   /*  list-style-position: inside;
-    margin-left: calc(1 * #{$margin_horizontal} + 3px); */
-}
-
-ul > li::before { 
-    
-/*     content: "◉"; 
-    // font-size: 17px;
-    font-size: 16px; */
-
-    /*     
-    display: inline-block;
-    content: '';
-    width: 13px;
-    height: 13px;
-    background-image: url("../../images/icons/list_1.svg"); 
-    */
-    
-    //margin-right: 11px;
-}
-
-
 
 ul { margin-left: calc(1 * #{$margin_horizontal} + 24px); } 
 ul { list-style-image: url("../../images/icons/list_1.svg"); }
@@ -930,7 +894,7 @@ ul > li + li, ol > li + li {
     font-size: $font_smaller;
 }
 
-/*
+
 .underline {
   text-decoration: underline;
 }
@@ -942,7 +906,7 @@ ul > li + li, ol > li + li {
 .italic {
     font-style: italic;
 }
-*/
+/**/
 
 .container_text {
     font-size: $font_size; 
@@ -5340,7 +5304,7 @@ TODO: Others
 ::selection { 
     
     color: hsl(195, 100%, 49%); 
-    background: hsl(195, 100%, 95%); 
+    background-color: hsl(195, 100%, 95%); 
 } 
 
 hr {
@@ -5373,7 +5337,7 @@ a, button:not(button[disabled], .disabled), input[type="radio"]:not(fieldset[dis
     margin-bottom:  $margin_vertical;
 } 
 
-@for $i from 1 through 70 { 
+@for $i from 1 through 100 { 
     .lb#{$i} { /* Line break */
         margin-top: calc(#{$i} * #{$margin_vertical}); 
         margin-bottom:  calc(#{$i} * #{$margin_vertical});
@@ -5562,6 +5526,44 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
         padding-right: calc((#{$button_height_smaller})/2);
     }
 }
+
+/*  
+──────────────────────────────────────────────────────
+TODO: Text Icons (Alone)
+────────────────────────────────────────────────────── */
+
+.icon_yes, .icon_no, .icon_chain {
+    color: transparent;
+    cursor: default;
+    overflow: hidden;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    line-height: 1.2;
+}
+
+.icon_yes::selection, .icon_no::selection, .icon_chain::selection { 
+    
+    color: transparent;
+} 
+
+.icon_yes {
+    width: 22px;
+    background-image: url('../../images/icons/icon_yes.svg');   
+    background-size: 22px 17px;
+}
+
+.icon_no {
+    background-image: url('../../images/icons/icon_no.svg');   
+    background-size: 17px 17px;
+}
+
+.icon_chain {
+    background-image: url('../../images/icons/chain.svg');   
+    background-size: 17px 17px;
+}
+
+
 
 /*  
 ──────────────────────────────────────────────────────

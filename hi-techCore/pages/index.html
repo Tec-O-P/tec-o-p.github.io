@@ -276,10 +276,10 @@ font-size: 43px;
                     <tr><th>Tipos de caracteres</th><td>
 
                         <ul class="list_compressed" style="text-align: left; margin-top: 4px; margin-bottom: 4px;">
-                            <li><span style="font-weight: bold;">Números: </span><span class="check_yes">Yes</span></li>
-                            <li><span style="font-weight: bold;">Minúsculas: </span><span class="check_no">No</span></li>
-                            <li><span style="font-weight: bold;">Maiúsculas: </span><span><span class="check_yes">Yes</span></span></li>
-                            <li><span style="font-weight: bold;">Especiais: </span><span class="check_yes">Yes</span></li>
+                            <li><span style="font-weight: bold;">Números: </span><span class="icon_yes">Yes</span></li>
+                            <li><span style="font-weight: bold;">Minúsculas: </span><span class="icon_no">No</span></li>
+                            <li><span style="font-weight: bold;">Maiúsculas: </span><span><span class="icon_yes">Yes</span></span></li>
+                            <li><span style="font-weight: bold;">Especiais: </span><span class="icon_yes">Yes</span></li>
                         </ul>
 
                     </td></tr>
@@ -322,11 +322,16 @@ font-size: 43px;
                     - Se o tamanho que o caractere será utilizado será diferente do tamanho padrão.
                     - Se será necessário ter os mesmos estilos de cor, negrito, ou itálico do texto. 
                 -->
-                 
-
-                <div class="lb26"></div>
 
 
+
+                <p>Aqui temos um elemento <a id="quoting" href="#quoted" class="jump">X &lt;a> com a classe <span class="underline">jump</span>  citando um elemento</a> mais embaixo.</p> 
+
+                <div class="lb100"></div>
+
+                <p>Aqui temos um elemento <a id="quoted" href="#quoting" class="jump">&lt;a> com a classe <span class="underline">jump</span>  sendo citado por um elemento</a> mais em cima.</p>
+
+Texto corrente citado.
 
                 <h2>Índice</h2>
 
@@ -5786,6 +5791,9 @@ font-size: 43px;
     - font_small
     - font_smaller
     - font_monospace
+    - underline
+    - bold
+    - italic
     - mini_topic
     - container_text
     - highlight
@@ -5800,6 +5808,15 @@ font-size: 43px;
     - danger
     - token (em <span>)
       └ blue, red, yellow, green, cyan, orange, pink, purple, purple2, brown, black
+
+    ────────────────────────────
+    >> Icons (Alone)
+    ────────────────────────────
+
+    Obs.: Estas classes de ícones fazem o texto do elemento ficar transparente.
+
+    - icon_yes
+    - icon_no
 
     ────────────────────────────
     >> Layout Sections
