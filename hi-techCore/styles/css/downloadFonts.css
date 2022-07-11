@@ -4,7 +4,10 @@
 downloadFonts.css
 ────────────────────────────────────────────────────── */
 
-/*  */
+/* 
+Os códigos abaixo devem ficar  no início do CSS, antes de qualquer CSS,
+pois as fontes precisam ser importadas antes de serem usadas no site.
+*/
 
 @font-face {
     font-family: "Cyber-BoldBook";

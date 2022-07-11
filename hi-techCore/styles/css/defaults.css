@@ -213,24 +213,6 @@ a {
   text-decoration: none;
 }
 
-a[href^="http"] {
-  /*     background: url('../../images/icons/web.svg') no-repeat 100% 0;   
-    background-size: 17px 17px; 
-    padding-right: 21px;  */
-  background-image: url("../../images/icons/web.svg");
-  background-size: 21px 21px;
-  background-repeat: no-repeat;
-  padding-left: 26px;
-}
-
-a[href^="#"] {
-  color: purple;
-  background-image: url("../../images/icons/chain.svg");
-  background-size: 21px 21px;
-  background-repeat: no-repeat;
-  padding-left: 25px;
-}
-
 h2 {
   font-size: calc(58rem - (6 * 2rem));
   margin-top: calc(7rem - 2rem + 16rem);
@@ -615,15 +597,6 @@ strong, b, em, i {
   text-decoration: underline;
 }
 
-abbr[title] {
-  /* text-decoration: underline dotted;*/
-  text-decoration: none;
-  background: url("../../images/icons/interrogation.svg") no-repeat 100% 0;
-  background-size: 21px 21px;
-  padding-right: 21px;
-  cursor: pointer;
-}
-
 address {
   line-height: 1.5;
 }
@@ -656,12 +629,16 @@ pre {
   font-size: 17px;
 }
 
-.font_size {
-  font-size: 19rem;
-}
-
 ul > li + li, ol > li + li {
   margin-top: 16rem;
+}
+
+/*  
+────────────────────────────
+TODO:    > Classes
+──────────────────────────── */
+.font_size {
+  font-size: 19rem;
 }
 
 .font_monospace {
@@ -719,31 +696,6 @@ p.container_text {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-}
-
-.click {
-  color: black;
-  text-decoration: underline;
-  background: url("../../images/icons/button.svg") no-repeat 100% 0;
-  background-size: 21px 21px;
-  padding-right: 23px;
-  cursor: pointer;
-  /*padding-left: 4px;
-    padding-right: 4px;
-    
-    border: 1px solid hsl(0, 0%, 76%) !important; 
-    border-radius: 5px;
-    color: hsl(0, 0%, 53%);
-    background: hsl(0, 0%, 95%);*/
-  /*
-    background: $color_text_click;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    text-decoration: none !important;
-    cursor: pointer;
-    */
 }
 
 span.token {
@@ -1005,6 +957,108 @@ span.token.black {
   max-width: calc(100% - (2 * 20px));
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/*  
+────────────────────────────
+TODO:    > Text Icons
+──────────────────────────── */
+/*  
+────────────────────────────
+TODO:        >> Icons With Text Together
+──────────────────────────── */
+a[href^="http"] {
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  background-image: url("../../images/icons/web.svg");
+  padding-left: 26px;
+}
+
+a[href^="#"] {
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  color: purple;
+  background-image: url("../../images/icons/chain.svg");
+  padding-left: 25px;
+}
+
+abbr[title] {
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  background-image: url("../../images/icons/interrogation.svg");
+  background-position: 100% 0;
+  padding-right: 21px;
+  cursor: pointer;
+}
+
+.click {
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  color: black;
+  text-decoration: underline;
+  background-image: url("../../images/icons/control.svg");
+  padding-left: 26px;
+  cursor: pointer;
+  /*padding-left: 4px;
+    padding-right: 4px;
+    
+    border: 1px solid hsl(0, 0%, 76%) !important; 
+    border-radius: 5px;
+    color: hsl(0, 0%, 53%);
+    background: hsl(0, 0%, 95%);*/
+  /*
+    background: $color_text_click;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-decoration: none !important;
+    cursor: pointer;
+    */
+}
+
+.alert {
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  color: red;
+  background-image: url("../../images/icons/alert.svg");
+  background-position-y: 3px;
+  text-indent: 26px;
+}
+
+/*  
+────────────────────────────
+TODO:        >> Icon Alone
+──────────────────────────── */
+.icon_yes, .icon_no, .icon_chain {
+  color: transparent;
+  cursor: default;
+  overflow: hidden;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 1.2;
+}
+
+.icon_yes::selection, .icon_no::selection, .icon_chain::selection {
+  color: transparent;
+}
+
+.icon_yes {
+  width: 22px;
+  background-image: url("../../images/icons/icon_yes.svg");
+  background-size: 22px 17px;
+}
+
+.icon_no {
+  background-image: url("../../images/icons/icon_no.svg");
+  background-size: 17px 17px;
+}
+
+.icon_chain {
+  background-image: url("../../images/icons/chain.svg");
+  background-size: 17px 17px;
 }
 
 /*  
@@ -5145,40 +5199,6 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
   margin-left: 20px;
   margin-right: 20px;
   padding-right: calc((32px)/2);
-}
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Text Icons (Alone)
-────────────────────────────────────────────────────── */
-.icon_yes, .icon_no, .icon_chain {
-  color: transparent;
-  cursor: default;
-  overflow: hidden;
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  line-height: 1.2;
-}
-
-.icon_yes::selection, .icon_no::selection, .icon_chain::selection {
-  color: transparent;
-}
-
-.icon_yes {
-  width: 22px;
-  background-image: url("../../images/icons/icon_yes.svg");
-  background-size: 22px 17px;
-}
-
-.icon_no {
-  background-image: url("../../images/icons/icon_no.svg");
-  background-size: 17px 17px;
-}
-
-.icon_chain {
-  background-image: url("../../images/icons/chain.svg");
-  background-size: 17px 17px;
 }
 
 /*  

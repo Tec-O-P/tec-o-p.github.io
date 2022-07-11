@@ -682,29 +682,6 @@ a {
     text-decoration: none;
 } 
 
-a[href^="http"] {
-    // color: $color_text;
-    // text-decoration: underline;
-/*     background: url('../../images/icons/web.svg') no-repeat 100% 0;   
-    background-size: 17px 17px; 
-    padding-right: 21px;  */
-
-    background-image: url('../../images/icons/web.svg');   
-    background-size: 21px 21px; 
-    background-repeat: no-repeat;   
-    padding-left: 26px; 
-}
-
-a[href^="#"] {
-    color: purple;
-    // text-decoration: underline;
-    // background: url('../../images/icons/chain_purple.svg') no-repeat 100% 0;   
-    background-image: url('../../images/icons/chain.svg');   
-    background-size: 21px 21px; 
-    background-repeat: no-repeat;   
-    padding-left: 25px; 
-}
-
 @for $i from 2 through 6 {
 
 	h#{$i} {
@@ -830,16 +807,6 @@ strong, b, em, i {
     text-decoration: underline;
 }
 
-abbr[title] {
-    /* text-decoration: underline dotted;*/
-    //text-decoration: underline; 
-    text-decoration: none;
-    background: url('../../images/icons/interrogation.svg') no-repeat 100% 0;    
-    background-size: 21px 21px;  
-    padding-right: 21px;
-    cursor: pointer;
-}
-
 address {
 
     line-height: 1.5;
@@ -873,12 +840,17 @@ pre {
     font-size: $font_monospace_size;
 }
 
-.font_size {
-    font-size: $font_size; 
-}
-
 ul > li + li, ol > li + li {
     margin-top: $margin_vertical;
+}
+
+/*  
+────────────────────────────
+TODO:    > Classes
+──────────────────────────── */
+
+.font_size {
+    font-size: $font_size; 
 }
 
 .font_monospace {
@@ -948,38 +920,6 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-}
-
-.click { 
-
-    color: $color_text;
-    text-decoration: underline;
-    background: url('../../images/icons/button.svg') no-repeat 100% 0;    
-    background-size: 21px 21px;  
-    padding-right: 23px; 
-    cursor: pointer;
-
-
-
-
-    /*padding-left: 4px;
-    padding-right: 4px;
-    
-    border: 1px solid hsl(0, 0%, 76%) !important; 
-    border-radius: 5px;
-    color: hsl(0, 0%, 53%);
-    background: hsl(0, 0%, 95%);*/
-
-    
-    /*
-    background: $color_text_click;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    text-decoration: none !important;
-    cursor: pointer;
-    */
 }
 
 span.token {
@@ -1264,6 +1204,124 @@ span.token.black {
 
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+/*  
+────────────────────────────
+TODO:    > Text Icons
+──────────────────────────── */
+ 
+/*  
+────────────────────────────
+TODO:        >> Icons With Text Together
+──────────────────────────── */
+
+@mixin iconWithTextTogether {
+
+    background-size: 21px 21px; 
+    background-repeat: no-repeat;   
+}
+
+a[href^="http"] {
+    @include iconWithTextTogether;
+    background-image: url('../../images/icons/web.svg');   
+    padding-left: 26px; 
+}
+
+a[href^="#"] {
+    @include iconWithTextTogether;
+    color: purple;
+    background-image: url('../../images/icons/chain.svg');
+    padding-left: 25px; 
+}
+
+abbr[title] {
+    @include iconWithTextTogether;
+    text-decoration: none;
+    background-image: url('../../images/icons/interrogation.svg');
+    background-position: 100% 0;
+    padding-right: 21px;
+    cursor: pointer;
+}
+
+.click { 
+
+    @include iconWithTextTogether;
+    color: $color_text;
+    text-decoration: underline;
+    background-image: url('../../images/icons/control.svg');
+    padding-left: 26px;     
+    cursor: pointer;
+
+ 
+
+    /*padding-left: 4px;
+    padding-right: 4px;
+    
+    border: 1px solid hsl(0, 0%, 76%) !important; 
+    border-radius: 5px;
+    color: hsl(0, 0%, 53%);
+    background: hsl(0, 0%, 95%);*/
+
+    
+    /*
+    background: $color_text_click;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-decoration: none !important;
+    cursor: pointer;
+    */
+}
+
+.alert {
+    @include iconWithTextTogether;
+    color: red;
+    background-image: url('../../images/icons/alert.svg');
+    background-position-y: 3px;
+    // padding-left: 25px; 
+    text-indent: 26px;
+}
+
+
+ 
+/*  
+────────────────────────────
+TODO:        >> Icon Alone
+──────────────────────────── */
+
+
+
+.icon_yes, .icon_no, .icon_chain {
+    color: transparent;
+    cursor: default;
+    overflow: hidden;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    line-height: 1.2;
+}
+
+.icon_yes::selection, .icon_no::selection, .icon_chain::selection { 
+    
+    color: transparent;
+} 
+
+.icon_yes {
+    width: 22px;
+    background-image: url('../../images/icons/icon_yes.svg');   
+    background-size: 22px 17px;
+}
+
+.icon_no {
+    background-image: url('../../images/icons/icon_no.svg');   
+    background-size: 17px 17px;
+}
+
+.icon_chain {
+    background-image: url('../../images/icons/chain.svg');   
+    background-size: 17px 17px;
 }
 
 /*  
@@ -5526,44 +5584,6 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
         padding-right: calc((#{$button_height_smaller})/2);
     }
 }
-
-/*  
-──────────────────────────────────────────────────────
-TODO: Text Icons (Alone)
-────────────────────────────────────────────────────── */
-
-.icon_yes, .icon_no, .icon_chain {
-    color: transparent;
-    cursor: default;
-    overflow: hidden;
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    line-height: 1.2;
-}
-
-.icon_yes::selection, .icon_no::selection, .icon_chain::selection { 
-    
-    color: transparent;
-} 
-
-.icon_yes {
-    width: 22px;
-    background-image: url('../../images/icons/icon_yes.svg');   
-    background-size: 22px 17px;
-}
-
-.icon_no {
-    background-image: url('../../images/icons/icon_no.svg');   
-    background-size: 17px 17px;
-}
-
-.icon_chain {
-    background-image: url('../../images/icons/chain.svg');   
-    background-size: 17px 17px;
-}
-
-
 
 /*  
 ──────────────────────────────────────────────────────
