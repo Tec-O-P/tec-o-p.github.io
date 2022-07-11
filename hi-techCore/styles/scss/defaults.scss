@@ -159,18 +159,18 @@ $color_text_token_black: hsl(0, 0%, 52%);
 // ─────────── Signs ───────────
 
 $color_text_success: hsl(120, 100%, 35%);
-$color_text_attention: hsl(45, 74%, 45%);
+$color_text_warning: hsl(45, 74%, 45%);
 $color_text_fail: hsl(0, 100%, 50%);
 $color_text_danger: white;
 
 $color_border_success: hsl(120, 100%, 44%);
-$color_border_attention: hsl(43, 74%, 72%);
+$color_border_warning: hsl(43, 74%, 72%);
 $color_border_fail: hsl(0, 100%, 70%);
 $color_border_danger_clear: hsl(0, 100%, 76%);
 $color_border_danger_dark: hsl(0, 100%, 31%);
 
 $bg_success: hsl(120, 100%, 91%);
-$bg_attention: hsl(54, 100%, 93%);
+$bg_warning: hsl(54, 100%, 93%);
 $bg_fail: hsl(0, 100%, 94%);
 $bg_danger: red;
 
@@ -1144,7 +1144,7 @@ span.token.black {
     }
 }
 
-.success, .attention, .fail, .danger  {
+.success, .warning, .fail, .danger  {
 
     padding: 2px 8px;
     margin: $margin_vertical $margin_horizontal;
@@ -1158,10 +1158,10 @@ span.token.black {
     border: 2px solid $color_border_success;
 }
 
-.attention {
-    color: $color_text_attention;
-    background: $bg_attention;
-    border: 2px solid $color_border_attention;
+.warning {
+    color: $color_text_warning;
+    background: $bg_warning;
+    border: 2px solid $color_border_warning;
 }
 
 .fail {
@@ -1183,7 +1183,7 @@ span.token.black {
     text-transform: uppercase;
 }
 /*
-.success.long, .attention.long, .fail.long, .danger.long {
+.success.long, .warning.long, .fail.long, .danger.long {
     text-align: center;
     padding-left: calc(1 * #{$margin_horizontal});
     padding-right: calc(1 * #{$margin_horizontal});
@@ -1218,40 +1218,42 @@ TODO:        >> Icons With Text Together
 
 @mixin iconWithTextTogether {
 
-    background-size: 21px 21px; 
     background-repeat: no-repeat;   
+    background-position: 100% 0;
+    background-size: 21px 21px; 
+    cursor: pointer;
 }
 
 a[href^="http"] {
     @include iconWithTextTogether;
     background-image: url('../../images/icons/web.svg');   
-    padding-left: 26px; 
+    padding-right: 26px;
 }
 
-a[href^="#"] {
+a[href^="#"]:not([href="#"]) {
     @include iconWithTextTogether;
-    color: purple;
     background-image: url('../../images/icons/chain.svg');
-    padding-left: 25px; 
+    padding-right: 25px; 
 }
 
 abbr[title] {
     @include iconWithTextTogether;
     text-decoration: none;
     background-image: url('../../images/icons/interrogation.svg');
-    background-position: 100% 0;
     padding-right: 21px;
-    cursor: pointer;
 }
 
 .click { 
 
     @include iconWithTextTogether;
-    color: $color_text;
-    text-decoration: underline;
-    background-image: url('../../images/icons/control.svg');
-    padding-left: 26px;     
-    cursor: pointer;
+    /* 
+    background-image: url('../../images/icons/popUp_thin.svg');
+    background-size: 23px 18px; 
+    */
+    background-image: url('../../images/icons/popUp_thick.svg');
+    background-size: 22px 19px; 
+    
+    padding-right: 28px;   
 
  
 
@@ -1275,11 +1277,13 @@ abbr[title] {
     */
 }
 
-.alert {
-    @include iconWithTextTogether;
+.attention {
+    // @include iconWithTextTogether;
     color: red;
-    background-image: url('../../images/icons/alert.svg');
+    background-image: url('../../images/icons/attention.svg');
     background-position-y: 3px;
+    background-repeat: no-repeat;   
+    background-size: 21px 21px; 
     // padding-left: 25px; 
     text-indent: 26px;
 }

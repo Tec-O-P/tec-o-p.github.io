@@ -898,7 +898,7 @@ span.token.black {
   padding-top: calc(0.5 * 16rem);
 }
 
-.success, .attention, .fail, .danger {
+.success, .warning, .fail, .danger {
   padding: 2px 8px;
   margin: 16rem 20px;
   border-radius: 10px;
@@ -911,7 +911,7 @@ span.token.black {
   border: 2px solid #00e000;
 }
 
-.attention {
+.warning {
   color: #c89d1e;
   background: #fffbdb;
   border: 2px solid #ecce83;
@@ -937,7 +937,7 @@ span.token.black {
 }
 
 /*
-.success.long, .attention.long, .fail.long, .danger.long {
+.success.long, .warning.long, .fail.long, .danger.long {
     text-align: center;
     padding-left: calc(1 * 20px);
     padding-right: calc(1 * 20px);
@@ -968,38 +968,45 @@ TODO:    > Text Icons
 TODO:        >> Icons With Text Together
 ──────────────────────────── */
 a[href^="http"] {
-  background-size: 21px 21px;
   background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  cursor: pointer;
   background-image: url("../../images/icons/web.svg");
-  padding-left: 26px;
+  padding-right: 26px;
 }
 
-a[href^="#"] {
-  background-size: 21px 21px;
+a[href^="#"]:not([href="#"]) {
   background-repeat: no-repeat;
-  color: purple;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  cursor: pointer;
   background-image: url("../../images/icons/chain.svg");
-  padding-left: 25px;
+  padding-right: 25px;
 }
 
 abbr[title] {
-  background-size: 21px 21px;
   background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  cursor: pointer;
   text-decoration: none;
   background-image: url("../../images/icons/interrogation.svg");
-  background-position: 100% 0;
   padding-right: 21px;
-  cursor: pointer;
 }
 
 .click {
-  background-size: 21px 21px;
   background-repeat: no-repeat;
-  color: black;
-  text-decoration: underline;
-  background-image: url("../../images/icons/control.svg");
-  padding-left: 26px;
+  background-position: 100% 0;
+  background-size: 21px 21px;
   cursor: pointer;
+  /* 
+    background-image: url('../../images/icons/popUp_thin.svg');
+    background-size: 23px 18px; 
+    */
+  background-image: url("../../images/icons/popUp_thick.svg");
+  background-size: 22px 19px;
+  padding-right: 28px;
   /*padding-left: 4px;
     padding-right: 4px;
     
@@ -1018,12 +1025,12 @@ abbr[title] {
     */
 }
 
-.alert {
-  background-size: 21px 21px;
-  background-repeat: no-repeat;
+.attention {
   color: red;
-  background-image: url("../../images/icons/alert.svg");
+  background-image: url("../../images/icons/attention.svg");
   background-position-y: 3px;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
   text-indent: 26px;
 }
 
