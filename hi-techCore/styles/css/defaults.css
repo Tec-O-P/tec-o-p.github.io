@@ -520,9 +520,8 @@ p, li, ul, ol, dl, dt, dd {
 }
 
 p {
-  text-indent: 6rem;
-  /* Sem justificar, usar: 4px */
-  text-align: justify;
+  text-indent: 4rem;
+  /* Sem justificar, usar: 4px. Com justificar, usar: 6px.  */
 }
 
 ul, ol {
@@ -994,7 +993,7 @@ TODO:        >> Icons With Text Together
   background-size: 21px 21px;
   padding-right: 26px;
   background-image: url("../../images/icons/info.svg");
-  padding-right: 23px;
+  padding-right: 22px;
 }
 
 .textIcon_popUp {
@@ -1011,24 +1010,6 @@ TODO:        >> Icons With Text Together
   padding-right: 29px;
 }
 
-a[href^="mailto:"] {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/mail.svg");
-  padding-right: 27px;
-}
-
-a[href^="tel:"] {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/phone.svg");
-  padding-right: 25px;
-}
-
 .textIcon_download {
   background-repeat: no-repeat;
   background-position: 100% 0;
@@ -1036,6 +1017,24 @@ a[href^="tel:"] {
   padding-right: 26px;
   background-image: url("../../images/icons/download.png");
   padding-right: 24px;
+}
+
+.textIcon_email {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  padding-right: 26px;
+  background-image: url("../../images/icons/email.svg");
+  padding-right: 27px;
+}
+
+.textIcon_phone {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  padding-right: 26px;
+  background-image: url("../../images/icons/phone.svg");
+  padding-right: 25px;
 }
 
 .attention {

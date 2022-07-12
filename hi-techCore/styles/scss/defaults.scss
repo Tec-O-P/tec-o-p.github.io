@@ -735,8 +735,8 @@ p, li, ul, ol, dl, dt, dd {
 
 p {
     @extend %margins;
-    text-indent: 6rem; /* Sem justificar, usar: 4px */
-    text-align: justify;
+    text-indent: 4rem; /* Sem justificar, usar: 4px. Com justificar, usar: 6px.  */
+    // text-align: justify;
 }
 
 ul, ol {
@@ -1243,7 +1243,7 @@ $icons_text_whiteSpace: 26px;
 .textIcon_info {
     @include iconsWithTextTogether;
     background-image: url('../../images/icons/info.svg');
-    padding-right: 23px;
+    padding-right: 22px;
 }
  
 .textIcon_popUp { 
@@ -1259,22 +1259,22 @@ $icons_text_whiteSpace: 26px;
     padding-right: 29px;   
 }
 
-a[href^="mailto:"] { 
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/mail.svg');
-    padding-right: 27px;
-}
-
-a[href^="tel:"] { 
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/phone.svg');
-    padding-right: 25px;
-}
-
 .textIcon_download {
     @include iconsWithTextTogether;
     background-image: url('../../images/icons/download.png'); // Não consegui fazer este ícone em SVG
     padding-right: 24px;
+}
+
+.textIcon_email { // a[href^="mailto:"] { 
+    @include iconsWithTextTogether;
+    background-image: url('../../images/icons/email.svg');
+    padding-right: 27px;
+}
+
+.textIcon_phone { // a[href^="tel:"] { 
+    @include iconsWithTextTogether;
+    background-image: url('../../images/icons/phone.svg');
+    padding-right: 25px;
 }
 
 
