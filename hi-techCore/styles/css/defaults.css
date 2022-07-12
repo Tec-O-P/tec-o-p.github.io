@@ -975,36 +975,67 @@ TODO:        >> Icons With Text Together
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 21px 21px;
-  background-image: url("../../images/icons/web.svg");
   padding-right: 26px;
+  background-image: url("../../images/icons/web.svg");
+  padding-right: 25px;
 }
 
 .textIcon_chain {
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 21px 21px;
-  background-image: url("../../images/icons/chain.svg");
   padding-right: 26px;
+  background-image: url("../../images/icons/chain.svg");
 }
 
-/* 
-abbr[title] {
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/interrogation.svg');
-    padding-right: 21px;
-}
- */
 .textIcon_info {
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 21px 21px;
+  padding-right: 26px;
+  background-image: url("../../images/icons/info.svg");
+  padding-right: 23px;
+}
+
+.textIcon_popUp {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  padding-right: 26px;
   /* 
     background-image: url('../../images/icons/popUp_thin.svg');
     background-size: 23px 18px; 
     */
-  background-image: url("../../images/icons/popUp_thick.svg");
+  background-image: url("../../images/icons/popUp.svg");
   background-size: 22px 19px;
-  padding-right: 28px;
+  padding-right: 29px;
+}
+
+a[href^="mailto:"] {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  padding-right: 26px;
+  background-image: url("../../images/icons/mail.svg");
+  padding-right: 27px;
+}
+
+a[href^="tel:"] {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  padding-right: 26px;
+  background-image: url("../../images/icons/phone.svg");
+  padding-right: 25px;
+}
+
+.textIcon_download {
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 21px 21px;
+  padding-right: 26px;
+  background-image: url("../../images/icons/download.png");
+  padding-right: 24px;
 }
 
 .attention {

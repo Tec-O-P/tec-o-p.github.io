@@ -1226,53 +1226,69 @@ $icons_text_whiteSpace: 26px;
     background-repeat: no-repeat;   
     background-position: 100% 0;
     background-size: 21px 21px; 
+    padding-right: $icons_text_whiteSpace;
 }
 
 .textIcon_link {
     @include iconsWithTextTogether;
     background-image: url('../../images/icons/web.svg');   
-    padding-right: $icons_text_whiteSpace;
+    padding-right: 25px;
 }
 
 .textIcon_chain {
     @include iconsWithTextTogether;
     background-image: url('../../images/icons/chain.svg');
-    padding-right: $icons_text_whiteSpace; 
 }
 
-/* 
-abbr[title] {
+.textIcon_info {
     @include iconsWithTextTogether;
-    background-image: url('../../images/icons/interrogation.svg');
-    padding-right: 21px;
+    background-image: url('../../images/icons/info.svg');
+    padding-right: 23px;
 }
- */
-
-.textIcon_info { 
+ 
+.textIcon_popUp { 
 
     @include iconsWithTextTogether;
     /* 
     background-image: url('../../images/icons/popUp_thin.svg');
     background-size: 23px 18px; 
     */
-    background-image: url('../../images/icons/popUp_thick.svg');
+    background-image: url('../../images/icons/popUp.svg');
     background-size: 22px 19px; 
     
-    padding-right: 28px;   
+    padding-right: 29px;   
 }
 
+a[href^="mailto:"] { 
+    @include iconsWithTextTogether;
+    background-image: url('../../images/icons/mail.svg');
+    padding-right: 27px;
+}
+
+a[href^="tel:"] { 
+    @include iconsWithTextTogether;
+    background-image: url('../../images/icons/phone.svg');
+    padding-right: 25px;
+}
+
+.textIcon_download {
+    @include iconsWithTextTogether;
+    background-image: url('../../images/icons/download.png'); // Não consegui fazer este ícone em SVG
+    padding-right: 24px;
+}
+
+
+
+
+
 .attention {
-    // @include iconsWithTextTogether;
     color: red;
     background-image: url('../../images/icons/attention.svg');
     background-position-y: 3px;
     background-repeat: no-repeat;   
     background-size: 21px 21px; 
-    // padding-left: 25px; 
     text-indent: $icons_text_whiteSpace;
 }
-
-
  
 /*  
 ────────────────────────────
