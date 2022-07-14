@@ -520,8 +520,9 @@ p, li, ul, ol, dl, dt, dd {
 }
 
 p {
-  text-indent: 4rem;
-  /* Sem justificar, usar: 4px. Com justificar, usar: 6px.  */
+  text-indent: 6rem;
+  /* Sem 'text-align: justify', usar: 4px. Com 'text-align: justify', usar: 6px.  */
+  text-align: justify;
 }
 
 ul, ol {
@@ -988,288 +989,300 @@ TODO:        >> Generator
   background-size: 21px 21px;
 }
 
-.textIcon_template, .textIcon_template_left, .textIcon_template_right {
+.textIcon_template, .textIcon_template.left, .textIcon_template.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
 }
 
-.textIcon_template::selection, .textIcon_template_left::selection, .textIcon_template_right::selection {
+.textIcon_template::selection, .textIcon_template.left::selection, .textIcon_template.right::selection {
   color: transparent;
 }
 
-.textIcon_template, .textIcon_template_left {
+.textIcon_template, .textIcon_template.left {
   background-image: url("../../images/icons/textIcon_template.svg");
   background-position-y: 0px;
   padding-left: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_template:empty, .textIcon_template_left:empty {
+.textIcon_template:empty, .textIcon_template.left:empty {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_template_right {
-  background-image: url("../../images/icons/textIcon_template.svg");
-  background-position: 100% 0px;
+.textIcon_template.right {
+  background-position-x: 100%;
+  padding-left: 0;
   padding-right: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_template_right:empty {
+.textIcon_template.right:empty {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
-.textIcon_template.noText, .textIcon_template_left.noText {
+.textIcon_template.noText, .textIcon_template.left.noText {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_template_right.noText {
+.textIcon_template.right.noText {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
 .textIcon_template.noText::before, .textIcon_template:empty::before,
-.textIcon_template_left.noText::before, .textIcon_template_left:empty::before,
-.textIcon_template_right.noText::before, .textIcon_template_right:empty::before {
+.textIcon_template.left.noText::before, .textIcon_template.left:empty::before,
+.textIcon_template.right.noText::before, .textIcon_template.right:empty::before {
   display: inline-block;
-  content: 'Bug fix!';
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
   height: 0;
   color: rgba(255, 255, 255, 0);
   overflow: hidden;
 }
 
-.textIcon_HNB_template, .textIcon_HNB_template_left, .textIcon_HNB_template_right {
+.textIcon_HNB_template, .textIcon_HNB_template.left, .textIcon_HNB_template.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
 }
 
-.textIcon_HNB_template::selection, .textIcon_HNB_template_left::selection, .textIcon_HNB_template_right::selection {
+.textIcon_HNB_template::selection, .textIcon_HNB_template.left::selection, .textIcon_HNB_template.right::selection {
   color: transparent;
 }
 
-.textIcon_HNB_template, .textIcon_HNB_template_left {
+.textIcon_HNB_template, .textIcon_HNB_template.left {
   background-image: url("../../images/icons/textIcon_menu_template.svg");
   background-position-y: 3px;
   padding-left: calc(21px + 0px + 6px + 4px);
 }
 
-.textIcon_HNB_template:empty, .textIcon_HNB_template_left:empty {
+.textIcon_HNB_template:empty, .textIcon_HNB_template.left:empty {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_HNB_template_right {
-  background-image: url("../../images/icons/textIcon_menu_template.svg");
-  background-position: 100% 3px;
+.textIcon_HNB_template.right {
+  background-position-x: 100%;
+  padding-left: 0;
   padding-right: calc(21px + 0px + 6px + 4px);
 }
 
-.textIcon_HNB_template_right:empty {
+.textIcon_HNB_template.right:empty {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
-.textIcon_HNB_template.noText, .textIcon_HNB_template_left.noText {
+.textIcon_HNB_template.noText, .textIcon_HNB_template.left.noText {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_HNB_template_right.noText {
+.textIcon_HNB_template.right.noText {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
 .textIcon_HNB_template.noText::before, .textIcon_HNB_template:empty::before,
-.textIcon_HNB_template_left.noText::before, .textIcon_HNB_template_left:empty::before,
-.textIcon_HNB_template_right.noText::before, .textIcon_HNB_template_right:empty::before {
+.textIcon_HNB_template.left.noText::before, .textIcon_HNB_template.left:empty::before,
+.textIcon_HNB_template.right.noText::before, .textIcon_HNB_template.right:empty::before {
   display: inline-block;
-  content: 'Bug fix!';
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
   height: 0;
   color: rgba(255, 255, 255, 0);
   overflow: hidden;
 }
 
-.textIcon_yes, .textIcon_yes_left, .textIcon_yes_right {
+.textIcon_yes, .textIcon_yes.left, .textIcon_yes.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 1px) 21px;
 }
 
-.textIcon_yes::selection, .textIcon_yes_left::selection, .textIcon_yes_right::selection {
+.textIcon_yes::selection, .textIcon_yes.left::selection, .textIcon_yes.right::selection {
   color: transparent;
 }
 
-.textIcon_yes, .textIcon_yes_left {
+.textIcon_yes, .textIcon_yes.left {
   background-image: url("../../images/icons/textIcon_yes.svg");
   background-position-y: 0px;
   padding-left: calc(21px + 1px + 0px + 4px);
 }
 
-.textIcon_yes:empty, .textIcon_yes_left:empty {
+.textIcon_yes:empty, .textIcon_yes.left:empty {
   padding-left: calc(21px + 1px);
 }
 
-.textIcon_yes_right {
-  background-image: url("../../images/icons/textIcon_yes.svg");
-  background-position: 100% 0px;
+.textIcon_yes.right {
+  background-position-x: 100%;
+  padding-left: 0;
   padding-right: calc(21px + 1px + 0px + 4px);
 }
 
-.textIcon_yes_right:empty {
+.textIcon_yes.right:empty {
+  padding-left: 0;
   padding-right: calc(21px + 1px);
 }
 
-.textIcon_yes.noText, .textIcon_yes_left.noText {
+.textIcon_yes.noText, .textIcon_yes.left.noText {
   padding-left: calc(21px + 1px);
 }
 
-.textIcon_yes_right.noText {
+.textIcon_yes.right.noText {
+  padding-left: 0;
   padding-right: calc(21px + 1px);
 }
 
 .textIcon_yes.noText::before, .textIcon_yes:empty::before,
-.textIcon_yes_left.noText::before, .textIcon_yes_left:empty::before,
-.textIcon_yes_right.noText::before, .textIcon_yes_right:empty::before {
+.textIcon_yes.left.noText::before, .textIcon_yes.left:empty::before,
+.textIcon_yes.right.noText::before, .textIcon_yes.right:empty::before {
   display: inline-block;
-  content: 'Bug fix!';
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
   height: 0;
   color: rgba(255, 255, 255, 0);
   overflow: hidden;
 }
 
-.textIcon_no, .textIcon_no_left, .textIcon_no_right {
+.textIcon_no, .textIcon_no.left, .textIcon_no.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
 }
 
-.textIcon_no::selection, .textIcon_no_left::selection, .textIcon_no_right::selection {
+.textIcon_no::selection, .textIcon_no.left::selection, .textIcon_no.right::selection {
   color: transparent;
 }
 
-.textIcon_no, .textIcon_no_left {
+.textIcon_no, .textIcon_no.left {
   background-image: url("../../images/icons/textIcon_no.svg");
   background-position-y: 0px;
   padding-left: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_no:empty, .textIcon_no_left:empty {
+.textIcon_no:empty, .textIcon_no.left:empty {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_no_right {
-  background-image: url("../../images/icons/textIcon_no.svg");
-  background-position: 100% 0px;
+.textIcon_no.right {
+  background-position-x: 100%;
+  padding-left: 0;
   padding-right: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_no_right:empty {
+.textIcon_no.right:empty {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
-.textIcon_no.noText, .textIcon_no_left.noText {
+.textIcon_no.noText, .textIcon_no.left.noText {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_no_right.noText {
+.textIcon_no.right.noText {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
 .textIcon_no.noText::before, .textIcon_no:empty::before,
-.textIcon_no_left.noText::before, .textIcon_no_left:empty::before,
-.textIcon_no_right.noText::before, .textIcon_no_right:empty::before {
+.textIcon_no.left.noText::before, .textIcon_no.left:empty::before,
+.textIcon_no.right.noText::before, .textIcon_no.right:empty::before {
   display: inline-block;
-  content: 'Bug fix!';
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
   height: 0;
   color: rgba(255, 255, 255, 0);
   overflow: hidden;
 }
 
-.textIcon_image, .textIcon_image_left, .textIcon_image_right {
+.textIcon_image, .textIcon_image.left, .textIcon_image.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
 }
 
-.textIcon_image::selection, .textIcon_image_left::selection, .textIcon_image_right::selection {
+.textIcon_image::selection, .textIcon_image.left::selection, .textIcon_image.right::selection {
   color: transparent;
 }
 
-.textIcon_image, .textIcon_image_left {
+.textIcon_image, .textIcon_image.left {
   background-image: url("../../images/icons/textIcon_image.svg");
   background-position-y: 0px;
   padding-left: calc(21px + 0px + 20px + 4px);
 }
 
-.textIcon_image:empty, .textIcon_image_left:empty {
+.textIcon_image:empty, .textIcon_image.left:empty {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_image_right {
-  background-image: url("../../images/icons/textIcon_image.svg");
-  background-position: 100% 0px;
+.textIcon_image.right {
+  background-position-x: 100%;
+  padding-left: 0;
   padding-right: calc(21px + 0px + 20px + 4px);
 }
 
-.textIcon_image_right:empty {
+.textIcon_image.right:empty {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
-.textIcon_image.noText, .textIcon_image_left.noText {
+.textIcon_image.noText, .textIcon_image.left.noText {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_image_right.noText {
+.textIcon_image.right.noText {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
 .textIcon_image.noText::before, .textIcon_image:empty::before,
-.textIcon_image_left.noText::before, .textIcon_image_left:empty::before,
-.textIcon_image_right.noText::before, .textIcon_image_right:empty::before {
+.textIcon_image.left.noText::before, .textIcon_image.left:empty::before,
+.textIcon_image.right.noText::before, .textIcon_image.right:empty::before {
   display: inline-block;
-  content: 'Bug fix!';
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
   height: 0;
   color: rgba(255, 255, 255, 0);
   overflow: hidden;
 }
 
-.textIcon_table, .textIcon_table_left, .textIcon_table_right {
+.textIcon_table, .textIcon_table.left, .textIcon_table.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
 }
 
-.textIcon_table::selection, .textIcon_table_left::selection, .textIcon_table_right::selection {
+.textIcon_table::selection, .textIcon_table.left::selection, .textIcon_table.right::selection {
   color: transparent;
 }
 
-.textIcon_table, .textIcon_table_left {
+.textIcon_table, .textIcon_table.left {
   background-image: url("../../images/icons/textIcon_table.svg");
   background-position-y: 0px;
   padding-left: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_table:empty, .textIcon_table_left:empty {
+.textIcon_table:empty, .textIcon_table.left:empty {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_table_right {
-  background-image: url("../../images/icons/textIcon_table.svg");
-  background-position: 100% 0px;
+.textIcon_table.right {
+  background-position-x: 100%;
+  padding-left: 0;
   padding-right: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_table_right:empty {
+.textIcon_table.right:empty {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
-.textIcon_table.noText, .textIcon_table_left.noText {
+.textIcon_table.noText, .textIcon_table.left.noText {
   padding-left: calc(21px + 0px);
 }
 
-.textIcon_table_right.noText {
+.textIcon_table.right.noText {
+  padding-left: 0;
   padding-right: calc(21px + 0px);
 }
 
 .textIcon_table.noText::before, .textIcon_table:empty::before,
-.textIcon_table_left.noText::before, .textIcon_table_left:empty::before,
-.textIcon_table_right.noText::before, .textIcon_table_right:empty::before {
+.textIcon_table.left.noText::before, .textIcon_table.left:empty::before,
+.textIcon_table.right.noText::before, .textIcon_table.right:empty::before {
   display: inline-block;
-  content: 'Bug fix!';
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
   height: 0;
   color: rgba(255, 255, 255, 0);

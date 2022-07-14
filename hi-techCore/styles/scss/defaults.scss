@@ -735,8 +735,8 @@ p, li, ul, ol, dl, dt, dd {
 
 p {
     @extend %margins;
-    text-indent: 4rem; /* Sem justificar, usar: 4px. Com justificar, usar: 6px.  */
-    // text-align: justify;
+    text-indent: 6rem; /* Sem 'text-align: justify', usar: 4px. Com 'text-align: justify', usar: 6px.  */
+    text-align: justify;
 }
 
 ul, ol {
@@ -1220,7 +1220,7 @@ span.token.black {
 TODO:    > Text Icons
 ──────────────────────────── */
  
-$textIcons_size: 21px;
+$textIcons_size: 21px; // <-------------------------------------------------------------
 
 /*  
 ────────────────────────────
@@ -1268,10 +1268,19 @@ TODO:        >> Generator
 
 
 
+
+
+
+
+
+
+
+$textIcons_size: 21px;
+
 // Entradas:
 
 $icons: 
-// Classe "Arquivo.tipo" ∆width ∆Espaçamento y,
+// Classe "Arquivo.tipo" ∆Largura ∆Espaçamento y,
 textIcon_template "textIcon_template.svg" 0px 0px 0px, 
 textIcon_HNB_template "textIcon_menu_template.svg" 0px 6px 3px, 
 textIcon_yes "textIcon_yes.svg" 1px 0px 0px, 
@@ -1291,59 +1300,60 @@ $widthOfSpace: 4px;
     $textIcon_distanceAdjust: nth($icon, 4);
     $textIcon_position_y: nth($icon, 5);
 
-    .#{$textIcon_ClassName}, .#{$textIcon_ClassName}_left, .#{$textIcon_ClassName}_right {
+    .#{$textIcon_ClassName}, .#{$textIcon_ClassName}.left, .#{$textIcon_ClassName}.right {
         background-repeat: no-repeat;   
         background-size: calc(#{$textIcons_size} + #{$textIcon_widthAdjust}) $textIcons_size; 
     }
 
-    .#{$textIcon_ClassName}::selection, .#{$textIcon_ClassName}_left::selection, .#{$textIcon_ClassName}_right::selection { 
+    .#{$textIcon_ClassName}::selection, .#{$textIcon_ClassName}.left::selection, .#{$textIcon_ClassName}.right::selection { 
         color: transparent;
     } 
 
-    .#{$textIcon_ClassName}, .#{$textIcon_ClassName}_left {
+    .#{$textIcon_ClassName}, .#{$textIcon_ClassName}.left {
         background-image: url("../../images/icons/"+ $textIcon_imageFileName);     
         background-position-y: $textIcon_position_y;
         padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjust} + #{$textIcon_distanceAdjust} + #{$widthOfSpace});
     }
 
-    .#{$textIcon_ClassName}:empty, .#{$textIcon_ClassName}_left:empty {
+    .#{$textIcon_ClassName}:empty, .#{$textIcon_ClassName}.left:empty {
         padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     }
 
-    .#{$textIcon_ClassName}_right {
-        background-image: url("../../images/icons/"+ $textIcon_imageFileName);     
-        background-position: 100% $textIcon_position_y;
+    .#{$textIcon_ClassName}.right {
+        background-position-x: 100%;
+        padding-left: 0;
         padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust} + #{$textIcon_distanceAdjust} + #{$widthOfSpace});
     }
 
-    .#{$textIcon_ClassName}_right:empty {
+    .#{$textIcon_ClassName}.right:empty {
+        padding-left: 0;
         padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     }
 
-    .#{$textIcon_ClassName}.noText, .#{$textIcon_ClassName}_left.noText {
-        // O conteúdo do elemento é retirado via Java script!
+    .#{$textIcon_ClassName}.noText, .#{$textIcon_ClassName}.left.noText {
         padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
+        // Bug fix: O conteúdo do elemento é retirado via JavaScript! Foi necessário usar JavaScript ao invés do CSS para evitar que o ícone fique deslocado para cima.
     }
 
-    .#{$textIcon_ClassName}_right.noText {
-        // O conteúdo do elemento é retirado via Java script!
+    .#{$textIcon_ClassName}.right.noText {
+        padding-left: 0;
         padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     } 
 
-    // Bug fix: 
+    // Bug fix: Isso evita que os caracteres de espaço antes do ícone (do lado esquerdo) desapareçam se não houver algum caractere do lado direito dele (além dos caracteres de espaços e dos outros elementos).
     .#{$textIcon_ClassName}.noText::before, .#{$textIcon_ClassName}:empty::before,
-    .#{$textIcon_ClassName}_left.noText::before, .#{$textIcon_ClassName}_left:empty::before,
-    .#{$textIcon_ClassName}_right.noText::before, .#{$textIcon_ClassName}_right:empty::before {
+    .#{$textIcon_ClassName}.left.noText::before, .#{$textIcon_ClassName}.left:empty::before,
+    .#{$textIcon_ClassName}.right.noText::before, .#{$textIcon_ClassName}.right:empty::before {
 
         display: inline-block;
-        content: 'Bug fix!';
+        content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
         width: 0;
         height: 0;
         color: hsla(0, 0%, 100%, 0);
         overflow: hidden;
     }
 }
- 
+
 /*  
 ────────────────────────────
 TODO:        >> Not From Generator

@@ -224,7 +224,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<li><a onclick="nav_menu_options(this)"><span>Link 2</span></a>
+<li><a onclick="nav_menu_options(this)"><span>L2</span></a>
 
     <div>
         <ul>
@@ -299,7 +299,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li>
 
-<li><a href="page.html"><span>P</span></a><div><ul></ul></div></li>
+<li><a href="page.html"><span>P2</span></a><div><ul></ul></div></li>
 <li><a aria-label="Hide bar"><img src="../images/icons/headerNav-hide.svg" alt="Header-nav button"></a></li>
 </ul>
 `
