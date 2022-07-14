@@ -1300,6 +1300,19 @@ $widthOfSpace: 4px;
         // O conteúdo do elemento é retirado via Java script!
         padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
     } 
+
+    // Bug fix: 
+    .#{$textIcon_ClassName}.noText::before, .#{$textIcon_ClassName}:empty::before,
+    .#{$textIcon_ClassName}_left.noText::before, .#{$textIcon_ClassName}_left:empty::before,
+    .#{$textIcon_ClassName}_right.noText::before, .#{$textIcon_ClassName}_right:empty::before {
+
+        display: inline-block;
+        content: 'Bug fix!';
+        width: 0;
+        height: 0;
+        color: hsla(0, 0%, 100%, 0);
+        overflow: hidden;
+    }
 }
  
 /*  

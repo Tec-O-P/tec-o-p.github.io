@@ -24,6 +24,7 @@ TODO: Text Icons - Generator
 document.querySelectorAll('.noText').forEach(function (item) {
 
     item.textContent = ''
+    // item.innerHTML = '<span style="color: hsla(0, 0%, 100%, 0);">.</span>'
 })
 
 /*  

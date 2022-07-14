@@ -1011,6 +1011,17 @@ TODO:        >> Generator
   padding-right: calc(21px + 0px);
 }
 
+.textIcon_template.noText::before, .textIcon_template:empty::before,
+.textIcon_template_left.noText::before, .textIcon_template_left:empty::before,
+.textIcon_template_right.noText::before, .textIcon_template_right:empty::before {
+  display: inline-block;
+  content: 'Bug fix!';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
 .textIcon_yes, .textIcon_yes_left, .textIcon_yes_right {
   background-repeat: no-repeat;
   background-size: calc(21px + 1px) 21px;
@@ -1045,6 +1056,17 @@ TODO:        >> Generator
 
 .textIcon_yes_right.noText {
   padding-right: calc(21px + 1px);
+}
+
+.textIcon_yes.noText::before, .textIcon_yes:empty::before,
+.textIcon_yes_left.noText::before, .textIcon_yes_left:empty::before,
+.textIcon_yes_right.noText::before, .textIcon_yes_right:empty::before {
+  display: inline-block;
+  content: 'Bug fix!';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
 }
 
 .textIcon_no, .textIcon_no_left, .textIcon_no_right {
@@ -1083,6 +1105,17 @@ TODO:        >> Generator
   padding-right: calc(21px + 0px);
 }
 
+.textIcon_no.noText::before, .textIcon_no:empty::before,
+.textIcon_no_left.noText::before, .textIcon_no_left:empty::before,
+.textIcon_no_right.noText::before, .textIcon_no_right:empty::before {
+  display: inline-block;
+  content: 'Bug fix!';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
 .textIcon_image, .textIcon_image_left, .textIcon_image_right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
@@ -1119,6 +1152,17 @@ TODO:        >> Generator
   padding-right: calc(21px + 0px);
 }
 
+.textIcon_image.noText::before, .textIcon_image:empty::before,
+.textIcon_image_left.noText::before, .textIcon_image_left:empty::before,
+.textIcon_image_right.noText::before, .textIcon_image_right:empty::before {
+  display: inline-block;
+  content: 'Bug fix!';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
 .textIcon_table, .textIcon_table_left, .textIcon_table_right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
@@ -1153,6 +1197,17 @@ TODO:        >> Generator
 
 .textIcon_table_right.noText {
   padding-right: calc(21px + 0px);
+}
+
+.textIcon_table.noText::before, .textIcon_table:empty::before,
+.textIcon_table_left.noText::before, .textIcon_table_left:empty::before,
+.textIcon_table_right.noText::before, .textIcon_table_right:empty::before {
+  display: inline-block;
+  content: 'Bug fix!';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
 }
 
 /*  
