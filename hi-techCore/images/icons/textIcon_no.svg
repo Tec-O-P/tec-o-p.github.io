@@ -7,10 +7,10 @@
     <image id="image" width="63px" height="63px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAYAAABXXxDfAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAP6ADAAQAAAABAAAAPwAAAACf5cgIAAAAXElEQVRoBe3QAQ0AAADCoPdPbQ8HESgMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBg4GRgPkMAAXh4rBUAAAAASUVORK5CYII="/>
    </defs>
    <use id="Camada" xlink:href="#image" x="0px" y="0px" width="63px" height="63px"/>
-   <path id="Retângulo" d="M16.775 56.245 L55.208 17.812 45.6 8.204 7.166 46.637 Z" fill="#ff0000" fill-opacity="1" stroke="none"/>
+   <path id="Retângulo" d="M16.109 55.579 L54.542 17.146 46.198 8.802 7.765 47.235 Z" fill="#ff0000" fill-opacity="1" stroke="none"/>
   </g>
   <g id="New-Group-2">
-   <path id="Retângulo-copiar" d="M50.844 56.209 L38.151 43.516 41.784 39.883 54.477 52.576 50.844 56.209 Z M19.897 25.26 L7.46 12.824 11.092 9.191 23.53 21.627 19.897 25.26 Z" fill="#ff0000" fill-opacity="1" stroke="none"/>
+   <path id="Retângulo-copiar" d="M50.843 56.209 L37.65 43.018 41.283 39.385 54.476 52.576 50.843 56.209 Z M20.396 25.762 L7.459 12.824 11.091 9.191 24.029 22.129 20.396 25.762 Z" fill="#ff0000" fill-opacity="1" stroke="none"/>
   </g>
  </g>
 </svg>
