@@ -1227,6 +1227,32 @@ $textIcons_size: 21px;
 TODO:        >> Generator
 ──────────────────────────── */ 
 
+#tt {
+    // padding-left: 25px;
+    border: 1px solid red;
+}
+
+#tt::before {
+    display: inline;
+    content: '····';
+    color: hsla(0, 0%, 100%, 0);
+    // width: 21px;
+    // height: 21px;
+    background-image: url("../../images/icons/textIcon_template.svg");  
+    background-repeat: no-repeat;   
+    background-size: 21px 21px;    
+}
+
+
+
+
+
+
+
+
+
+
+
 // $icon_1: "classeName1", "fileName1", 10;
 // $icon_2: "classeName2", "fileName2", 4;
 
@@ -1242,15 +1268,16 @@ TODO:        >> Generator
 
 
 
-// Entrada:
+// Entradas:
 
 $icons: 
-// NomeDaClasse "NomeDoArquivoDeImagem.tipo" AjusteDaLargura AjusteDaDistânciaEntreOÍconeEOTexto,
-textIcon_template "textIcon_template.svg" 0px 0px, 
-textIcon_yes "textIcon_yes.svg" 1px 0px, 
-textIcon_no "textIcon_no.svg" 0px 0px,  
-textIcon_image "textIcon_image.svg" 0px 20px, 
-textIcon_table "textIcon_table.svg" 0px 0px;
+// Classe "Arquivo.tipo" ∆width ∆Espaçamento y,
+textIcon_template "textIcon_template.svg" 0px 0px 0px, 
+textIcon_HNB_template "textIcon_menu_template.svg" 0px 6px 3px, 
+textIcon_yes "textIcon_yes.svg" 1px 0px 0px, 
+textIcon_no "textIcon_no.svg" 0px 0px 0px,  
+textIcon_image "textIcon_image.svg" 0px 20px 0px, 
+textIcon_table "textIcon_table.svg" 0px 0px 0px;
  
 // Motor: 
 
@@ -1260,12 +1287,13 @@ $widthOfSpace: 4px;
     
     $textIcon_ClassName: nth($icon, 1);
     $textIcon_imageFileName: nth($icon, 2);
-    $textIcon_widthAdjustment: nth($icon, 3);
-    $textIcon_AdjustDistance: nth($icon, 4);
+    $textIcon_widthAdjust: nth($icon, 3);
+    $textIcon_distanceAdjust: nth($icon, 4);
+    $textIcon_position_y: nth($icon, 5);
 
     .#{$textIcon_ClassName}, .#{$textIcon_ClassName}_left, .#{$textIcon_ClassName}_right {
         background-repeat: no-repeat;   
-        background-size: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment}) $textIcons_size; 
+        background-size: calc(#{$textIcons_size} + #{$textIcon_widthAdjust}) $textIcons_size; 
     }
 
     .#{$textIcon_ClassName}::selection, .#{$textIcon_ClassName}_left::selection, .#{$textIcon_ClassName}_right::selection { 
@@ -1274,31 +1302,32 @@ $widthOfSpace: 4px;
 
     .#{$textIcon_ClassName}, .#{$textIcon_ClassName}_left {
         background-image: url("../../images/icons/"+ $textIcon_imageFileName);     
-        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment} + #{$textIcon_AdjustDistance} + #{$widthOfSpace});
+        background-position-y: $textIcon_position_y;
+        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjust} + #{$textIcon_distanceAdjust} + #{$widthOfSpace});
     }
 
     .#{$textIcon_ClassName}:empty, .#{$textIcon_ClassName}_left:empty {
-        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     }
 
     .#{$textIcon_ClassName}_right {
         background-image: url("../../images/icons/"+ $textIcon_imageFileName);     
-        background-position: 100% 0;
-        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment} + #{$textIcon_AdjustDistance} + #{$widthOfSpace});
+        background-position: 100% $textIcon_position_y;
+        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust} + #{$textIcon_distanceAdjust} + #{$widthOfSpace});
     }
 
     .#{$textIcon_ClassName}_right:empty {
-        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     }
 
     .#{$textIcon_ClassName}.noText, .#{$textIcon_ClassName}_left.noText {
         // O conteúdo do elemento é retirado via Java script!
-        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     }
 
     .#{$textIcon_ClassName}_right.noText {
         // O conteúdo do elemento é retirado via Java script!
-        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust});
     } 
 
     // Bug fix: 
