@@ -2,18 +2,18 @@
 <html lang="pt-br"> <!-- en -->
 <head>
     <meta charset="utf-8">
-    <title>Hi-Tech Core</title>
-    <meta name = "apple-mobile-web-app-title" content = "Hi-Tech Core"><!-- App Name --> 
+    <title>Framework</title>
+    <meta name = "apple-mobile-web-app-title" content = "Framework"><!-- App Name --> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="George Maxwell">
     <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
     <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-
+<!---->
     <link href='../styles/css/downloadFonts.css' rel='stylesheet'>  
     <link href='../styles/css/normalize.css' rel='stylesheet'>  
     <link href='../styles/css/gmes_normalize.css' rel='stylesheet'>
-    <link href='../styles/css/defaults.css' rel='stylesheet'><!---->
+    <link href='../styles/css/defaults.css' rel='stylesheet'>
     <link href='../styles/css/fw_identity.css' rel='stylesheet'>
 </head>
 <body>
@@ -33,7 +33,7 @@
 
                 <nav class="nav">
                 
-                    <h1><a href="index.html" class="logo"><img src="../images/icons/logo.svg" alt="Logo" width="22px" height="22px">Site</a></h1>
+                    <h1><a href="index.html" class="logo"><img src="../images/icons/logo.svg" alt="Logo" width="22px" height="22px">Framework</a></h1>
                     
                     <a class="nav-menu-button">
                         <img src="../images/icons/menu.svg" alt="Menu button" width="48px" height="48px">
@@ -63,21 +63,19 @@
 
                 <h2>Testes</h2>
 
-                <p>Acesse o <a class="textIcon_link" href="https://developer.mozilla.org/en-US/">site do MDN</a> para aprender HTML, CSS, JS.</p>
+                <p>Acesse o <a href="https://developer.mozilla.org/en-US/">site do MDN</a> para aprender HTML, CSS, JS.</p>
 
                 <p>Aqui temos um <a id="quoting" class="textIcon_chain" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
 
-                <p>&lt;abbr>: Usamos <abbr title=""><a class="textIcon_info" href="#" onclick="lightbox(`Hypertext Markup Language`)" >HTML</a></abbr> para estruturar nossos documentos da web.</p>
-
-                <p>É necessário <a class="textIcon_download" download="filename.pdf" href="../pdf/text.pdf">baixar o arquivo (PDF, 10MB)</a> para iniciar o exemplo.</p>
+                <p>É necessário <a download="filename.pdf" href="../pdf/text.pdf">baixar o arquivo (PDF, 10MB)</a> para iniciar o exemplo.</p>
 
                 <p>
                     Contate o autor por 
-                    <a class="textIcon_email" href="mailto:contato@mozilla.org">contato@mozilla.org</a>
+                    <a href="mailto:contato@mozilla.org">contato@mozilla.org</a>
                      ou 
-                     <a class="textIcon_phone" href="tel:+6824258804">(68) 2425-8804</a> 
+                     <a href="tel:+6824258804">(68) 2425-8804</a> 
                      para obter mais informações.
-                    </p> 
+                </p> 
 
                 <!-- 
                 <p><a class="textIcon_popUp" href="#" onclick="alert(`Eu tenho a classe 'textIcon_popUp' para indicar que sou um texto clicável.`)">Clique aqui!</a></p> 
@@ -86,6 +84,10 @@
 
                 <p><a href="../videos/trailer.mp4">Assista ao vídeo (qualidade HD)</a></p>
                 -->
+
+
+                <p>&lt;abbr>: Usamos <abbr title=""><button onclick="lightbox(`Hypertext Markup Language`)" >HTML</button></abbr> para estruturar nossos documentos da web.</p>
+
 
                 
 
@@ -298,6 +300,40 @@ font-size: 43px;
 
                 <h4>Nome Da Fonte Futurista</h4>
 
+                <p class="t10"></p>
+                <p class="t4"></p>
+                <p class="t6"></p>
+                <p class="t25"></p>
+
+
+
+
+
+
+
+                <p>Texto de ícone (o lado padrão é o esquerdo):</p>
+
+                <p>Ícone L: <span class="textIcon_table"></span>.</p>
+                <p>Ícone L: <span class="textIcon_image">Yes</span>.</p>
+                <!-- <p>Ícone L: <span class="textIcon_template noText"></span>.</p> -->
+                <p>Ícone L: <span class="textIcon_yes noText">Yes</span>.</p>
+
+                <p style="white-space: break-spaces;">Números: <span class="textIcon_yes noText">Yes</span></p>
+
+                <p>Texto de ícone pro lado esquerdo:</p>
+
+                <p>Ícone L: <span class="textIcon_template_left"></span>.</p>
+                <p>Ícone L: <span class="textIcon_template_left">Yes</span>.</p>
+                <!-- <p>Ícone L: <span class="textIcon_template_left noText"></span>.</p> -->
+                <p>Ícone L: <span class="textIcon_template_left noText">Yes</span>.</p>
+
+                <p>Texto de ícone pro lado direito:</p>
+
+                <p>Ícone R: <span class="textIcon_template_right"></span>.</p>
+                <p>Ícone R: <span class="textIcon_template_right">Yes</span>.</p>
+                <!-- <p>Ícone R: <span class="textIcon_template_right noText"></span>.</p> -->
+                <p>Ícone R: <span class="textIcon_template_right noText">Yes</span>.</p>
+
                 <p>Principais características:</p>
 
                 <table class="type_3">
@@ -305,10 +341,10 @@ font-size: 43px;
                     <tr><th>Tipos de caracteres</th><td>
 
                         <ul class="list_compressed" style="text-align: left; margin-top: 4px; margin-bottom: 4px;">
-                            <li><span style="font-weight: bold;">Números: </span><span class="icon_yes">Yes</span></li>
-                            <li><span style="font-weight: bold;">Minúsculas: </span><span class="icon_no">No</span></li>
-                            <li><span style="font-weight: bold;">Maiúsculas: </span><span><span class="icon_yes">Yes</span></span></li>
-                            <li><span style="font-weight: bold;">Especiais: </span><span class="icon_yes">Yes</span></li>
+                            <li><span style="font-weight: bold;">Números: </span><span class="textIcon_yes noText">Yes</span>.</li>
+                            <li><span style="font-weight: bold;">Minúsculas: </span><span class="textIcon_no noText">No</span></li>
+                            <li><span style="font-weight: bold;">Maiúsculas: </span><span><span class="textIcon_yes noText">Yes</span></span></li>
+                            <li><span style="font-weight: bold;">Especiais: </span><span class="textIcon_yes noText">Yes</span></li>
                         </ul>
 
                     </td></tr>
@@ -5843,12 +5879,7 @@ font-size: 43px;
 
 
 
-      textIcon_link
-      textIcon_chain
       textIcon_info
-      textIcon_download
-      textIcon_email
-      textIcon_phone
 
     ────────────────────────────
     >> Icons (Alone)

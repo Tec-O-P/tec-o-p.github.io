@@ -289,7 +289,7 @@ document.querySelector('.nav-menu').innerHTML = `
     <div>
         <ul>
             <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.1</span></a></li>
-            <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.2</span></a></li>
+            <li><a href="#"><span class="textIcon_template"></span><span>Link 7.2</span></a></li>
             <li><a href="#"><span><img src="../images/exs/text_img_2_1.svg" alt="" class="text_img_size">Link 7.3</span></a></li>
             <!--<li><a href="#">Link 7.4</a></li>
             <li><a href="#"><img src="../images/exs/landscape.png" alt="" class="nav_poster_margins"><span>Link 7.5</span></a></li> 

@@ -18,6 +18,16 @@ var $color_theme = 'DeepSkyBlue' // VÍNCULO: Váriável SCSS
 
 /*  
 ──────────────────────────────────────────────────────
+TODO: Text Icons - Generator
+────────────────────────────────────────────────────── */
+
+document.querySelectorAll('.noText').forEach(function (item) {
+
+    item.textContent = ''
+})
+
+/*  
+──────────────────────────────────────────────────────
 TODO: Switches & Buttons
 ────────────────────────────────────────────────────── */
 

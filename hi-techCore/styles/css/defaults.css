@@ -861,6 +861,11 @@ span.token.black {
   margin-right: calc(2 * 20px);
 }
 
+.list_index a[href^="#"]:not([href="#"]) {
+  padding-right: 0px;
+  background: 0;
+}
+
 @media (min-width: calc(800px + 60px)) {
   .list_index > ul {
     margin-left: 20px;
@@ -968,118 +973,348 @@ TODO:    > Text Icons
 ──────────────────────────── */
 /*  
 ────────────────────────────
-TODO:        >> Icons With Text Together
+TODO:        >> Generator
 ──────────────────────────── */
-.textIcon_link {
+.textIcon_template, .textIcon_template_left, .textIcon_template_right {
   background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/web.svg");
-  padding-right: 25px;
+  background-size: calc(21px + 0px) 21px;
 }
 
-.textIcon_chain {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/chain.svg");
+.textIcon_template::selection, .textIcon_template_left::selection, .textIcon_template_right::selection {
+  color: transparent;
 }
 
-.textIcon_info {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/info.svg");
-  padding-right: 22px;
+.textIcon_template, .textIcon_template_left {
+  background-image: url("../../images/icons/textIcon_template.svg");
+  padding-left: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_popUp {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  /* 
-    background-image: url('../../images/icons/popUp_thin.svg');
-    background-size: 23px 18px; 
-    */
-  background-image: url("../../images/icons/popUp.svg");
-  background-size: 22px 19px;
-  padding-right: 29px;
+.textIcon_template:empty, .textIcon_template_left:empty {
+  padding-left: calc(21px + 0px);
 }
 
-.textIcon_download {
-  background-repeat: no-repeat;
+.textIcon_template_right {
+  background-image: url("../../images/icons/textIcon_template.svg");
   background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/download.png");
-  padding-right: 24px;
+  padding-right: calc(21px + 0px + 0px + 4px);
 }
 
-.textIcon_email {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/email.svg");
-  padding-right: 27px;
+.textIcon_template_right:empty {
+  padding-right: calc(21px + 0px);
 }
 
-.textIcon_phone {
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 21px 21px;
-  padding-right: 26px;
-  background-image: url("../../images/icons/phone.svg");
-  padding-right: 25px;
+.textIcon_template.noText, .textIcon_template_left.noText {
+  padding-left: calc(21px + 0px);
 }
 
-.attention {
-  color: red;
-  background-image: url("../../images/icons/attention.svg");
-  background-position-y: 3px;
+.textIcon_template_right.noText {
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_yes, .textIcon_yes_left, .textIcon_yes_right {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
-  text-indent: 26px;
+  background-size: calc(21px + 1px) 21px;
+}
+
+.textIcon_yes::selection, .textIcon_yes_left::selection, .textIcon_yes_right::selection {
+  color: transparent;
+}
+
+.textIcon_yes, .textIcon_yes_left {
+  background-image: url("../../images/icons/textIcon_yes.svg");
+  padding-left: calc(21px + 1px + 0px + 4px);
+}
+
+.textIcon_yes:empty, .textIcon_yes_left:empty {
+  padding-left: calc(21px + 1px);
+}
+
+.textIcon_yes_right {
+  background-image: url("../../images/icons/textIcon_yes.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 1px + 0px + 4px);
+}
+
+.textIcon_yes_right:empty {
+  padding-right: calc(21px + 1px);
+}
+
+.textIcon_yes.noText, .textIcon_yes_left.noText {
+  padding-left: calc(21px + 1px);
+}
+
+.textIcon_yes_right.noText {
+  padding-right: calc(21px + 1px);
+}
+
+.textIcon_no, .textIcon_no_left, .textIcon_no_right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_no::selection, .textIcon_no_left::selection, .textIcon_no_right::selection {
+  color: transparent;
+}
+
+.textIcon_no, .textIcon_no_left {
+  background-image: url("../../images/icons/textIcon_no.svg");
+  padding-left: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_no:empty, .textIcon_no_left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_no_right {
+  background-image: url("../../images/icons/textIcon_no.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_no_right:empty {
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_no.noText, .textIcon_no_left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_no_right.noText {
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_image, .textIcon_image_left, .textIcon_image_right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_image::selection, .textIcon_image_left::selection, .textIcon_image_right::selection {
+  color: transparent;
+}
+
+.textIcon_image, .textIcon_image_left {
+  background-image: url("../../images/icons/textIcon_image.svg");
+  padding-left: calc(21px + 0px + 20px + 4px);
+}
+
+.textIcon_image:empty, .textIcon_image_left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_image_right {
+  background-image: url("../../images/icons/textIcon_image.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 0px + 20px + 4px);
+}
+
+.textIcon_image_right:empty {
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_image.noText, .textIcon_image_left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_image_right.noText {
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_table, .textIcon_table_left, .textIcon_table_right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_table::selection, .textIcon_table_left::selection, .textIcon_table_right::selection {
+  color: transparent;
+}
+
+.textIcon_table, .textIcon_table_left {
+  background-image: url("../../images/icons/textIcon_table.svg");
+  padding-left: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_table:empty, .textIcon_table_left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_table_right {
+  background-image: url("../../images/icons/textIcon_table.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_table_right:empty {
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_table.noText, .textIcon_table_left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_table_right.noText {
+  padding-right: calc(21px + 0px);
 }
 
 /*  
 ────────────────────────────
+TODO:        >> Not From Generator
+──────────────────────────── */
+/*  
+────────────────────────────
+TODO:            >>> <a>
+──────────────────────────── */
+a[href^="http"] {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-image: url("../../images/icons/anchor_web.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 4px);
+}
+
+a[href^="#"]:not([href="#"]) {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-image: url("../../images/icons/anchor_chain.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 5px);
+}
+
+a[download] {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-image: url("../../images/icons/anchor_download.png");
+  background-position: 100% 0;
+  padding-right: calc(21px + 3px);
+}
+
+a[href^="mailto:"] {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-image: url("../../images/icons/anchor_email.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 6px);
+}
+
+a[href^="tel:"] {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-image: url("../../images/icons/anchor_phone.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 4px);
+}
+
+/*  
+────────────────────────────
+TODO:            >>> Others
+──────────────────────────── */
+abbr > button {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  color: blue;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../../images/icons/textIcon_info.svg");
+  background-position: 100% 0;
+  padding-right: calc(21px + 1px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+abbr > button:focus {
+  outline: 0px dotted DeepSkyBlue;
+}
+
+/* 
+.textIcon_popUp { 
+
+    @include textIcons_notFromGenerator;
+    
+    // background-image: url('../../images/icons/popUp_thin.svg');
+    // background-position: 100% 0;
+    // background-size: 23px 18px; 
+
+    background-image: url('../../images/icons/popUp.svg');
+    background-position: 100% 0;
+    background-size: 22px 19px; 
+    
+    padding-right: calc(21px + 8px);   
+}
+*/
+.attention {
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  color: red;
+  text-indent: calc(21px + 5px);
+  background-image: url("../../images/icons/textIcon_attention.svg");
+  background-position: 0 3px;
+}
+
+/*   
+────────────────────────────
 TODO:        >> Icon Alone
 ──────────────────────────── */
-.icon_yes, .icon_no, .icon_chain {
-  color: transparent;
-  cursor: default;
-  overflow: hidden;
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  line-height: 1.2;
+/* 
+.icon_yes, .icon_no {
+    color: transparent;
+    cursor: default;
+    overflow: hidden;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    line-height: 1.2;
 }
 
-.icon_yes::selection, .icon_no::selection, .icon_chain::selection {
-  color: transparent;
-}
+.icon_yes::selection, .icon_no::selection { 
+    color: transparent;
+} 
 
 .icon_yes {
-  width: 22px;
-  background-image: url("../../images/icons/icon_yes.svg");
-  background-size: 22px 17px;
+    width: 22px;
+    background-image: url('../../images/icons/icon_yes.svg');   
+    background-size: 22px 17px;
 }
 
 .icon_no {
-  background-image: url("../../images/icons/icon_no.svg");
-  background-size: 17px 17px;
+    background-image: url('../../images/icons/icon_no.svg');   
+    background-size: 17px 17px;
+}
+ */
+/* 
+ @mixin iconsAlone { // O tamanho da linha de um <span> é 21 px.
+
+    display: inline-flex;
+    align-items: center;
+
+    width: 20px; 
+    height: 20px; // Altura máxima de um ícone para a altura padrão da linha de um <p>. Ou seja, se um ícone com altura maior que 20px estiver dentro de um <p>, a altura da linha do <p> aumentará.
+
+    background-size: 20px 20px; // Necessário caso a imagem do ícone não seja um vetor
+    // background-repeat: no-repeat;   
+
+    // Esconder o conteúdo interno:
+
+    color: transparent;
+    overflow: hidden;
+    cursor: default;
 }
 
-.icon_chain {
-  background-image: url("../../images/icons/chain.svg");
-  background-size: 17px 17px;
+.icon_yes::selection, .icon_no::selection { 
+    color: transparent;
+} 
+
+.icon_yes {
+    @include iconsAlone;
+    //width: 220px;
+    background-image: url('../../images/icons/textIcon_template.svg');   // 22x13
+
+    // background-position: 0 0;
+    //background-size: 22px 22px;
 }
 
+.icon_no {
+    @include iconsAlone;
+    background-image: url('../../images/icons/icon_no.svg');   
+}
+ */
 /*  
 ──────────────────────────────────────────────────────
 TODO: Layout Sections

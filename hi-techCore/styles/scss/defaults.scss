@@ -23,7 +23,7 @@ $button_height: 48px;
 $button_height_small: 40px;
 $button_height_smaller: 32px;
 $border_radius_default: 20px;
-$border_radius_big: 40px;
+$border_radius_big: 40px; 
  
 // ─────────── Breakpoints ───────────
 
@@ -1103,6 +1103,11 @@ span.token.black {
         margin-right: calc(2 * #{$margin_horizontal});
     }
 
+    a[href^="#"]:not([href="#"]) {
+        padding-right: 0px;
+        background: 0;
+    }
+
     @media (min-width: $hr_stop) {
 
         > ul { 
@@ -1215,89 +1220,202 @@ span.token.black {
 TODO:    > Text Icons
 ──────────────────────────── */
  
+$textIcons_size: 21px;
+
 /*  
 ────────────────────────────
-TODO:        >> Icons With Text Together
-──────────────────────────── */
+TODO:        >> Generator
+──────────────────────────── */ 
 
-$icons_text_whiteSpace: 26px;
+// $icon_1: "classeName1", "fileName1", 10;
+// $icon_2: "classeName2", "fileName2", 4;
 
-@mixin iconsWithTextTogether {
-    background-repeat: no-repeat;   
-    background-position: 100% 0;
-    background-size: 21px 21px; 
-    padding-right: $icons_text_whiteSpace;
-}
-
-.textIcon_link {
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/web.svg');   
-    padding-right: 25px;
-}
-
-.textIcon_chain {
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/chain.svg');
-}
-
-.textIcon_info {
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/info.svg');
-    padding-right: 22px;
-}
+// $icons:  $icon_1, $icon_2, "classeName3" "fileName3" 6, "classeName4" "fileName4" 25;
  
-.textIcon_popUp { 
+// @each $icon in $icons {
 
-    @include iconsWithTextTogether;
-    /* 
-    background-image: url('../../images/icons/popUp_thin.svg');
-    background-size: 23px 18px; 
-    */
-    background-image: url('../../images/icons/popUp.svg');
-    background-size: 22px 19px; 
+//     .t#{nth($icon, 3)}::before {
+//         display: inline-block;
+//         content: nth($icon, 1) +" - "+ nth($icon, 2); 
+//     } 
+// }  
+
+
+
+// Entrada:
+
+$icons: 
+// NomeDaClasse "NomeDoArquivoDeImagem.tipo" AjusteDaLargura AjusteDaDistânciaEntreOÍconeEOTexto,
+textIcon_template "textIcon_template.svg" 0px 0px, 
+textIcon_yes "textIcon_yes.svg" 1px 0px, 
+textIcon_no "textIcon_no.svg" 0px 0px,  
+textIcon_image "textIcon_image.svg" 0px 20px, 
+textIcon_table "textIcon_table.svg" 0px 0px;
+ 
+// Motor: 
+
+$widthOfSpace: 4px;
+
+@each $icon in $icons {
     
-    padding-right: 29px;   
-}
+    $textIcon_ClassName: nth($icon, 1);
+    $textIcon_imageFileName: nth($icon, 2);
+    $textIcon_widthAdjustment: nth($icon, 3);
+    $textIcon_AdjustDistance: nth($icon, 4);
 
-.textIcon_download {
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/download.png'); // Não consegui fazer este ícone em SVG
-    padding-right: 24px;
-}
+    .#{$textIcon_ClassName}, .#{$textIcon_ClassName}_left, .#{$textIcon_ClassName}_right {
+        background-repeat: no-repeat;   
+        background-size: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment}) $textIcons_size; 
+    }
 
-.textIcon_email { // a[href^="mailto:"] { 
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/email.svg');
-    padding-right: 27px;
-}
+    .#{$textIcon_ClassName}::selection, .#{$textIcon_ClassName}_left::selection, .#{$textIcon_ClassName}_right::selection { 
+        color: transparent;
+    } 
 
-.textIcon_phone { // a[href^="tel:"] { 
-    @include iconsWithTextTogether;
-    background-image: url('../../images/icons/phone.svg');
-    padding-right: 25px;
-}
+    .#{$textIcon_ClassName}, .#{$textIcon_ClassName}_left {
+        background-image: url("../../images/icons/"+ $textIcon_imageFileName);     
+        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment} + #{$textIcon_AdjustDistance} + #{$widthOfSpace});
+    }
 
+    .#{$textIcon_ClassName}:empty, .#{$textIcon_ClassName}_left:empty {
+        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+    }
 
+    .#{$textIcon_ClassName}_right {
+        background-image: url("../../images/icons/"+ $textIcon_imageFileName);     
+        background-position: 100% 0;
+        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment} + #{$textIcon_AdjustDistance} + #{$widthOfSpace});
+    }
 
+    .#{$textIcon_ClassName}_right:empty {
+        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+    }
 
+    .#{$textIcon_ClassName}.noText, .#{$textIcon_ClassName}_left.noText {
+        // O conteúdo do elemento é retirado via Java script!
+        padding-left: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+    }
 
-.attention {
-    color: red;
-    background-image: url('../../images/icons/attention.svg');
-    background-position-y: 3px;
-    background-repeat: no-repeat;   
-    background-size: 21px 21px; 
-    text-indent: $icons_text_whiteSpace;
+    .#{$textIcon_ClassName}_right.noText {
+        // O conteúdo do elemento é retirado via Java script!
+        padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjustment});
+    } 
 }
  
 /*  
+────────────────────────────
+TODO:        >> Not From Generator
+──────────────────────────── */
+
+@mixin textIcons_notFromGenerator {
+    background-repeat: no-repeat;   
+    background-size: $textIcons_size $textIcons_size; 
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> <a>
+──────────────────────────── */
+
+a[href^="http"] {  // .textIcon_link {
+    @include textIcons_notFromGenerator;
+    background-image: url('../../images/icons/anchor_web.svg');   
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 4px);
+}
+
+a[href^="#"]:not([href="#"]) { // .textIcon_chain {
+    @include textIcons_notFromGenerator;
+    background-image: url('../../images/icons/anchor_chain.svg');
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 5px);
+}
+
+a[download] { // .textIcon_download {
+    @include textIcons_notFromGenerator;
+    background-image: url('../../images/icons/anchor_download.png'); // Não consegui fazer este ícone em SVG
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 3px);
+}
+
+a[href^="mailto:"] {  // .textIcon_email {
+    @include textIcons_notFromGenerator;
+    background-image: url('../../images/icons/anchor_email.svg');
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 6px);
+}
+
+a[href^="tel:"] {  // .textIcon_phone {
+    @include textIcons_notFromGenerator;
+    background-image: url('../../images/icons/anchor_phone.svg');
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 4px);
+}
+ 
+/*  
+────────────────────────────
+TODO:            >>> Others
+──────────────────────────── */
+
+abbr > button { // .textIcon_info {
+    @include textIcons_notFromGenerator;
+    color: blue;
+    background-color: hsla(0, 0%, 0%, 0);
+    background-image: url('../../images/icons/textIcon_info.svg');
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 1px);
+    margin-left: 0;
+    margin-right: 0;
+} 
+
+abbr > button:focus {
+    outline: 0px dotted DeepSkyBlue;
+}
+ 
+/* 
+.textIcon_popUp { 
+
+    @include textIcons_notFromGenerator;
+    
+    // background-image: url('../../images/icons/popUp_thin.svg');
+    // background-position: 100% 0;
+    // background-size: 23px 18px; 
+
+    background-image: url('../../images/icons/popUp.svg');
+    background-position: 100% 0;
+    background-size: 22px 19px; 
+    
+    padding-right: calc(#{$textIcons_size} + 8px);   
+}
+*/
+
+.attention {
+    @include textIcons_notFromGenerator;
+    color: red;
+    text-indent: calc(#{$textIcons_size} + 5px);
+    background-image: url('../../images/icons/textIcon_attention.svg');
+    background-position: 0 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/*   
 ────────────────────────────
 TODO:        >> Icon Alone
 ──────────────────────────── */
 
-
-
-.icon_yes, .icon_no, .icon_chain {
+/* 
+.icon_yes, .icon_no {
     color: transparent;
     cursor: default;
     overflow: hidden;
@@ -1307,8 +1425,7 @@ TODO:        >> Icon Alone
     line-height: 1.2;
 }
 
-.icon_yes::selection, .icon_no::selection, .icon_chain::selection { 
-    
+.icon_yes::selection, .icon_no::selection { 
     color: transparent;
 } 
 
@@ -1322,11 +1439,52 @@ TODO:        >> Icon Alone
     background-image: url('../../images/icons/icon_no.svg');   
     background-size: 17px 17px;
 }
+ */
 
-.icon_chain {
-    background-image: url('../../images/icons/chain.svg');   
-    background-size: 17px 17px;
+
+
+
+
+
+
+
+/* 
+ @mixin iconsAlone { // O tamanho da linha de um <span> é 21 px.
+
+    display: inline-flex;
+    align-items: center;
+
+    width: 20px; 
+    height: 20px; // Altura máxima de um ícone para a altura padrão da linha de um <p>. Ou seja, se um ícone com altura maior que 20px estiver dentro de um <p>, a altura da linha do <p> aumentará.
+
+    background-size: 20px 20px; // Necessário caso a imagem do ícone não seja um vetor
+    // background-repeat: no-repeat;   
+
+    // Esconder o conteúdo interno:
+
+    color: transparent;
+    overflow: hidden;
+    cursor: default;
 }
+
+.icon_yes::selection, .icon_no::selection { 
+    color: transparent;
+} 
+
+.icon_yes {
+    @include iconsAlone;
+    //width: 220px;
+    background-image: url('../../images/icons/textIcon_template.svg');   // 22x13
+
+    // background-position: 0 0;
+    //background-size: 22px 22px;
+}
+
+.icon_no {
+    @include iconsAlone;
+    background-image: url('../../images/icons/icon_no.svg');   
+}
+ */
 
 /*  
 ──────────────────────────────────────────────────────
@@ -1836,7 +1994,6 @@ TODO:    > Footer
         }
 
         a {
-
             width: 58px;
             height: 58px;
             color: #000000; 
