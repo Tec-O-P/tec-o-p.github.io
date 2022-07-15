@@ -1,18 +1,16 @@
 @charset "UTF-8";
-/* 
-──────────────────────────────────────────────────────
-gmes-defaults.css
-────────────────────────────────────────────────────── */
-/* 
-──────────────────────────────────────────────────────
+/*
+┌──────────────────────────────────────────────────────┐
+│                                                 gmes-defaults.css                                                  │
+└──────────────────────────────────────────────────────◈ */
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Variables
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
-/*  
-────────────────────────────
-TODO:    > Specific Elements & Components
-──────────────────────────── */
+/*  TODO:    1 ▶ Specific Elements & Components
+◈──────────────────────────────────────────────────────◈ */
 /*
 $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10%,hsl(203,100%,71%) 25%,hsl(204,100%,72%) 37%,hsl(204,100%,73%) 50%,hsl(203,100%,67%) 51%,hsl(202,100%,76%) 83%,hsl(198, 100%, 84%) 100%); 
 $bg_nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
@@ -48,9 +46,9 @@ $color_box_shadow_out_button_type_image_piece_text_floating: hsla(193, 100%, 66%
 $bg_button_type_image_piece_text_floating: hsla(192, 100%, 98%, 0.95); 
 */
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Geral
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 /* Global New Box Model */
 html {
   box-sizing: border-box;
@@ -70,9 +68,9 @@ html {
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Scrollbars
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 *::-webkit-scrollbar {
   width: 14px;
   height: 14px;
@@ -100,9 +98,9 @@ TODO: Scrollbars
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: <html> & <body> 
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 html {
   background: white;
 }
@@ -138,9 +136,9 @@ body {
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Margins
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 .offset {
   /* Lateral margins */
   margin-left: 20px;
@@ -166,9 +164,9 @@ p, dl, label {
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Texts
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 .TNR {
   font-family: 'Times New Roman';
   font-size: 19px;
@@ -225,6 +223,7 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h3 {
@@ -239,6 +238,7 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h4 {
@@ -253,6 +253,7 @@ h4 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h5 {
@@ -267,6 +268,7 @@ h5 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h6 {
@@ -281,6 +283,7 @@ h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h7 {
@@ -637,10 +640,8 @@ ul > li + li, ol > li + li {
   margin-top: 16rem;
 }
 
-/*  
-────────────────────────────
-TODO:    > Classes
-──────────────────────────── */
+/*  TODO:    1 ▶ Classes
+◈──────────────────────────────────────────────────────◈ */
 .font_size {
   font-size: 19rem;
 }
@@ -968,27 +969,24 @@ span.token.black {
   margin-right: auto !important;
 }
 
-/*  
-────────────────────────────
-TODO:    > Text Icons
-──────────────────────────── */
-/*  
-────────────────────────────
-TODO:        >> Generator
-──────────────────────────── */
-#tt {
-  border: 1px solid red;
-}
+/*  TODO:    1 ▶ Text Icons
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:        2 ▶ Generator
+◈──────────────────────────────────────────────────────◈ */
+/* 
+Evite criar ícones com as dimensões do arquivo de imagem diferentes de 
+'$textIcons_size: 21px'.
 
-#tt::before {
-  display: inline;
-  content: '····';
-  color: rgba(255, 255, 255, 0);
-  background-image: url("../../images/icons/textIcon_template.svg");
-  background-repeat: no-repeat;
-  background-size: 21px 21px;
-}
+Para ícones menores do que isso (21x21 px), tente ajustá-lo dentro de seu próprio arquivo de imagem com este mesmo tamanho, E se necessário, ajus
+ */
+/*
+- Evite criar ícones com a altura do arquivo de imagem diferente de 21px
+(já que '$textIcons_size: 21px').
 
+- Se o efeito de alinhamento vertical do Flexbox for aplicado ao ícone, será 
+necessário ajustar sua posição no eixo Y na entrada do gerador quando for 
+criado  (Assim como foi feito com o ícone 'textIcon_HNB_template').
+ */
 .textIcon_template, .textIcon_template.left, .textIcon_template.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
@@ -1031,6 +1029,56 @@ TODO:        >> Generator
 .textIcon_template.noText::before, .textIcon_template:empty::before,
 .textIcon_template.left.noText::before, .textIcon_template.left:empty::before,
 .textIcon_template.right.noText::before, .textIcon_template.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_wider, .textIcon_template_wider.left, .textIcon_template_wider.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_template_wider::selection, .textIcon_template_wider.left::selection, .textIcon_template_wider.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_wider, .textIcon_template_wider.left {
+  background-image: url("../../images/icons/textIcon_template_wider.svg");
+  background-position-y: 0px;
+  padding-left: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template_wider:empty, .textIcon_template_wider.left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_wider.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template_wider.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_wider.noText, .textIcon_template_wider.left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_wider.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_wider.noText::before, .textIcon_template_wider:empty::before,
+.textIcon_template_wider.left.noText::before, .textIcon_template_wider.left:empty::before,
+.textIcon_template_wider.right.noText::before, .textIcon_template_wider.right:empty::before {
   display: inline-block;
   content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;
@@ -1289,14 +1337,10 @@ TODO:        >> Generator
   overflow: hidden;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Not From Generator
-──────────────────────────── */
-/*  
-────────────────────────────
-TODO:            >>> <a>
-──────────────────────────── */
+/*  TODO:        2 ▶ Not From Generator
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:            3 ▶ <a>
+◈──────────────────────────────────────────────────────◈ */
 a[href^="http"] {
   background-repeat: no-repeat;
   background-size: 21px 21px;
@@ -1337,10 +1381,8 @@ a[href^="tel:"] {
   padding-right: calc(21px + 4px);
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Others
-──────────────────────────── */
+/*  TODO:            3 ▶ Others
+◈──────────────────────────────────────────────────────◈ */
 abbr > button {
   background-repeat: no-repeat;
   background-size: 21px 21px;
@@ -1382,91 +1424,20 @@ abbr > button:focus {
   background-position: 0 3px;
 }
 
-/*   
-────────────────────────────
-TODO:        >> Icon Alone
-──────────────────────────── */
-/* 
-.icon_yes, .icon_no {
-    color: transparent;
-    cursor: default;
-    overflow: hidden;
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    line-height: 1.2;
-}
-
-.icon_yes::selection, .icon_no::selection { 
-    color: transparent;
-} 
-
-.icon_yes {
-    width: 22px;
-    background-image: url('../../images/icons/icon_yes.svg');   
-    background-size: 22px 17px;
-}
-
-.icon_no {
-    background-image: url('../../images/icons/icon_no.svg');   
-    background-size: 17px 17px;
-}
- */
-/* 
- @mixin iconsAlone { // O tamanho da linha de um <span> é 21 px.
-
-    display: inline-flex;
-    align-items: center;
-
-    width: 20px; 
-    height: 20px; // Altura máxima de um ícone para a altura padrão da linha de um <p>. Ou seja, se um ícone com altura maior que 20px estiver dentro de um <p>, a altura da linha do <p> aumentará.
-
-    background-size: 20px 20px; // Necessário caso a imagem do ícone não seja um vetor
-    // background-repeat: no-repeat;   
-
-    // Esconder o conteúdo interno:
-
-    color: transparent;
-    overflow: hidden;
-    cursor: default;
-}
-
-.icon_yes::selection, .icon_no::selection { 
-    color: transparent;
-} 
-
-.icon_yes {
-    @include iconsAlone;
-    //width: 220px;
-    background-image: url('../../images/icons/textIcon_template.svg');   // 22x13
-
-    // background-position: 0 0;
-    //background-size: 22px 22px;
-}
-
-.icon_no {
-    @include iconsAlone;
-    background-image: url('../../images/icons/icon_no.svg');   
-}
- */
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Layout Sections
-────────────────────────────────────────────────────── */
-/*  
-────────────────────────────
-TODO:    > Central
-──────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:    1 ▶ Central
+◈──────────────────────────────────────────────────────◈ */
 .central, .header-content {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/*  
-────────────────────────────
-TODO:    > Header-nav
-──────────────────────────── */
+/*  TODO:    1 ▶ Header-nav
+◈──────────────────────────────────────────────────────◈ */
 .block-hack {
   /* Hack necessário pois o Safari não aceita 'position: sticky'. */
   height: 48px;
@@ -1483,14 +1454,10 @@ TODO:    > Header-nav
   background: url(../../images/bgs/header.png) center/100% 100%;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.6);
   font-weight: bold;
-  /*  
-────────────────────────────
-TODO:        >> Menu
-──────────────────────────── */
-  /*  
-────────────────────────────
-TODO:        >> Expanded
-──────────────────────────── */
+  /*  TODO:        2 ▶ Menu
+◈──────────────────────────────────────────────────────◈ */
+  /*  TODO:        2 ▶ Expanded
+◈──────────────────────────────────────────────────────◈ */
 }
 
 .header-nav .nav {
@@ -1823,10 +1790,8 @@ TODO:        >> Expanded
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
-/*  
-────────────────────────────
-TODO:    > Footer
-──────────────────────────── */
+/*  TODO:    1 ▶ Footer
+◈──────────────────────────────────────────────────────◈ */
 .footer-content {
   width: 100%;
   margin-top: calc(2 * 16rem);
@@ -1959,10 +1924,8 @@ TODO:    > Footer
   text-align: center;
 }
 
-/*  
-────────────────────────────
-TODO:    > Classes
-──────────────────────────── */
+/*  TODO:    1 ▶ Classes
+◈──────────────────────────────────────────────────────◈ */
 /*
 .nav_poster_margins { // <- Desisti desta ideia.
     margin-top: 16px;
@@ -2006,9 +1969,9 @@ TODO:    > Classes
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Multimedia
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 /*.text_img_evenSize {
     max-width: 18px; 
     margin-bottom: -4px;
@@ -2037,9 +2000,9 @@ audio {
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Tables
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 table {
   max-width: calc(100% - 2 * 20px);
   margin: 16rem auto;
@@ -2257,13 +2220,11 @@ table.type_4 th {
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Forms
-────────────────────────────────────────────────────── */
-/*  
-────────────────────────────
-TODO:    > fieldset e label
-──────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:    1 ▶ fieldset e label
+◈──────────────────────────────────────────────────────◈ */
 /*form {
     margin: $margin_vertical auto;
 }*/
@@ -2291,14 +2252,10 @@ fieldset:disabled label {
   color: #adadad;
 }
 
-/*  
-────────────────────────────
-TODO:    > Widgets
-──────────────────────────── */
-/*  
-────────────────────────────
-TODO:        >> inputs e textarea
-──────────────────────────── */
+/*  TODO:    1 ▶ Widgets
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:        2 ▶ inputs e textarea
+◈──────────────────────────────────────────────────────◈ */
 input[type="text"], input[type="email"], textarea {
   color: black;
   width: calc(100% - 40px);
@@ -2414,10 +2371,8 @@ input[type="checkbox"]:disabled::before {
     border: 3px dashed white; 
 }
 */
-/*  
-────────────────────────────
-TODO:        >> select
-──────────────────────────── */
+/*  TODO:        2 ▶ select
+◈──────────────────────────────────────────────────────◈ */
 select {
   border-radius: 5px;
   /* <- Traz inconsistências entre os navegadores. */
@@ -2429,11 +2384,9 @@ select {
   padding: 0 6px;
 }
 
-/*  
-────────────────────────────
-TODO:        >> button
-──────────────────────────── 
-
+/*  TODO:        2 ▶ button
+◈──────────────────────────────────────────────────────◈ */
+/*
 button {
     min-width: 116px; // Tava em 120px
     color: $color_text_menu;
@@ -2452,10 +2405,8 @@ button {
 button:disabled {
     opacity: 0.5;
 }*/
-/*  
-────────────────────────────
-TODO:    > Focus Effect
-──────────────────────────── */
+/*  TODO:    1 ▶ Focus Effect
+◈──────────────────────────────────────────────────────◈ */
 input:focus:not(input[type="checkbox"]), textarea:focus {
   outline: 0px dotted;
   border: 1px solid DeepSkyBlue;
@@ -2479,10 +2430,8 @@ button:focus {
   outline: 2px dotted DeepSkyBlue;
 }
 
-/*  
-────────────────────────────
-TODO:    > Class
-──────────────────────────── */
+/*  TODO:    1 ▶ Class
+◈──────────────────────────────────────────────────────◈ */
 .textarea_1l {
   height: calc(40rem + ( (1 - 1) * 28rem));
 }
@@ -2603,10 +2552,8 @@ TODO:    > Class
   height: calc(40rem + ( (30 - 1) * 28rem));
 }
 
-/* 
-──────────────────────────────────────────────────────
-TODO:    > Switches & Buttons
-────────────────────────────────────────────────────── */
+/*  TODO:    1 ▶ Switches & Buttons
+◈──────────────────────────────────────────────────────◈ */
 .switch,
 button,
 a.button_full, a.button_text, a.button_icon, a.image {
@@ -2631,10 +2578,8 @@ button {
   border-width: 0;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Button
-──────────────────────────── */
+/*  TODO:        2 ▶ Button
+◈──────────────────────────────────────────────────────◈ */
 .switch.button_full, .switch.button_text, .switch.button_icon,
 button.button_full, button.button_text, button.button_icon,
 a.button_full, a.button_text, a.button_icon {
@@ -2891,10 +2836,8 @@ a.button_full.rounded .button_shine_top, a.button_text.rounded .button_shine_top
   opacity: 0.85;
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Text Below
-──────────────────────────── */
+/*  TODO:            3 ▶ Text Below
+◈──────────────────────────────────────────────────────◈ */
 .switch.button_full.text_below, button.button_full.text_below, a.button_full.text_below {
   flex-direction: column;
   padding-bottom: 10px;
@@ -2963,10 +2906,8 @@ a.button_full.text_below {
   justify-content: center;
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Option ON
-──────────────────────────── */
+/*  TODO:            3 ▶ Option ON
+◈──────────────────────────────────────────────────────◈ */
 .switch.button_full.on .piece_text, .switch.button_text.on .piece_text, .switch.button_icon.on .piece_text {
   color: white;
 }
@@ -3006,10 +2947,8 @@ TODO:            >>> Option ON
     // background: $bg_switch_type_button_pill_and_rounded_on;
 }
 */
-/*  
-────────────────────────────
-TODO:            >>> Floating Labels
-──────────────────────────── */
+/*  TODO:            3 ▶ Floating Labels
+◈──────────────────────────────────────────────────────◈ */
 @media (pointer: fine) {
   .switch.button_icon .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
     position: absolute;
@@ -3053,10 +2992,8 @@ TODO:            >>> Floating Labels
   }
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Colors
-──────────────────────────── */
+/*  TODO:            3 ▶ Colors
+◈──────────────────────────────────────────────────────◈ */
 /*------ Default: Blue ------*/
 button.button_full, button.button_text, button.button_icon,
 a.button_full, a.button_text, a.button_icon,
@@ -3376,10 +3313,8 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   }
 }
 
-/*  
-────────────────────────────
-TODO:        >> Image
-──────────────────────────── */
+/*  TODO:        2 ▶ Image
+◈──────────────────────────────────────────────────────◈ */
 .switch.image, button.image, a.image {
   display: inline-flex;
   /* width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; <- Declarações necessárias 
@@ -3424,18 +3359,14 @@ TODO:        >> Image
   border-radius: 1000px !important;
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Option ON
-──────────────────────────── */
+/*  TODO:            3 ▶ Option ON
+◈──────────────────────────────────────────────────────◈ */
 .switch.image.on .piece_icon {
   box-shadow: 0px 0px 0px 2px white, 0px 0px 12px 2px DeepSkyBlue;
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Floating Labels
-──────────────────────────── */
+/*  TODO:            3 ▶ Floating Labels
+◈──────────────────────────────────────────────────────◈ */
 @media (pointer: fine) {
   .switch.image, button.image, a.image {
     justify-content: center;
@@ -3482,10 +3413,8 @@ TODO:            >>> Floating Labels
   }
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Colors
-──────────────────────────── */
+/*  TODO:            3 ▶ Colors
+◈──────────────────────────────────────────────────────◈ */
 @media (pointer: fine) {
   /*------ Default: Blue ------*/
   .switch.image.on .piece_text,
@@ -3551,10 +3480,8 @@ TODO:            >>> Colors
   }
 }
 
-/*  
-────────────────────────────
-TODO:        >> Key (Only Switches)
-──────────────────────────── */
+/*  TODO:        2 ▶ Key (Only Switches)
+◈──────────────────────────────────────────────────────◈ */
 .switch.key_full, .switch.key_text {
   display: flex;
   justify-content: space-between;
@@ -3655,10 +3582,8 @@ TODO:        >> Key (Only Switches)
   margin-right: 12px;
 }
 
-/*  
-────────────────────────────
-TODO:            >>> Sizes & Positions
-──────────────────────────── */
+/*  TODO:            3 ▶ Sizes & Positions
+◈──────────────────────────────────────────────────────◈ */
 .switch.key_full .piece_key, .switch.key_text .piece_key {
   min-width: 47px;
   height: 6px;
@@ -3728,11 +3653,9 @@ TODO:            >>> Sizes & Positions
   }
 }
 
-/*  
-────────────────────────────
-TODO:    > Choices
-──────────────────────────── 
-
+/*  TODO:    1 ▶ Choices
+◈──────────────────────────────────────────────────────◈ */
+/*
 $bg_element_type_button_blue
 $box_shadow_element_type_button_blue
 */
@@ -3781,10 +3704,8 @@ $box_shadow_element_type_button_blue
   margin-right: 6px;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Horizontal
-──────────────────────────── */
+/*  TODO:        2 ▶ Horizontal
+◈──────────────────────────────────────────────────────◈ */
 .choice.horizontal {
   display: inline-flex;
   border-radius: 1000px;
@@ -3842,10 +3763,8 @@ TODO:        >> Horizontal
   border-left: 1px solid white;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Vertical
-──────────────────────────── */
+/*  TODO:        2 ▶ Vertical
+◈──────────────────────────────────────────────────────◈ */
 .choice.vertical {
   border-radius: 20px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), #1ac6ff;
@@ -3899,10 +3818,8 @@ TODO:        >> Vertical
   border-top: 1px solid white;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Dropdown
-──────────────────────────── */
+/*  TODO:        2 ▶ Dropdown
+◈──────────────────────────────────────────────────────◈ */
 .choice.dropdown {
   border-radius: 1000px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #47d1ff, #00b8f5, deepskyblue);
@@ -4049,10 +3966,8 @@ TODO:        >> Dropdown
         overflow: auto;
     }
 }*/
-/*  
-────────────────────────────
-TODO:        >> Option ON
-──────────────────────────── */
+/*  TODO:        2 ▶ Option ON
+◈──────────────────────────────────────────────────────◈ */
 .choice.horizontal > li > a.on, .choice.vertical > li > a.on, .choice.dropdown.choice.dropdown_open > li > .on {
   background: rgba(255, 255, 255, 0.5);
 }
@@ -4065,10 +3980,8 @@ TODO:        >> Option ON
   background: rgba(245, 252, 255, 0.9);
 }
 
-/*  
-────────────────────────────
-TODO:        >> No Label
-──────────────────────────── */
+/*  TODO:        2 ▶ No Label
+◈──────────────────────────────────────────────────────◈ */
 .no_label > li:nth-of-type(1) {
   display: none;
 }
@@ -4124,10 +4037,8 @@ TODO:        >> No Label
   margin-left: 0;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Disabled
-──────────────────────────── */
+/*  TODO:        2 ▶ Disabled
+◈──────────────────────────────────────────────────────◈ */
 .choice.horizontal.disabled, .choice.vertical.disabled, .choice.dropdown.disabled {
   opacity: 0.5;
 }
@@ -4158,10 +4069,8 @@ TODO:        >> Disabled
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
-/*  
-──────────────────────────── // <- Parte do estilo de choice novo!
-TODO:        >> Shine
-──────────────────────────── */
+/*  TODO:        2 ▶ Shine // <- Parte do estilo de choice novo!
+◈──────────────────────────────────────────────────────◈ */
 .choice.horizontal li {
   position: relative;
 }
@@ -4237,14 +4146,12 @@ TODO:        >> Shine
   cursor: default;
 }
 
-/*
-──────────────────────────────────────────────────────
-TODO: Components
-────────────────────────────────────────────────────── */
 /*  
-────────────────────────────
-TODO:    > Outdoors
-──────────────────────────── */
+◈──────────────────────────────────────────────────────◈
+TODO: Components
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:    1 ▶ Outdoors
+◈──────────────────────────────────────────────────────◈ */
 img.outdoor, video.outdoor {
   display: block;
   max-width: 100%;
@@ -4284,10 +4191,8 @@ figure.outdoor img {
   }
 }
 
-/*  
-────────────────────────────
-TODO:    > Galleries
-──────────────────────────── */
+/*  TODO:    1 ▶ Galleries
+◈──────────────────────────────────────────────────────◈ */
 .gallery img {
   width: 50%;
 }
@@ -4306,10 +4211,8 @@ TODO:    > Galleries
   }
 }
 
-/*  
-────────────────────────────
-TODO:    > Sliders
-──────────────────────────── */
+/*  TODO:    1 ▶ Sliders
+◈──────────────────────────────────────────────────────◈ */
 .slider {
   white-space: nowrap;
   border-top: 2px solid DeepSkyBlue;
@@ -4411,14 +4314,10 @@ TODO:    > Sliders
   scrollbar-color: DeepSkyBlue white;
 }
 
-/*
-──────────────────────────────────────────────────────
-TODO:    > Cards & Posters
-────────────────────────────────────────────────────── */
-/*  
-────────────────────────────
-TODO:        >> Cards
-──────────────────────────── */
+/*  TODO:    1 ▶ Cards & Posters
+◈──────────────────────────────────────────────────────◈ */
+/*  TODO:        2 ▶ Cards
+◈──────────────────────────────────────────────────────◈ */
 .card {
   display: inline-flex;
   flex-direction: column;
@@ -4497,10 +4396,8 @@ TODO:        >> Cards
   margin-top: 0;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Posters
-──────────────────────────── */
+/*  TODO:        2 ▶ Posters
+◈──────────────────────────────────────────────────────◈ */
 .poster {
   display: inline-flex;
   flex-direction: column;
@@ -4544,10 +4441,8 @@ TODO:        >> Posters
   text-indent: 0;
 }
 
-/*  
-────────────────────────────
-TODO:        >> Groups
-──────────────────────────── */
+/*  TODO:        2 ▶ Groups
+◈──────────────────────────────────────────────────────◈ */
 .group {
   display: flex;
   flex-direction: column;
@@ -4677,10 +4572,8 @@ TODO:        >> Groups
   }
 }
 
-/*
-──────────────────────────────────────────────────────
-TODO:    > Lightbox
-────────────────────────────────────────────────────── */
+/*  TODO:    1 ▶ Lightbox
+◈──────────────────────────────────────────────────────◈ */
 .lightbox {
   display: none;
   justify-content: center;
@@ -4804,9 +4697,9 @@ TODO:    > Lightbox
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Others
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 ::selection {
   color: #00bbfa;
   background-color: #e6f9ff;
@@ -5590,9 +5483,9 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Classes JS
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 .display_none {
   display: none;
 }
