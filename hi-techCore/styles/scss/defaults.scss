@@ -698,9 +698,6 @@ a {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent; 
-
-        //text-shadow: 10px 10px 1px black;
-        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 	}
 }
 
@@ -1264,14 +1261,25 @@ criado  (Assim como foi feito com o ícone 'textIcon_HNB_template').
 //·································◈ Entradas
 
 $icons: 
+
 // Classe "Arquivo.tipo" ∆Largura ∆Espaçamento y,
-textIcon_template "textIcon_template.svg" 0px 0px 0px, 
-textIcon_template_wider "textIcon_template_wider.svg" 0px 0px 0px, 
+
 textIcon_HNB_template "textIcon_menu_template.svg" 0px 6px 3px, 
 textIcon_yes "textIcon_yes.svg" 1px 0px 0px, 
 textIcon_no "textIcon_no.svg" 0px 0px 0px,  
 textIcon_image "textIcon_image.svg" 0px 20px 0px, 
-textIcon_table "textIcon_table.svg" 0px 0px 0px;
+textIcon_table "textIcon_table.svg" 0px 0px 0px,
+
+// Ícones de testes:
+
+textIcon_template "textIcon_template.svg" 0px 0px 0px, 
+textIcon_template_moreWide "textIcon_template_moreWide.svg" 10px 0px 0px, 
+textIcon_template_lessWide "textIcon_template_lessWide.svg" -10px 0px 0px, 
+textIcon_template_moreSpace "textIcon_template.svg" 0px 10px 0px, 
+textIcon_template_lessSpace "textIcon_template.svg" 0px -10px 0px, 
+textIcon_template_above "textIcon_template.svg" 0px 0px -10px, 
+textIcon_template_below "textIcon_template.svg" 0px 0px 10px, 
+textIcon_template_uncommon "textIcon_template_moreWide.svg" 10px 10px 10px; 
  
 //·································◈ Motor
 

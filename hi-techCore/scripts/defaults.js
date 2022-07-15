@@ -1,14 +1,14 @@
-/* 
-──────────────────────────────────────────────────────
-gmes-defaults.js
-────────────────────────────────────────────────────── */
+/*
+┌──────────────────────────────────────────────────────┐
+│                                                   gmes-defaults.js                                                   │
+└──────────────────────────────────────────────────────◈ */
 
 /* Test: */ // if(document.body.prop === true) { console.log('S') } else { console.log('N') } 
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Global Variables
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 var $is_cellphone = innerWidth <= 500 || innerHeight <= 500
 
@@ -17,9 +17,9 @@ var $is_mobile = innerWidth <= 1366 && innerHeight <= 1366
 var $color_theme = 'DeepSkyBlue' // VÍNCULO: Váriável SCSS
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Text Icons - Generator
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 document.querySelectorAll('.noText').forEach(function (item) {
 
@@ -28,9 +28,9 @@ document.querySelectorAll('.noText').forEach(function (item) {
 })
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Switches & Buttons
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 function switch_event(arg) {
 
@@ -59,10 +59,9 @@ for (i = 0; i < switches.length; i++) {
 }
 */
 
-/*  
-────────────────────────────
-TODO:    > Switches, Buttons, And Anchors All Type Button
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Switches, Buttons, And Anchors All Type Button
+◈──────────────────────────────────────────────────────◈ */
 
 var $is_safari_for_desktop_or_is_a_mobile_browser = navigator.vendor.indexOf('Apple') !== -1
 var $is_safari_for_desktop_or_is_a_tablet_browser = $is_safari_for_desktop_or_is_a_mobile_browser && !($is_cellphone)
@@ -601,10 +600,9 @@ function switches_buttons_and_anchors__type_button($switches_or_buttons_or_ancho
 
 switches_buttons_and_anchors__type_button(document.querySelectorAll('.switch.button_full, .switch.button_text, .switch.button_icon, button.button_full, button.button_text, button.button_icon, a.button_full, a.button_text, a.button_icon'))
 
-/*  
-────────────────────────────
-TODO:    > Switches, Buttons, And Anchors All Type Image
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Switches, Buttons, And Anchors All Type Image
+◈──────────────────────────────────────────────────────◈ */
 
 function switches_buttons_and_anchors__type_image($switches_or_buttons_or_anchors) {
 
@@ -675,10 +673,9 @@ function switches_buttons_and_anchors__type_image($switches_or_buttons_or_anchor
 
 switches_buttons_and_anchors__type_image(document.querySelectorAll('.switch.image, button.image, a.image'))
 
-/*  
-────────────────────────────
-TODO:    > Update Switches And Buttons
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Update Switches And Buttons
+◈──────────────────────────────────────────────────────◈ */
 
 function update_switches_buttons_and_anchors($switches_or_buttons_or_anchors, type_number) {
 
@@ -768,9 +765,9 @@ window.addEventListener('resize', update_switches_buttons_and_anchors_resize)
 */
  
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Choices 
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 var choice_anchorClicked = null
 var choice_anchorClickedBefore = null /* <- Variável necessária para 
@@ -908,10 +905,9 @@ var e = document.createElement("li")
     allChoicesD[i].appendChild(e)
 }
 
-/*  
-────────────────────────────
-TODO:    > Shine
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Shine
+◈──────────────────────────────────────────────────────◈ */
 
 document.querySelectorAll('.choice').forEach(function ($choice) {
 
@@ -955,9 +951,9 @@ document.querySelectorAll('.choice').forEach(function ($choice) {
 })
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Lightbox
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 {
 
 var lightbox_html = document.createElement("div");
@@ -1095,9 +1091,9 @@ function lightbox_close(arg) {
 
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Button Hide
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 var all_button_hide = document.querySelectorAll('.button_hide')
 
@@ -1124,9 +1120,9 @@ for(var i = 0; i < all_button_hide.length; i++) {
 } 
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Is-A-Number Function
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 /* 
  A função isAN() (Is-A-Number) verifica eficientemente se um valor é 
@@ -1213,9 +1209,9 @@ function isAN(x) {
 
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Get File Name
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 function getFileName(url, withType) { // withType é opcional, booleano, e false se omitido.
 
@@ -1243,9 +1239,9 @@ function getFileName(url, withType) { // withType é opcional, booleano, e false
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Get Image Filename
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 function getImgName(img) {
 
@@ -1268,9 +1264,9 @@ function getImgName(img) {
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Image Filename as ALT Attribute Value
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 function imgsNamesAsAlts(imgs) {
 

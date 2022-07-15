@@ -223,7 +223,6 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h3 {
@@ -238,7 +237,6 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h4 {
@@ -253,7 +251,6 @@ h4 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h5 {
@@ -268,7 +265,6 @@ h5 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h6 {
@@ -283,7 +279,6 @@ h6 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25));
 }
 
 h7 {
@@ -987,106 +982,6 @@ Para ícones menores do que isso (21x21 px), tente ajustá-lo dentro de seu pró
 necessário ajustar sua posição no eixo Y na entrada do gerador quando for 
 criado  (Assim como foi feito com o ícone 'textIcon_HNB_template').
  */
-.textIcon_template, .textIcon_template.left, .textIcon_template.right {
-  background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
-}
-
-.textIcon_template::selection, .textIcon_template.left::selection, .textIcon_template.right::selection {
-  color: transparent;
-}
-
-.textIcon_template, .textIcon_template.left {
-  background-image: url("../../images/icons/textIcon_template.svg");
-  background-position-y: 0px;
-  padding-left: calc(21px + 0px + 0px + 4px);
-}
-
-.textIcon_template:empty, .textIcon_template.left:empty {
-  padding-left: calc(21px + 0px);
-}
-
-.textIcon_template.right {
-  background-position-x: 100%;
-  padding-left: 0;
-  padding-right: calc(21px + 0px + 0px + 4px);
-}
-
-.textIcon_template.right:empty {
-  padding-left: 0;
-  padding-right: calc(21px + 0px);
-}
-
-.textIcon_template.noText, .textIcon_template.left.noText {
-  padding-left: calc(21px + 0px);
-}
-
-.textIcon_template.right.noText {
-  padding-left: 0;
-  padding-right: calc(21px + 0px);
-}
-
-.textIcon_template.noText::before, .textIcon_template:empty::before,
-.textIcon_template.left.noText::before, .textIcon_template.left:empty::before,
-.textIcon_template.right.noText::before, .textIcon_template.right:empty::before {
-  display: inline-block;
-  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
-  width: 0;
-  height: 0;
-  color: rgba(255, 255, 255, 0);
-  overflow: hidden;
-}
-
-.textIcon_template_wider, .textIcon_template_wider.left, .textIcon_template_wider.right {
-  background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
-}
-
-.textIcon_template_wider::selection, .textIcon_template_wider.left::selection, .textIcon_template_wider.right::selection {
-  color: transparent;
-}
-
-.textIcon_template_wider, .textIcon_template_wider.left {
-  background-image: url("../../images/icons/textIcon_template_wider.svg");
-  background-position-y: 0px;
-  padding-left: calc(21px + 0px + 0px + 4px);
-}
-
-.textIcon_template_wider:empty, .textIcon_template_wider.left:empty {
-  padding-left: calc(21px + 0px);
-}
-
-.textIcon_template_wider.right {
-  background-position-x: 100%;
-  padding-left: 0;
-  padding-right: calc(21px + 0px + 0px + 4px);
-}
-
-.textIcon_template_wider.right:empty {
-  padding-left: 0;
-  padding-right: calc(21px + 0px);
-}
-
-.textIcon_template_wider.noText, .textIcon_template_wider.left.noText {
-  padding-left: calc(21px + 0px);
-}
-
-.textIcon_template_wider.right.noText {
-  padding-left: 0;
-  padding-right: calc(21px + 0px);
-}
-
-.textIcon_template_wider.noText::before, .textIcon_template_wider:empty::before,
-.textIcon_template_wider.left.noText::before, .textIcon_template_wider.left:empty::before,
-.textIcon_template_wider.right.noText::before, .textIcon_template_wider.right:empty::before {
-  display: inline-block;
-  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
-  width: 0;
-  height: 0;
-  color: rgba(255, 255, 255, 0);
-  overflow: hidden;
-}
-
 .textIcon_HNB_template, .textIcon_HNB_template.left, .textIcon_HNB_template.right {
   background-repeat: no-repeat;
   background-size: calc(21px + 0px) 21px;
@@ -1329,6 +1224,406 @@ criado  (Assim como foi feito com o ícone 'textIcon_HNB_template').
 .textIcon_table.noText::before, .textIcon_table:empty::before,
 .textIcon_table.left.noText::before, .textIcon_table.left:empty::before,
 .textIcon_table.right.noText::before, .textIcon_table.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template, .textIcon_template.left, .textIcon_template.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_template::selection, .textIcon_template.left::selection, .textIcon_template.right::selection {
+  color: transparent;
+}
+
+.textIcon_template, .textIcon_template.left {
+  background-image: url("../../images/icons/textIcon_template.svg");
+  background-position-y: 0px;
+  padding-left: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template:empty, .textIcon_template.left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template.noText, .textIcon_template.left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template.noText::before, .textIcon_template:empty::before,
+.textIcon_template.left.noText::before, .textIcon_template.left:empty::before,
+.textIcon_template.right.noText::before, .textIcon_template.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_moreWide, .textIcon_template_moreWide.left, .textIcon_template_moreWide.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 10px) 21px;
+}
+
+.textIcon_template_moreWide::selection, .textIcon_template_moreWide.left::selection, .textIcon_template_moreWide.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_moreWide, .textIcon_template_moreWide.left {
+  background-image: url("../../images/icons/textIcon_template_moreWide.svg");
+  background-position-y: 0px;
+  padding-left: calc(21px + 10px + 0px + 4px);
+}
+
+.textIcon_template_moreWide:empty, .textIcon_template_moreWide.left:empty {
+  padding-left: calc(21px + 10px);
+}
+
+.textIcon_template_moreWide.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 10px + 0px + 4px);
+}
+
+.textIcon_template_moreWide.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 10px);
+}
+
+.textIcon_template_moreWide.noText, .textIcon_template_moreWide.left.noText {
+  padding-left: calc(21px + 10px);
+}
+
+.textIcon_template_moreWide.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 10px);
+}
+
+.textIcon_template_moreWide.noText::before, .textIcon_template_moreWide:empty::before,
+.textIcon_template_moreWide.left.noText::before, .textIcon_template_moreWide.left:empty::before,
+.textIcon_template_moreWide.right.noText::before, .textIcon_template_moreWide.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_lessWide, .textIcon_template_lessWide.left, .textIcon_template_lessWide.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + -10px) 21px;
+}
+
+.textIcon_template_lessWide::selection, .textIcon_template_lessWide.left::selection, .textIcon_template_lessWide.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_lessWide, .textIcon_template_lessWide.left {
+  background-image: url("../../images/icons/textIcon_template_lessWide.svg");
+  background-position-y: 0px;
+  padding-left: calc(21px + -10px + 0px + 4px);
+}
+
+.textIcon_template_lessWide:empty, .textIcon_template_lessWide.left:empty {
+  padding-left: calc(21px + -10px);
+}
+
+.textIcon_template_lessWide.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + -10px + 0px + 4px);
+}
+
+.textIcon_template_lessWide.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + -10px);
+}
+
+.textIcon_template_lessWide.noText, .textIcon_template_lessWide.left.noText {
+  padding-left: calc(21px + -10px);
+}
+
+.textIcon_template_lessWide.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + -10px);
+}
+
+.textIcon_template_lessWide.noText::before, .textIcon_template_lessWide:empty::before,
+.textIcon_template_lessWide.left.noText::before, .textIcon_template_lessWide.left:empty::before,
+.textIcon_template_lessWide.right.noText::before, .textIcon_template_lessWide.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_moreSpace, .textIcon_template_moreSpace.left, .textIcon_template_moreSpace.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_template_moreSpace::selection, .textIcon_template_moreSpace.left::selection, .textIcon_template_moreSpace.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_moreSpace, .textIcon_template_moreSpace.left {
+  background-image: url("../../images/icons/textIcon_template.svg");
+  background-position-y: 0px;
+  padding-left: calc(21px + 0px + 10px + 4px);
+}
+
+.textIcon_template_moreSpace:empty, .textIcon_template_moreSpace.left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_moreSpace.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 0px + 10px + 4px);
+}
+
+.textIcon_template_moreSpace.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_moreSpace.noText, .textIcon_template_moreSpace.left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_moreSpace.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_moreSpace.noText::before, .textIcon_template_moreSpace:empty::before,
+.textIcon_template_moreSpace.left.noText::before, .textIcon_template_moreSpace.left:empty::before,
+.textIcon_template_moreSpace.right.noText::before, .textIcon_template_moreSpace.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_lessSpace, .textIcon_template_lessSpace.left, .textIcon_template_lessSpace.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_template_lessSpace::selection, .textIcon_template_lessSpace.left::selection, .textIcon_template_lessSpace.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_lessSpace, .textIcon_template_lessSpace.left {
+  background-image: url("../../images/icons/textIcon_template.svg");
+  background-position-y: 0px;
+  padding-left: calc(21px + 0px + -10px + 4px);
+}
+
+.textIcon_template_lessSpace:empty, .textIcon_template_lessSpace.left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_lessSpace.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 0px + -10px + 4px);
+}
+
+.textIcon_template_lessSpace.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_lessSpace.noText, .textIcon_template_lessSpace.left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_lessSpace.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_lessSpace.noText::before, .textIcon_template_lessSpace:empty::before,
+.textIcon_template_lessSpace.left.noText::before, .textIcon_template_lessSpace.left:empty::before,
+.textIcon_template_lessSpace.right.noText::before, .textIcon_template_lessSpace.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_above, .textIcon_template_above.left, .textIcon_template_above.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_template_above::selection, .textIcon_template_above.left::selection, .textIcon_template_above.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_above, .textIcon_template_above.left {
+  background-image: url("../../images/icons/textIcon_template.svg");
+  background-position-y: -10px;
+  padding-left: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template_above:empty, .textIcon_template_above.left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_above.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template_above.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_above.noText, .textIcon_template_above.left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_above.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_above.noText::before, .textIcon_template_above:empty::before,
+.textIcon_template_above.left.noText::before, .textIcon_template_above.left:empty::before,
+.textIcon_template_above.right.noText::before, .textIcon_template_above.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_below, .textIcon_template_below.left, .textIcon_template_below.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 0px) 21px;
+}
+
+.textIcon_template_below::selection, .textIcon_template_below.left::selection, .textIcon_template_below.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_below, .textIcon_template_below.left {
+  background-image: url("../../images/icons/textIcon_template.svg");
+  background-position-y: 10px;
+  padding-left: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template_below:empty, .textIcon_template_below.left:empty {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_below.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 0px + 0px + 4px);
+}
+
+.textIcon_template_below.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_below.noText, .textIcon_template_below.left.noText {
+  padding-left: calc(21px + 0px);
+}
+
+.textIcon_template_below.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 0px);
+}
+
+.textIcon_template_below.noText::before, .textIcon_template_below:empty::before,
+.textIcon_template_below.left.noText::before, .textIcon_template_below.left:empty::before,
+.textIcon_template_below.right.noText::before, .textIcon_template_below.right:empty::before {
+  display: inline-block;
+  content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
+  width: 0;
+  height: 0;
+  color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.textIcon_template_uncommon, .textIcon_template_uncommon.left, .textIcon_template_uncommon.right {
+  background-repeat: no-repeat;
+  background-size: calc(21px + 10px) 21px;
+}
+
+.textIcon_template_uncommon::selection, .textIcon_template_uncommon.left::selection, .textIcon_template_uncommon.right::selection {
+  color: transparent;
+}
+
+.textIcon_template_uncommon, .textIcon_template_uncommon.left {
+  background-image: url("../../images/icons/textIcon_template_moreWide.svg");
+  background-position-y: 10px;
+  padding-left: calc(21px + 10px + 10px + 4px);
+}
+
+.textIcon_template_uncommon:empty, .textIcon_template_uncommon.left:empty {
+  padding-left: calc(21px + 10px);
+}
+
+.textIcon_template_uncommon.right {
+  background-position-x: 100%;
+  padding-left: 0;
+  padding-right: calc(21px + 10px + 10px + 4px);
+}
+
+.textIcon_template_uncommon.right:empty {
+  padding-left: 0;
+  padding-right: calc(21px + 10px);
+}
+
+.textIcon_template_uncommon.noText, .textIcon_template_uncommon.left.noText {
+  padding-left: calc(21px + 10px);
+}
+
+.textIcon_template_uncommon.right.noText {
+  padding-left: 0;
+  padding-right: calc(21px + 10px);
+}
+
+.textIcon_template_uncommon.noText::before, .textIcon_template_uncommon:empty::before,
+.textIcon_template_uncommon.left.noText::before, .textIcon_template_uncommon.left:empty::before,
+.textIcon_template_uncommon.right.noText::before, .textIcon_template_uncommon.right:empty::before {
   display: inline-block;
   content: 'Deve ter pelo menos 1 caractere aqui que não seja o de espaço.';
   width: 0;

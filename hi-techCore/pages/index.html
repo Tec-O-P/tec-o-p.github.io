@@ -67,7 +67,7 @@
 
                 <p>Aqui temos um <a id="quoting" class="textIcon_chain" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
 
-                <p>É necessário <a download="filename.pdf" href="../pdf/text.pdf">baixar o arquivo (PDF, 10MB)</a> para iniciar o exemplo.</p>
+                <p>É necessário <a download="filename.pdf" href="data:../pdf/text.pdf">baixar o arquivo (PDF, 10MB)</a> para iniciar o exemplo.</p>
 
                 <p>
                     Contate o autor por 
@@ -88,28 +88,121 @@
 
                 <p>&lt;abbr>: Usamos <abbr title=""><button onclick="lightbox(`Hypertext Markup Language`)" >HTML</button></abbr> para estruturar nossos documentos da web.</p>
 
+                <div class="lb6"></div>
+
+                <p>É considerado um 'ícone de texto' um elemento de texto com uma classe cujo nome inicia com 'textIcon_'.</p> 
+                
+                <p style="text-align: center;">Exemplo:</p>
+                
+                <p><span class="bold">HTML:</span> &lt;span class="textIcon_template">Abc&lt;/span></p>
+
+                <p><span class="bold">Execução:</span> <span class="textIcon_template">Abc</span></p>
+
+                <div class="lb2"></div>
+
+                <p>Ícones de texto:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template noText">Texto</span>.</li>
+                </ul>
+
+                <!-- 
+                <p>Ícones de texto com a classe 'left':</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template left"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template left">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template left noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template left noText">Texto</span>.</li>
+                </ul> 
+                -->
+
+                <p>Ícones de texto com a classe 'right':</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template right"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template right noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template right noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com ∆Largura = 10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_moreWide"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_moreWide">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_moreWide noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_moreWide noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com ∆Largura = -10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_lessWide"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_lessWide">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_lessWide noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_lessWide noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com ∆Espaçamento = 10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_moreSpace"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_moreSpace">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_moreSpace noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_moreSpace noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com ∆Espaçamento = -10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_lessSpace"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_lessSpace">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_lessSpace noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_lessSpace noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com y = -10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_above"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_above">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_above noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_above noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com y = 10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_below"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_below">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_below noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_below noText">Texto</span>.</li>
+                </ul>
+
+                <p>Ícones de texto com ∆Largura = 10px, ∆Espaçamento = 10px, e y = 10px:</p>
+
+                <ul>
+                    <li>Ícone vazio: <span class="textIcon_template_uncommon"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcon_template_uncommon">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_uncommon noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_uncommon noText">Texto</span>.</li>
+                </ul>
 
 
-                <p>Texto de ícone (o lado padrão é o esquerdo):</p>
 
-                <p>Ícone L: <span class="textIcon_template"></span>.</p>
-                <p>Ícone L: <span class="textIcon_template">Yes</span>.</p>
-                <!-- <p>Ícone L: <span class="textIcon_template noText"></span>.</p> -->
-                <p>Ícone L: <span class="textIcon_template noText">Yes</span>.</p>
 
-                <p>Texto de ícone pro lado esquerdo:</p>
 
-                <p>Ícone L: <span class="textIcon_template left"></span>.</p>
-                <p>Ícone L: <span class="textIcon_template left">Yes</span>.</p>
-                <!-- <p>Ícone L: <span class="textIcon_template left noText"></span>.</p> -->
-                <p>Ícone L: <span class="textIcon_template left noText">Yes</span>.</p>
 
-                <p>Texto de ícone pro lado direito:</p>
 
-                <p>Ícone R: <span class="textIcon_template right"></span>.</p>
-                <p>Ícone R: <span class="textIcon_template right">Yes</span>.</p>
-                <!-- <p>Ícone R: <span class="textIcon_template right noText"></span>.</p> -->
-                <p>Ícone R: <span class="textIcon_template right noText">Yes</span>.</p>
+
+
+
+
+
 
                 <div class="lb3"></div>
 
@@ -118,16 +211,6 @@
                 <p class="t4"></p>
                 <p class="t6"></p>
                 <p class="t25"></p>
-
-                <p>P: <span id="tt">S</span>.</p>
-
-                <p>Ícone L: <span class="textIcon_table"></span>.</p>
-                <p>Ícone L: <span class="textIcon_image">Yes</span>.</p>
-                <!-- <p>Ícone L: <span class="textIcon_template noText"></span>.</p> -->
-                <p>Ícone L: <span class="textIcon_yes noText">Yes</span>.</p>
-
-                <p>Números: <span class="textIcon_yes"></span></p>
-                <p>Números: <span class="textIcon_yes noText">Yes</span></p>
                 
 
                 <h2>► Ícone Do H2</h2> 
@@ -519,9 +602,9 @@ font-size: 43px;
                 <hr> 
 
                 <!--
-                ──────────────────────────────────────────────────────
+                ◈──────────────────────────────────────────────────────◈
                 TODO: Texts
-                ────────────────────────────────────────────────────── --> 
+                ◈──────────────────────────────────────────────────────◈ -->
                 
                 <h2 id="Texts">Texts</h2>
 
