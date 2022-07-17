@@ -29,6 +29,17 @@ document.querySelectorAll('.noText').forEach(function (item) {
 
 /*  
 ◈──────────────────────────────────────────────────────◈
+TODO: <abbr> Com A Classe 'description'
+◈──────────────────────────────────────────────────────◈ */
+
+document.querySelectorAll('abbr.description').forEach(function (abbr) {
+
+    abbr.innerHTML = '<button onclick="lightbox(`'+ abbr.title +'`)" >'+ abbr.textContent +'</button>'
+    abbr.title = ''
+})
+
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Switches & Buttons
 ◈──────────────────────────────────────────────────────◈ */
 

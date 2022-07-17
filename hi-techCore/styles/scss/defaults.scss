@@ -11,7 +11,7 @@ TODO: Variables
 
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
-$font_monospace: 'Courier New', Courier, monospace;
+$font_monospace: Courier, 'Courier New', monospace;
 $font_monospace_size: 17px;
 $font_small: 16rem;
 $font_smaller: 13rem;
@@ -659,8 +659,6 @@ TODO: Texts
     font-size: $font_monospace_size;
 }
 
-
-
 html {
     font-family: $font_default;
     font-size: 1px;
@@ -668,9 +666,10 @@ html {
 }
 
 span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd, 
-abbr, dfn, sub, sup, pre, var, kbd, samp, code, time, address, blockquote, 
+abbr, dfn, sub, sup, pre, var, kbd, samp, output, code, time, address, blockquote, 
 q, cite, figcaption, form, label, input, textarea, select, button, fieldset, 
 legend, table, tr, td, th, caption {
+
     font-size: $font_size; 
 }
 
@@ -721,85 +720,18 @@ a {
 	}
 }
 
-.mini_topic {
-
-    font-size: $font_size;
-    background: 0;
-    text-align: center;
-    font-weight: bold;
-    -webkit-text-fill-color: initial;
+.lineHeight {
+    line-height: 1.5;
 }
 
-p, li, ul, ol, dl, dt, dd {
-    line-height: 1.5;
+p {
+    @extend .lineHeight;
 }
 
 p {
     @extend %margins;
     text-indent: 4rem; /* Sem 'text-align: justify', usar: 4px. Com 'text-align: justify', usar: 6px.  */
     // text-align: justify;
-}
-
-ul, ol {
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
-    margin-left: calc(1 * #{$margin_horizontal} + 21px);
-    margin-right: $margin_horizontal;
-}
-
-// ul { list-style-type: "➭ "; } // <- Não funciona no safari.
-// ul ul { list-style-type: "● "; } // <- Não funciona no safari.
-// ul ul { list-style-type: "-› "; } // <- Não funciona no safari.
-// ul ul ul { list-style-type: "- "; } // <- Não funciona no safari.
-
-ul { margin-left: calc(1 * #{$margin_horizontal} + 24px); } 
-ul { list-style-image: url("../../images/icons/list_1.svg"); }
-ul ul { list-style-image: url("../../images/icons/list_2.svg"); }
-ul ul ul { list-style-image: url("../../images/icons/list_3.svg"); }
-ul ul ul ul { list-style-image: url("../../images/icons/list_4.svg"); }
-/*  */
-
-ol > li::after {
-    display: inline;
-    content: '.';
-}
-
-dl {
-    @extend %margins;
-}
-
-dt { 
-    font-weight: bold; 
-    margin-top: $margin_vertical;
-}
-
-dt::after {
-    display: inline;
-    content: ':';
-}
- 
-dd {
-    margin-left: 0;
-}
-
-dd::after {
-    display: inline;
-    content: '.';
-}
-
-dt + dd {
-    margin-top: $margin_vertical;
-}
-
-dt:nth-of-type(1) {
-    margin-top: 0;
-}
-
-@media (min-width: $screen_small_widthLimit) {
-
-    dd {
-        margin-left: 30rem;
-    }
 }
 
 strong, b, em, i {
@@ -810,10 +742,10 @@ strong, b, em, i {
 
 abbr {
     text-decoration: none !important;
+    font-variant: none; // Evita o estilo 'font-variant: small-caps' de alguns navegadores
 }
 
 address {
-
     line-height: 1.5;
 }
 
@@ -845,10 +777,81 @@ pre {
     font-size: $font_monospace_size;
 }
 
+/*  TODO:    1 ▶ Lists
+◈──────────────────────────────────────────────────────◈ */
+
+li, ul, ol, ot, od, dl, dt, dd {
+    @extend .lineHeight;
+}
+
+ul, ol {
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+    margin-left: calc(1 * #{$margin_horizontal} + 21px);
+    margin-right: $margin_horizontal;
+}
+
 ul > li + li, ol > li + li {
     margin-top: $margin_vertical;
 }
 
+// ul { list-style-type: "➭ "; } ul ul { list-style-type: "● "; } ul ul { list-style-type: "-› "; } ul ul ul { list-style-type: "- "; } <- Não funciona no safari.
+
+ul, dl { margin-left: calc(1 * #{$margin_horizontal} + 24px); } 
+ul, dl { list-style-image: url("../../images/icons/list_1.svg"); }
+ul ul, dl dl { list-style-image: url("../../images/icons/list_2.svg"); }
+ul ul ul, dl dl dl { list-style-image: url("../../images/icons/list_3.svg"); }
+ul ul ul ul, dl dl dl dl { list-style-image: url("../../images/icons/list_4.svg"); }
+
+//·································◈ <dl>
+
+dl {
+    @extend %margins;
+
+    .dl_li {
+        display: list-item;
+    }
+
+    dt { 
+        font-weight: bold; 
+    }
+
+    dt, dd { 
+        display: inline;
+    }
+
+    .dl_li:not(:nth-last-of-type(1)) {
+        margin-bottom: $margin_vertical;
+    }
+}
+
+//·································◈ <dl> Of Definition
+
+.list_definition {
+
+    dt, dd { 
+        display: block;
+        margin-bottom: $margin_vertical;
+    }
+
+    @media (min-width: $screen_small_widthLimit) {
+
+        dd {
+            margin-left: 30rem;
+        }
+    }
+}
+
+//·································◈ Description Ordered Lists
+
+.dol {
+
+    font-weight: bold;
+
+    > li > *:not(:nth-of-type(1)){
+        font-weight: normal;
+    }
+}
 
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
@@ -882,7 +885,15 @@ ul > li + li, ol > li + li {
 .italic {
     font-style: italic;
 }
-/**/
+
+.mini_topic {
+
+    font-size: $font_size;
+    background: 0;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-fill-color: initial;
+}
 
 .container_text {
     font-size: $font_size; 
@@ -1238,25 +1249,7 @@ span.token.black {
 
 
 
-/* 
-Evite criar ícones com as dimensões do arquivo de imagem diferentes de 
-'$textIcons_size: 21px'.
 
-Para ícones menores do que isso (21x21 px), tente ajustá-lo dentro de seu próprio arquivo de imagem com este mesmo tamanho, E se necessário, ajus
- */
-
-
-
-//·································◈ Observações
-
-/*
-- Evite criar ícones com a altura do arquivo de imagem diferente de 21px
-(já que '$textIcons_size: 21px').
-
-- Se o efeito de alinhamento vertical do Flexbox for aplicado ao ícone, será 
-necessário ajustar sua posição no eixo Y na entrada do gerador quando for 
-criado  (Assim como foi feito com o ícone 'textIcon_HNB_template').
- */
  
 //·································◈ Entradas
 
@@ -1267,8 +1260,10 @@ $icons:
 textIcon_HNB_template "textIcon_menu_template.svg" 0px 6px 3px, 
 textIcon_yes "textIcon_yes.svg" 1px 0px 0px, 
 textIcon_no "textIcon_no.svg" 0px 0px 0px,  
-textIcon_image "textIcon_image.svg" 0px 20px 0px, 
-textIcon_table "textIcon_table.svg" 0px 0px 0px,
+
+// Ícones especiais:
+
+// description "textIcon_info" 0px -3px 0px,  
 
 // Ícones de testes:
 
@@ -1345,6 +1340,22 @@ textIcon_template_uncommon "textIcon_template_moreWide.svg" 10px 10px 10px;
     }
 }
 
+//·································◈ Configurações Adicionais De Alguns Ícones Do Gerador
+
+/* abbr.description > button {
+    @extend .description.right;
+    @extend .description.right:empty;
+    @extend .description.noText;
+    color: blue;
+    background-color: hsla(0, 0%, 0%, 0);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+abbr > button:focus {
+    outline: 0px dotted DeepSkyBlue;
+} */
+
 
 /*  TODO:        2 ▶ Not From Generator
 ◈──────────────────────────────────────────────────────◈ */
@@ -1395,7 +1406,7 @@ a[href^="tel:"] {  // .textIcon_phone {
 /*  TODO:            3 ▶ Others
 ◈──────────────────────────────────────────────────────◈ */
 
-abbr > button { // .textIcon_info {
+abbr.description > button { // .textIcon_info {
     @include textIcons_notFromGenerator;
     color: blue;
     background-color: hsla(0, 0%, 0%, 0);
@@ -1404,9 +1415,9 @@ abbr > button { // .textIcon_info {
     padding-right: calc(#{$textIcons_size} + 1px);
     margin-left: 0;
     margin-right: 0;
-} 
+}
 
-abbr > button:focus {
+abbr.description > button:focus {
     outline: 0px dotted DeepSkyBlue;
 }
  
@@ -5221,7 +5232,7 @@ figure.outdoor img {
 /*  TODO:        2 ▶ Groups
 ◈──────────────────────────────────────────────────────◈ */
 
-.group {
+.group_cards, .group_posters {
     display: flex;
     flex-direction: column;
 }
@@ -5243,7 +5254,7 @@ figure.outdoor img {
 
 @for $i from 2 through 12 {
 
-    .group.c_#{$i} {
+    .group_cards.c_#{$i}, .group_posters.c_#{$i} {
 
         @media (min-width: $screen_small_widthLimit) {
 
@@ -5415,6 +5426,92 @@ figure.outdoor img {
 
     scrollbar-width: auto;
     scrollbar-color: hsl(195, 100%, 100%) hsla(194, 100%, 50%, 0.1);  
+}
+
+/*  TODO:    1 ▶ Codification
+◈──────────────────────────────────────────────────────◈ */
+
+.codification {
+
+    background-color: $color_theme_clear;
+    border-top: 1px solid $color_theme;
+    border-bottom: 1px solid $color_theme;
+    margin-top: $margin_vertical;
+    margin-bottom: $margin_vertical;
+
+    dl.codification_piece {
+        margin-left: $margin_horizontal;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .dl_li.codification_piece  {
+        position: relative;
+        list-style: none;
+    }
+
+    .language {
+        color: white;
+        background-color: white;
+/*         
+        background: 
+        linear-gradient(to bottom right, hsla(0, 0%, 100%, 0) 50%, black 50%), // Canto direito inferior
+        linear-gradient(to bottom left, hsla(0, 0%, 100%, 0.35) 0%, hsla(0, 0%, 0%, 0) 90%), // Canto esquerdo superior
+        black;
+ */
+
+        //font-weight: bold;
+        border-top: 6px ridge hsl(0, 0%, 83%); 
+        border-bottom: 6px ridge hsl(0, 0%, 83%); 
+        //border-radius: $border_radius_big;
+
+/*         dt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: hsla(0, 0%, 0%, 0.2);
+            color: transparent;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        } */
+        
+        dd {
+            pre {
+                padding: 0 $margin_horizontal;
+                margin: 0;
+                overflow-x: auto;
+            }
+
+            pre::-webkit-scrollbar-thumb {
+                background-color: white;
+                box-shadow: none;
+            }
+
+            pre::-webkit-scrollbar-track {
+                border: 0;
+            }
+
+            code {
+                @extend .font_monospace;
+                filter: drop-shadow(0px 0px 3px hsl(188, 100%, 50%)); 
+                text-shadow: 0px 0px 7px hsl(188, 100%, 50%), 0px 0px 7px hsla(188, 100%, 50%, 0.55);
+            }
+        }
+    }
+
+    .resources {
+        background-color: white;
+    }
+
+    .rendering, .console {
+        background-color: white;
+    }
+}
+
+.codification + .codification {
+
+    margin-top: #{2 * $margin_vertical};
 }
 
 /*  
