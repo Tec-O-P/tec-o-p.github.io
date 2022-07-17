@@ -5453,19 +5453,19 @@ figure.outdoor img {
     .language {
         color: white;
         background-color: white;
-/*         
+/*         */
         background: 
         linear-gradient(to bottom right, hsla(0, 0%, 100%, 0) 50%, black 50%), // Canto direito inferior
         linear-gradient(to bottom left, hsla(0, 0%, 100%, 0.35) 0%, hsla(0, 0%, 0%, 0) 90%), // Canto esquerdo superior
         black;
- */
+ 
 
         font-weight: bold;
         border-top: 6px ridge hsl(0, 0%, 80%); 
         border-bottom: 6px ridge hsl(0, 0%, 80%); 
         //border-radius: $border_radius_big;
 
-/*         dt {
+         dt {/*
             display: flex;
             justify-content: center;
             align-items: center;
@@ -5473,8 +5473,10 @@ figure.outdoor img {
             color: transparent;
             position: absolute;
             width: 100%;
-            height: 100%;
-        } */
+            height: 100%;*/
+
+            display: none;
+        } 
         
         dd {
             pre {
