@@ -1442,7 +1442,7 @@ abbr.description > button:focus {
     @include textIcons_notFromGenerator;
     color: red;
     text-indent: calc(#{$textIcons_size} + 5px);
-    background-image: url('../../images/icons/textIcon_attention.svg');
+    background-image: url('../../images/icons/attention.svg');
     background-position: 0 3px;
 }
 
@@ -5443,45 +5443,70 @@ figure.outdoor img {
         margin-left: $margin_horizontal;
         margin-left: 0;
         margin-right: 0;
-    }
-
-    .dl_li.codification_piece  {
-        position: relative;
         list-style: none;
     }
 
+    dl.codification_piece .dl_li.codification_piece {
+        display: block;
+    }
+
+    .assets .dl_li.codification_piece > dd {
+        display: none;
+        //position: relative;
+    }
+
+    .assets .dl_li.codification_piece:nth-child(2) > dd {
+        display: block;
+        //position: relative;
+    }
+
+    .dl_li.codification_piece.resources > dd, .dl_li.codification_piece.rendering > dd, .dl_li.codification_piece.console > dd {
+        border: 1px solid black;
+    }
+
+    // .dl_li.codification_piece.rendering > dd, .dl_li.codification_piece.console > dd  {
+    //     display: block;
+    // }
+
+    .dts_container dt {/*
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: hsla(0, 0%, 0%, 0.2);
+        color: transparent;
+        position: absolute;
+        width: 100%;
+        height: 100%;*/
+
+        //display: none;
+
+        padding: 3px 5px;
+        border-top: 6px ridge hsl(0, 0%, 83%); 
+        border-right: 6px ridge hsl(0, 0%, 83%); 
+        background-color: hsla(195, 0%, 90%, 1);
+    } 
+
     .language {
-        color: white;
-        background-color: white;
-/*         */
-        background: 
-        linear-gradient(to bottom right, hsla(0, 0%, 100%, 0) 50%, black 50%), // Canto direito inferior
-        linear-gradient(to bottom left, hsla(0, 0%, 100%, 0.35) 0%, hsla(0, 0%, 0%, 0) 90%), // Canto esquerdo superior
-        black;
+ /*       background-color: white;
+         */
  
 
         //font-weight: bold;
-        border-top: 6px ridge hsl(0, 0%, 80%); 
-        border-bottom: 6px ridge hsl(0, 0%, 80%); 
         //border-radius: $border_radius_big;
 
-         dt {/*
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: hsla(0, 0%, 0%, 0.2);
-            color: transparent;
-            position: absolute;
-            width: 100%;
-            height: 100%;*/
-
-            display: none;
-        } 
+         
         
         dd {
             pre {
                 padding: 0 $margin_horizontal;
+                border-top: 6px ridge hsl(0, 0%, 83%); 
+                border-bottom: 6px ridge hsl(0, 0%, 83%); 
                 margin: 0;
+                color: white;
+                background: 
+                linear-gradient(to bottom right, hsla(0, 0%, 100%, 0) 50%, black 50%), // Canto direito inferior
+                linear-gradient(to bottom left, hsla(0, 0%, 100%, 0.35) 0%, hsla(0, 0%, 0%, 0) 90%), // Canto esquerdo superior
+                black;
                 overflow-x: auto;
             }
 

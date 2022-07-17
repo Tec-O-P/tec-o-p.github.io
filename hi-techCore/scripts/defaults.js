@@ -1100,7 +1100,70 @@ function lightbox_close(arg) {
 
 }
 
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: Codification
+◈──────────────────────────────────────────────────────◈ */
 
+document.querySelectorAll('.codification').forEach(function (codification) {
+
+    var assets = codification.querySelector(':scope .assets')
+    var dts = codification.querySelectorAll(':scope .assets > .dl_li.codification_piece > dt')
+/* 
+    for (i = (dts.length - 1); i > 0; i--) {
+    
+        dts[0].insertAdjacentElement('afterend', dts[i])
+    }
+ */
+    var dts_container = document.createElement('div')
+    dts_container.classList.add('dts_container')
+
+    if(assets !== null) {
+        assets.prepend(dts_container)
+
+        dts.forEach(function (dt) {
+        
+            dts_container.append(dt)
+        })
+    }
+    
+
+    
+    
+    // assets.insertAdjacentHTML('afterbegin', '<div class="dts_container"></div>')
+
+
+
+
+
+
+    
+    dts_container.addEventListener('click', function(evt) {
+            
+        
+
+        if (evt.target.textContent === "HTML") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "CSS") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "JS") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "Imagens") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "Áudios") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "Vídeos") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "JSON") { lightbox(evt.target.textContent) }
+    })
+})
+
+
+
+
+
+/* 
+div.addEventListener('click', function fct(evt) {
+
+    if (evt.target.id === "btn1") { display.textContent = '1' }
+    if (evt.target.id === "btn2") { display.textContent = '2' }
+    if (evt.target.id === "btn3") { display.textContent = '3' }
+})
+ */
 /*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Button Hide

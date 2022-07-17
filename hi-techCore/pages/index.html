@@ -72,21 +72,39 @@
         </p>
 
         <dl class="codification_piece">
-            <div class="codification_piece dl_li language"><dt>Linguagem 1</dt><dd><pre><code>
-                                                            function degToRad(degrees) {
-                                                                return degrees * Math.PI / 180;
-                                                            }
-            </code></pre></dd></div>
 
-            <div class="codification_piece dl_li language"><dt>Linguagem 2</dt><dd><pre><code>
+            <div class="assets">
 
+                <div class="codification_piece dl_li language"><dt>HTML</dt><dd><pre><code>
+&lt;dl>
+    &lt;div>&lt;dt class="dl_li">Termo 1: &lt;/dt>&lt;dd>Descrição 1.&lt;/dd>&lt;/div>
+    &lt;div>&lt;dt class="dl_li">Termo 2: &lt;/dt>&lt;dd>Descrição 2.&lt;/dd>&lt;/div>
+    &lt;div>&lt;dt class="dl_li">Termo 3: &lt;/dt>&lt;dd>Descrição 3.&lt;/dd>&lt;/div>
+&lt;/dl>
+                </code></pre></dd></div>
 
+                <div class="codification_piece dl_li language"><dt>CSS</dt><dd><pre><code>
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+                </code></pre></dd></div>
 
-            </code></pre></dd></div>
-            
-            <div class="codification_piece dl_li resources"><dt>Recursos 1</dt><dd>...</dd></div>
-            
-            <div class="codification_piece dl_li resources"><dt>Recursos 2</dt><dd>...</dd></div>
+                <div class="codification_piece dl_li language"><dt>JS</dt><dd><pre><code>
+function degToRad(degrees) {
+    return degrees * Math.PI / 180;
+}
+                </code></pre></dd></div>
+                
+                <div class="codification_piece dl_li resources"><dt>Imagens</dt><dd>...</dd></div>
+                
+                <div class="codification_piece dl_li resources"><dt>Áudios</dt><dd>...</dd></div>
+                
+                <div class="codification_piece dl_li resources"><dt>Vídeos</dt><dd>...</dd></div>
+        
+            </div>
 
             <div class="run">
 
@@ -95,7 +113,7 @@
                     <dd>
                         <samp>
 
-
+                            Saída da renderização.
 
                         </samp>
                     </dd>
@@ -106,7 +124,7 @@
                     <dd>
                         <samp>
 
-
+                            Saída do console.
                             
                         </samp>
                     </dd>
