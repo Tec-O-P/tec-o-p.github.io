@@ -5433,9 +5433,9 @@ figure.outdoor img {
 
 .codification {
 
-    background-color: $color_theme_clear;
+/*     background-color: $color_theme_clear;
     border-top: 1px solid $color_theme;
-    border-bottom: 1px solid $color_theme;
+    border-bottom: 1px solid $color_theme; */
     margin-top: $margin_vertical;
     margin-bottom: $margin_vertical;
 
@@ -5460,7 +5460,7 @@ figure.outdoor img {
         black;
  
 
-        font-weight: bold;
+        //font-weight: bold;
         border-top: 6px ridge hsl(0, 0%, 80%); 
         border-bottom: 6px ridge hsl(0, 0%, 80%); 
         //border-radius: $border_radius_big;

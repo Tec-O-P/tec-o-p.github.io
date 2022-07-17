@@ -4890,9 +4890,9 @@ figure.outdoor img {
 /*  TODO:    1 ▶ Codification
 ◈──────────────────────────────────────────────────────◈ */
 .codification {
-  background-color: #f5fdff;
-  border-top: 1px solid DeepSkyBlue;
-  border-bottom: 1px solid DeepSkyBlue;
+  /*     background-color: $color_theme_clear;
+    border-top: 1px solid $color_theme;
+    border-bottom: 1px solid $color_theme; */
   margin-top: 16rem;
   margin-bottom: 16rem;
 }
@@ -4913,7 +4913,6 @@ figure.outdoor img {
   background-color: white;
   /*         */
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, black 50%), linear-gradient(to bottom left, rgba(255, 255, 255, 0.35) 0%, rgba(0, 0, 0, 0) 90%), black;
-  font-weight: bold;
   border-top: 6px ridge #cccccc;
   border-bottom: 6px ridge #cccccc;
 }
