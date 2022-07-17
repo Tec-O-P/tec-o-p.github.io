@@ -4947,7 +4947,7 @@ figure.outdoor img {
   border-bottom: 6px ridge #d4d4d4;
   margin: 0;
   color: white;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, black 50%), linear-gradient(to bottom left, rgba(255, 255, 255, 0.35) 0%, rgba(0, 0, 0, 0) 90%), black;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 50%, black 50%), linear-gradient(to bottom left, rgba(255, 255, 255, 0.35) 0%, rgba(0, 0, 0, 0) 95%), black;
   overflow-x: auto;
 }
 
