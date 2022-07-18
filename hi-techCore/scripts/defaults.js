@@ -1109,6 +1109,10 @@ document.querySelectorAll('.codification').forEach(function (codification) {
 
     var assets = codification.querySelector(':scope .assets')
     var dts = codification.querySelectorAll(':scope .assets > .dl_li.codification_piece > dt')
+    var dds = codification.querySelectorAll(':scope .assets > .dl_li.codification_piece > dd')
+
+
+
 /* 
     for (i = (dts.length - 1); i > 0; i--) {
     
@@ -1127,29 +1131,36 @@ document.querySelectorAll('.codification').forEach(function (codification) {
         })
     }
     
-
-    
-    
-    // assets.insertAdjacentHTML('afterbegin', '<div class="dts_container"></div>')
-
-
-
-
-
-
-    
     dts_container.addEventListener('click', function(evt) {
-            
-        
-
-        if (evt.target.textContent === "HTML") { lightbox(evt.target.textContent) }
+/*         if (evt.target.textContent === "HTML") { lightbox(evt.target.textContent) }
         if (evt.target.textContent === "CSS") { lightbox(evt.target.textContent) }
         if (evt.target.textContent === "JS") { lightbox(evt.target.textContent) }
         if (evt.target.textContent === "Imagens") { lightbox(evt.target.textContent) }
         if (evt.target.textContent === "Áudios") { lightbox(evt.target.textContent) }
         if (evt.target.textContent === "Vídeos") { lightbox(evt.target.textContent) }
-        if (evt.target.textContent === "JSON") { lightbox(evt.target.textContent) }
+        if (evt.target.textContent === "JSON") { lightbox(evt.target.textContent) } */
+
+        dts.forEach(function (dt) {
+        
+            dt.classList.remove('on')
+            evt.target.classList.add('on')
+        })
+
+        dds.forEach(function (dd) {
+        
+            dd.style.display = 'none'
+        })
+
+        dts.forEach(function (dt, i) {
+        
+            if (evt.target === dt) {
+
+                dds[i].style.display = 'block'
+            }
+        })
     })
+
+
 })
 
 
