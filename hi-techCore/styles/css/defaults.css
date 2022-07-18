@@ -4890,6 +4890,7 @@ figure.outdoor img {
 /*  TODO:    1 ▶ Codification
 ◈──────────────────────────────────────────────────────◈ */
 .codification {
+  display: none;
   /*     background-color: $color_theme_clear;
     border-top: 1px solid $color_theme;
     border-bottom: 1px solid $color_theme; */

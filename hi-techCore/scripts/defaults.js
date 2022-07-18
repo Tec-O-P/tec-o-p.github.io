@@ -1160,7 +1160,7 @@ document.querySelectorAll('.codification').forEach(function (codification) {
         })
     })
 
-
+    codification.style.display = 'block'
 })
 
 
