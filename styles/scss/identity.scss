@@ -1,14 +1,13 @@
 //@import '../../framework/styles/scss/defaults.scss';
+/*
+┌──────────────────────────────────────────────────────┐
+│                                                  gmes-identity.css                                                  │
+└──────────────────────────────────────────────────────◈ */
 
 /*  
-──────────────────────────────────────────────────────
-gmes-identity.css  
-────────────────────────────────────────────────────── */
-
-/* 
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Framework - Variables
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_monospace: 'Courier New', Courier, monospace;
@@ -60,11 +59,10 @@ $color_shadow_box_inset_dark: hsla(0, 0%, 0%, 0.15);
 $bg_html: white;
 //$bg_html: hsl(0, 0%, 36%);
 //$bg_html: url(../../images/bgs/lightbox.png)  center /100% 100%, white;
- 
-/*  
-────────────────────────────
-TODO:    > Specific Elements & Components
-──────────────────────────── */
+
+
+/*  TODO:    1 ▶ Specific Elements & Components
+◈──────────────────────────────────────────────────────◈ */
 
 // ─────────── Header-Nav ───────────
 
@@ -461,9 +459,9 @@ $color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%; 
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Framework - Classes JS
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 // Classes Genéricas Pra Serem Aplicadas Somente Via JS:
 
@@ -477,10 +475,10 @@ TODO: Framework - Classes JS
     overflow: hidden;
 }
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Seções De Layout
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 html { 
     //background: url("../../images/bgs/html.png");
@@ -546,10 +544,10 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
     } 
 }
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Others
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 table { 
 
@@ -567,10 +565,10 @@ table {
     padding: 8px 0px 0px 7px; 
 }
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Slider
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 .slider { 
 
@@ -599,7 +597,7 @@ TODO: Slider
 /* 
 ────────────────────────────────────────────────────── 
 TODO: Download Page
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 .download_buttons {
 
@@ -639,10 +637,10 @@ TODO: Download Page
     }
 }
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Types Table
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 .types_table_msg {
     @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
@@ -769,10 +767,10 @@ TODO: Types Table
 
 */
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Skills - Table
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 $STC_and_SDSB_FULLHD_margin_horizontal: 20px; 
 
@@ -790,6 +788,11 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     }
 }
 
+.skills_types_choiceZ:not(.dropdown_open) {
+
+
+}
+/*  */
 .skills_types_choice:not(.dropdown_open) {
 
     display: flex !important;
@@ -834,7 +837,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     // }
 
     a {
-        // width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
+        // width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; // <- Declarações necessárias para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.)
         height: 44px !important;
         // border-radius: 1000px; 
     }
@@ -1121,6 +1124,9 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     td.Effect {
 
         font-size: 0;
+        max-width: 250px;
+        padding-left: 6px;
+        padding-right: 6px;
 
         > span:empty {
 
@@ -1135,14 +1141,17 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
             padding: 4px 8px;
             margin-top: $margin_v;
             margin-bottom: $margin_v;
+            margin-left: 5px;
+            margin-right: 5px;
             border-radius: 1000px;
         }
-
-        > span + span {
+/* 
+        > span:not(:empty) + span {
 
             margin-left: 9px;
+            margin-right: 9px;
         }
-
+ */
         .SPD {
 
             color: $color_text_token_yellow; 
@@ -1287,7 +1296,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     text-align: center;
 }
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: ...
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */

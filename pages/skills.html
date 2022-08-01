@@ -24,6 +24,11 @@
          
         display: none; 
     }
+
+    .skillTest {
+
+        display: none !important;
+    }
     
     /* Esta largura mínima representa o valor da variável 'larger_screen_minWidth_setting'. VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>). 
     @media (min-width: 1366px) {  
@@ -559,7 +564,7 @@
     <th scope="col">Notes</th>
 </tr>
 
-<tr>
+<tr class="skillTest">
     <td class='Name'><span>?1</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Dragon.png' alt=''><img class='icon_type' src='../images/game/icons/types/Vital Energy.png' alt=''></span></td>
     <td class='Damage'><span></span></td>
@@ -593,7 +598,7 @@
     <td class='Notes'><span></span></td>
 </tr>
 
-<tr>
+<tr class="skillTest">
     <td class='Name'><span>?2</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Magnetic.png' alt=''><img class='icon_type' src='../images/game/icons/types/Laser.png' alt=''></span></td>
 
@@ -628,7 +633,7 @@
     <td class='Notes'><span></span></td>
 </tr>
 
-<tr>
+<tr class="skillTest">
     <td class='Name'><span>?3</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Plasma.png' alt=''><img class='icon_type' src='../images/game/icons/types/Gravity.png' alt=''></span></td>
 
@@ -663,7 +668,7 @@
     <td class='Notes'><span></span></td>
 </tr>
 
-<tr>
+<tr class="skillTest">
     <td class='Name'><span>?4</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Beast.png' alt=''><img class='icon_type' src='../images/game/icons/types/Time.png' alt=''></span></td>
     <td class='Damage'><span></span></td>
@@ -802,6 +807,40 @@
     <td class='Consistency'><span><!-- Solid, Energy, Digital --></span></td>
         <td class='Description'><span></span></td>
     <td class='Notes'><span>Bio Generator. Organic Battery - converte energia vital em energia elétrica.</span></td>
+</tr>
+
+<tr>
+    <td class='Name'><span>Black Box</span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span>
+        <span class='React'></span>
+        <span class='Critical'><!-- ?% critical chance --></span>
+        <span class='State'>+Vulnerable</span>
+        <span class='Recover'></span>
+        <span class='Drain'></span>
+        <span class='Call'></span>
+        <span class='Union'></span>
+        <span class='Integrate'></span>
+        <span class='Field'></span>
+        <span class='Block'></span>
+        <span class='Special'></span>
+    </td>
+        <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
+        <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
+
+    <td class='Success'><span></span></td>
+    <td class='Cost'><span></span></td>
+    <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='plusTP'><span></span></td>
+    <td class='Condition'><span><span class='Equip'></span><span class='OtherCond'></span></span></td>
+    <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
+    <td class='Hit'><span></span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
+    <td class='Consistency'><span><!-- Solid, Energy, Digital --></span></td>
+    <td class='Description'><span></span></td>
+    <td class='Notes'><span>Black Box: Verificação de software sem o conhecimento/acesso à estrutura interna do sistema/código.</span></td>
 </tr>
 
 <tr>
@@ -1378,6 +1417,40 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <!--G-->
 
+<tr>
+    <td class='Name'><span>Gray Box</span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span>
+        <span class='React'></span>
+        <span class='Critical'><!-- ?% critical chance --></span>
+        <span class='State'>+Vulnerable</span>
+        <span class='Recover'></span>
+        <span class='Drain'></span>
+        <span class='Call'></span>
+        <span class='Union'></span>
+        <span class='Integrate'></span>
+        <span class='Field'></span>
+        <span class='Block'></span>
+        <span class='Special'></span>
+    </td>
+        <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
+        <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
+
+    <td class='Success'><span></span></td>
+    <td class='Cost'><span></span></td>
+    <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='plusTP'><span></span></td>
+    <td class='Condition'><span><span class='Equip'></span><span class='OtherCond'></span></span></td>
+    <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
+    <td class='Hit'><span></span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
+    <td class='Consistency'><span><!-- Solid, Energy, Digital --></span></td>
+    <td class='Description'><span></span></td>
+    <td class='Notes'><span>White Box: Verificação de software com conhecimento/acesso parcial da/à estrutura interna do sistema/código.</span></td>
+</tr>
+
 <!--H-->
 
 <tr>
@@ -1781,7 +1854,7 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 
 <!--P-->
 
-<tr>
+<tr class="skillTest">
     <td class='Name'><span>Psionic Boom</span></td>
     <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Cybernetic.png' alt=''><img class='icon_type' src='../images/game/icons/types/Psychic.png' alt=''></span></td>
 
@@ -2319,6 +2392,40 @@ sistema operacional não consegue armazenar determinado arquivo de uma vez só. 
 </tr>
 
 <!--W-->
+
+<tr>
+    <td class='Name'><span>White Box</span></td>
+    <td class='Type'><span><img class='icon_type' src='../images/game/icons/types/Digital.png' alt=''></span></td>
+    <td class='Damage'><span></span></td>
+    <td class='Effect'>
+        <span class='SPD'><!-- Act first, Act last --></span>
+        <span class='React'></span>
+        <span class='Critical'><!-- ?% critical chance --></span>
+        <span class='State'>+Vulnerable</span>
+        <span class='Recover'></span>
+        <span class='Drain'></span>
+        <span class='Call'></span>
+        <span class='Union'></span>
+        <span class='Integrate'></span>
+        <span class='Field'></span>
+        <span class='Block'></span>
+        <span class='Special'></span>
+    </td>
+        <!-- Anonymous, Encrypt, Firewall, Low Power Mode, Zip -->
+        <!-- Bug, Lag, Crash, Vulnerable, Hack, Overload, Burn - Confusion, Fascination, Fear, Rage -->
+
+    <td class='Success'><span></span></td>
+    <td class='Cost'><span></span></td>
+    <!-- <span class='cost hp/turn/money'></span><span class='cost mp'></span><span class='cost tp'></span> -->
+    <td class='Target'><span></span></td><!-- User, 1 Ally, All Allies, 1 Enemy, All Enemies -->
+    <td class='plusTP'><span></span></td>
+    <td class='Condition'><span><span class='Equip'></span><span class='OtherCond'></span></span></td>
+    <td class='Available'><span>IRL and Net</span></td><!-- In Real Life, IRL and Net -->
+    <td class='Hit'><span></span></td><!-- Physical, Certain Physical, Digital, Certain Digital -->
+    <td class='Consistency'><span><!-- Solid, Energy, Digital --></span></td>
+    <td class='Description'><span></span></td>
+    <td class='Notes'><span>White Box: Verificação de software com conhecimento/acesso total da/à estrutura interna do sistema/código.</span></td>
+</tr>
 
 <!--X-->
 

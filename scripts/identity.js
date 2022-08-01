@@ -1,12 +1,12 @@
 /*  
 ──────────────────────────────────────────────────────
 gmes-identity.js
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Framework Demos
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 {
 // Choice - Sample functions:
@@ -103,17 +103,16 @@ function switch_5(arg){ if(arg.classList.contains('disabled')) { return }; conso
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Header-nav
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 {
 var nav_expand = 565 // VÍNCULO: Váriável SCSS 
 
-/*  
-────────────────────────────
-TODO:    >  Nav - Menu - HTML
-──────────────────────────── */
+
+/*  TODO:    1 ▶  Nav - Menu - HTML
+◈──────────────────────────────────────────────────────◈ */
 
 document.querySelector('.nav-menu').innerHTML = `
 
@@ -238,10 +237,9 @@ document.querySelector('.nav-menu').innerHTML = `
 </ul>
 */
 
-/*  
-────────────────────────────
-TODO:    >  Nav - JS
-──────────────────────────── */
+
+/*  TODO:    1 ▶  Nav - JS
+◈──────────────────────────────────────────────────────◈ */
 
 var nav_menu_compact_enabled = false
 var nav_options_anchors = document.querySelectorAll('.nav-menu > ul > li > a')
@@ -467,9 +465,9 @@ document.querySelector('.headerNav-button').onclick = function() { // <- Show He
 }
 
 /*  
-──────────────────────────────────────────────────────
+◈──────────────────────────────────────────────────────◈
 TODO: Footer - HTML
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 document.querySelector('footer').innerHTML = `
 
@@ -544,19 +542,18 @@ document.querySelector('footer').innerHTML = `
 
 update_switches_buttons_and_anchors(document.querySelectorAll('footer a')) 
 
-/* 
-──────────────────────────────────────────────────────
+/*  
+◈──────────────────────────────────────────────────────◈
 TODO: Table - Skills
-────────────────────────────────────────────────────── */
+◈──────────────────────────────────────────────────────◈ */
 
 var type_icon_imgs = document.querySelectorAll('img.type_icon')
 
 imgsNamesAsAlts(type_icon_imgs)
 
-/*  
-────────────────────────────
-TODO:    > Variables Used In 2+ Topics
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Variables Used In 2+ Topics
+◈──────────────────────────────────────────────────────◈ */
 
 var skills_table_box = document.querySelector('.skills_table_box')
 
@@ -570,11 +567,9 @@ var STSB_switchs = document.querySelectorAll('.skills_types_switchs_box .switch'
 
 var SDSB_switchs = document.querySelectorAll('.skills_data_switchs_box .switch')
 
-/*  
-────────────────────────────
-TODO:    > Add Classes Of <th> names
-                    In Table Cells
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Add Classes Of <th> names In Table Cells
+◈──────────────────────────────────────────────────────◈ */
 
 for (i = 0; i < skills_table_ths.length; i++) {
 
@@ -595,10 +590,9 @@ for (i = 0; i < skills_table_ths.length; i++) {
     */
 }
 
-/*  
-────────────────────────────
-TODO:    > Skills Choice
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Skills Choice
+◈──────────────────────────────────────────────────────◈ */
 
 imgsNamesAsAlts(document.querySelectorAll('.skills_types_choice img'))
 
@@ -735,16 +729,14 @@ document.querySelector('.skills_switch_show_only_internet_skills').addEventListe
 
 
 
-/*  
-────────────────────────────
-OUT:    > Skills Types Switchs
-──────────────────────────── */
+/*  TODO:    1 ▶ Skills Types Switchs (OUT)
+◈──────────────────────────────────────────────────────◈ */
 
-/*  
-────────────────────────────
-OUT:        >> Initial Settings
-──────────────────────────── 
 
+/*  TODO:        2 ▶ Initial Settings (OUT)
+◈──────────────────────────────────────────────────────◈ */
+
+/*
 var quantity_of_types_activated = 0
 
 for (i = 0; i < skills_table_rows.length; i++) {
@@ -755,11 +747,11 @@ for (i = 0; i < skills_table_rows.length; i++) {
 imgsNamesAsAlts(document.querySelectorAll('.skills_types_switchs_box img'))
 */
 
-/*  
-────────────────────────────
-OUT:        >> Skills Types Switchs Function
-──────────────────────────── 
 
+/*  TODO:        2 ▶ Skills Types Switchs Function (OUT)
+◈──────────────────────────────────────────────────────◈ */
+
+/*
 function F_skills_types_switchs(el) {
 
     for (i = 1; i < skills_table_rows.length; i++) {
@@ -799,11 +791,11 @@ function F_skills_types_switchs(el) {
     }
 }*/
 
-/*  
-────────────────────────────
-OUT:            >> 'All' Switch
-──────────────────────────── 
 
+/*  TODO:        2 ▶ 'All' Switch (OUT)
+◈──────────────────────────────────────────────────────◈ */
+
+/*
 function F_skills_types_all_switch(el) {
 
     if (el.classList.contains('on')) {
@@ -829,11 +821,11 @@ function F_skills_types_all_switch(el) {
     }
 }*/
 
-/*  
-────────────────────────────
-OUT:            >> Switch - hide skill names
-──────────────────────────── 
 
+/*  TODO:        2 ▶ Switch - hide skill names (OUT)
+◈──────────────────────────────────────────────────────◈ */
+
+/*
 function F_hide_skills_names(el) {
     
     STSB_switchs.forEach(function (current_switch) {
@@ -851,17 +843,14 @@ function F_hide_skills_names(el) {
     })
 }*/
 
-/*  
-────────────────────────────
-TODO:    > Skills Data Switchs
-──────────────────────────── */
 
-/*  
-────────────────────────────
-TODO:      >> Decrease Size Of Buttons 
-                                On Highest Screen Width
-──────────────────────────── 
+/*  TODO:    1 ▶ Skills Data Switchs
+◈──────────────────────────────────────────────────────◈ */
 
+/*  TODO:        2 ▶ Decrease Size Of Buttons On Highest Screen Width
+◈──────────────────────────────────────────────────────◈ */
+
+/*
 var larger_screen_minWidth_setting = 1366 // VÍNCULO: Váriável JS, SCSS, e HTML (CSS no <style>).
 
 onresize = function() {
@@ -879,22 +868,19 @@ onresize = function() {
             current_switch.classList.remove('small')
         })
     }
-}*/
+}
+*/
  
-/*  
-────────────────────────────
-TODO:      >> Labels
-──────────────────────────── */
+/*  TODO:        2 ▶ Labels
+◈──────────────────────────────────────────────────────◈ */
 
 for (i = 1; i < SDSB_switchs.length; i++) {
 
     SDSB_switchs[i].querySelector(':scope .piece_text').textContent = skills_table_ths[i - 1].textContent
 }
 
-/*  
-────────────────────────────
-TODO:      >> Set Switches Widths
-──────────────────────────── */
+/*  TODO:        2 ▶ Set Switches Widths
+◈──────────────────────────────────────────────────────◈ */
 
 function skills_data_switchs_width() {  
 
@@ -912,10 +898,8 @@ skills_data_switchs_width()
 
 window.addEventListener('resize', skills_data_switchs_width)
   
-/*  
-────────────────────────────
-TODO:      >> Logic
-──────────────────────────── */
+/*  TODO:        2 ▶ Logic
+◈──────────────────────────────────────────────────────◈ */
 
 function F_skills_data_switchs(el) {
 
@@ -948,10 +932,8 @@ function F_skills_data_switchs(el) {
     }
 }
 
-/*  
-────────────────────────────
-TODO:          >>> 'All' Switch
-──────────────────────────── */
+/*  TODO:            3 ▶ 'All' Switch
+◈──────────────────────────────────────────────────────◈ */
 
 function F_skills_data_all_switch(el) {
 
@@ -984,16 +966,11 @@ function F_skills_data_all_switch(el) {
     }
 }
 
-/*  
-────────────────────────────
-TODO:      >> Initial Setting
-──────────────────────────── */
+/*  TODO:        2 ▶ Initial Setting
+◈──────────────────────────────────────────────────────◈ */
 
-/*  
-────────────────────────────
-TODO:          >>> Activate 'All'
-                                        Type switch
-──────────────────────────── */
+/*  TODO:            3 ▶ Activate 'All' Type switch
+◈──────────────────────────────────────────────────────◈ */
 
 STSB_switchs.forEach(function (current_switch) {
 
@@ -1004,12 +981,10 @@ STSB_switchs.forEach(function (current_switch) {
     }
 })
 
-/*  
-────────────────────────────
-TODO:          >>> Activateds Data
-──────────────────────────── */
+/*  TODO:            3 ▶ Activateds Data
+◈──────────────────────────────────────────────────────◈ */
 
-var activated_data = ['Name', 'Type', 'Damage', 'Effect', 'Cost', 'Condition']
+var activated_data = ['Name', 'Type', 'Effect', 'Condition', 'Available'] // 'Damage', 'Cost', 
 
 var activated_data_indexes = [ ]
 
@@ -1030,10 +1005,8 @@ for (ix = 0; ix < activated_data_indexes.length; ix++) {
     switch_event(SDSB_switchs[activated_data_indexes[ix]])
 }
 
-/*  
-────────────────────────────
-TODO:          >>> 'Name' Data disabled
-──────────────────────────── */
+/*  TODO:            3 ▶ 'Name' Data disabled
+◈──────────────────────────────────────────────────────◈ */
 
 for (i = 0; i < SDSB_switchs.length; i++) {
 
@@ -1043,10 +1016,8 @@ for (i = 0; i < SDSB_switchs.length; i++) {
     }
 }
 
-/*  
-────────────────────────────
-TODO:          >>> Hidden Data Switchs
-──────────────────────────── */
+/*  TODO:            3 ▶ Hidden Data Switchs
+◈──────────────────────────────────────────────────────◈ */
 
 var hidden_data_switchs = []
 var hidden_data_switchs = ['Name', 'plusTP', 'Notes'] 
@@ -1067,11 +1038,10 @@ for (i = 0; i < hidden_data_switchs.length; i++) {
     }
 }
 
-/*  
-────────────────────────────
-TODO:    > Initial Type & Auto Table Full Screen
-──────────────────────────── */
 
+/*  TODO:    1 ▶ Set Choice Initial Type
+◈──────────────────────────────────────────────────────◈ */
+/*  */
 var skills_choice_initial_type = 'All Types'
 
 var skills_choice = document.querySelector('.skills_types_choice')
@@ -1091,13 +1061,15 @@ skills_choice_options_anchor.forEach(function (option) {
  
 choice(skills_choice)
 
-// skills_table_box.classList.toggle('skills_table_box_full'); document.body.classList.toggle('overflow_hidden')
 
-/*  
-────────────────────────────
-TODO:    > Replace Table Header 
-                'plusTP' With '+TP'
-──────────────────────────── */
+/*  TODO:    1 ▶ Auto Table Full Screen
+◈──────────────────────────────────────────────────────◈ */
+
+skills_table_box.classList.toggle('skills_table_box_full'); document.body.classList.toggle('overflow_hidden')
+
+
+/*  TODO:    1 ▶ Replace Table Header 'plusTP' With '+TP'
+◈──────────────────────────────────────────────────────◈ */
 
 // Replace In Table Header:
 
@@ -1119,11 +1091,9 @@ for (i = 0; i < SDSB_switchs.length; i++) {
     }
 }
 
-/*  
-────────────────────────────
-TODO:    > Replace Table Header 
-                'HP_or_AP_or_TP' With 'HP/AP/TP'
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Replace Table Header 'HP_or_AP_or_TP' With 'HP/AP/TP'
+◈──────────────────────────────────────────────────────◈ */
 
 // Replace In Table Header:
 /*  
@@ -1166,10 +1136,9 @@ SDSB__HP_or_AP_or_TP.textContent =
 SDSB__HP_or_AP_or_TP.textContent.replace('_or_', '/').replace('_or_', '/')
 */
 
-/*  
-────────────────────────────
-TODO:    > Table Full Screen
-──────────────────────────── */
+
+/*  TODO:    1 ▶ Table Full Screen
+◈──────────────────────────────────────────────────────◈ */
 
 // console.log(skills_table_box.getBoundingClientRect())
 
@@ -1191,14 +1160,13 @@ skills_table_box.addEventListener('click', function() {
 
 
 
-/* 
-──────────────────────────────────────────────────────
-TODO: ...
-────────────────────────────────────────────────────── */
-
 /*  
-────────────────────────────
-TODO:    > ...
-──────────────────────────── */
+◈──────────────────────────────────────────────────────◈
+TODO: ...
+◈──────────────────────────────────────────────────────◈ */
+
+
+/*  TODO:    1 ▶ ...
+◈──────────────────────────────────────────────────────◈ */
 
 
