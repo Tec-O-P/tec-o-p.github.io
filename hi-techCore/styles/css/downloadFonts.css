@@ -9,6 +9,11 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
 */
 
 @font-face {
+    font-family: "2015_Cruiser";
+    src: url("../../fonts/2015_Cruiser.otf");
+} 
+
+@font-face {
     font-family: "Cyber-BoldBook";
     src: url("../../fonts/Cyber-BoldBook.ttf");
 } 

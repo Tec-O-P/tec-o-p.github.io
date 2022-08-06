@@ -11,6 +11,29 @@ TODO: Variables
 
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
+
+$font_default: 'Cyber-BoldBook'; // FORA!
+$font_size: 15rem;
+// line-height: 1.8; 
+
+$font_default: 'HighTech...ish'; // Feio
+$font_size: 21rem;
+
+$font_default: Micron;
+$font_size: 14rem; 
+
+$font_default: 'IDroid'; // Não é bonito o suficiente
+$font_size: 14rem;
+
+$font_default: "2015_Cruiser";
+$font_size: 14rem;
+
+.lineHeight {
+    line-height: 2.0358 !important;
+}
+
+
+
 $font_monospace: Courier, 'Courier New', monospace;
 $font_monospace_size: 17px;
 $font_small: 16rem;
@@ -24,7 +47,7 @@ $button_height_smaller: 32px;
 $border_radius_default: 20px;
 $border_radius_big: 40px; 
  
-//·································◈ Breakpoints
+//····································································◈ Breakpoints
 
 $screen_small_widthLimit: 501px; // Largura máxima de um celular.
 // $screen_medium_widthLimit: 1000px; // Largura mínima de um PC.
@@ -34,13 +57,14 @@ $screen_small_widthLimit: 501px; // Largura máxima de um celular.
 $nav_expand: 565px; // VÍNCULO: Váriável JS // Altura mínima de um celular.
 $hr_stop: calc(#{$central_maxWidth} + 60px);
 
-//·································◈ z-index's
+//····································································◈ z-index's
 
 $zIndex_nav: 1000;
 $zIndex_choice_d_open: 1100;
 $zIndex_lightbox: 1200;
+$zIndex_error: 5000;
 
-//·································◈ Colors And BG's Geral
+//····································································◈ Colors And BG's Geral
 
 // $color_theme: hsl(193, 100%, 50%);
 //$color_theme: hsl(201, 100%, 48%);
@@ -65,7 +89,7 @@ $bg_html: white;
 /*  TODO:    1 ▶ Specific Elements & Components
 ◈──────────────────────────────────────────────────────◈ */
 
-//·································◈ Header-Nav
+//····································································◈ Header-Nav
 
 $color_shadow_headerNav: hsla(0, 0%, 0%, 0.6);
 $color_shadow_headerNav_rounded: hsla(0, 0%, 0%, 0.28);
@@ -85,7 +109,7 @@ $bg_header: linear-gradient(to bottom, hsl(197,100%,78%) 0%,hsl(200,100%,76%) 10
 $bg_nav: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%,hsl(193,100%,82%) 33%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 */
  
-//·································◈ Footer
+//····································································◈ Footer
 
 $color_shadow_footer: $color_shadow_headerNav_rounded; 
 $color_shadow_footer_icons: hsla(0, 0%, 0%, 0.12);   
@@ -94,7 +118,7 @@ $bg_footer_icons: url(../../images/bgs/footer_icons.png)  center /100% 100%;
 
 // $bg_footer_icons: linear-gradient(to bottom right, hsl(204,100%,73%) 0%,hsl(203,100%,67%) 10%, hsl(193,100%,76%) 55%, hsl(170, 100%, 88%) 90%,hsl(170, 100%, 88%) 100%);
 
-//·································◈ Texts
+//····································································◈ Texts
 
 // $color_text_hx: url(../../images/colors/text_hx.png)  center /100% 100%; 199
 $color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 50%), hsl(201, 100%, 50%), hsl(193, 100%, 82%), hsl(230, 100%, 40%)); // hsl(246, 100%, 50%)
@@ -111,53 +135,53 @@ $bg_kbd: hsl(0, 0%, 86%);
 $textIcons_size: 21px;
 $widthOfSpace: 4px;
 
-// Tokens:
+// Tickets:
 
-$color_border_token_blue: hsl(195, 100%, 58%);
-$bg_token_blue: hsl(195, 100%, 99%);
-$color_text_token_blue: hsl(195, 100%, 46%);
+$color_border_ticket_blue: hsl(195, 100%, 58%);
+$bg_ticket_blue: hsl(195, 100%, 99%);
+$color_text_ticket_blue: hsl(195, 100%, 46%);
 
-$color_border_token_red: hsl(0, 100%, 74%);
-$bg_token_red: hsl(0, 100%, 98%);
-$color_text_token_red: hsl(0, 100%, 46%); 
+$color_border_ticket_red: hsl(0, 100%, 74%);
+$bg_ticket_red: hsl(0, 100%, 98%);
+$color_text_ticket_red: hsl(0, 100%, 46%); 
 
-$color_border_token_yellow: hsl(55, 100%, 43%);
-$bg_token_yellow: hsl(60, 90%, 95%);
-$color_text_token_yellow: hsl(54, 100%, 42%);
+$color_border_ticket_yellow: hsl(55, 100%, 43%);
+$bg_ticket_yellow: hsl(60, 90%, 95%);
+$color_text_ticket_yellow: hsl(54, 100%, 42%);
 
-$color_border_token_green: hsl(120, 100%, 46%);
-$bg_token_green: hsl(120, 100%, 98%);
-$color_text_token_green: hsl(120, 100%, 42%);
+$color_border_ticket_green: hsl(120, 100%, 46%);
+$bg_ticket_green: hsl(120, 100%, 98%);
+$color_text_ticket_green: hsl(120, 100%, 42%);
 
-$color_border_token_pink: hsl(300, 100%, 50%);
-$bg_token_pink: hsl(300, 100%, 98%);
-$color_text_token_pink: hsl(300, 100%, 50%);
+$color_border_ticket_pink: hsl(300, 100%, 50%);
+$bg_ticket_pink: hsl(300, 100%, 98%);
+$color_text_ticket_pink: hsl(300, 100%, 50%);
 
-$color_border_token_purple: hsl(300, 100%, 30%);
-$bg_token_purple: hsl(280, 100%, 97%);
-$color_text_token_purple: hsl(300, 100%, 30%);
+$color_border_ticket_purple: hsl(300, 100%, 30%);
+$bg_ticket_purple: hsl(280, 100%, 97%);
+$color_text_ticket_purple: hsl(300, 100%, 30%);
 
-$color_border_token_orange: hsl(39, 100%, 50%);
-$bg_token_orange: hsl(39, 100%, 96%);
-$color_text_token_orange: hsl(39, 100%, 48%);
+$color_border_ticket_orange: hsl(39, 100%, 50%);
+$bg_ticket_orange: hsl(39, 100%, 96%);
+$color_text_ticket_orange: hsl(39, 100%, 48%);
 
-$color_border_token_brown: hsl(25, 76%, 44%);
-$bg_token_brown: hsl(25, 76%, 96%);
-$color_text_token_brown: hsl(25, 76%, 44%);
+$color_border_ticket_brown: hsl(25, 76%, 44%);
+$bg_ticket_brown: hsl(25, 76%, 96%);
+$color_text_ticket_brown: hsl(25, 76%, 44%);
 
-$color_border_token_cyan: hsl(180, 100%, 44%);
-$bg_token_cyan: hsl(180, 100%, 97%);
-$color_text_token_cyan: hsl(180, 100%, 40%);
+$color_border_ticket_cyan: hsl(180, 100%, 44%);
+$bg_ticket_cyan: hsl(180, 100%, 97%);
+$color_text_ticket_cyan: hsl(180, 100%, 40%);
 
-$color_border_token_purple2: hsl(249, 80%, 77%);
-$bg_token_purple2: hsl(249, 100%, 98%);
-$color_text_token_purple2: hsl(249, 80%, 72%);
+$color_border_ticket_purple2: hsl(249, 80%, 77%);
+$bg_ticket_purple2: hsl(249, 100%, 98%);
+$color_text_ticket_purple2: hsl(249, 80%, 72%);
 
-$color_border_token_black: hsl(0, 0%, 52%);
-$bg_token_black: hsl(0, 0%, 97%); 
-$color_text_token_black: hsl(0, 0%, 52%);
+$color_border_ticket_black: hsl(0, 0%, 52%);
+$bg_ticket_black: hsl(0, 0%, 97%); 
+$color_text_ticket_black: hsl(0, 0%, 52%);
 
-//·································◈ Signs
+//····································································◈ Signs
 
 $color_text_success: hsl(120, 100%, 35%);
 $color_text_warning: hsl(45, 74%, 45%);
@@ -175,7 +199,7 @@ $bg_warning: hsl(54, 100%, 93%);
 $bg_fail: hsl(0, 100%, 94%);
 $bg_danger: red;
 
-//·································◈ Tables
+//····································································◈ Tables
 
 $table_border1_width: 1px;
 $table_border2_width: 1px;
@@ -185,7 +209,7 @@ $color_border_table: hsl(0, 0%, 85%);
 $bg_table_tr_hover: $color_theme_clear; 
 $bg_table_tr_hover_2: linear-gradient(to right, hsla(193, 100%, 96%, 0), $color_theme_clear 5% 95%, hsla(193, 100%, 96%, 0)); // Não use a palavra-chave 'transparent' nesta instrução, pois caso contrário vai bugar no Safari
 
-//·································◈ Forms
+//····································································◈ Forms
 
 $color_text_form: $color_text; 
 $color_text_form_placeholder: $color_text_clear;
@@ -199,7 +223,7 @@ $bg_select: linear-gradient(to bottom, hsl(0, 0%, 91%), white);
 
 // $bg_button: linear-gradient(to bottom right,hsl(197,100%,88%) 0%,hsl(200,100%,81%) 20%,hsl(203,100%,77%) 50%,hsl(204,100%,70%) 74%,hsl(204,100%,73%) 100%);
 
-//·································◈ Switches
+//····································································◈ Switches
 
 // --- Type Button ---
 
@@ -292,25 +316,25 @@ $color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%);
 $bg_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 96%); //linear-gradient(to bottom, white, hsl(193, 0%, 91%));
 $color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_token_blue;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_token_blue;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_token_blue; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_ticket_blue;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_ticket_blue;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_ticket_blue; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_token_red;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_token_red;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_token_red; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_ticket_red;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_ticket_red;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_ticket_red; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_token_yellow;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_token_yellow;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_token_yellow; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_ticket_yellow;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_ticket_yellow;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_ticket_yellow; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_token_green;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_token_green;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_token_green; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_ticket_green;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_ticket_green;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_ticket_green; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_token_black;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_token_black;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_token_black; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_ticket_black;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_ticket_black;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_ticket_black; 
 
 // --- Type Image ---
 
@@ -374,7 +398,7 @@ $bg_switch_type_key_path_off: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0,
 $bg_switch_type_key_path_on: white; // linear-gradient(to bottom, white, hsl(197, 100%, 75%)); // linear-gradient(to bottom, white, white, hsl(197, 100%, 65%));
 $bg_switch_type_key_path_off_SS: linear-gradient(to bottom, hsl(0, 0%, 70%), hsl(0, 0%, 79%), hsl(0, 0%, 100%)); // hsl(0, 0%, 76%)
 
-//·································◈ Buttons
+//····································································◈ Buttons
 
 // Obs.: Algumas variáveis dos botões estão em Switches.
 
@@ -416,14 +440,14 @@ $color_text_button_type_image_piece_text_floating_black: $color_text_switch_type
 $color_box_shadow_in_button_type_image_piece_text_floating_black: transparent;
 $color_box_shadow_out_button_type_image_piece_text_floating_black: transparent;
 
-//·································◈ Choices
+//····································································◈ Choices
 
 // $bg_choice_label: url(../../images/bgs/choice_label.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice: url(../../images/bgs/choice.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice_d_open: url(../../images/bgs/choice_d_open.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 // $bg_choice_selector: url(../../images/bgs/choice_selector.png)  center /100% 100%; // <- Parte do estilo de choice anterior!
 
-//·································◈ Lightboxs
+//····································································◈ Lightboxs
 
 $color_shadow_lightbox: black; 
 $color_shadow_lightbox_button: black; 
@@ -432,7 +456,7 @@ $color_shadow_lightbox_button: black;
 // $bg_lightbox_button: url(../../images/icons/lightbox_close.svg)  center /100% 100%, hsl(0, 0%, 33%);
 $bg_lightbox_overlay: 0; // hsla(0, 0%, 100%, 0.7);
 
-//·································◈ Scrollbars
+//····································································◈ Scrollbars
 
 // Header-nav, choice dropdown, lightbox, <textarea>
 
@@ -455,7 +479,7 @@ $color_menuRounded_scrollbar_thumb_firefox: $color_1_scrollbar;
 $color_menuRounded_scrollbar_track: transparent;
 $color_menuRounded_scrollbar_track_firefox: $color_2_scrollbar;
 
-//·································◈ Others
+//····································································◈ Others
 
 $bg_button_hide: url(../../images/icons/button_hide.png)  center /100% 100%;
 
@@ -485,6 +509,37 @@ html {
 .bgc_color_theme {
     background-color: $color_theme;
 }
+
+/*  
+◈──────────────────────────────────────────────────────◈
+TODO: Error
+◈──────────────────────────────────────────────────────◈ */
+
+.error {
+
+    @extend .danger;
+    font-size: $font_size;
+    /*     
+    color: white;
+    background-color: red;
+    outline: 2px solid red;
+    border-top: 2px solid $bg_html;
+    padding: 0 8px;
+    text-align: center;
+    @extend .lineHeight;
+    */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $zIndex_error;
+} 
+
+.error.top {
+
+    top: 0;
+    bottom: auto;
+} 
 
 /*  
 ◈──────────────────────────────────────────────────────◈
@@ -636,6 +691,9 @@ TODO: Margins
 TODO: Texts
 ◈──────────────────────────────────────────────────────◈ */
 
+/*  TODO:    1 ▶ Elements
+◈──────────────────────────────────────────────────────◈ */
+
 .TNR {
     font-family: 'Times New Roman'; 
     font-size: 19px;
@@ -643,9 +701,9 @@ TODO: Texts
 
 .Cyber-BoldBook {
     font-family: 'Cyber-BoldBook';
-    font-size: 14rem;
-    text-shadow: 0.2px 0px 0px; 
+    font-size: 15rem; // Era 14rem!!! (Mudar o tamanho dos caracteres que já criei)
     line-height: 1.8; 
+    text-shadow: 0.2px 0px 0px; 
 } 
 
 .Myfont-Regular {
@@ -665,11 +723,24 @@ html {
     color: $color_text; 
 }
 
-span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd, 
-abbr, dfn, sub, sup, pre, var, kbd, samp, output, code, time, address, blockquote, 
-q, cite, figcaption, form, label, input, textarea, select, button, fieldset, 
-legend, table, tr, td, th, caption {
+/* Elementos genéricos inline: */ 
+span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var, 
+/* Elementos genéricos em bloco: */ 
+p, ul, ol, li, dt, dd, details, summary, 
+/* ?: */
+output, time, address, blockquote, 
+q, cite, figcaption, 
+/* Elementos de formulário: */ 
+form, label, input, textarea, select, button, fieldset, legend, 
+/* Elementos de tabela: */
+table, tr, th, td,
+/* Elementos que eu criei: */
+e
+/* Elementos com tamanho definido separadamente: 
+h1, h2, h3, h4, h5, h6, pre, code, samp, kbd, caption */ 
 
+
+{
     font-size: $font_size; 
 }
 
@@ -730,8 +801,8 @@ p {
 
 p {
     @extend %margins;
-    text-indent: 4rem; /* Sem 'text-align: justify', usar: 4px. Com 'text-align: justify', usar: 6px.  */
-    // text-align: justify;
+    text-indent: 6rem; /* Sem 'text-align: justify', usar: 4px. Com 'text-align: justify', usar: 6px.  */
+    text-align: justify;
 }
 
 strong, b, em, i {
@@ -746,26 +817,24 @@ abbr {
 }
 
 address {
-    line-height: 1.5;
+    @extend .lineHeight;
 }
 
 dfn, var, address, cite {
     font-style: normal;
 }
 
-var, kbd, samp, code {
-    font-family: $font_default;
-}
-
 kbd {
-    font-size: 15rem;
-    background: $bg_kbd;
+    font-family: Helvetica;
+    font-size: 14rem;
     padding: 1px 5px;
     border: 4px outset $color_border_kbd;
     border-radius: 5px;
+    background: $bg_kbd;
 }
 
-code {
+code, samp {
+    font-size: 17px;
     font-family: $font_monospace;
     text-align: left;
 }
@@ -777,10 +846,10 @@ pre {
     font-size: $font_monospace_size;
 }
 
-/*  TODO:    1 ▶ Lists
+/*  TODO:        2 ▶ Lists
 ◈──────────────────────────────────────────────────────◈ */
 
-li, ul, ol, ot, od, dl, dt, dd {
+li, ul, ol, dl, dt, dd {
     @extend .lineHeight;
 }
 
@@ -803,12 +872,12 @@ ul ul, dl dl { list-style-image: url("../../images/icons/list_2.svg"); }
 ul ul ul, dl dl dl { list-style-image: url("../../images/icons/list_3.svg"); }
 ul ul ul ul, dl dl dl dl { list-style-image: url("../../images/icons/list_4.svg"); }
 
-//·································◈ <dl>
+//····································································◈ <dl>
 
 dl {
     @extend %margins;
 
-    .dl_li {
+    > div {
         display: list-item;
     }
 
@@ -820,12 +889,12 @@ dl {
         display: inline;
     }
 
-    .dl_li:not(:nth-last-of-type(1)) {
+    > div:not(:nth-last-of-type(1)) {
         margin-bottom: $margin_vertical;
     }
 }
 
-//·································◈ <dl> Of Definition
+//····································································◈ <dl> Of Definition
 
 .list_definition {
 
@@ -839,17 +908,6 @@ dl {
         dd {
             margin-left: 30rem;
         }
-    }
-}
-
-//·································◈ Description Ordered Lists
-
-.dol {
-
-    font-weight: bold;
-
-    > li > *:not(:nth-of-type(1)){
-        font-weight: normal;
     }
 }
 
@@ -872,7 +930,6 @@ dl {
 .font_smaller {
     font-size: $font_smaller;
 }
-
 
 .underline {
   text-decoration: underline;
@@ -937,91 +994,100 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-fill-color: transparent;
 }
 
-span.token {
+span.ticket {
 
     padding: 6px 8px;
     border-radius: 1000px;
 }
 
-span.token, span.token.blue {
+span.ticket, span.ticket.blue {
 
-    border: 1px solid $color_border_token_blue;
-    background: $bg_token_blue;
-    color: $color_text_token_blue;
+    border: 1px solid $color_border_ticket_blue;
+    background: $bg_ticket_blue;
+    color: $color_text_ticket_blue;
 }
 
-span.token.red {
+span.ticket.red {
 
-    border: 1px solid $color_border_token_red;
-    background: $bg_token_red;
-    color: $color_text_token_red;        
+    border: 1px solid $color_border_ticket_red;
+    background: $bg_ticket_red;
+    color: $color_text_ticket_red;        
 } 
 
-span.token.yellow {
+span.ticket.yellow {
 
-    border: 1px solid $color_border_token_yellow;
-    background: $bg_token_yellow;
+    border: 1px solid $color_border_ticket_yellow;
+    background: $bg_ticket_yellow;
     color: hsl(60, 100%, 50%); // yellow
-    color: $color_text_token_yellow; 
+    color: $color_text_ticket_yellow; 
 }
 
-span.token.green {
+span.ticket.green {
 
-    border: 1px solid $color_border_token_green;
-    background: $bg_token_green;
-    color: $color_text_token_green;
+    border: 1px solid $color_border_ticket_green;
+    background: $bg_ticket_green;
+    color: $color_text_ticket_green;
 }
 
-span.token.pink {
+span.ticket.pink {
 
-    border: 1px solid $color_border_token_pink;
-    background: $bg_token_pink;
-    color: $color_text_token_pink;
+    border: 1px solid $color_border_ticket_pink;
+    background: $bg_ticket_pink;
+    color: $color_text_ticket_pink;
 }
 
-span.token.purple {
+span.ticket.purple {
 
-    border: 1px solid $color_border_token_purple;
-    background: $bg_token_purple;
-    color: $color_text_token_purple;
+    border: 1px solid $color_border_ticket_purple;
+    background: $bg_ticket_purple;
+    color: $color_text_ticket_purple;
 }
 
-span.token.orange {
+span.ticket.orange {
 
-    border: 1px solid $color_border_token_orange;
-    background: $bg_token_orange;
-    color: $color_text_token_orange;
+    border: 1px solid $color_border_ticket_orange;
+    background: $bg_ticket_orange;
+    color: $color_text_ticket_orange;
 }
 
-span.token.brown {
+span.ticket.brown {
 
-    border: 1px solid $color_border_token_brown;
-    background: $bg_token_brown;
-    color: $color_text_token_brown;
+    border: 1px solid $color_border_ticket_brown;
+    background: $bg_ticket_brown;
+    color: $color_text_ticket_brown;
 }
 
-span.token.cyan {
+span.ticket.cyan {
 
-    border: 1px solid $color_border_token_cyan;
-    background: $bg_token_cyan;
-    color: $color_text_token_cyan;
+    border: 1px solid $color_border_ticket_cyan;
+    background: $bg_ticket_cyan;
+    color: $color_text_ticket_cyan;
 }
 
-span.token.purple2 {
+span.ticket.purple2 {
 
-    border: 1px solid $color_border_token_purple2;
-    background: $bg_token_purple2;
-    color: $color_text_token_purple2;
+    border: 1px solid $color_border_ticket_purple2;
+    background: $bg_ticket_purple2;
+    color: $color_text_ticket_purple2;
 }
 
-span.token.black {
+span.ticket.black {
 
-    border: 1px solid $color_border_token_black;
-    background: $bg_token_black;
-    color: $color_text_token_black;        
+    border: 1px solid $color_border_ticket_black;
+    background: $bg_ticket_black;
+    color: $color_text_ticket_black;        
 }
 
-.noListStyle {
+.dol { // Description Ordered Lists
+
+    font-weight: bold;
+
+    > li > *:not(:nth-of-type(1)){
+        font-weight: normal;
+    }
+}
+
+ul.noListStyle, ol.noListStyle {
 
     list-style: none; 
     padding: 0; 
@@ -1031,6 +1097,32 @@ span.token.black {
         margin-top: 0;
     }
 }
+
+dl.noListStyle {
+    list-style: none; 
+    margin-left: $margin_horizontal;
+
+    > div {
+        display: block;
+    }
+
+    dt { 
+        font-weight: normal; 
+    }
+
+    dt, dd { 
+        display: block;
+    }
+
+    > div:not(:nth-last-of-type(1)) {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
 
 /* 
 .spaced_items > li + li, .spaced_items > dd + dd {
@@ -1251,7 +1343,7 @@ span.token.black {
 
 
  
-//·································◈ Entradas
+//····································································◈ Entradas
 
 $icons: 
 
@@ -1276,7 +1368,7 @@ textIcon_template_above "textIcon_template.svg" 0px 0px -10px,
 textIcon_template_below "textIcon_template.svg" 0px 0px 10px, 
 textIcon_template_uncommon "textIcon_template_moreWide.svg" 10px 10px 10px; 
  
-//·································◈ Motor
+//····································································◈ Motor
 
 @each $icon in $icons {
     
@@ -1340,7 +1432,7 @@ textIcon_template_uncommon "textIcon_template_moreWide.svg" 10px 10px 10px;
     }
 }
 
-//·································◈ Configurações Adicionais De Alguns Ícones Do Gerador
+//····································································◈ Configurações Adicionais De Alguns Ícones Do Gerador
 
 /* abbr.description > button {
     @extend .description.right;
@@ -1438,14 +1530,26 @@ abbr.description > button:focus {
 }
 */
 
-.attention {
-    @include textIcons_notFromGenerator;
-    color: red;
+@mixin attention{ 
     text-indent: calc(#{$textIcons_size} + 5px);
+    @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/attention.svg');
-    background-position: 0 3px;
+    background-position: 0 3px;    
 }
 
+p.attention {
+    color: red;
+    @include attention;
+}
+
+div.attention {
+
+    color: red;
+
+    p:nth-child(1) {
+        @include attention;
+    }
+}
 /*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Layout Sections
@@ -2424,7 +2528,7 @@ input[type="text"], input[type="email"] {
 textarea {
     height: 40rem;
     padding: 4rem 13rem 0rem;
-    line-height: 1.5;
+    @extend .lineHeight;
     vertical-align: top; /* Alinha os <textarea>'s com seus rótulos */
 }
 
@@ -2838,7 +2942,7 @@ a.button_full.disabled, a.button_text.disabled {
     }
 }
 
-//·································◈ Pill
+//····································································◈ Pill
 
 .switch.button_full.pill, .switch.button_text.pill, .switch.button_icon.pill, 
 button.button_full.pill, button.button_text.pill, button.button_icon.pill, 
@@ -2902,7 +3006,7 @@ a.button_full.pill, a.button_text.pill, a.button_icon.pill {
 }
 
 
-//·································◈ Rounded (A menor dimensão de um switch rounded é configurado via JS!)
+//····································································◈ Rounded (A menor dimensão de um switch rounded é configurado via JS!)
 
 .switch.button_full.rounded, .switch.button_text.rounded, .switch.button_icon.rounded, 
 button.button_full.rounded, button.button_text.rounded, button.button_icon.rounded, 
@@ -3108,7 +3212,7 @@ a.button_full.text_below {
 }
 */
 
-//·································◈ Pill
+//····································································◈ Pill
 
 /*
 .switch.button_icon.on.pill {
@@ -3117,7 +3221,7 @@ a.button_full.text_below {
 }
 */
 
-//·································◈ Rounded
+//····································································◈ Rounded
 
 /*
 .switch.button_full.on.rounded, .switch.button_text.on.rounded, .switch.button_icon.on.rounded {
@@ -3720,7 +3824,7 @@ a.button_full.black, a.button_text.black {
     }
 }
 
-//·································◈ pill
+//····································································◈ pill
 
 .switch.image.pill, button.image.pill, a.image.pill {
 
@@ -3981,7 +4085,7 @@ a.button_full.black, a.button_text.black {
 
     .piece_text {
 
-        line-height: 1.5;
+        @extend .lineHeight;
     }
 } 
 
@@ -5364,7 +5468,7 @@ figure.outdoor img {
     font-weight: bold;  // Lightbox novo
     // text-shadow: 1px 1px 1px $color_shadow_text;  // Lightbox anterior 
     filter: drop-shadow(0px 0px 2px hsl(193, 100%, 30%));  // Lightbox novo
-    line-height: 1.5; 
+    @extend .lineHeight; 
 
     .text_img, .text_img_size {
         filter: drop-shadow(1px 1px 1px $color_shadow_text); 
@@ -5428,109 +5532,100 @@ figure.outdoor img {
     scrollbar-color: hsl(195, 100%, 100%) hsla(194, 100%, 50%, 0.1);  
 }
 
-/*  TODO:    1 ▶ Codification
+/*  TODO:    1 ▶ Code Viewer
 ◈──────────────────────────────────────────────────────◈ */
 
-.codification {
+.codeViewer {
 
-    display: none; // 
+    * { 
+        background-color: hsla(195, 100%, 50%, 0.18);
+    }
 
-    /*     background-color: $color_theme_clear;
-    border-top: 1px solid $color_theme;
-    border-bottom: 1px solid $color_theme; */
-    margin-top: $margin_vertical;
-    margin-bottom: $margin_vertical;
+    display: none; // Bug fix: Coloquei os 'codeViewer's ocultos inicialmente via CSS, e coloquei para o exibi-los usando JavaScript logo assim que forem manipulados por ele. Isso é necessário porque o JavaScript demora um pouco para ser executado, o que faz com que o HTML seja exibido brevemente antes de ser manipulado pelo JavaScript.
 
-    dl.codification_piece {
+    @extend .noListStyle;
+
+    margin-top: #{2 * $margin_vertical};
+    margin-bottom: #{2 * $margin_vertical};
+
+
+
+
+/* 
+    .assets {
         margin-left: $margin_horizontal;
         margin-left: 0;
         margin-right: 0;
         list-style: none;
     }
-    
-    dl.codification_piece .dl_li:not(:nth-last-of-type(1)) {
-        margin-bottom: 0;
-    }
 
-    .dts_container { // Elemento criado via JavaScript
+    .assets_dts_container { // Elemento criado via JavaScript
 
         display: flex;
-        //justify-content: space-around;
-        // border: 1px solid black;
         overflow-x: auto;
-        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.5) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
         box-shadow: $box_shadow_element_type_button_blue; 
 
         > * {
             flex-grow: 1; 
+            display: inline-block;
             min-width: 85px;
+            min-height: $button_height_small;
         }
 
         > dt {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            min-height: $button_height_small;
-            // text-align: center;
-            padding: 1px 5px;
-            // border-top: 6px ridge hsl(0, 0%, 83%); 
-            // border-right: 6px ridge hsl(0, 0%, 83%); 
-            //background-color: hsla(195, 0%, 90%, 1);
-            color: $color_text_menu;
-            font-weight: bold;
+            //padding: 1px 5px;
         // background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.6) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
-            filter: $filter_element_type_button_piece_text_blue;
-            cursor: pointer;
 
-            &:hover {
-                filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%));
+            button {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                color: $color_text_menu;
+                font-weight: bold;
+                background: none;
+                filter: $filter_element_type_button_piece_text_blue;
+                cursor: pointer;
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%));
+                }
             }
 
-            * {
-                
+            > .on {
+                // background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+
+                background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
             }
         }
-
 
         > dt + dt {
             border-left: 1px solid $color_text_menu;
         }
-
-        > .on {
-            background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
-        }
     }
 
-    dl.codification_piece .dl_li.codification_piece {
+    .assets > dl > div {
         display: block;
     }
 
-    .assets .dl_li.codification_piece > dd {
+    .assets > div > dd {
         display: none;
     }
 
-    .assets .dl_li.codification_piece:nth-child(2) > dd {
+    .assets > div:nth-child(2) > dd {
         display: block;
     }
 
-    .dl_li.codification_piece.resources > dd, .dl_li.codification_piece.rendering > dd, .dl_li.codification_piece.console > dd {
+    > div.noText > dd, > div.rendering > dd, > div.console > dd {
         border: 1px solid black;
     }
 
-    // .dl_li.codification_piece.rendering > dd, .dl_li.codification_piece.console > dd  {
-    //     display: block;
-    // }
+    .text {
 
-    .language {
- /*       background-color: white;
-         */
- 
-
-        //font-weight: bold;
-        //border-radius: $border_radius_big;
-
-         
-        
         dd {
             pre {
                 padding: 0 $margin_horizontal;
@@ -5562,18 +5657,163 @@ figure.outdoor img {
         }
     }
 
-    .resources {
+    .noText {
+        background-color: white;
+    }
+
+    .rendering, .console {
+        background-color: white;
+    } */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.codeViewer2 {
+
+    display: none; // Bug fix: Coloquei os 'codeViewer's ocultos inicialmente via CSS, e coloquei para o exibi-los usando JavaScript logo assim que forem manipulados por ele. Isso é necessário porque o JavaScript demora um pouco para ser executado, o que faz com que o HTML seja exibido brevemente antes de ser manipulado pelo JavaScript.
+
+    margin-top: #{2 * $margin_vertical};
+    margin-bottom: #{2 * $margin_vertical};
+
+    .assets {
+        margin-left: $margin_horizontal;
+        margin-left: 0;
+        margin-right: 0;
+        list-style: none;
+    }
+
+    .assets_dts_container { // Elemento criado via JavaScript
+
+        display: flex;
+        overflow-x: auto;
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.5) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+        box-shadow: $box_shadow_element_type_button_blue; 
+
+        > * {
+            flex-grow: 1; 
+            display: inline-block;
+            min-width: 85px;
+            min-height: $button_height_small;
+        }
+
+        > dt {
+            //padding: 1px 5px;
+        // background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.6) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+
+            button {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                color: $color_text_menu;
+                font-weight: bold;
+                background: none;
+                filter: $filter_element_type_button_piece_text_blue;
+                cursor: pointer;
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%));
+                }
+            }
+
+            > .on {
+                // background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+
+                background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+            }
+        }
+
+        > dt + dt {
+            border-left: 1px solid $color_text_menu;
+        }
+    }
+
+    .assets > dl > div {
+        display: block;
+    }
+
+    .assets > div > dd {
+        display: none;
+    }
+
+    .assets > div:nth-child(2) > dd {
+        display: block;
+    }
+
+    > div.noText > dd, > div.rendering > dd, > div.console > dd {
+        border: 1px solid black;
+    }
+
+    .text {
+
+        dd {
+            pre {
+                padding: 0 $margin_horizontal;
+                border-top: 6px ridge hsl(0, 0%, 83%); 
+                border-bottom: 6px ridge hsl(0, 0%, 83%); 
+                margin: 0;
+                color: white;
+                background: 
+                linear-gradient(to bottom right, hsla(0, 0%, 100%, 0) 50%, black 50%), // Canto direito inferior
+                linear-gradient(to bottom left, hsla(0, 0%, 100%, 0.35) 0%, hsla(0, 0%, 0%, 0) 95%), // Canto esquerdo superior
+                black;
+                overflow-x: auto;
+            }
+
+            pre::-webkit-scrollbar-thumb {
+                background-color: white;
+                box-shadow: none;
+            }
+
+            pre::-webkit-scrollbar-track {
+                border: 0;
+            }
+
+            code {
+                @extend .font_monospace;
+                filter: drop-shadow(0px 0px 3px hsl(188, 100%, 50%)); 
+                text-shadow: 0px 0px 7px hsl(188, 100%, 50%), 0px 0px 7px hsla(188, 100%, 50%, 0.55);
+            }
+        }
+    }
+
+    .noText {
         background-color: white;
     }
 
     .rendering, .console {
         background-color: white;
     }
-}
-
-.codification + .codification {
-
-    margin-top: #{2 * $margin_vertical};
 }
 
 /*  

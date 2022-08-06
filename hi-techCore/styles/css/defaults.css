@@ -7,6 +7,10 @@
 ◈──────────────────────────────────────────────────────◈
 TODO: Variables
 ◈──────────────────────────────────────────────────────◈ */
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 2.0358 !important;
+}
+
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  TODO:    1 ▶ Specific Elements & Components
@@ -65,6 +69,33 @@ html {
 
 .bgc_color_theme {
   background-color: DeepSkyBlue;
+}
+
+/*  
+◈──────────────────────────────────────────────────────◈
+TODO: Error
+◈──────────────────────────────────────────────────────◈ */
+.error {
+  font-size: 14rem;
+  /*     
+    color: white;
+    background-color: red;
+    outline: 2px solid red;
+    border-top: 2px solid $bg_html;
+    padding: 0 8px;
+    text-align: center;
+    @extend .lineHeight;
+    */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5000;
+}
+
+.error.top {
+  top: 0;
+  bottom: auto;
 }
 
 /*  
@@ -167,6 +198,8 @@ p, dl, label {
 ◈──────────────────────────────────────────────────────◈
 TODO: Texts
 ◈──────────────────────────────────────────────────────◈ */
+/*  TODO:    1 ▶ Elements
+◈──────────────────────────────────────────────────────◈ */
 .TNR {
   font-family: 'Times New Roman';
   font-size: 19px;
@@ -174,9 +207,9 @@ TODO: Texts
 
 .Cyber-BoldBook {
   font-family: 'Cyber-BoldBook';
-  font-size: 14rem;
-  text-shadow: 0.2px 0px 0px;
+  font-size: 15rem;
   line-height: 1.8;
+  text-shadow: 0.2px 0px 0px;
 }
 
 .Myfont-Regular {
@@ -190,16 +223,20 @@ TODO: Texts
 }
 
 html {
-  font-family: "Times New Roman", Times, Georgia, serif;
+  font-family: "2015_Cruiser";
   font-size: 1px;
   color: black;
 }
 
-span, h1, h2, h3, h4, h5, h6, p, a, em, i, strong, b, u, ul, ol, li, dt, dd,
-abbr, dfn, sub, sup, pre, var, kbd, samp, output, code, time, address, blockquote,
-q, cite, figcaption, form, label, input, textarea, select, button, fieldset,
-legend, table, tr, td, th, caption {
-  font-size: 19rem;
+/* Elementos genéricos inline: */
+span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var,
+p, ul, ol, li, dt, dd, details, summary,
+output, time, address, blockquote,
+q, cite, figcaption,
+form, label, input, textarea, select, button, fieldset, legend,
+table, tr, th, td,
+e {
+  font-size: 14rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -505,13 +542,14 @@ h20 {
   text-fill-color: transparent;
 }
 
-.lineHeight, p, li, ul, ol, ot, od, dl, dt, dd {
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
   line-height: 1.5;
 }
 
 p {
-  text-indent: 4rem;
+  text-indent: 6rem;
   /* Sem 'text-align: justify', usar: 4px. Com 'text-align: justify', usar: 6px.  */
+  text-align: justify;
 }
 
 strong, b, em, i {
@@ -525,27 +563,21 @@ abbr {
   font-variant: none;
 }
 
-address {
-  line-height: 1.5;
-}
-
 dfn, var, address, cite {
   font-style: normal;
 }
 
-var, kbd, samp, code {
-  font-family: "Times New Roman", Times, Georgia, serif;
-}
-
 kbd {
-  font-size: 15rem;
-  background: #dbdbdb;
+  font-family: Helvetica;
+  font-size: 14rem;
   padding: 1px 5px;
   border: 4px outset #f2f2f2;
   border-radius: 5px;
+  background: #dbdbdb;
 }
 
-code {
+code, samp {
+  font-size: 17px;
   font-family: Courier, "Courier New", monospace;
   text-align: left;
 }
@@ -557,7 +589,7 @@ pre {
   font-size: 17px;
 }
 
-/*  TODO:    1 ▶ Lists
+/*  TODO:        2 ▶ Lists
 ◈──────────────────────────────────────────────────────◈ */
 ul, ol {
   margin-top: 16rem;
@@ -590,7 +622,7 @@ ul ul ul ul, dl dl dl dl {
   list-style-image: url("../../images/icons/list_4.svg");
 }
 
-dl .dl_li {
+dl > div {
   display: list-item;
 }
 
@@ -602,7 +634,7 @@ dl dt, dl dd {
   display: inline;
 }
 
-dl .dl_li:not(:nth-last-of-type(1)) {
+dl > div:not(:nth-last-of-type(1)) {
   margin-bottom: 16rem;
 }
 
@@ -617,21 +649,13 @@ dl .dl_li:not(:nth-last-of-type(1)) {
   }
 }
 
-.dol {
-  font-weight: bold;
-}
-
-.dol > li > *:not(:nth-of-type(1)) {
-  font-weight: normal;
-}
-
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
 .font_size {
-  font-size: 19rem;
+  font-size: 14rem;
 }
 
-.font_monospace, .codification .language dd code {
+.font_monospace, .codeViewer2 .text dd code {
   font-family: Courier, "Courier New", monospace;
   font-size: 17px;
 }
@@ -657,7 +681,7 @@ dl .dl_li:not(:nth-last-of-type(1)) {
 }
 
 .mini_topic {
-  font-size: 19rem;
+  font-size: 14rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -665,7 +689,7 @@ dl .dl_li:not(:nth-last-of-type(1)) {
 }
 
 .container_text {
-  font-size: 19rem;
+  font-size: 14rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -695,86 +719,115 @@ p.container_text {
   text-fill-color: transparent;
 }
 
-span.token {
+span.ticket {
   padding: 6px 8px;
   border-radius: 1000px;
 }
 
-span.token, span.token.blue {
+span.ticket, span.ticket.blue {
   border: 1px solid #29c9ff;
   background: #fafeff;
   color: #00b0eb;
 }
 
-span.token.red {
+span.ticket.red {
   border: 1px solid #ff7a7a;
   background: #fff5f5;
   color: #eb0000;
 }
 
-span.token.yellow {
+span.ticket.yellow {
   border: 1px solid #dbc900;
   background: #fefee7;
   color: yellow;
   color: #d6c100;
 }
 
-span.token.green {
+span.ticket.green {
   border: 1px solid #00eb00;
   background: #f5fff5;
   color: #00d600;
 }
 
-span.token.pink {
+span.ticket.pink {
   border: 1px solid magenta;
   background: #fff5ff;
   color: magenta;
 }
 
-span.token.purple {
+span.ticket.purple {
   border: 1px solid #990099;
   background: #faf0ff;
   color: #990099;
 }
 
-span.token.orange {
+span.ticket.orange {
   border: 1px solid #ffa600;
   background: #fff8eb;
   color: #f59f00;
 }
 
-span.token.brown {
+span.ticket.brown {
   border: 1px solid #c5621b;
   background: #fdf4ed;
   color: #c5621b;
 }
 
-span.token.cyan {
+span.ticket.cyan {
   border: 1px solid #00e0e0;
   background: azure;
   color: #00cccc;
 }
 
-span.token.purple2 {
+span.ticket.purple2 {
   border: 1px solid #a495f3;
   background: #f6f5ff;
   color: #907ef1;
 }
 
-span.token.black {
+span.ticket.black {
   border: 1px solid #858585;
   background: #f7f7f7;
   color: #858585;
 }
 
-.noListStyle {
+.dol {
+  font-weight: bold;
+}
+
+.dol > li > *:not(:nth-of-type(1)) {
+  font-weight: normal;
+}
+
+ul.noListStyle, ul.codeViewer, ol.noListStyle, ol.codeViewer {
   list-style: none;
   padding: 0;
   margin-left: 20px;
 }
 
-.noListStyle li + li {
+ul.noListStyle li + li, ul.codeViewer li + li, ol.noListStyle li + li, ol.codeViewer li + li {
   margin-top: 0;
+}
+
+dl.noListStyle, dl.codeViewer {
+  list-style: none;
+  margin-left: 20px;
+}
+
+dl.noListStyle > div, dl.codeViewer > div {
+  display: block;
+}
+
+dl.noListStyle dt, dl.codeViewer dt {
+  font-weight: normal;
+}
+
+dl.noListStyle dt, dl.codeViewer dt, dl.noListStyle dd, dl.codeViewer dd {
+  display: block;
+}
+
+dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-last-of-type(1)) {
+  margin-bottom: 0;
 }
 
 /* 
@@ -891,7 +944,7 @@ span.token.black {
 }
 
 .list_featured li div {
-  font-size: 19rem;
+  font-size: 14rem;
 }
 
 .list_featured li + li {
@@ -900,7 +953,7 @@ span.token.black {
   padding-top: calc(0.5 * 16rem);
 }
 
-.success, .warning, .fail, .danger {
+.success, .warning, .fail, .danger, .error {
   padding: 2px 8px;
   margin: 16rem 20px;
   border-radius: 10px;
@@ -925,7 +978,7 @@ span.token.black {
   border: 2px solid #ff6666;
 }
 
-.danger {
+.danger, .error {
   padding: 6px 10px;
   color: white;
   background: red;
@@ -1606,11 +1659,23 @@ abbr.description > button:focus {
     padding-right: calc(21px + 8px);   
 }
 */
-.attention {
-  background-repeat: no-repeat;
-  background-size: 21px 21px;
+p.attention {
   color: red;
   text-indent: calc(21px + 5px);
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  background-image: url("../../images/icons/attention.svg");
+  background-position: 0 3px;
+}
+
+div.attention {
+  color: red;
+}
+
+div.attention p:nth-child(1) {
+  text-indent: calc(21px + 5px);
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
   background-image: url("../../images/icons/attention.svg");
   background-position: 0 3px;
 }
@@ -1965,7 +2030,7 @@ TODO: Layout Sections
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 19rem;
+  font-size: 14rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -2471,7 +2536,6 @@ input[type="text"], input[type="email"] {
 textarea {
   height: 40rem;
   padding: 4rem 13rem 0rem;
-  line-height: 1.5;
   vertical-align: top;
   /* Alinha os <textarea>'s com seus rótulos */
 }
@@ -3720,10 +3784,6 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
 }
 
-.switch.key_full .piece_text, .switch.key_text .piece_text {
-  line-height: 1.5;
-}
-
 .switch.key_text .piece_icon {
   display: none;
 }
@@ -4833,10 +4893,9 @@ figure.outdoor img {
 }
 
 .lightbox_text {
-  font-size: 19rem;
+  font-size: 14rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
-  line-height: 1.5;
 }
 
 .lightbox_text .text_img, .lightbox_text .text_img_size {
@@ -4887,86 +4946,202 @@ figure.outdoor img {
   scrollbar-color: white rgba(0, 196, 255, 0.1);
 }
 
-/*  TODO:    1 ▶ Codification
+/*  TODO:    1 ▶ Code Viewer
 ◈──────────────────────────────────────────────────────◈ */
-.codification {
+.codeViewer {
   display: none;
-  /*     background-color: $color_theme_clear;
-    border-top: 1px solid $color_theme;
-    border-bottom: 1px solid $color_theme; */
-  margin-top: 16rem;
-  margin-bottom: 16rem;
+  margin-top: 32rem;
+  margin-bottom: 32rem;
+  /* 
+    .assets {
+        margin-left: $margin_horizontal;
+        margin-left: 0;
+        margin-right: 0;
+        list-style: none;
+    }
+
+    .assets_dts_container { // Elemento criado via JavaScript
+
+        display: flex;
+        overflow-x: auto;
+        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.5) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+        box-shadow: $box_shadow_element_type_button_blue; 
+
+        > * {
+            flex-grow: 1; 
+            display: inline-block;
+            min-width: 85px;
+            min-height: $button_height_small;
+        }
+
+        > dt {
+            //padding: 1px 5px;
+        // background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.6) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+
+            button {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+                margin-right: 0;
+                color: $color_text_menu;
+                font-weight: bold;
+                background: none;
+                filter: $filter_element_type_button_piece_text_blue;
+                cursor: pointer;
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 2px hsl(193, 100%, 36%));
+                }
+            }
+
+            > .on {
+                // background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+
+                background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.7) 52%, hsla(0, 0%, 100%, 0) 52%), $bg_element_type_button_blue, deepskyblue; 
+            }
+        }
+
+        > dt + dt {
+            border-left: 1px solid $color_text_menu;
+        }
+    }
+
+    .assets > dl > div {
+        display: block;
+    }
+
+    .assets > div > dd {
+        display: none;
+    }
+
+    .assets > div:nth-child(2) > dd {
+        display: block;
+    }
+
+    > div.noText > dd, > div.rendering > dd, > div.console > dd {
+        border: 1px solid black;
+    }
+
+    .text {
+
+        dd {
+            pre {
+                padding: 0 $margin_horizontal;
+                border-top: 6px ridge hsl(0, 0%, 83%); 
+                border-bottom: 6px ridge hsl(0, 0%, 83%); 
+                margin: 0;
+                color: white;
+                background: 
+                linear-gradient(to bottom right, hsla(0, 0%, 100%, 0) 50%, black 50%), // Canto direito inferior
+                linear-gradient(to bottom left, hsla(0, 0%, 100%, 0.35) 0%, hsla(0, 0%, 0%, 0) 95%), // Canto esquerdo superior
+                black;
+                overflow-x: auto;
+            }
+
+            pre::-webkit-scrollbar-thumb {
+                background-color: white;
+                box-shadow: none;
+            }
+
+            pre::-webkit-scrollbar-track {
+                border: 0;
+            }
+
+            code {
+                @extend .font_monospace;
+                filter: drop-shadow(0px 0px 3px hsl(188, 100%, 50%)); 
+                text-shadow: 0px 0px 7px hsl(188, 100%, 50%), 0px 0px 7px hsla(188, 100%, 50%, 0.55);
+            }
+        }
+    }
+
+    .noText {
+        background-color: white;
+    }
+
+    .rendering, .console {
+        background-color: white;
+    } */
 }
 
-.codification dl.codification_piece {
+.codeViewer * {
+  background-color: rgba(0, 191, 255, 0.18);
+}
+
+.codeViewer2 {
+  display: none;
+  margin-top: 32rem;
+  margin-bottom: 32rem;
+}
+
+.codeViewer2 .assets {
   margin-left: 20px;
   margin-left: 0;
   margin-right: 0;
   list-style: none;
 }
 
-.codification dl.codification_piece .dl_li:not(:nth-last-of-type(1)) {
-  margin-bottom: 0;
-}
-
-.codification .dts_container {
+.codeViewer2 .assets_dts_container {
   display: flex;
   overflow-x: auto;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4) 52%, rgba(255, 255, 255, 0) 52%), linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #47d1ff, #00b8f5, deepskyblue), deepskyblue;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5) 52%, rgba(255, 255, 255, 0) 52%), linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #47d1ff, #00b8f5, deepskyblue), deepskyblue;
   box-shadow: 0px 0px 0px 1px #52d4ff, inset 0px 0px 9px 7px white;
 }
 
-.codification .dts_container > * {
+.codeViewer2 .assets_dts_container > * {
   flex-grow: 1;
+  display: inline-block;
   min-width: 85px;
+  min-height: 40px;
 }
 
-.codification .dts_container > dt {
+.codeViewer2 .assets_dts_container > dt button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
-  padding: 1px 5px;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
   color: white;
   font-weight: bold;
+  background: none;
   filter: drop-shadow(0px 0px 2px #00a0cc);
   cursor: pointer;
 }
 
-.codification .dts_container > dt:hover {
+.codeViewer2 .assets_dts_container > dt button:hover {
   filter: drop-shadow(0px 0px 2px #0090b8);
 }
 
-.codification .dts_container > dt + dt {
-  border-left: 1px solid white;
-}
-
-.codification .dts_container > .on {
+.codeViewer2 .assets_dts_container > dt > .on {
   background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.7) 52%, rgba(255, 255, 255, 0) 52%), linear-gradient(to bottom, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.7), white), linear-gradient(to bottom, #47d1ff, #00b8f5, deepskyblue), deepskyblue;
 }
 
-.codification dl.codification_piece .dl_li.codification_piece {
+.codeViewer2 .assets_dts_container > dt + dt {
+  border-left: 1px solid white;
+}
+
+.codeViewer2 .assets > dl > div {
   display: block;
 }
 
-.codification .assets .dl_li.codification_piece > dd {
+.codeViewer2 .assets > div > dd {
   display: none;
 }
 
-.codification .assets .dl_li.codification_piece:nth-child(2) > dd {
+.codeViewer2 .assets > div:nth-child(2) > dd {
   display: block;
 }
 
-.codification .dl_li.codification_piece.resources > dd, .codification .dl_li.codification_piece.rendering > dd, .codification .dl_li.codification_piece.console > dd {
+.codeViewer2 > div.noText > dd, .codeViewer2 > div.rendering > dd, .codeViewer2 > div.console > dd {
   border: 1px solid black;
 }
 
-.codification .language {
-  /*       background-color: white;
-         */
-}
-
-.codification .language dd pre {
+.codeViewer2 .text dd pre {
   padding: 0 20px;
   border-top: 6px ridge #d4d4d4;
   border-bottom: 6px ridge #d4d4d4;
@@ -4976,30 +5151,26 @@ figure.outdoor img {
   overflow-x: auto;
 }
 
-.codification .language dd pre::-webkit-scrollbar-thumb {
+.codeViewer2 .text dd pre::-webkit-scrollbar-thumb {
   background-color: white;
   box-shadow: none;
 }
 
-.codification .language dd pre::-webkit-scrollbar-track {
+.codeViewer2 .text dd pre::-webkit-scrollbar-track {
   border: 0;
 }
 
-.codification .language dd code {
+.codeViewer2 .text dd code {
   filter: drop-shadow(0px 0px 3px #00ddff);
   text-shadow: 0px 0px 7px #00ddff, 0px 0px 7px rgba(0, 221, 255, 0.55);
 }
 
-.codification .resources {
+.codeViewer2 .noText {
   background-color: white;
 }
 
-.codification .rendering, .codification .console {
+.codeViewer2 .rendering, .codeViewer2 .console {
   background-color: white;
-}
-
-.codification + .codification {
-  margin-top: 32rem;
 }
 
 /*  
