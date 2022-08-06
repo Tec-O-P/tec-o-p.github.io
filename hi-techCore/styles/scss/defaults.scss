@@ -12,10 +12,6 @@ TODO: Variables
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
 
-$font_default: 'Cyber-BoldBook'; // FORA!
-$font_size: 15rem;
-// line-height: 1.8; 
-
 $font_default: 'HighTech...ish'; // Feio
 $font_size: 21rem;
 
@@ -23,13 +19,24 @@ $font_default: 'IDroid'; // Não é bonito o suficiente
 $font_size: 14rem;
 
 $font_default: "2015_Cruiser";
-$font_size: 14rem;
+$font_size: 15rem;
+
+.lineHeight {
+    line-height: 1.9 !important;
+}
 
 $font_default: Micron;
 $font_size: 14rem; 
 
 .lineHeight {
     line-height: 2.0358 !important;
+}
+
+$font_default: 'Cyber-BoldBook'; // FORA!
+$font_size: 15rem;
+
+.lineHeight {
+    line-height: 1.9 !important;
 }
 
 
