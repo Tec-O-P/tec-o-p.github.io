@@ -587,6 +587,10 @@ TODO: Skills - Table
   outline: 1px solid DeepSkyBlue;
 }
 
+.skills_table .Name {
+  max-width: 186px;
+}
+
 .skills_table .Description, .skills_table .Notes {
   text-align: left;
 }

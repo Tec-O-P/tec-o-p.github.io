@@ -7,6 +7,30 @@
 ◈──────────────────────────────────────────────────────◈
 TODO: Variables
 ◈──────────────────────────────────────────────────────◈ */
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 1.5 !important;
+}
+
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 1.9 !important;
+}
+
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 2.0358 !important;
+}
+
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 1.5 !important;
+}
+
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 1.9 !important;
+}
+
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 1.9 !important;
+}
+
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  TODO:    1 ▶ Specific Elements & Components
@@ -72,7 +96,7 @@ html {
 TODO: Error
 ◈──────────────────────────────────────────────────────◈ */
 .error {
-  font-size: 19rem;
+  font-size: 15rem;
   /*     
     color: white;
     background-color: red;
@@ -80,7 +104,7 @@ TODO: Error
     border-top: 2px solid $bg_html;
     padding: 0 8px;
     text-align: center;
-    line-height: 1.5;
+    @extend .lineHeight;
     */
   position: fixed;
   left: 0;
@@ -203,9 +227,9 @@ TODO: Texts
 
 .Cyber-BoldBook {
   font-family: 'Cyber-BoldBook';
-  font-size: 14rem;
-  text-shadow: 0.2px 0px 0px;
+  font-size: 15rem;
   line-height: 1.8;
+  text-shadow: 0.2px 0px 0px;
 }
 
 .Myfont-Regular {
@@ -219,7 +243,7 @@ TODO: Texts
 }
 
 html {
-  font-family: "Times New Roman", Times, Georgia, serif;
+  font-family: "2015_Cruiser_Italic";
   font-size: 1px;
   color: black;
 }
@@ -232,7 +256,7 @@ q, cite, figcaption,
 form, label, input, textarea, select, button, fieldset, legend,
 table, tr, th, td,
 e {
-  font-size: 19rem;
+  font-size: 15rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -538,7 +562,7 @@ h20 {
   text-fill-color: transparent;
 }
 
-.lineHeight, p, li, ul, ol, dl, dt, dd {
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
   line-height: 1.5;
 }
 
@@ -557,10 +581,6 @@ strong, b, em, i {
 abbr {
   text-decoration: none !important;
   font-variant: none;
-}
-
-address {
-  line-height: 1.5;
 }
 
 dfn, var, address, cite {
@@ -652,7 +672,7 @@ dl > div:not(:nth-last-of-type(1)) {
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
 .font_size {
-  font-size: 19rem;
+  font-size: 15rem;
 }
 
 .font_monospace, .codeViewer2 .text dd code {
@@ -681,7 +701,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .mini_topic {
-  font-size: 19rem;
+  font-size: 15rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -689,7 +709,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .container_text {
-  font-size: 19rem;
+  font-size: 15rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -944,7 +964,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 }
 
 .list_featured li div {
-  font-size: 19rem;
+  font-size: 15rem;
 }
 
 .list_featured li + li {
@@ -2030,7 +2050,7 @@ TODO: Layout Sections
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 19rem;
+  font-size: 15rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -2536,7 +2556,6 @@ input[type="text"], input[type="email"] {
 textarea {
   height: 40rem;
   padding: 4rem 13rem 0rem;
-  line-height: 1.5;
   vertical-align: top;
   /* Alinha os <textarea>'s com seus rótulos */
 }
@@ -3785,10 +3804,6 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.15));
 }
 
-.switch.key_full .piece_text, .switch.key_text .piece_text {
-  line-height: 1.5;
-}
-
 .switch.key_text .piece_icon {
   display: none;
 }
@@ -4898,10 +4913,9 @@ figure.outdoor img {
 }
 
 .lightbox_text {
-  font-size: 19rem;
+  font-size: 15rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
-  line-height: 1.5;
 }
 
 .lightbox_text .text_img, .lightbox_text .text_img_size {
