@@ -31,8 +31,14 @@ TODO: Variables
   line-height: 1.9 !important;
 }
 
-th, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: "2015_Cruiser_Hollow_Italic" !important;
+  text-shadow: 1px 0px 0 rgba(0, 191, 255, 0.2);
+}
+
+th {
+  font-family: "2015_Cruiser_Hollow_Italic" !important;
+  text-shadow: 1px 0px 0 rgba(0, 191, 255, 0.2);
 }
 
 /* Padrão: 600-700px. */
