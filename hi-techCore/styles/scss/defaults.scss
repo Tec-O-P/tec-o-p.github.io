@@ -12,6 +12,10 @@ TODO: Variables
 $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
 
+.lineHeight {
+    line-height: 1.5 !important;
+}
+
 $font_default: 'HighTech...ish'; // Feio
 $font_size: 21rem;
 
@@ -37,6 +41,13 @@ $font_size: 15rem;
 
 .lineHeight {
     line-height: 1.9 !important;
+}
+
+$font_default: Medabots;
+$font_size: 19rem; 
+
+.lineHeight {
+    line-height: 1.5 !important;
 }
 
 

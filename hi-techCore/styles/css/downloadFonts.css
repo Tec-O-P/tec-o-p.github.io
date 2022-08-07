@@ -19,6 +19,21 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
 } 
 
 @font-face {
+    font-family: "2015_Cruiser_Italic";
+    src: url("../../fonts/2015_Cruiser_Italic.otf");
+} 
+
+@font-face {
+    font-family: "Medabots";
+    src: url("../../fonts/Medabots.otf");
+} 
+
+@font-face {
+    font-family: "Medabots_Italic";
+    src: url("../../fonts/Medabots_Italic.otf");
+} 
+
+@font-face {
     font-family: "Cyber-BoldBook";
     src: url("../../fonts/Cyber-BoldBook.ttf");
 } 
