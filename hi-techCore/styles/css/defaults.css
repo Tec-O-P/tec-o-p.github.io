@@ -24,11 +24,15 @@ TODO: Variables
 }
 
 .lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
+  line-height: 1.7813 !important;
 }
 
 .lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
   line-height: 1.9 !important;
+}
+
+th, h2, h3, h4, h5, h6 {
+  font-family: "2015_Cruiser_Hollow_Italic" !important;
 }
 
 /* Padrão: 600-700px. */

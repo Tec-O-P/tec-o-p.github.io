@@ -24,6 +24,36 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
 } 
 
 @font-face {
+    font-family: "2015_Cruiser_Hollow";
+    src: url("../../fonts/2015_Cruiser_Hollow.otf");
+} 
+
+@font-face {
+    font-family: "2015_Cruiser_Hollow_Italic";
+    src: url("../../fonts/2015_Cruiser_Hollow_Italic.otf");
+} 
+
+@font-face {
+    font-family: "Downlink";
+    src: url("../../fonts/Downlink.otf");
+} 
+
+@font-face {
+    font-family: "Downlink_Bold";
+    src: url("../../fonts/Downlink_Bold.otf");
+} 
+
+@font-face {
+    font-family: "Downlink_Italic";
+    src: url("../../fonts/Downlink_Italic.otf");
+} 
+
+@font-face {
+    font-family: "Downlink_Bold_Italic";
+    src: url("../../fonts/Downlink_Bold_Italic.otf");
+} 
+
+@font-face {
     font-family: "Medabots";
     src: url("../../fonts/Medabots.otf");
 } 

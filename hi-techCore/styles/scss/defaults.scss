@@ -43,18 +43,40 @@ $font_size: 19rem;
     line-height: 1.5 !important;
 }
 
+$font_default: "Downlink_Bold";
+$font_size: 16rem;
+
+$font_default: "Downlink_Italic";
+$font_size: 16rem;
+
+$font_default: "Downlink_Bold_Italic";
+$font_size: 16rem;
+
+$font_default: "Downlink";
+$font_size: 16rem;
+
+.lineHeight {
+    line-height: 1.7813 !important;
+}
+
 $font_default: "2015_Cruiser";
 $font_size: 15rem;
 
-.lineHeight {
-    line-height: 1.9 !important;
-}
+$font_default: "2015_Cruiser_Hollow";
+$font_size: 15rem;
+
+$font_default: "2015_Cruiser_Hollow_Italic";
+$font_size: 15rem;
 
 $font_default: "2015_Cruiser_Italic";
 $font_size: 15rem;
 
 .lineHeight {
     line-height: 1.9 !important;
+}
+
+th, h2, h3, h4, h5, h6 {
+    font-family: "2015_Cruiser_Hollow_Italic" !important;
 }
 
 
