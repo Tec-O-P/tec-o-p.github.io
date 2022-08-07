@@ -12,11 +12,11 @@ TODO: Variables
 }
 
 .lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
+  line-height: 2.0358 !important;
 }
 
 .lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 2.0358 !important;
+  line-height: 1.9 !important;
 }
 
 /* Padrão: 600-700px. */
@@ -84,7 +84,7 @@ html {
 TODO: Error
 ◈──────────────────────────────────────────────────────◈ */
 .error {
-  font-size: 14rem;
+  font-size: 15rem;
   /*     
     color: white;
     background-color: red;
@@ -231,7 +231,7 @@ TODO: Texts
 }
 
 html {
-  font-family: Micron;
+  font-family: "2015_Cruiser";
   font-size: 1px;
   color: black;
 }
@@ -244,7 +244,7 @@ q, cite, figcaption,
 form, label, input, textarea, select, button, fieldset, legend,
 table, tr, th, td,
 e {
-  font-size: 14rem;
+  font-size: 15rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -660,7 +660,7 @@ dl > div:not(:nth-last-of-type(1)) {
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
 .font_size {
-  font-size: 14rem;
+  font-size: 15rem;
 }
 
 .font_monospace, .codeViewer2 .text dd code {
@@ -689,7 +689,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .mini_topic {
-  font-size: 14rem;
+  font-size: 15rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -697,7 +697,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .container_text {
-  font-size: 14rem;
+  font-size: 15rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -952,7 +952,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 }
 
 .list_featured li div {
-  font-size: 14rem;
+  font-size: 15rem;
 }
 
 .list_featured li + li {
@@ -2038,7 +2038,7 @@ TODO: Layout Sections
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 14rem;
+  font-size: 15rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -4901,7 +4901,7 @@ figure.outdoor img {
 }
 
 .lightbox_text {
-  font-size: 14rem;
+  font-size: 15rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
 }
