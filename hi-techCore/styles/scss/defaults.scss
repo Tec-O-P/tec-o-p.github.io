@@ -36,13 +36,6 @@ $font_size: 14rem;
     line-height: 2.0358 !important;
 }
 
-$font_default: Medabots;
-$font_size: 19rem; 
-
-.lineHeight {
-    line-height: 1.5 !important;
-}
-
 $font_default: "Downlink_Bold";
 $font_size: 16rem;
 
@@ -58,7 +51,7 @@ $font_size: 16rem;
 .lineHeight {
     line-height: 1.7813 !important;
 }
-
+/* 
 $font_default: "2015_Cruiser";
 $font_size: 15rem;
 
@@ -78,6 +71,14 @@ $font_size: 15rem;
 h2, h3, h4, h5, h6 {
     font-family: "2015_Cruiser_Hollow_Italic" !important;
     // text-shadow: 1px 0px 0 hsla(195, 100%, 50%, 0.2);
+}
+ */
+$font_default: Medabots;
+$font_default: Medabots_Italic;
+$font_size: 19rem; 
+
+.lineHeight {
+    line-height: 1.5 !important;
 }
 
 

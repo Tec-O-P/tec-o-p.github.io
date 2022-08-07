@@ -20,19 +20,33 @@ TODO: Variables
 }
 
 .lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.5 !important;
-}
-
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
   line-height: 1.7813 !important;
 }
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
+/* 
+$font_default: "2015_Cruiser";
+$font_size: 15rem;
+
+$font_default: "2015_Cruiser_Hollow";
+$font_size: 15rem;
+
+$font_default: "2015_Cruiser_Hollow_Italic";
+$font_size: 15rem;
+
+$font_default: "2015_Cruiser_Italic";
+$font_size: 15rem;
+
+.lineHeight {
+    line-height: 1.9 !important;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: "2015_Cruiser_Hollow_Italic" !important;
+    font-family: "2015_Cruiser_Hollow_Italic" !important;
+    // text-shadow: 1px 0px 0 hsla(195, 100%, 50%, 0.2);
+}
+ */
+.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
+  line-height: 1.5 !important;
 }
 
 /* Padrão: 600-700px. */
@@ -100,7 +114,7 @@ html {
 TODO: Error
 ◈──────────────────────────────────────────────────────◈ */
 .error {
-  font-size: 15rem;
+  font-size: 19rem;
   /*     
     color: white;
     background-color: red;
@@ -247,7 +261,7 @@ TODO: Texts
 }
 
 html {
-  font-family: "2015_Cruiser_Italic";
+  font-family: Medabots_Italic;
   font-size: 1px;
   color: black;
 }
@@ -260,7 +274,7 @@ q, cite, figcaption,
 form, label, input, textarea, select, button, fieldset, legend,
 table, tr, th, td,
 e {
-  font-size: 15rem;
+  font-size: 19rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -676,7 +690,7 @@ dl > div:not(:nth-last-of-type(1)) {
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
 .font_size {
-  font-size: 15rem;
+  font-size: 19rem;
 }
 
 .font_monospace, .codeViewer2 .text dd code {
@@ -705,7 +719,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .mini_topic {
-  font-size: 15rem;
+  font-size: 19rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -713,7 +727,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .container_text {
-  font-size: 15rem;
+  font-size: 19rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -968,7 +982,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 }
 
 .list_featured li div {
-  font-size: 15rem;
+  font-size: 19rem;
 }
 
 .list_featured li + li {
@@ -2054,7 +2068,7 @@ TODO: Layout Sections
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 15rem;
+  font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -4917,7 +4931,7 @@ figure.outdoor img {
 }
 
 .lightbox_text {
-  font-size: 15rem;
+  font-size: 19rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
 }
