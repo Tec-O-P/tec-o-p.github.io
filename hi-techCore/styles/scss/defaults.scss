@@ -36,15 +36,6 @@ $font_size: 14rem;
     line-height: 2.0358 !important;
 }
 
-$font_default: "Downlink_Bold";
-$font_default: "Downlink_Italic";
-$font_default: "Downlink_Bold_Italic";
-$font_default: "Downlink";
-$font_size: 16rem;
-
-.lineHeight {
-    line-height: 1.7813 !important;
-}
 /* 
 
 $font_default: "2015_Cruiser";
@@ -63,6 +54,13 @@ h2, h3, h4, h5, h6 {
 }
  */
 
+$font_default: Copperplate;
+$font_size: 20rem;
+
+.lineHeight {
+    line-height: 1.425 !important;
+} 
+
 $font_default: Medabots;
 $font_default: Medabots_Italic;
 $font_size: 19rem; 
@@ -72,33 +70,19 @@ $font_size: 19rem;
 }
 
 $font_default: "Downlink_Bold";
-$font_default: "Downlink_Italic";
 $font_default: "Downlink_Bold_Italic";
 $font_default: "Downlink";
+$font_default: "Downlink_Italic";
 $font_size: 16rem;
 
 .lineHeight {
     line-height: 1.7813 !important;
 }
-
-$font_default: Xolonium-Regular;
-$font_size: 18rem; 
-
-.lineHeight {
-    line-height: 1.5833 !important;
-}
-
-$font_default: Copperplate;
-$font_size: 20rem;
-
-.lineHeight {
-    line-height: 1.5 !important;
-}
-
+/* 
 * {
     font-style: italic !important;
 }
-
+ */
 
 
 $font_monospace: Courier, 'Courier New', monospace;
