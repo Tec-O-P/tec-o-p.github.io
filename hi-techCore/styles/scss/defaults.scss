@@ -46,6 +46,7 @@ $font_size: 16rem;
     line-height: 1.7813 !important;
 }
 /* 
+
 $font_default: "2015_Cruiser";
 $font_default: "2015_Cruiser_Hollow";
 $font_default: "2015_Cruiser_Hollow_Italic";
@@ -61,6 +62,7 @@ h2, h3, h4, h5, h6 {
     // text-shadow: 1px 0px 0 hsla(195, 100%, 50%, 0.2);
 }
  */
+
 $font_default: Medabots;
 $font_default: Medabots_Italic;
 $font_size: 19rem; 
@@ -77,6 +79,24 @@ $font_size: 16rem;
 
 .lineHeight {
     line-height: 1.7813 !important;
+}
+
+$font_default: Xolonium-Regular;
+$font_size: 18rem; 
+
+.lineHeight {
+    line-height: 1.5833 !important;
+}
+
+$font_default: Copperplate;
+$font_size: 19rem; 
+
+.lineHeight {
+    line-height: 1.5 !important;
+}
+
+* {
+    font-style: italic !important;
 }
 
 
