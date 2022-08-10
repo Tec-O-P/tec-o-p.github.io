@@ -6183,6 +6183,11 @@ button * {
     letter-spacing: 0px;
     text-transform: uppercase;
 
+    font-family: 'Regen';
+    font-size: 19rem !important;
+    letter-spacing: 0px;    
+    text-transform: none;
+
     font-family: 'Videopac'; 
     font-size: 19rem !important;
     letter-spacing: 2px;
@@ -6190,11 +6195,6 @@ button * {
     text-transform: none;
     // text-shadow: 1px 1px 25px hsla(0, 0%, 100%, 1); 
     // text-shadow: 0.5px 0.5px 0px hsla(0, 0%, 100%, 1); 
-
-    font-family: 'Regen';
-    font-size: 19rem !important;
-    letter-spacing: 0px;    
-    text-transform: none;
 
     //line-height: 1.6764 !important;
 }
