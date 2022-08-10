@@ -6180,7 +6180,7 @@ nav * {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 100;
-    text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.75) !important; 
+    text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.80), 3px 3px 2px hsla(0, 0%, 0%, 0.12) !important; 
 
     //line-height: 1.6764 !important;
 }
@@ -6188,6 +6188,10 @@ nav * {
 /* .logo {
     font-size: 20rem; // Videopac
 } */
+
+.logo img { 
+    filter: drop-shadow(3px 3px 2px hsla(0, 0%, 0%, 0.32)) !important;
+} 
 
 button * {
     font-family: 'Chromia';
@@ -6220,7 +6224,6 @@ button * {
     letter-spacing: 2px;
     text-transform: uppercase;
     text-transform: none;
-    // font-weight: 900;
     // text-shadow: 1px 1px 25px hsla(0, 0%, 100%, 1); 
     // text-shadow: 0.5px 0.5px 0px hsla(0, 0%, 100%, 1); 
 
