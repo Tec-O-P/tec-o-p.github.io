@@ -6079,12 +6079,11 @@ button * {
   font-size: 19rem !important;
   letter-spacing: 0px;
   text-transform: none;
-  font-family: 'Videopac';
-  font-size: 19rem !important;
+  font-family: 'Videopac_Bold';
+  font-size: 18rem !important;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-transform: none;
-  font-weight: 900;
 }
 
 table *, .lightbox * {
