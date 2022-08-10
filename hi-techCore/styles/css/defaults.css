@@ -11,46 +11,26 @@ TODO: Variables
   line-height: 1.5 !important;
 }
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
-}
-
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 2.0358 !important;
-}
-
 /* 
-
-$font_default: "2015_Cruiser";
-$font_default: "2015_Cruiser_Hollow";
-$font_default: "2015_Cruiser_Hollow_Italic";
-$font_default: "2015_Cruiser_Italic";
+$font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
 $font_size: 15rem;
 
 .lineHeight {
     line-height: 1.9 !important;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: "2015_Cruiser_Hollow_Italic" !important;
-    // text-shadow: 1px 0px 0 hsla(195, 100%, 50%, 0.2);
-}
- */
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.425 !important;
+$font_default: 'Alternity';
+$font_size: 17rem; 
+
+.lineHeight {
+    line-height: 1.6764 !important;
 }
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.5 !important;
-}
+$font_default: 'Chromia';
+$font_size: 18rem; 
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.7813 !important;
-}
-
-/* 
-* {
-    font-style: italic !important;
+.lineHeight {
+    line-height: 1.6764 !important;
 }
  */
 /* Padrão: 600-700px. */
@@ -118,7 +98,7 @@ html {
 TODO: Error
 ◈──────────────────────────────────────────────────────◈ */
 .error {
-  font-size: 16rem;
+  font-size: 19rem;
   /*     
     color: white;
     background-color: red;
@@ -265,20 +245,13 @@ TODO: Texts
 }
 
 html {
-  font-family: "Downlink_Italic";
+  font-family: "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
   color: black;
 }
 
-/* Elementos genéricos inline: */
-span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var,
-p, ul, ol, li, dt, dd, details, summary,
-output, time, address, blockquote,
-q, cite, figcaption,
-form, label, input, textarea, select, button, fieldset, legend,
-table, tr, th, td,
-e {
-  font-size: 16rem;
+* {
+  font-size: 19rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -694,7 +667,7 @@ dl > div:not(:nth-last-of-type(1)) {
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
 .font_size {
-  font-size: 16rem;
+  font-size: 19rem;
 }
 
 .font_monospace, .codeViewer2 .text dd code {
@@ -723,7 +696,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .mini_topic {
-  font-size: 16rem;
+  font-size: 19rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -731,7 +704,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .container_text {
-  font-size: 16rem;
+  font-size: 19rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -986,7 +959,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 }
 
 .list_featured li div {
-  font-size: 16rem;
+  font-size: 19rem;
 }
 
 .list_featured li + li {
@@ -2072,7 +2045,7 @@ TODO: Layout Sections
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 16rem;
+  font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -4935,7 +4908,7 @@ figure.outdoor img {
 }
 
 .lightbox_text {
-  font-size: 16rem;
+  font-size: 19rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
 }
@@ -6012,3 +5985,59 @@ TODO: Classes JS
 .overflow_hidden {
   overflow: hidden;
 }
+
+* {
+  font-family: 'Imaki';
+  font-family: 'Directive_Four';
+}
+
+p {
+  font-size: 17rem;
+  line-height: 1.6764 !important;
+}
+
+nav * {
+  font-family: 'Alternity';
+  font-size: 17rem;
+  text-transform: uppercase;
+}
+
+button * {
+  font-family: 'Chromia';
+  font-size: 17rem !important;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  font-family: 'Quantum';
+  font-size: 19rem !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Imaki';
+  font-size: 18rem !important;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  font-family: 'Protoculture';
+  font-size: 20rem !important;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  font-family: 'Regen';
+  font-size: 17rem !important;
+  letter-spacing: 0px;
+}
+
+table *, .lightbox * {
+  font-family: 'Persis';
+  font-size: 17rem;
+  letter-spacing: 0px;
+  font-family: 'Regen';
+  font-size: 17rem;
+  letter-spacing: 0px;
+  font-family: 'Quantum';
+  font-size: 19rem;
+  letter-spacing: 1px;
+}
+
+/* 
+* {
+    font-style: italic !important;
+}
+ */

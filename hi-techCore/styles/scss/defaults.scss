@@ -15,72 +15,26 @@ $font_size: 19rem;
 .lineHeight {
     line-height: 1.5 !important;
 }
-
-$font_default: 'HighTech...ish'; // Feio
-$font_size: 21rem;
-
-$font_default: 'IDroid'; // Não é bonito o suficiente
-$font_size: 14rem;
-
-$font_default: 'Cyber-BoldBook'; // FORA!
+/* 
+$font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
 $font_size: 15rem;
 
 .lineHeight {
     line-height: 1.9 !important;
 }
 
-$font_default: Micron;
-$font_size: 14rem; 
+$font_default: 'Alternity';
+$font_size: 17rem; 
 
 .lineHeight {
-    line-height: 2.0358 !important;
+    line-height: 1.6764 !important;
 }
 
-/* 
-
-$font_default: "2015_Cruiser";
-$font_default: "2015_Cruiser_Hollow";
-$font_default: "2015_Cruiser_Hollow_Italic";
-$font_default: "2015_Cruiser_Italic";
-$font_size: 15rem;
+$font_default: 'Chromia';
+$font_size: 18rem; 
 
 .lineHeight {
-    line-height: 1.9 !important;
-}
-
-h2, h3, h4, h5, h6 {
-    font-family: "2015_Cruiser_Hollow_Italic" !important;
-    // text-shadow: 1px 0px 0 hsla(195, 100%, 50%, 0.2);
-}
- */
-
-$font_default: Copperplate;
-$font_size: 20rem;
-
-.lineHeight {
-    line-height: 1.425 !important;
-} 
-
-$font_default: Medabots;
-$font_default: Medabots_Italic;
-$font_size: 19rem; 
-
-.lineHeight {
-    line-height: 1.5 !important;
-}
-
-$font_default: "Downlink_Bold";
-$font_default: "Downlink_Bold_Italic";
-$font_default: "Downlink";
-$font_default: "Downlink_Italic";
-$font_size: 16rem;
-
-.lineHeight {
-    line-height: 1.7813 !important;
-}
-/* 
-* {
-    font-style: italic !important;
+    line-height: 1.6764 !important;
 }
  */
 
@@ -774,24 +728,23 @@ html {
     color: $color_text; 
 }
 
-/* Elementos genéricos inline: */ 
-span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var, 
-/* Elementos genéricos em bloco: */ 
-p, ul, ol, li, dt, dd, details, summary, 
-/* ?: */
-output, time, address, blockquote, 
-q, cite, figcaption, 
-/* Elementos de formulário: */ 
-form, label, input, textarea, select, button, fieldset, legend, 
-/* Elementos de tabela: */
-table, tr, th, td,
-/* Elementos que eu criei: */
-e
-/* Elementos com tamanho definido separadamente: 
-h1, h2, h3, h4, h5, h6, pre, code, samp, kbd, caption */ 
+// /* Elementos genéricos inline: */ 
+// span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var, 
+// /* Elementos genéricos em bloco: */ 
+// p, ul, ol, li, dt, dd, details, summary, 
+// /* ?: */
+// output, time, address, blockquote, 
+// q, cite, figcaption, 
+// /* Elementos de formulário: */ 
+// form, label, input, textarea, select, button, fieldset, legend, 
+// /* Elementos de tabela: */
+// table, tr, th, td,
+// /* Elementos que eu criei: */
+// e
+// /* Elementos com tamanho definido separadamente: 
+// h1, h2, h3, h4, h5, h6, pre, code, samp, kbd, caption */ 
 
-
-{
+* {
     font-size: $font_size; 
 }
 
@@ -6125,3 +6078,92 @@ TODO: Classes JS
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /* Elementos genéricos inline: */ 
+// span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var, 
+// /* Elementos genéricos em bloco: */ 
+// p, ul, ol, li, dt, dd, details, summary, 
+// /* ?: */
+// output, time, address, blockquote, 
+// q, cite, figcaption, 
+// /* Elementos de formulário: */ 
+// form, label, input, textarea, select, button, fieldset, legend, 
+// /* Elementos de tabela: */
+// table, tr, th, td 
+
+* {
+    font-family: 'Imaki';
+    font-family: 'Directive_Four'; // , Chromia
+}
+
+p {
+    font-size: 17rem;
+    line-height: 1.6764 !important;
+}
+
+nav * {
+    font-family: 'Alternity';
+    font-size: 17rem;
+    //line-height: 1.6764 !important;
+    text-transform: uppercase;
+}
+
+button * {
+    font-family: 'Chromia';
+    font-size: 17rem !important;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+
+    font-family: 'Quantum'; // Persis, Regen
+    font-size: 19rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    font-family: 'Imaki';
+    font-size: 18rem !important;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+
+    font-family: 'Protoculture';
+    font-size: 20rem !important;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+
+    font-family: 'Regen';
+    font-size: 17rem !important;
+    letter-spacing: 0px;    
+    // text-transform: none;
+
+    //line-height: 1.6764 !important;
+}
+
+table *, .lightbox * {
+    font-family: 'Persis'; // Persis, Regen
+    font-size: 17rem;
+    letter-spacing: 0px;
+    font-family: 'Regen'; // Persis, Regen
+    font-size: 17rem;
+    letter-spacing: 0px;
+    font-family: 'Quantum'; // Persis, Regen
+    font-size: 19rem;
+    letter-spacing: 1px;
+    // line-height: 1.6764 !important;
+}
+
+/* 
+* {
+    font-style: italic !important;
+}
+ */
