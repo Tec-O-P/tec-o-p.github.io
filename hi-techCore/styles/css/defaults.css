@@ -5988,114 +5988,76 @@ TODO: Classes JS
 
 * {
   font-family: 'Imaki';
+  font-family: 'Chromia';
   font-family: 'Directive_Four';
   font-family: 'Persis';
 }
 
-h2 {
-  font-family: 'Videopac';
-  letter-spacing: calc(14px - (2px * 2));
-}
-
-/* 
-	h2 {
-        font-family: 'Protoculture';
-        letter-spacing: calc(6px - (1px * 2));
-	}
-
-    h6 {
-        letter-spacing: 1px;
-    }
-    */
-h3 {
-  font-family: 'Videopac';
-  letter-spacing: calc(14px - (2px * 3));
-}
-
-/* 
-	h3 {
-        font-family: 'Protoculture';
-        letter-spacing: calc(6px - (1px * 3));
-	}
-
-    h6 {
-        letter-spacing: 1px;
-    }
-    */
-h4 {
-  font-family: 'Videopac';
-  letter-spacing: calc(14px - (2px * 4));
-}
-
-/* 
-	h4 {
-        font-family: 'Protoculture';
-        letter-spacing: calc(6px - (1px * 4));
-	}
-
-    h6 {
-        letter-spacing: 1px;
-    }
-    */
-h5 {
-  font-family: 'Videopac';
-  letter-spacing: calc(14px - (2px * 5));
-}
-
-/* 
-	h5 {
-        font-family: 'Protoculture';
-        letter-spacing: calc(6px - (1px * 5));
-	}
-
-    h6 {
-        letter-spacing: 1px;
-    }
-    */
-h6 {
-  font-family: 'Videopac';
-  letter-spacing: calc(14px - (2px * 6));
-}
-
-/* 
-	h6 {
-        font-family: 'Protoculture';
-        letter-spacing: calc(6px - (1px * 6));
-	}
-
-    h6 {
-        letter-spacing: 1px;
-    }
-    */
-p, span {
+p, li, span {
+  font-size: 17rem;
   font-size: 18rem;
 }
 
+/*     */
+h2, h3, h4, h5, h6 {
+  font-family: 'Videopac';
+}
+
+h2 {
+  letter-spacing: 9px;
+}
+
+h3 {
+  letter-spacing: 8px;
+}
+
+h4 {
+  letter-spacing: 7px;
+}
+
+h5 {
+  letter-spacing: 5px;
+}
+
+h6 {
+  letter-spacing: 3px;
+}
+
 nav * {
-  font-family: 'Alternity';
-  font-size: 17rem;
-  text-transform: uppercase;
-  letter-spacing: 0px;
   font-family: 'Protoculture';
   font-size: 20rem;
   text-transform: uppercase;
   letter-spacing: 0px;
+  font-weight: 400;
   font-family: 'Regen';
   font-size: 19rem;
   text-transform: none;
   text-transform: uppercase;
   letter-spacing: 0px;
+  font-weight: 400;
+  font-family: 'IDroid';
+  font-size: 18rem;
+  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-family: 'Alternity';
+  font-size: 17rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 400;
   font-family: 'Videopac';
-  font-size: 19rem;
+  font-size: 20rem;
   text-transform: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: 100;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.75) !important;
 }
 
-.logo {
-  font-size: 20rem;
-}
-
+/* .logo {
+    font-size: 20rem; // Videopac
+} */
 button * {
   font-family: 'Chromia';
   font-size: 17rem !important;
@@ -6122,6 +6084,7 @@ button * {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-transform: none;
+  font-weight: 100;
 }
 
 table *, .lightbox * {
@@ -6131,6 +6094,9 @@ table *, .lightbox * {
   font-family: 'Quantum';
   font-size: 19rem;
   letter-spacing: 1px;
+  font-family: 'Alternity';
+  font-size: 17rem;
+  letter-spacing: 0px;
   font-family: 'Persis';
   font-size: 18rem;
   letter-spacing: 0px;

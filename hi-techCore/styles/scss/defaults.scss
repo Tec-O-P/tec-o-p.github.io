@@ -6105,62 +6105,89 @@ TODO: Classes JS
 
 * {
     font-family: 'Imaki';
-    font-family: 'Directive_Four'; // , Chromia
+    font-family: 'Chromia';
+    font-family: 'Directive_Four';
     font-family: 'Persis';
 }
 
-@for $i from 2 through 6 {
-
-	h#{$i} {
-        font-family: 'Videopac';
-        letter-spacing: calc(14px - (2px * #{$i}));
-	}
-    /* 
-	h#{$i} {
-        font-family: 'Protoculture';
-        letter-spacing: calc(6px - (1px * #{$i}));
-	}
-
-    h6 {
-        letter-spacing: 1px;
-    }
-    */
-}
-
-p, span {
-    font-size: 18rem;
+p, li, span {
+    font-size: 17rem; // Directive_Four
+    font-size: 18rem; // Persis
     // line-height: 1.6764 !important;
 }
 
+/*     */
+// @for $i from 2 through 6 { // h2: 9px, h6: 3px
+
+// 	h#{$i} {
+        
+//         font-family: 'Videopac'; letter-spacing: calc(11px - (1px * #{$i})); // letter-spacing: calc(13px - (2px * #{$i}));
+        
+//         // font-family: 'Alternity';
+// 	}
+// /* 	h#{$i} {
+//         font-family: 'Protoculture';
+//         letter-spacing: calc(6px - (1px * #{$i}));
+// 	}
+
+//     h6 {
+//         letter-spacing: 1px;
+//     } */
+// }
+
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Videopac';
+}
+
+h2 { letter-spacing: 9px; }
+h3 { letter-spacing: 8px; }
+h4 { letter-spacing: 7px; }
+h5 { letter-spacing: 5px; }
+h6 { letter-spacing: 3px; }
+
 nav * {
-    font-family: 'Alternity';
-    font-size: 17rem;
-    text-transform: uppercase;
-    letter-spacing: 0px;
 
     font-family: 'Protoculture';
     font-size: 20rem;
     text-transform: uppercase;
     letter-spacing: 0px;
+    font-weight: 400;
 
     font-family: 'Regen';
     font-size: 19rem;
     text-transform: none;
     text-transform: uppercase;
     letter-spacing: 0px;
+    font-weight: 400;
+
+    font-family: 'IDroid';
+    font-size: 18rem;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-weight: 400;
+
+    font-family: 'Alternity';
+    font-size: 17rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-weight: 400;
 
     font-family: 'Videopac';
-    font-size: 19rem;
+    font-size: 20rem;
     text-transform: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 100;
+    text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.75) !important; 
 
     //line-height: 1.6764 !important;
 }
 
-.logo {
+/* .logo {
     font-size: 20rem; // Videopac
-}
+} */
 
 button * {
     font-family: 'Chromia';
@@ -6193,6 +6220,7 @@ button * {
     letter-spacing: 2px;
     text-transform: uppercase;
     text-transform: none;
+    font-weight: 100;
     // text-shadow: 1px 1px 25px hsla(0, 0%, 100%, 1); 
     // text-shadow: 0.5px 0.5px 0px hsla(0, 0%, 100%, 1); 
 
@@ -6203,9 +6231,16 @@ table *, .lightbox * {
     font-family: 'Regen'; // Persis, Regen
     font-size: 17rem;
     letter-spacing: 0px;
+
     font-family: 'Quantum'; // Persis, Regen
     font-size: 19rem;
     letter-spacing: 1px;
+
+    font-family: 'Alternity';
+    font-size: 17rem;
+    // text-transform: uppercase;
+    letter-spacing: 0px;
+
     font-family: 'Persis'; // Persis, Regen
     font-size: 18rem;
     letter-spacing: 0px;

@@ -139,3 +139,12 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
 .Videopac_Italic { font-family: "Videopac_Italic"; }
 @font-face { font-family: "Videopac_Bold_Italic"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Bold_Italic.otf"); }
 .Videopac_Bold_Italic { font-family: "Videopac_Bold_Italic"; }
+
+@font-face { font-family: "IDroid"; src: url("../../fonts/pixelSagas/IDroid/IDroid.otf"); }
+.IDroid { font-family: "IDroid"; }
+@font-face { font-family: "IDroid_Bold"; src: url("../../fonts/pixelSagas/IDroid/IDroid_Bold.otf"); }
+.IDroid_Bold { font-family: "IDroid_Bold"; }
+@font-face { font-family: "IDroid_Italic"; src: url("../../fonts/pixelSagas/IDroid/IDroid_Italic.otf"); }
+.IDroid_Italic { font-family: "IDroid_Italic"; }
+@font-face { font-family: "IDroid_Bold_Italic"; src: url("../../fonts/pixelSagas/IDroid/IDroid_Bold_Italic.otf"); }
+.IDroid_Bold_Italic { font-family: "IDroid_Bold_Italic"; }
