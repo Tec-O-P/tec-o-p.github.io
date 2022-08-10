@@ -130,3 +130,12 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
 .Protoculture_Italic { font-family: "Protoculture_Italic"; }
 @font-face { font-family: "Protoculture_Bold_Italic"; src: url("../../fonts/pixelSagas/Protoculture/Protoculture_Bold_Italic.otf"); }
 .Protoculture_Bold_Italic { font-family: "Protoculture_Bold_Italic"; }
+
+@font-face { font-family: "Videopac"; src: url("../../fonts/pixelSagas/Videopac/Videopac.otf"); }
+.Videopac { font-family: "Videopac"; }
+@font-face { font-family: "Videopac_Bold"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Bold.otf"); }
+.Videopac_Bold { font-family: "Videopac_Bold"; }
+@font-face { font-family: "Videopac_Italic"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Italic.otf"); }
+.Videopac_Italic { font-family: "Videopac_Italic"; }
+@font-face { font-family: "Videopac_Bold_Italic"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Bold_Italic.otf"); }
+.Videopac_Bold_Italic { font-family: "Videopac_Bold_Italic"; }

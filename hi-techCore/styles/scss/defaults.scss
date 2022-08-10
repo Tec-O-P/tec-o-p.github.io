@@ -6106,18 +6106,60 @@ TODO: Classes JS
 * {
     font-family: 'Imaki';
     font-family: 'Directive_Four'; // , Chromia
+    font-family: 'Persis';
 }
 
-p {
+@for $i from 2 through 6 {
+
+	h#{$i} {
+        font-family: 'Videopac';
+        letter-spacing: calc(14px - (2px * #{$i}));
+	}
+    /* 
+	h#{$i} {
+        font-family: 'Protoculture';
+        letter-spacing: calc(6px - (1px * #{$i}));
+	}
+
+    h6 {
+        letter-spacing: 1px;
+    }
+    */
+}
+
+p, span {
     font-size: 17rem;
-    line-height: 1.6764 !important;
+    // line-height: 1.6764 !important;
 }
 
 nav * {
     font-family: 'Alternity';
     font-size: 17rem;
-    //line-height: 1.6764 !important;
     text-transform: uppercase;
+    letter-spacing: 0px;
+
+    font-family: 'Protoculture';
+    font-size: 20rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+
+    font-family: 'Regen';
+    font-size: 19rem;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+
+    font-family: 'Videopac';
+    font-size: 19rem;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    //line-height: 1.6764 !important;
+}
+
+.logo {
+    font-size: 20rem; // Videopac
 }
 
 button * {
@@ -6126,7 +6168,7 @@ button * {
     letter-spacing: 0px;
     text-transform: uppercase;
 
-    font-family: 'Quantum'; // Persis, Regen
+    font-family: 'Quantum'; 
     font-size: 19rem !important;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -6142,9 +6184,15 @@ button * {
     text-transform: uppercase;
 
     font-family: 'Regen';
-    font-size: 17rem !important;
+    font-size: 19rem !important;
     letter-spacing: 0px;    
-    // text-transform: none;
+    text-transform: none;
+
+    font-family: 'Videopac'; 
+    font-size: 19rem !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-transform: none;
 
     //line-height: 1.6764 !important;
 }

@@ -5989,17 +5989,111 @@ TODO: Classes JS
 * {
   font-family: 'Imaki';
   font-family: 'Directive_Four';
+  font-family: 'Persis';
 }
 
-p {
+h2 {
+  font-family: 'Videopac';
+  letter-spacing: calc(14px - (2px * 2));
+}
+
+/* 
+	h2 {
+        font-family: 'Protoculture';
+        letter-spacing: calc(6px - (1px * 2));
+	}
+
+    h6 {
+        letter-spacing: 1px;
+    }
+    */
+h3 {
+  font-family: 'Videopac';
+  letter-spacing: calc(14px - (2px * 3));
+}
+
+/* 
+	h3 {
+        font-family: 'Protoculture';
+        letter-spacing: calc(6px - (1px * 3));
+	}
+
+    h6 {
+        letter-spacing: 1px;
+    }
+    */
+h4 {
+  font-family: 'Videopac';
+  letter-spacing: calc(14px - (2px * 4));
+}
+
+/* 
+	h4 {
+        font-family: 'Protoculture';
+        letter-spacing: calc(6px - (1px * 4));
+	}
+
+    h6 {
+        letter-spacing: 1px;
+    }
+    */
+h5 {
+  font-family: 'Videopac';
+  letter-spacing: calc(14px - (2px * 5));
+}
+
+/* 
+	h5 {
+        font-family: 'Protoculture';
+        letter-spacing: calc(6px - (1px * 5));
+	}
+
+    h6 {
+        letter-spacing: 1px;
+    }
+    */
+h6 {
+  font-family: 'Videopac';
+  letter-spacing: calc(14px - (2px * 6));
+}
+
+/* 
+	h6 {
+        font-family: 'Protoculture';
+        letter-spacing: calc(6px - (1px * 6));
+	}
+
+    h6 {
+        letter-spacing: 1px;
+    }
+    */
+p, span {
   font-size: 17rem;
-  line-height: 1.6764 !important;
 }
 
 nav * {
   font-family: 'Alternity';
   font-size: 17rem;
   text-transform: uppercase;
+  letter-spacing: 0px;
+  font-family: 'Protoculture';
+  font-size: 20rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-family: 'Regen';
+  font-size: 19rem;
+  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-family: 'Videopac';
+  font-size: 19rem;
+  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.logo {
+  font-size: 20rem;
 }
 
 button * {
@@ -6020,8 +6114,14 @@ button * {
   letter-spacing: 0px;
   text-transform: uppercase;
   font-family: 'Regen';
-  font-size: 17rem !important;
+  font-size: 19rem !important;
   letter-spacing: 0px;
+  text-transform: none;
+  font-family: 'Videopac';
+  font-size: 19rem !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-transform: none;
 }
 
 table *, .lightbox * {
