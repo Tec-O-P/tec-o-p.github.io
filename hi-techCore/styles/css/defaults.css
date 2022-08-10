@@ -6025,15 +6025,15 @@ button * {
 }
 
 table *, .lightbox * {
-  font-family: 'Persis';
-  font-size: 17rem;
-  letter-spacing: 0px;
   font-family: 'Regen';
   font-size: 17rem;
   letter-spacing: 0px;
   font-family: 'Quantum';
   font-size: 19rem;
   letter-spacing: 1px;
+  font-family: 'Persis';
+  font-size: 17rem;
+  letter-spacing: 0px;
 }
 
 /* 
