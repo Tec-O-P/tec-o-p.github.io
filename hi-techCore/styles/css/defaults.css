@@ -6035,12 +6035,6 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0px;
   font-weight: 400;
-  font-family: 'IDroid';
-  font-size: 18rem;
-  text-transform: none;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  font-weight: 400;
   font-family: 'Alternity';
   font-size: 17rem;
   text-transform: uppercase;
@@ -6053,6 +6047,10 @@ h6 {
   letter-spacing: 2px;
   font-weight: 100;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5) !important;
+  font-family: 'IDroid';
+  font-size: 19rem;
+  letter-spacing: 0px;
+  font-weight: 400;
 }
 
 /* .logo {
