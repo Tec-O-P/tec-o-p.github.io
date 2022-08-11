@@ -6136,8 +6136,9 @@ p, li, span {
 // }
 
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 { 
     font-family: 'Videopac';
+    // filter: drop-shadow(0px 0px 0px hsla(195, 100%, 15%, 1));
 }
 
 h2 { letter-spacing: 9px; }
@@ -6190,7 +6191,7 @@ nav * {
 } */
 
 .logo img { 
-    filter: drop-shadow(3px 3px 2px hsla(0, 0%, 0%, 0.26)) !important;
+    filter: drop-shadow(3px 3px 2px hsla(0, 0%, 0%, 0.25)) !important;
 } 
 
 button * {
@@ -6219,11 +6220,11 @@ button * {
     letter-spacing: 0px;    
     text-transform: none;
 
-    font-family: 'Videopac_Bold'; 
-    font-size: 18rem !important;
+    font-family: 'Videopac'; 
+    font-size: 17rem !important;
     letter-spacing: 2px;
-    text-transform: uppercase;
     text-transform: none;
+    text-transform: uppercase;
     // text-shadow: 1px 1px 25px hsla(0, 0%, 100%, 1); 
     // text-shadow: 0.5px 0.5px 0px hsla(0, 0%, 100%, 1); 
 
