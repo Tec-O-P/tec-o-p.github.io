@@ -6135,7 +6135,7 @@ p, li, span {
 //     } */
 // }
 
-
+/* 
 h2, h3, h4, h5, h6 { 
     font-family: 'Videopac';
     // filter: drop-shadow(0px 0px 0px hsla(195, 100%, 15%, 1));
@@ -6146,6 +6146,15 @@ h3 { letter-spacing: 8px; }
 h4 { letter-spacing: 7px; }
 h5 { letter-spacing: 5px; }
 h6 { letter-spacing: 3px; }
+ */
+
+@for $i from 2 through 6 {
+
+	h#{$i} {
+        
+        font-family: 'IDroid'; letter-spacing: calc(7px - (1px * #{$i}));
+	}
+}
 
 .header-nav * {
 
