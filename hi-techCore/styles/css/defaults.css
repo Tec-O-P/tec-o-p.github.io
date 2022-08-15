@@ -708,7 +708,7 @@ details > div {
 
 details[open] {
   color: white;
-  background-image: linear-gradient(to bottom right, #80dfff, deepskyblue);
+  background-image: linear-gradient(to bottom right, #70dbff, #00b8f5);
 }
 
 details[open] > summary {
