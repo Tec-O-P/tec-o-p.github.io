@@ -1848,11 +1848,6 @@ TODO: Layout Sections
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* 
-        .text_img, .text_img_size {
-            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
-        }
-        */
 }
 
 .header-nav .nav h1 {
@@ -1884,11 +1879,15 @@ TODO: Layout Sections
 .header-nav .nav .logo img {
   width: 22px;
   margin-right: 8px;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
 }
 
 .header-nav .nav li + li {
   margin-top: 0;
+}
+
+.header-nav .nav .text_img, .header-nav .nav .text_img_size {
+  filter: drop-shadow(0px 0px 2px #006b8f);
 }
 
 .header-nav .button-left {
@@ -1897,11 +1896,6 @@ TODO: Layout Sections
 
 .header-nav .nav-menu-button {
   margin-right: 1px;
-  /* 
-        img {
-            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
-        }
-         */
 }
 
 .header-nav .nav-menu-button :nth-child(2) {
@@ -1912,6 +1906,10 @@ TODO: Layout Sections
   font-size: 32px;
   text-align: center;
   color: white;
+}
+
+.header-nav .nav-menu-button img {
+  filter: drop-shadow(0px 0px 2px #006b8f);
 }
 
 .header-nav .nav-menu {
@@ -2077,6 +2075,7 @@ TODO: Layout Sections
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a img {
     width: 48px;
     margin-right: 2px;
+    filter: drop-shadow(0px 0px 2px #006b8f);
   }
   .header-nav .nav-menu ul li div {
     display: none;
@@ -2170,9 +2169,16 @@ TODO: Layout Sections
     */
 }
 
+.headerNav-button a {
+  width: inherit;
+  height: inherit;
+  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.15));
+}
+
 .headerNav-button img {
   width: inherit;
   height: inherit;
+  filter: drop-shadow(0px 0px 2px #006b8f);
 }
 
 /*  TODO:    1 ▶ Footer

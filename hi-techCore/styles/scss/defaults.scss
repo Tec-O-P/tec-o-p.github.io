@@ -1744,13 +1744,16 @@ TODO: Layout Sections
             filter: drop-shadow(3px 3px 1px hsla(0, 0%, 0%, 0.15)); // Sombra
         }
 
+        img {
+        }
+
         .logo {
             margin-left: 14px;
 
             img {
                 width: 22px;
                 margin-right: 8px;
-                filter: drop-shadow(1px 1px 1px $color_shadow_text);
+                filter: drop-shadow(0px 0px 1px hsla(0, 0%, 0%, 0.3));
             }
         }
 
@@ -1758,11 +1761,10 @@ TODO: Layout Sections
             margin-top: 0;
         }
 
-        /* 
         .text_img, .text_img_size {
-            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+            // filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+            filter: drop-shadow(0px 0px 2px hsl(195, 100%, 28%)); 
         }
-        */
     }
 
     .button-left {
@@ -1782,11 +1784,10 @@ TODO: Layout Sections
             color: $color_text_menu;
         }
 
-        /* 
         img {
-            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+            // filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+            filter: drop-shadow(0px 0px 2px hsl(195, 100%, 28%)); 
         }
-         */
     }
 
 
@@ -1980,6 +1981,7 @@ TODO: Layout Sections
                     width: $button_height;
                     margin-right: 2px;
                     // filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+                    filter: drop-shadow(0px 0px 2px hsl(195, 100%, 28%)); 
                 }
             }
         }
@@ -2090,10 +2092,17 @@ TODO: Layout Sections
     font-size: $font_size;
     box-shadow: 3px 3px 6px 0px $color_shadow_headerNav_button;
 
+    a {
+        width: inherit;
+        height: inherit;
+        filter: drop-shadow(3px 3px 1px hsla(0, 0%, 0%, 0.15)); // Sombra
+    }
+
     img {
         width: inherit;
         height: inherit;
         // filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+        filter: drop-shadow(0px 0px 2px hsl(195, 100%, 28%)); 
     }
 
     /*
