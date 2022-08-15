@@ -614,13 +614,6 @@ pre {
   font-size: 17px;
 }
 
-.gambiarraTemporaria {
-  display: block;
-  margin-top: -39px;
-  margin-bottom: -59px;
-  white-space: break-spaces;
-}
-
 /* 
 details {
     border: 1px solid hsl(0, 0%, 67%);
@@ -692,8 +685,8 @@ details {
   border-radius: 20px;
 }
 
-details > summary {
-  line-height: 40px !important;
+details > summary:nth-of-type(1) {
+  line-height: 40px;
   padding-left: 16px;
   padding-right: 12px;
   font-weight: bold;
@@ -1140,6 +1133,13 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
   max-width: calc(100% - (2 * 20px));
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.gambiarraTemporaria {
+  display: block;
+  margin-top: -39px;
+  margin-bottom: -59px;
+  white-space: break-spaces;
 }
 
 /*  TODO:    1 ▶ Text Icons
@@ -1848,6 +1848,11 @@ TODO: Layout Sections
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* 
+        .text_img, .text_img_size {
+            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+        }
+        */
 }
 
 .header-nav .nav h1 {
@@ -1862,13 +1867,14 @@ TODO: Layout Sections
 }
 
 .header-nav .nav a {
-  height: 48px;
-  color: inherit;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 48px;
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 0px 0px 1px #005470;
+  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.15));
 }
 
 .header-nav .nav .logo {
@@ -1885,16 +1891,17 @@ TODO: Layout Sections
   margin-top: 0;
 }
 
-.header-nav .nav .text_img, .header-nav .nav .text_img_size {
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
-}
-
 .header-nav .button-left {
   margin-right: -13px;
 }
 
 .header-nav .nav-menu-button {
   margin-right: 1px;
+  /* 
+        img {
+            filter: drop-shadow(1px 1px 1px $color_shadow_text); 
+        }
+         */
 }
 
 .header-nav .nav-menu-button :nth-child(2) {
@@ -1905,10 +1912,6 @@ TODO: Layout Sections
   font-size: 32px;
   text-align: center;
   color: white;
-}
-
-.header-nav .nav-menu-button img {
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 .header-nav .nav-menu {
@@ -1935,10 +1938,6 @@ TODO: Layout Sections
 
 .header-nav .nav-menu ul li {
   border-top: 1px solid white;
-}
-
-.header-nav .nav-menu ul li span {
-  filter: drop-shadow(0px 0px 2px #00a8e0);
 }
 
 .header-nav .nav-menu ul li div {
@@ -2074,7 +2073,6 @@ TODO: Layout Sections
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a img {
     width: 48px;
     margin-right: 2px;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
   }
   .header-nav .nav-menu ul li div {
     display: none;
@@ -2171,7 +2169,6 @@ TODO: Layout Sections
 .headerNav-button img {
   width: inherit;
   height: inherit;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
 }
 
 /*  TODO:    1 ▶ Footer
