@@ -7,10 +7,6 @@
 ◈──────────────────────────────────────────────────────◈
 TODO: Variables
 ◈──────────────────────────────────────────────────────◈ */
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.5 !important;
-}
-
 /* 
 $font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
 $font_size: 15rem;
@@ -209,7 +205,7 @@ TODO: Margins
   margin-right: 20px;
 }
 
-p, dl, label {
+p, details, dl, label {
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: 20px;
@@ -263,8 +259,22 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: calc(70rem - (8 * 1rem));
+  margin-top: calc(7rem - 1rem + 16rem);
+  margin-bottom: calc(7rem - 1rem + 16rem);
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ccefff, #00aeff, #bdf7ff, #00a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 h2 {
-  font-size: calc(58rem - (6 * 2rem));
+  font-size: calc(70rem - (8 * 2rem));
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
   margin-left: 20px;
@@ -278,7 +288,7 @@ h2 {
 }
 
 h3 {
-  font-size: calc(58rem - (6 * 3rem));
+  font-size: calc(70rem - (8 * 3rem));
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
   margin-left: 20px;
@@ -292,7 +302,7 @@ h3 {
 }
 
 h4 {
-  font-size: calc(58rem - (6 * 4rem));
+  font-size: calc(70rem - (8 * 4rem));
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
   margin-left: 20px;
@@ -306,7 +316,7 @@ h4 {
 }
 
 h5 {
-  font-size: calc(58rem - (6 * 5rem));
+  font-size: calc(70rem - (8 * 5rem));
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
   margin-left: 20px;
@@ -320,7 +330,7 @@ h5 {
 }
 
 h6 {
-  font-size: calc(58rem - (6 * 6rem));
+  font-size: calc(70rem - (8 * 6rem));
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
   margin-left: 20px;
@@ -602,6 +612,109 @@ pre {
   margin-right: 20px;
   font-family: Courier, "Courier New", monospace;
   font-size: 17px;
+}
+
+.gambiarraTemporaria {
+  display: block;
+  margin-top: -39px;
+  margin-bottom: -59px;
+  white-space: break-spaces;
+}
+
+/* 
+details {
+    border: 1px solid hsl(0, 0%, 67%);
+    border: 1px solid deepskyblue;
+    border-radius: 20px;
+    // padding: 5rem 12rem 5rem 16rem;
+    @extend %margins;
+
+    summary {
+        display: flex; // Use o Flex box aqui para garantir que o tamanho do X e permaneça o mesmo independentemente da fonte de texto.
+        align-items: center;
+
+            min-height: 40px;
+        // padding: 9rem 12rem 9rem 16rem;
+
+        font-weight: bold;
+        // margin: -8rem -8rem 0;
+        // padding: 8rem;
+        cursor: pointer;
+
+        > div {
+            display: list-item;
+            counter-increment: list-item 0;
+            // list-style: inside disclosure-closed;
+        
+            font-size: $font_size;
+            padding-left: 16px;
+            padding-right: 12px;
+            // padding-bottom: 1px;
+
+            color: deepskyblue;
+            // background: $color_text_hx;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            // background-clip: text;
+            // text-fill-color: transparent; 
+        }
+    }
+
+    > div {
+        font-size: $font_size;
+        padding: 9rem 12rem 9rem 16rem;
+    }
+}
+
+details[open] { 
+
+    color: white;
+    // background-color: deepskyblue;
+    background-image: linear-gradient(to bottom right, hsl(195, 100%, 65%), hsl(195, 100%, 40%));
+
+    > summary {
+        color: deepskyblue;
+        background: white;
+        border-radius: 19px;
+    }
+
+    > summary > div {
+            
+        list-style-type: disclosure-open;
+        -webkit-text-fill-color: initial;
+        text-fill-color: initial; 
+    }
+}
+ */
+details {
+  border: 1px solid #ababab;
+  border: 1px solid deepskyblue;
+  border-radius: 20px;
+}
+
+details > summary {
+  line-height: 40px !important;
+  padding-left: 16px;
+  padding-right: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: deepskyblue;
+}
+
+details > div {
+  font-size: 19rem;
+  padding: 9rem 12rem 9rem 16rem;
+}
+
+details[open] {
+  color: white;
+  background-image: linear-gradient(to bottom right, #4dd2ff, #0099cc);
+}
+
+details[open] > summary {
+  color: deepskyblue;
+  background: white;
+  border-radius: 19px;
 }
 
 /*  TODO:        2 ▶ Lists
@@ -5985,139 +6098,3 @@ TODO: Classes JS
 .overflow_hidden {
   overflow: hidden;
 }
-
-* {
-  font-family: 'Imaki';
-  font-family: 'Chromia';
-  font-family: 'Directive_Four';
-  font-family: 'Persis';
-}
-
-p, li, span {
-  font-size: 17rem;
-  font-size: 18rem;
-}
-
-/*     */
-/* 
-h2, h3, h4, h5, h6 { 
-    font-family: 'Videopac';
-    // filter: drop-shadow(0px 0px 0px hsla(195, 100%, 15%, 1));
-}
-
-h2 { letter-spacing: 9px; }
-h3 { letter-spacing: 8px; }
-h4 { letter-spacing: 7px; }
-h5 { letter-spacing: 5px; }
-h6 { letter-spacing: 3px; }
- */
-h2 {
-  font-family: 'IDroid';
-  letter-spacing: calc(7px - (1px * 2));
-}
-
-h3 {
-  font-family: 'IDroid';
-  letter-spacing: calc(7px - (1px * 3));
-}
-
-h4 {
-  font-family: 'IDroid';
-  letter-spacing: calc(7px - (1px * 4));
-}
-
-h5 {
-  font-family: 'IDroid';
-  letter-spacing: calc(7px - (1px * 5));
-}
-
-h6 {
-  font-family: 'IDroid';
-  letter-spacing: calc(7px - (1px * 6));
-}
-
-.header-nav * {
-  font-family: 'Protoculture';
-  font-size: 20rem;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  font-weight: 400;
-  font-family: 'Regen';
-  font-size: 19rem;
-  text-transform: none;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  font-weight: 400;
-  font-family: 'Alternity';
-  font-size: 17rem;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  font-weight: 400;
-  font-family: 'Videopac';
-  font-size: 20rem;
-  text-transform: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 100;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5) !important;
-  font-family: 'IDroid';
-  font-size: 19rem;
-  letter-spacing: 0px;
-  font-weight: 400;
-}
-
-/* .logo {
-    font-size: 20rem; // Videopac
-} */
-.header-nav a {
-  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.15)) !important;
-}
-
-button * {
-  font-family: 'Chromia';
-  font-size: 17rem !important;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  font-family: 'Quantum';
-  font-size: 19rem !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Imaki';
-  font-size: 18rem !important;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  font-family: 'Protoculture';
-  font-size: 20rem !important;
-  letter-spacing: 0px;
-  text-transform: uppercase;
-  font-family: 'Regen';
-  font-size: 19rem !important;
-  letter-spacing: 0px;
-  text-transform: none;
-  font-family: 'Videopac';
-  font-size: 17rem !important;
-  letter-spacing: 2px;
-  text-transform: none;
-  text-transform: uppercase;
-}
-
-table *, .lightbox * {
-  font-family: 'Regen';
-  font-size: 17rem;
-  letter-spacing: 0px;
-  font-family: 'Quantum';
-  font-size: 19rem;
-  letter-spacing: 1px;
-  font-family: 'Alternity';
-  font-size: 17rem;
-  letter-spacing: 0px;
-  font-family: 'Persis';
-  font-size: 18rem;
-  letter-spacing: 0px;
-}
-
-/* 
-* {
-    font-style: italic !important;
-}
- */

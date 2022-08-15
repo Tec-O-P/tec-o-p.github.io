@@ -13,7 +13,7 @@ $font_default: 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
 
 .lineHeight {
-    line-height: 1.5 !important;
+    // line-height: 1.5 !important;
 }
 /* 
 $font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
@@ -757,11 +757,10 @@ a {
     text-decoration: none;
 } 
 
-@for $i from 2 through 6 {
+@for $i from 1 through 6 {
 
-	h#{$i} {
-
-        font-size: calc(58rem - (6 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
+	h#{$i} { 
+        font-size: calc(70rem - (8 * #{$i}rem)); // Geralmente o h1 é 40rem e o h6 é 20rem
         margin-top: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-bottom: calc(7rem - #{$i}rem + #{$margin_vertical});
         margin-left: $margin_horizontal;
@@ -777,7 +776,6 @@ a {
 
 @for $i from 7 through 20 { 
 	h#{$i} {
-
         display: block;
         font-size: 20rem;
         margin-top: $margin_vertical;
@@ -849,6 +847,130 @@ pre {
     font-family: $font_monospace;
     font-size: $font_monospace_size;
 }
+
+.gambiarraTemporaria {
+    display: block;
+    margin-top: -39px;
+    margin-bottom: -59px;
+    white-space: break-spaces;
+
+    // white-space: pre-wrap;
+    // word-break: break-world;
+    // overflow-x: auto;
+}
+
+/* 
+details {
+    border: 1px solid hsl(0, 0%, 67%);
+    border: 1px solid deepskyblue;
+    border-radius: 20px;
+    // padding: 5rem 12rem 5rem 16rem;
+    @extend %margins;
+
+    summary {
+        display: flex; // Use o Flex box aqui para garantir que o tamanho do X e permaneça o mesmo independentemente da fonte de texto.
+        align-items: center;
+
+            min-height: 40px;
+        // padding: 9rem 12rem 9rem 16rem;
+
+        font-weight: bold;
+        // margin: -8rem -8rem 0;
+        // padding: 8rem;
+        cursor: pointer;
+
+        > div {
+            display: list-item;
+            counter-increment: list-item 0;
+            // list-style: inside disclosure-closed;
+        
+            font-size: $font_size;
+            padding-left: 16px;
+            padding-right: 12px;
+            // padding-bottom: 1px;
+
+            color: deepskyblue;
+            // background: $color_text_hx;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            // background-clip: text;
+            // text-fill-color: transparent; 
+        }
+    }
+
+    > div {
+        font-size: $font_size;
+        padding: 9rem 12rem 9rem 16rem;
+    }
+}
+
+details[open] { 
+
+    color: white;
+    // background-color: deepskyblue;
+    background-image: linear-gradient(to bottom right, hsl(195, 100%, 65%), hsl(195, 100%, 40%));
+
+    > summary {
+        color: deepskyblue;
+        background: white;
+        border-radius: 19px;
+    }
+
+    > summary > div {
+            
+        list-style-type: disclosure-open;
+        -webkit-text-fill-color: initial;
+        text-fill-color: initial; 
+    }
+}
+ */
+
+details {
+    border: 1px solid hsl(0, 0%, 67%);
+    border: 1px solid deepskyblue;
+    border-radius: 20px;
+    // padding: 5rem 12rem 5rem 16rem;
+    @extend %margins;
+
+    > summary {
+        // min-height: 40px;
+        //padding: 9rem 12rem 9rem 16rem;
+            line-height: 40px !important;
+            padding-left: 16px;
+            padding-right: 12px;
+
+        font-weight: bold;
+        cursor: pointer;
+
+        color: deepskyblue;
+        // background: $color_text_hx;
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent; 
+    }
+
+    > div {
+        font-size: $font_size;
+        padding: 9rem 12rem 9rem 16rem;
+    }
+}
+
+details[open] { 
+
+    color: white;
+    // background-color: deepskyblue;
+    background-image: linear-gradient(to bottom right, hsl(195, 100%, 65%), hsl(195, 100%, 40%));
+
+    > summary {
+        color: deepskyblue;
+        background: white;
+        border-radius: 19px;
+        // -webkit-text-fill-color: initial;
+        // text-fill-color: initial; 
+    }
+}
+
 
 /*  TODO:        2 ▶ Lists
 ◈──────────────────────────────────────────────────────◈ */
@@ -6091,176 +6213,3 @@ TODO: Classes JS
 
 
 
-// /* Elementos genéricos inline: */ 
-// span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var, 
-// /* Elementos genéricos em bloco: */ 
-// p, ul, ol, li, dt, dd, details, summary, 
-// /* ?: */
-// output, time, address, blockquote, 
-// q, cite, figcaption, 
-// /* Elementos de formulário: */ 
-// form, label, input, textarea, select, button, fieldset, legend, 
-// /* Elementos de tabela: */
-// table, tr, th, td 
-
-* {
-    font-family: 'Imaki';
-    font-family: 'Chromia';
-    font-family: 'Directive_Four';
-    font-family: 'Persis';
-}
-
-p, li, span {
-    font-size: 17rem; // Directive_Four
-    font-size: 18rem; // Persis
-    // line-height: 1.6764 !important;
-}
-
-/*     */
-// @for $i from 2 through 6 { // h2: 9px, h6: 3px
-
-// 	h#{$i} {
-        
-//         font-family: 'Videopac'; letter-spacing: calc(11px - (1px * #{$i})); // letter-spacing: calc(13px - (2px * #{$i}));
-        
-//         // font-family: 'Alternity';
-// 	}
-// /* 	h#{$i} {
-//         font-family: 'Protoculture';
-//         letter-spacing: calc(6px - (1px * #{$i}));
-// 	}
-
-//     h6 {
-//         letter-spacing: 1px;
-//     } */
-// }
-
-/* 
-h2, h3, h4, h5, h6 { 
-    font-family: 'Videopac';
-    // filter: drop-shadow(0px 0px 0px hsla(195, 100%, 15%, 1));
-}
-
-h2 { letter-spacing: 9px; }
-h3 { letter-spacing: 8px; }
-h4 { letter-spacing: 7px; }
-h5 { letter-spacing: 5px; }
-h6 { letter-spacing: 3px; }
- */
-
-@for $i from 2 through 6 {
-
-	h#{$i} {
-        
-        font-family: 'IDroid'; letter-spacing: calc(7px - (1px * #{$i}));
-	}
-}
-
-.header-nav * {
-
-    font-family: 'Protoculture';
-    font-size: 20rem;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    font-weight: 400;
-
-    font-family: 'Regen';
-    font-size: 19rem;
-    text-transform: none;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    font-weight: 400;
-
-    font-family: 'Alternity';
-    font-size: 17rem;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    font-weight: 400;
-
-    font-family: 'Videopac';
-    font-size: 20rem;
-    text-transform: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 100;
-    // text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.5), 3px 3px 2px hsla(0, 0%, 0%, 0.12) !important; 
-    text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 0.5) !important; 
-
-    font-family: 'IDroid';
-    font-size: 19rem;
-    letter-spacing: 0px;
-    font-weight: 400;
-
-    //line-height: 1.6764 !important;
-}
-
-/* .logo {
-    font-size: 20rem; // Videopac
-} */
-
-.header-nav a { 
-    filter: drop-shadow(3px 3px 1px hsla(0, 0%, 0%, 0.15)) !important;
-} 
-
-button * {
-    font-family: 'Chromia';
-    font-size: 17rem !important;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-
-    font-family: 'Quantum'; 
-    font-size: 19rem !important;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    font-family: 'Imaki';
-    font-size: 18rem !important;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-
-    font-family: 'Protoculture';
-    font-size: 20rem !important;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-
-    font-family: 'Regen';
-    font-size: 19rem !important;
-    letter-spacing: 0px;    
-    text-transform: none;
-
-    font-family: 'Videopac'; 
-    font-size: 17rem !important;
-    letter-spacing: 2px;
-    text-transform: none;
-    text-transform: uppercase;
-    // text-shadow: 1px 1px 25px hsla(0, 0%, 100%, 1); 
-    // text-shadow: 0.5px 0.5px 0px hsla(0, 0%, 100%, 1); 
-
-    //line-height: 1.6764 !important;
-}
-
-table *, .lightbox * {
-    font-family: 'Regen'; // Persis, Regen
-    font-size: 17rem;
-    letter-spacing: 0px;
-
-    font-family: 'Quantum'; // Persis, Regen
-    font-size: 19rem;
-    letter-spacing: 1px;
-
-    font-family: 'Alternity';
-    font-size: 17rem;
-    // text-transform: uppercase;
-    letter-spacing: 0px;
-
-    font-family: 'Persis'; // Persis, Regen
-    font-size: 18rem;
-    letter-spacing: 0px;
-    // line-height: 1.6764 !important;
-}
-
-/* 
-* {
-    font-style: italic !important;
-}
- */

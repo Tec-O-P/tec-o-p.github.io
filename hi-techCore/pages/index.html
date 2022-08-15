@@ -10,7 +10,8 @@
     <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <!---->
-    <link href='../styles/css/downloadFonts.css' rel='stylesheet'>  
+    <link href='../styles/css/downloadFonts.css' rel='stylesheet'><!--  Deve ficar antes de qualquer CSS -->
+    <script src="mouseRadar.js"></script><!--  Deve ficar antes de qualquer CSS -->
     <link href='../styles/css/normalize.css' rel='stylesheet'>  
     <link href='../styles/css/gmes_normalize.css' rel='stylesheet'>
     <link href='../styles/css/defaults.css' rel='stylesheet'>
@@ -681,7 +682,7 @@ font-size: 43px;
                 
                 <!-- <h3 style="font-size: 38px;">Cyber-BoldBook</h3> -->
 
-                <div class="TNR">
+                <div class="TNRz">
                     
                     <h3>Myfont-Regular</h3> 
                         
@@ -731,13 +732,13 @@ font-size: 43px;
                                     <li><span style="font-weight: bold;">Minúsculas</span>
                                         <ul>
                                             <li><span style="font-weight: bold;">Sem acento (26): </span><span class="__fonte__">a b c d e f g h i j k l m n o p q r s t u v w x y z</span></li>
-                                            <li><span style="font-weight: bold;">Com acento (12): </span><span class="__fonte__">á ã à â é ê í ó õ ô ú ç</span></li>
+                                            <li><span style="font-weight: bold;">Com acento (12): </span><span class="__fonte__">á ã à â ç é ê í ó õ ô ú</span></li>
                                         </ul>
                                     </li>
                                     <li><span style="font-weight: bold;">Maiúsculas</span>
                                         <ul>
                                             <li><span style="font-weight: bold;">Sem acento (26): </span><span class="__fonte__">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span></li>
-                                            <li><span style="font-weight: bold;">Com acento (12): </span><span class="__fonte__">Â À Ã É Ê Í Ó Ô Õ Ú Ç</span></li>
+                                            <li><span style="font-weight: bold;">Com acento (12): </span><span class="__fonte__">Â À Ã Ç É Ê Í Ó Ô Õ Ú</span></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -745,25 +746,24 @@ font-size: 43px;
 
                             <li><span style="font-weight: bold;">Especiais</span>
                                 <ul>
-                                    <li><span style="font-weight: bold;">Mais relevantes (32): </span><span class="__fonte__" style="letter-spacing: 4px;">'"ªº()[]{},;:.!?+-×∙÷⁄=%_@#$–/</span></li>
+                                    <li><span style="font-weight: bold;">Mais relevantes (32): </span><span class="__fonte__" style="letter-spacing: 4px;">'"“ªº()[]{},;:.…!?+-−×∙÷∕⁄=%_@#$–/ˆ¬</span></li>
                                     <li><span style="font-weight: bold;">Menos relevantes</span>
 
                                         <ul>
-                                            <li><span style="font-weight: bold;">Gerais: </span><span class="__fonte__" style="letter-spacing: 4px;">“ˆ…✓𐄂©♂♀¬◐◑★✩✰✪✦↑↓←→↕↔│├└─</span></li>
-                                            <li><span style="font-weight: bold;">Informática: </span><span class="__fonte__" style="letter-spacing: 4px;">`*&|\▼►‹›⌘⌥</span></li>
+                                            <li><span style="font-weight: bold;">Informática: </span><span class="__fonte__" style="letter-spacing: 4px;">�￼`*&|\▼►‹›⏎⌫⌘⌥¦ █¶</span></li>
                                             <li><span style="font-weight: bold;">Matemática </span>
                                                 <ul>
                                                     <li>
                                                         <span style="font-weight: bold;">Básicos:</span>
-                                                        <span class="__fonte__" style="letter-spacing: 4px;">⇒⇔±√∛∜&lt;>≤≥≠∼≈≃≅∝∠∟∃∄</span>
+                                                        <span class="__fonte__" style="letter-spacing: 4px;">¼½¾⅓⅔⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞⇑⇓⇐⇒⇔±√∛∜&lt;>≤≥≠∼≈≃≅∝∠∡∟⊾∢⦨ ⦩ ⦪ ⦫ ⦬ ⦭ ⦮ ⦯∃∄</span>
                                                     </li>
                                                     <li>
                                                         <span style="font-weight: bold;">Sobrescritos:</span>
-                                                        <span class="__fonte__" style="letter-spacing: 4px;">x⁺⁼⁽⁾⁰¹²³⁴⁵⁶⁷⁸⁹ᴬᴮᴰᴱᵃᵇᵈᵉᵍᵏᵐⁿᵒᵖᵗᵘᵛᵚᵡ</span>
+                                                        <span class="__fonte__" style="letter-spacing: 4px;">x⁺⁻⁼⁽⁾⁰¹²³⁴⁵⁶⁷⁸⁹ᴬᴮᴰᴱᵃᵇᵈᵉᵍᵏᵐⁿᵒᵖᵗᵘᵛᵚᵡ</span>
                                                     </li>
                                                     <li>
                                                         <span style="font-weight: bold;">Subscritos:</span>
-                                                        <span class="__fonte__" style="letter-spacing: 4px;">x₋₌₍₎₀₁₂₃₄₅₆₇₈₉</span>
+                                                        <span class="__fonte__" style="letter-spacing: 4px;">x₊₋₌₍₎₀₁₂₃₄₅₆₇₈₉</span>
                                                     </li>
                                                     <li>
                                                         <span style="font-weight: bold;">Conjuntos:</span>
@@ -775,26 +775,31 @@ font-size: 43px;
                                                     </li>
                                                     <li>
                                                         <span style="font-weight: bold;">Outros:</span>
-                                                        <span class="__fonte__" style="letter-spacing: 4px;">∞≡≪≫⋘⋙∇</span>
+                                                        <span class="__fonte__" style="letter-spacing: 4px;">∞≡≢∥∦≪≫⋘⋙∇∑∏§</span>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li><span style="font-weight: bold;">Física: </span><span class="__fonte__" style="letter-spacing: 6px;">°℃℉</span></li>
                                             <li><span style="font-weight: bold;">Química: </span><span class="__fonte__" style="letter-spacing: 4px;">⇌</span></li>
-                                            <li><span style="font-weight: bold;">Grego (letras gregas mais usadas na matemática)</span>
+                                            <li><span style="font-weight: bold;">Grego</span>
                                                 <ul>
                                                     <li>
-                                                        <span style="font-weight: bold;">Minúsculas (16):</span>
-                                                        <span class="__fonte__" style="letter-spacing: 4px;">αßγδεηθλµπρστφψω</span>
+                                                        <span style="font-weight: bold;">Minúsculas (24):</span>
+                                                        <span class="__fonte__" style="letter-spacing: 4px;">αßγδεζηθικλµνξοπρστυφχψω</span>
                                                     </li>
                                                     <li>
-                                                        <span style="font-weight: bold;">Maiúsculas (8):</span>
+                                                        <span style="font-weight: bold;">Maiúsculas (8) (letras gregas mais usadas na matemática):</span>
                                                         <span class="__fonte__" style="letter-spacing: 4px;">ΓΔΘΠΣΦΩ</span>
                                                     </li>
                                                 </ul>
                                             </li>
+                                            <li><span style="font-weight: bold;">Listas: </span><span class="__fonte__" style="letter-spacing: 4px;">•‣</span></li>
+                                            <li><span style="font-weight: bold;">Setas: </span><span class="__fonte__" style="letter-spacing: 4px;">↑↓←→↕↔⇧⇩⇦⇨➭➢➣</span></li>
+                                            <li><span style="font-weight: bold;">Linhas: </span><span class="__fonte__" style="letter-spacing: 4px;">│├└─</span></li>
+                                            <li><span style="font-weight: bold;">Formas geométricas: </span><span class="__fonte__" style="letter-spacing: 4px;">▲△▼▽◀◁▶▷■□◆◇⬠⬟⬡⬢●○◉◈▣</span></li>
+                                            <li><span style="font-weight: bold;">Legais: </span><span class="__fonte__" style="letter-spacing: 4px;">©®™</span></li>
+                                            <li><span style="font-weight: bold;">Desenhos: </span><span class="__fonte__" style="letter-spacing: 4px;">✓𐄂♂♀〈〉﴾﴿◐◑☺☻★✰✩✯✪⍟✦✷♪♫♥♦♣♠♡♢♧♤✞☼☾❅◔◕</span></li>
                                         </ul>
-
                                     </li>
                                 </ul>
                             </li>
@@ -827,10 +832,10 @@ font-size: 43px;
                     <tr><th>Tipos de caracteres</th><td>
 
                         <ul class="list_compressed" style="text-align: left; margin-top: 4px; margin-bottom: 4px;">
-                            <li><span style="font-weight: bold;">Números: </span><span class="textIcon_yes noText">Yes</span></li>
-                            <li><span style="font-weight: bold;">Minúsculas: </span><span class="textIcon_no noText">No</span></li>
-                            <li><span style="font-weight: bold;">Maiúsculas: </span><span><span class="textIcon_yes noText">Yes</span></span></li>
-                            <li><span style="font-weight: bold;">Especiais: </span><span class="textIcon_yes noText">Yes</span></li>
+                            <li><span style="font-weight: bold;">Números: </span><span class="textIcons textIcon_yes noText">Yes</span></li>
+                            <li><span style="font-weight: bold;">Minúsculas: </span><span class="textIcons textIcon_no noText">No</span></li>
+                            <li><span style="font-weight: bold;">Maiúsculas: </span><span><span class="textIcons textIcon_yes noText">Yes</span></span></li>
+                            <li><span style="font-weight: bold;">Especiais: </span><span class="textIcons textIcon_yes noText">Yes</span></li>
                         </ul>
 
                     </td></tr>
@@ -876,7 +881,7 @@ font-size: 43px;
 
                 <div class="lb4"></div>
 
-                <p>Aqui temos um <a id="quoted" class="textIcon_chain" href="#quoting"> elemento &lt;a> sendo citado por um elemento</a> mais em cima.</p>
+                <p>Aqui temos um <a id="quoted" class="textIcons textIcon_chain" href="#quoting"> elemento &lt;a> sendo citado por um elemento</a> mais em cima.</p>
 
 
                 
@@ -1066,9 +1071,9 @@ font-size: 43px;
                         <li></li>
                     </ul>
                     
-                    <p><span class="bold">HTML:</span> &lt;span class="textIcon_template">Abc&lt;/span></p>
+                    <p><span class="bold">HTML:</span> &lt;span class="textIcons textIcon_template">Abc&lt;/span></p>
 
-                    <p><span class="bold">Execução:</span> <span class="textIcon_template">Abc</span></p>
+                    <p><span class="bold">Execução:</span> <span class="textIcons textIcon_template">Abc</span></p>
                 </div> -->
 
                 <pre>Elemento   &lt;pre>.</pre>
@@ -1130,6 +1135,43 @@ font-size: 43px;
                 <span class="ticket orange">Ticket com a classe orange</span><div class="lb"></div>  
                 <span class="ticket brown">Ticket com a classe brown</span><div class="lb"></div>  
                 <span class="ticket black">Ticket com a classe black</span><div class="lb"></div>  
+
+                <div class="lb2"></div>
+
+                <p>&lt;details> e &lt;summary>:</p>
+
+                <p>Código HTML:</p>
+
+                <pre>
+                    <code class="gambiarraTemporaria">
+&lt;details>
+
+    &lt;summary>&lt;div>Resumo&lt;/div>&lt;/summary>
+
+    &lt;div>Algo pequeno o suficiente p/ escapar de um aviso casual.&lt;/div>        
+    
+&lt;/details>
+                    </code>
+                </pre>
+
+                <p>Execução:</p>
+                <!-- 
+                <details>
+
+                    <summary>Resumo</summary>
+    
+                    <div>Algo pequeno o suficiente p/ escapar de um aviso casual.</div>        
+                    
+                </details>
+                 -->
+
+                <details>
+
+                    <summary>Resumo</summary>
+    
+                    <div>Algo pequeno o suficiente p/ escapar de um aviso casual.</div>        
+                    
+                </details>
 
                 <!--  
                 ────────────────────────────
@@ -1385,7 +1427,7 @@ font-size: 43px;
 
                 <p>Acesse esse <a href="https://developer.mozilla.org/en-US/">link externo</a> para aprender HTML, CSS, JS.</p>
 
-                <p>Aqui temos um <a id="quoting" class="textIcon_chain" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
+                <p>Aqui temos um <a id="quoting" class="textIcons textIcon_chain" href="#quoted"> elemento &lt;a> citando um elemento</a> mais embaixo.</p> 
 
                 <p>É necessário <a download="filename.pdf" href="../pdf/text.pdf">baixar o arquivo (PDF, 10MB)</a> para iniciar o exemplo.</p>
 
@@ -1561,9 +1603,9 @@ font-size: 43px;
                 
                 <p style="text-align: center;">Exemplo:</p>
                 
-                <p><span class="bold">HTML:</span> &lt;span class="textIcon_template">Abc&lt;/span></p>
+                <p><span class="bold">HTML:</span> &lt;span class="textIcons textIcon_template">Abc&lt;/span></p>
 
-                <p><span class="bold">Execução:</span> <span class="textIcon_template">Abc</span></p>
+                <p><span class="bold">Execução:</span> <span class="textIcons textIcon_template">Abc</span></p>
 
                 <p style="text-align: center;">Observações:</p>
 
@@ -1578,30 +1620,30 @@ font-size: 43px;
                 <p>Ícones de texto:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template noText">Texto</span>.</li>
                 </ul>
 
                 <!-- 
                 <p>Ícones de texto com a classe 'left':</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template left"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template left">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template left noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template left noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template left"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template left">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template left noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template left noText">Texto</span>.</li>
                 </ul> 
                 -->
 
                 <p>Ícones de texto com a classe 'right':</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template right"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template right noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template right noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template right"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template right noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template right noText">Texto</span>.</li>
                 </ul>
 
                 <p style="color: magenta;">Exemplos de teste do gerador de ícones</p>
@@ -1609,71 +1651,71 @@ font-size: 43px;
                 <p>Ícones de texto com ∆Largura = 10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_moreWide"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_moreWide">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_moreWide right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_moreWide noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_moreWide noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_moreWide"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_moreWide">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_moreWide right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_moreWide noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_moreWide noText">Texto</span>.</li>
                 </ul>
 
                 <p>Ícones de texto com ∆Largura = -10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_lessWide"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_lessWide">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_lessWide right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_lessWide noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_lessWide noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_lessWide"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_lessWide">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_lessWide right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_lessWide noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_lessWide noText">Texto</span>.</li>
                 </ul>
 
                 <p>Ícones de texto com ∆Espaçamento = 10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_moreSpace"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_moreSpace">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_moreSpace right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_moreSpace noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_moreSpace noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_moreSpace"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_moreSpace">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_moreSpace right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_moreSpace noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_moreSpace noText">Texto</span>.</li>
                 </ul>
 
                 <p>Ícones de texto com ∆Espaçamento = -10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_lessSpace"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_lessSpace">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_lessSpace right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_lessSpace noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_lessSpace noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_lessSpace"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_lessSpace">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_lessSpace right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_lessSpace noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_lessSpace noText">Texto</span>.</li>
                 </ul>
 
                 <p>Ícones de texto com y = -10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_above"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_above">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_above right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_above noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_above noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_above"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_above">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_above right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_above noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_above noText">Texto</span>.</li>
                 </ul>
 
                 <p>Ícones de texto com y = 10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_below"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_below">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_below right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_below noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_below noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_below"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_below">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_below right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_below noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_below noText">Texto</span>.</li>
                 </ul>
 
                 <p>Ícones de texto com ∆Largura = 10px, ∆Espaçamento = 10px, e y = 10px:</p>
 
                 <ul>
-                    <li>Ícone vazio: <span class="textIcon_template_uncommon"></span>.</li>
-                    <li>Ícone com texto: <span class="textIcon_template_uncommon">Texto</span>.</li>
-                    <li>Ícone com texto e com a classe 'right': <span class="textIcon_template_uncommon right">Texto</span>.</li>
-                    <li>Ícone vazio e com a classe 'noText': <span class="textIcon_template_uncommon noText"></span>.</li>
-                    <li>Ícone com texto e com a classe 'noText': <span class="textIcon_template_uncommon noText">Texto</span>.</li>
+                    <li>Ícone vazio: <span class="textIcons textIcon_template_uncommon"></span>.</li>
+                    <li>Ícone com texto: <span class="textIcons textIcon_template_uncommon">Texto</span>.</li>
+                    <li>Ícone com texto e com a classe 'right': <span class="textIcons textIcon_template_uncommon right">Texto</span>.</li>
+                    <li>Ícone vazio e com a classe 'noText': <span class="textIcons textIcon_template_uncommon noText"></span>.</li>
+                    <li>Ícone com texto e com a classe 'noText': <span class="textIcons textIcon_template_uncommon noText">Texto</span>.</li>
                 </ul>
 
                 <hr>
