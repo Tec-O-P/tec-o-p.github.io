@@ -1940,6 +1940,10 @@ TODO: Layout Sections
   border-top: 1px solid white;
 }
 
+.header-nav .nav-menu ul li span {
+  filter: drop-shadow(0px 0px 2px #00a8e0);
+}
+
 .header-nav .nav-menu ul li div {
   display: none;
 }
