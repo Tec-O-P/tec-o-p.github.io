@@ -9,7 +9,7 @@ TODO: Variables
 ◈──────────────────────────────────────────────────────◈ */
 
 
-$font_default: 'Times New Roman', Times, Georgia, serif;
+$font_default: Digital_Disk, 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
 
 .lineHeight {
@@ -130,14 +130,20 @@ $color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 50%), hsl(201, 100%, 5
 $color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 64%), hsl(201, 100%, 64%), hsl(193, 100%, 88%), hsl(200, 100%, 50%));
 $color_text_hx: linear-gradient(to bottom, hsl(195, 100%, 90%), hsl(201, 100%, 50%), hsl(193, 100%, 90%), hsl(210, 100%, 50%));
 $color_text_hx: linear-gradient(to bottom, hsl(199, 100%, 90%), hsl(199, 100%, 50%), hsl(187, 100%, 87%), hsl(201, 100%, 50%)); 
+
+$ulANDol_margin_horizontal: calc(1 * #{$margin_horizontal} + 21px);
+
 $color_border_kbd: hsl(0, 0%, 95%);
+
 $color_text_highlight: url(../../images/colors/text_highlight.png)  center /100% 100%; 
 // $color_text_highlight_menu: url(../../images/colors/text_highlight_menu.png)  center /100% 100%;
+
 $color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 
 $bg_kbd: hsl(0, 0%, 86%);
  
 $textIcons_size: 21px;
+
 $widthOfSpace: 4px;
 
 // Tickets:
@@ -914,49 +920,60 @@ details[open] {
 }
  */
 
+// Tentei fazer a configuração do <summary> usando Flexbox mas bugou no Safari, e não fiz manipulando 
+// os paddings pois a altura do <summary> podia ficar diferente dependendo do tipo de fonte usada.
+
 details {
-    border: 1px solid hsl(0, 0%, 67%);
-    border: 1px solid deepskyblue;
-    border-radius: 20px;
-    // padding: 5rem 12rem 5rem 16rem;
+    $paddingTop: 9px;
+    $paddingBottom: $paddingTop;
+    $paddingLeft: 16px;
+    $paddingRight: 12px;
+
+    border: 1px solid $color_theme;
+    border-radius: calc(#{$button_height_small}/2);
     @extend %margins;
+    background-image: linear-gradient(to bottom right, hsl(195, 100%, 72%), hsl(195, 100%, 48%));
 
     > summary:nth-of-type(1) {
-        // min-height: 40px;
-        //padding: 9rem 12rem 9rem 16rem;
-            line-height: 40px;
-            padding-left: 16px;
-            padding-right: 12px;
-
+        line-height: $button_height_small;
+        padding-left: $paddingLeft;
+        padding-right: $paddingRight;
+        border: 1px solid hsla(0, 0%, 100%, 0);
+        border-radius: calc((#{$button_height_small}/2) - 1px);
+        color: $color_theme;
         font-weight: bold;
+        background-color: $bg_html;
+        list-style-type: "▶ ";
         cursor: pointer;
-
-        color: deepskyblue;
-        // background: $color_text_hx;
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
-        // background-clip: text;
-        // text-fill-color: transparent; 
     }
 
-    > div {
+    > .content {
+        color: $color_text_menu;
         font-size: $font_size;
-        padding: 9rem 12rem 9rem 16rem;
+        padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
+    }
+
+    ul {
+        margin-top: calc(#{$margin_vertical} - #{$paddingTop});
+        margin-bottom: calc(#{$margin_vertical} - #{$paddingBottom});
+        margin-left: calc(#{$ulANDol_margin_horizontal} - #{$margin_horizontal});
+        margin-right: calc(#{$ulANDol_margin_horizontal} - #{$margin_horizontal});
     }
 }
 
-details[open] { 
+details.type_2[open] {
 
-    color: white;
-    // background-color: deepskyblue;
-    background-image: linear-gradient(to bottom right, hsl(195, 100%, 72%), hsl(195, 100%, 48%));
+    background: 0;
 
-    > summary {
-        color: deepskyblue;
-        background: white;
-        border-radius: 19px;
-        // -webkit-text-fill-color: initial;
-        // text-fill-color: initial; 
+    > summary:nth-of-type(1) {
+
+        border: 1px solid $color_theme;
+        border-top-color: hsla(0, 0%, 100%, 0);
+        list-style-type: "▼ ";
+    }
+
+    > .content {
+        color: $color_text;
     }
 }
 
@@ -969,23 +986,38 @@ li, ul, ol, dl, dt, dd {
 }
 
 ul, ol {
-    margin-top: $margin_vertical;
+    margin-top: $margin_vertical; 
     margin-bottom: $margin_vertical;
-    margin-left: calc(1 * #{$margin_horizontal} + 21px);
-    margin-right: $margin_horizontal;
+    margin-left: $ulANDol_margin_horizontal;
+    margin-right: $ulANDol_margin_horizontal;
 }
 
 ul > li + li, ol > li + li {
     margin-top: $margin_vertical;
 }
 
-// ul { list-style-type: "➭ "; } ul ul { list-style-type: "● "; } ul ul { list-style-type: "-› "; } ul ul ul { list-style-type: "- "; } <- Não funciona no safari.
 
 ul, dl { margin-left: calc(1 * #{$margin_horizontal} + 24px); } 
+
+// ul { list-style-type: "➭ "; } ul ul { list-style-type: "● "; } ul ul { list-style-type: "-› "; } ul ul ul { list-style-type: "- "; } <- Não funciona no Safari.
+
+/* 
 ul, dl { list-style-image: url("../../images/icons/list_1.svg"); }
 ul ul, dl dl { list-style-image: url("../../images/icons/list_2.svg"); }
 ul ul ul, dl dl dl { list-style-image: url("../../images/icons/list_3.svg"); }
 ul ul ul ul, dl dl dl dl { list-style-image: url("../../images/icons/list_4.svg"); }
+*/
+
+// Estilos pro Safari
+ul, dl { list-style-image: url("../../images/icons/list_1.svg"); }
+ul ul, dl dl { list-style-image: url("../../images/icons/list_4.svg"); }
+ul ul ul, dl dl dl { list-style-image: url("../../images/icons/list_5.svg"); }
+
+// Não funciona no Safari (não funciona por causa da propriedade 'list-style-type' de 'list-style')
+ul, dl { list-style: none "➭ " outside; }
+ul ul, dl dl { list-style: none "• " outside; }
+ul ul ul, dl dl dl { list-style: none "‣ " outside; }
+ul ul ul ul, dl dl dl dl { list-style: none "- " outside; }
 
 //····································································◈ <dl>
 
@@ -2113,15 +2145,6 @@ TODO: Layout Sections
     */
 }
 
-
-
-
-
-
-
-
-.header-nav a { 
-} 
 
 /*  TODO:    1 ▶ Footer
 ◈──────────────────────────────────────────────────────◈ */

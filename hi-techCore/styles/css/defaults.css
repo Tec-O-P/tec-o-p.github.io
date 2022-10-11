@@ -241,7 +241,7 @@ TODO: Texts
 }
 
 html {
-  font-family: "Times New Roman", Times, Georgia, serif;
+  font-family: Digital_Disk, "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
   color: black;
 }
@@ -680,34 +680,49 @@ details[open] {
 }
  */
 details {
-  border: 1px solid #ababab;
-  border: 1px solid deepskyblue;
-  border-radius: 20px;
+  border: 1px solid DeepSkyBlue;
+  border-radius: calc(40px/2);
+  background-image: linear-gradient(to bottom right, #70dbff, #00b8f5);
 }
 
 details > summary:nth-of-type(1) {
   line-height: 40px;
   padding-left: 16px;
   padding-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: calc((40px/2) - 1px);
+  color: DeepSkyBlue;
   font-weight: bold;
+  background-color: white;
+  list-style-type: "▶ ";
   cursor: pointer;
-  color: deepskyblue;
 }
 
-details > div {
-  font-size: 19rem;
-  padding: 9rem 12rem 9rem 16rem;
-}
-
-details[open] {
+details > .content {
   color: white;
-  background-image: linear-gradient(to bottom right, #70dbff, #00b8f5);
+  font-size: 19rem;
+  padding: 9px 12px 9px 16px;
 }
 
-details[open] > summary {
-  color: deepskyblue;
-  background: white;
-  border-radius: 19px;
+details ul {
+  margin-top: calc(16rem - 9px);
+  margin-bottom: calc(16rem - 9px);
+  margin-left: calc(calc(1 * 20px + 21px) - 20px);
+  margin-right: calc(calc(1 * 20px + 21px) - 20px);
+}
+
+details.type_2[open] {
+  background: 0;
+}
+
+details.type_2[open] > summary:nth-of-type(1) {
+  border: 1px solid DeepSkyBlue;
+  border-top-color: rgba(255, 255, 255, 0);
+  list-style-type: "▼ ";
+}
+
+details.type_2[open] > .content {
+  color: black;
 }
 
 /*  TODO:        2 ▶ Lists
@@ -716,7 +731,7 @@ ul, ol {
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: calc(1 * 20px + 21px);
-  margin-right: 20px;
+  margin-right: calc(1 * 20px + 21px);
 }
 
 ul > li + li, ol > li + li {
@@ -727,20 +742,38 @@ ul, dl {
   margin-left: calc(1 * 20px + 24px);
 }
 
+/* 
+ul, dl { list-style-image: url("../../images/icons/list_1.svg"); }
+ul ul, dl dl { list-style-image: url("../../images/icons/list_2.svg"); }
+ul ul ul, dl dl dl { list-style-image: url("../../images/icons/list_3.svg"); }
+ul ul ul ul, dl dl dl dl { list-style-image: url("../../images/icons/list_4.svg"); }
+*/
 ul, dl {
   list-style-image: url("../../images/icons/list_1.svg");
 }
 
 ul ul, dl dl {
-  list-style-image: url("../../images/icons/list_2.svg");
+  list-style-image: url("../../images/icons/list_4.svg");
 }
 
 ul ul ul, dl dl dl {
-  list-style-image: url("../../images/icons/list_3.svg");
+  list-style-image: url("../../images/icons/list_5.svg");
+}
+
+ul, dl {
+  list-style: none "➭ " outside;
+}
+
+ul ul, dl dl {
+  list-style: none "• " outside;
+}
+
+ul ul ul, dl dl dl {
+  list-style: none "‣ " outside;
 }
 
 ul ul ul ul, dl dl dl dl {
-  list-style-image: url("../../images/icons/list_4.svg");
+  list-style: none "- " outside;
 }
 
 dl > div {
