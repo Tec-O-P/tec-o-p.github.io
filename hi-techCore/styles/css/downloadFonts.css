@@ -8,15 +8,10 @@ Os códigos abaixo devem ficar  no início do CSS, antes de qualquer CSS,
 pois as fontes precisam ser importadas antes de serem usadas no site.
 */
 
-@font-face {
-    font-family: "Digital_Disk";
-    src: url("../../fonts/Digital_Disk_Regular.otf");
-} 
-
-@font-face {
-    font-family: "Cyber-BoldBook";
-    src: url("../../fonts/Cyber_BoldBook.ttf");
-} 
+@font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Regular.otf"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Bold.otf"); font-weight: bold; font-style: normal; }
+@font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Italic.otf"); font-weight: normal; font-style: italic; }
+@font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Bold_Italic.otf"); font-weight: bold; font-style: italic; }
 
 @font-face {
     font-family: "7 Segments Display";
@@ -27,129 +22,3 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
     font-family: "Myfont-Regular";
     src: url("../../fonts/Myfont_Regular.otf");
 }
-
-@font-face { font-family: "Alternity"; src: url("../../fonts/pixelSagas/Alternity/Alternity.otf"); }
-.Alternity { font-family: "Alternity"; }
-@font-face { font-family: "Alternity_Bold"; src: url("../../fonts/pixelSagas/Alternity/Alternity_Bold.otf"); }
-.Alternity_Bold { font-family: "Alternity_Bold"; }
-@font-face { font-family: "Alternity_Italic"; src: url("../../fonts/pixelSagas/Alternity/Alternity_Italic.otf"); }
-.Alternity_Italic { font-family: "Alternity_Italic"; }
-@font-face { font-family: "Alternity_Bold_Italic"; src: url("../../fonts/pixelSagas/Alternity/Alternity_Bold_Italic.otf"); }
-.Alternity_Bold_Italic { font-family: "Alternity_Bold_Italic"; }
-
-@font-face { font-family: "Flynn"; src: url("../../fonts/pixelSagas/Flynn/Flynn.otf"); }
-.Flynn { font-family: "Flynn"; }
-@font-face { font-family: "Flynn_Bold"; src: url("../../fonts/pixelSagas/Flynn/Flynn_Bold.otf"); }
-.Flynn_Bold { font-family: "Flynn_Bold"; }
-@font-face { font-family: "Flynn_Italic"; src: url("../../fonts/pixelSagas/Flynn/Flynn_Italic.otf"); }
-.Flynn_Italic { font-family: "Flynn_Italic"; }
-@font-face { font-family: "Flynn_Bold_Italic"; src: url("../../fonts/pixelSagas/Flynn/Flynn_Bold_Italic.otf"); }
-.Flynn_Bold_Italic { font-family: "Flynn_Bold_Italic"; }
-
-@font-face { font-family: "Iori"; src: url("../../fonts/pixelSagas/Iori/Iori.otf"); }
-.Iori { font-family: "Iori"; }
-@font-face { font-family: "Iori_Bold"; src: url("../../fonts/pixelSagas/Iori/Iori_Bold.otf"); }
-.Iori_Bold { font-family: "Iori_Bold"; }
-@font-face { font-family: "Iori_Italic"; src: url("../../fonts/pixelSagas/Iori/Iori_Italic.otf"); }
-.Iori_Italic { font-family: "Iori_Italic"; }
-@font-face { font-family: "Iori_Bold_Italic"; src: url("../../fonts/pixelSagas/Iori/Iori_Bold_Italic.otf"); }
-.Iori_Bold_Italic { font-family: "Iori_Bold_Italic"; }
-
-@font-face { font-family: "Chromia"; src: url("../../fonts/pixelSagas/Chromia/Chromia.otf"); }
-.Chromia { font-family: "Chromia"; }
-@font-face { font-family: "Chromia_Bold"; src: url("../../fonts/pixelSagas/Chromia/Chromia_Bold.otf"); }
-.Chromia_Bold { font-family: "Chromia_Bold"; }
-@font-face { font-family: "Chromia_Italic"; src: url("../../fonts/pixelSagas/Chromia/Chromia_Italic.otf"); }
-.Chromia_Italic { font-family: "Chromia_Italic"; }
-@font-face { font-family: "Chromia_Supercap"; src: url("../../fonts/pixelSagas/Chromia/Chromia_Supercap.otf"); }
-.Chromia_Supercap { font-family: "Chromia_Supercap"; }
-@font-face { font-family: "Chromia_Supercap_Bold_Italic"; src: url("../../fonts/pixelSagas/Chromia/Chromia_Supercap_Bold_Italic.otf"); }
-.Chromia_Supercap_Bold_Italic { font-family: "Chromia_Supercap_Bold_Italic"; }
-@font-face { font-family: "Chromia_Condensed_Bold_Italic"; src: url("../../fonts/pixelSagas/Chromia/Chromia_Condensed_Bold_Italic.otf"); }
-.Chromia_Condensed_Bold_Italic { font-family: "Chromia_Condensed_Bold_Italic"; }
-@font-face { font-family: "Chromia_Supercap_Condensed_Italic"; src: url("../../fonts/pixelSagas/Chromia/Chromia_Supercap_Condensed_Italic.otf"); }
-.Chromia_Supercap_Condensed_Italic { font-family: "Chromia_Supercap_Condensed_Italic"; }
-
-@font-face { font-family: "Directive_Four"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four.otf"); }
-.Directive_Four { font-family: "Directive_Four"; }
-@font-face { font-family: "Directive_Four_Bold"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Bold.otf"); }
-.Directive_Four_Bold { font-family: "Directive_Four_Bold"; }
-@font-face { font-family: "Directive_Four_Italic"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Italic.otf"); }
-.Directive_Four_Italic { font-family: "Directive_Four_Italic"; }
-@font-face { font-family: "Directive_Four_Bold_Italic"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Bold_Italic.otf"); }
-.Directive_Four_Bold_Italic { font-family: "Directive_Four_Bold_Italic"; }
-@font-face { font-family: "Directive_Four_Condensed"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Condensed.otf"); }
-.Directive_Four_Condensed { font-family: "Directive_Four_Condensed"; }
-@font-face { font-family: "Directive_Four_Condensed_Bold"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Condensed_Bold.otf"); }
-.Directive_Four_Condensed_Bold { font-family: "Directive_Four_Condensed_Bold"; }
-@font-face { font-family: "Directive_Four_Condensed_Italic"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Condensed_Italic.otf"); }
-.Directive_Four_Condensed_Italic { font-family: "Directive_Four_Condensed_Italic"; }
-@font-face { font-family: "Directive_Four_Condensed_Bold_Italic"; src: url("../../fonts/pixelSagas/Directive_Four/Directive_Four_Condensed_Bold_Italic.otf"); }
-.Directive_Four_Condensed_Bold_Italic { font-family: "Directive_Four_Condensed_Bold_Italic"; }
-
-@font-face { font-family: "Persis"; src: url("../../fonts/pixelSagas/Persis/Persis.otf"); }
-.Persis { font-family: "Persis"; }
-@font-face { font-family: "Persis_Bold"; src: url("../../fonts/pixelSagas/Persis/Persis_Bold.otf"); }
-.Persis_Bold { font-family: "Persis_Bold"; }
-@font-face { font-family: "Persis_Italic"; src: url("../../fonts/pixelSagas/Persis/Persis_Italic.otf"); }
-.Persis_Italic { font-family: "Persis_Italic"; }
-@font-face { font-family: "Persis_Bold_Italic"; src: url("../../fonts/pixelSagas/Persis/Persis_Bold_Italic.otf"); }
-.Persis_Bold_Italic { font-family: "Persis_Bold_Italic"; }
-
-@font-face { font-family: "Quantum"; src: url("../../fonts/pixelSagas/Quantum/Quantum.otf"); }
-.Quantum { font-family: "Quantum"; }
-@font-face { font-family: "Quantum_Italic"; src: url("../../fonts/pixelSagas/Quantum/Quantum_Italic.otf"); }
-.Quantum_Italic { font-family: "Quantum_Italic"; }
-
-@font-face { font-family: "Imaki"; src: url("../../fonts/pixelSagas/Imaki/Imaki.otf"); }
-.Imaki { font-family: "Imaki"; }
-@font-face { font-family: "Imaki_Bold"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Bold.otf"); }
-.Imaki_Bold { font-family: "Imaki_Bold"; }
-@font-face { font-family: "Imaki_Italic"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Italic.otf"); }
-.Imaki_Italic { font-family: "Imaki_Italic"; }
-@font-face { font-family: "Imaki_Bold_Italic"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Bold_Italic.otf"); }
-.Imaki_Bold_Italic { font-family: "Imaki_Bold_Italic"; }
-@font-face { font-family: "Imaki_Condensed"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Condensed.otf"); }
-.Imaki_Condensed { font-family: "Imaki_Condensed"; }
-@font-face { font-family: "Imaki_Condensed_Bold"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Condensed_Bold.otf"); }
-.Imaki_Condensed_Bold { font-family: "Imaki_Condensed_Bold"; }
-@font-face { font-family: "Imaki_Condensed_Italic"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Condensed_Italic.otf"); }
-.Imaki_Condensed_Italic { font-family: "Imaki_Condensed_Italic"; }
-@font-face { font-family: "Imaki_Condensed_Bold_Italic"; src: url("../../fonts/pixelSagas/Imaki/Imaki_Condensed_Bold_Italic.otf"); }
-.Imaki_Condensed_Bold_Italic { font-family: "Imaki_Condensed_Bold_Italic"; }
-
-@font-face { font-family: "Regen"; src: url("../../fonts/pixelSagas/Regen/Regen.otf"); }
-.Regen { font-family: "Regen"; }
-@font-face { font-family: "Regen_Bold"; src: url("../../fonts/pixelSagas/Regen/Regen_Bold.otf"); }
-.Regen_Bold { font-family: "Regen_Bold"; }
-@font-face { font-family: "Regen_Italic"; src: url("../../fonts/pixelSagas/Regen/Regen_Italic.otf"); }
-.Regen_Italic { font-family: "Regen_Italic"; }
-@font-face { font-family: "Regen_Bold_Italic"; src: url("../../fonts/pixelSagas/Regen/Regen_Bold_Italic.otf"); }
-.Regen_Bold_Italic { font-family: "Regen_Bold_Italic"; }
-
-@font-face { font-family: "Protoculture"; src: url("../../fonts/pixelSagas/Protoculture/Protoculture.otf"); }
-.Protoculture { font-family: "Protoculture"; }
-@font-face { font-family: "Protoculture_Bold"; src: url("../../fonts/pixelSagas/Protoculture/Protoculture_Bold.otf"); }
-.Protoculture_Bold { font-family: "Protoculture_Bold"; }
-@font-face { font-family: "Protoculture_Italic"; src: url("../../fonts/pixelSagas/Protoculture/Protoculture_Italic.otf"); }
-.Protoculture_Italic { font-family: "Protoculture_Italic"; }
-@font-face { font-family: "Protoculture_Bold_Italic"; src: url("../../fonts/pixelSagas/Protoculture/Protoculture_Bold_Italic.otf"); }
-.Protoculture_Bold_Italic { font-family: "Protoculture_Bold_Italic"; }
-
-@font-face { font-family: "Videopac"; src: url("../../fonts/pixelSagas/Videopac/Videopac.otf"); }
-.Videopac { font-family: "Videopac"; }
-@font-face { font-family: "Videopac_Bold"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Bold.otf"); }
-.Videopac_Bold { font-family: "Videopac_Bold"; }
-@font-face { font-family: "Videopac_Italic"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Italic.otf"); }
-.Videopac_Italic { font-family: "Videopac_Italic"; }
-@font-face { font-family: "Videopac_Bold_Italic"; src: url("../../fonts/pixelSagas/Videopac/Videopac_Bold_Italic.otf"); }
-.Videopac_Bold_Italic { font-family: "Videopac_Bold_Italic"; }
-
-@font-face { font-family: "IDroid"; src: url("../../fonts/pixelSagas/IDroid/IDroid.otf"); }
-.IDroid { font-family: "IDroid"; }
-@font-face { font-family: "IDroid_Bold"; src: url("../../fonts/pixelSagas/IDroid/IDroid_Bold.otf"); }
-.IDroid_Bold { font-family: "IDroid_Bold"; }
-@font-face { font-family: "IDroid_Italic"; src: url("../../fonts/pixelSagas/IDroid/IDroid_Italic.otf"); }
-.IDroid_Italic { font-family: "IDroid_Italic"; }
-@font-face { font-family: "IDroid_Bold_Italic"; src: url("../../fonts/pixelSagas/IDroid/IDroid_Bold_Italic.otf"); }
-.IDroid_Bold_Italic { font-family: "IDroid_Bold_Italic"; }
