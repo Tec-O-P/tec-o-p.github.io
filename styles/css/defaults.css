@@ -7,30 +7,28 @@
 ◈──────────────────────────────────────────────────────◈
 TODO: Variables
 ◈──────────────────────────────────────────────────────◈ */
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.5 !important;
+/* 
+$font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
+$font_size: 15rem;
+
+.lineHeight {
+    line-height: 1.9 !important;
 }
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
+$font_default: 'Alternity';
+$font_size: 17rem; 
+
+.lineHeight {
+    line-height: 1.6764 !important;
 }
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 2.0358 !important;
-}
+$font_default: 'Chromia';
+$font_size: 18rem; 
 
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.5 !important;
+.lineHeight {
+    line-height: 1.6764 !important;
 }
-
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
-}
-
-.lineHeight, p, address, li, ul, ol, dl, dt, dd, textarea, .switch.key_full .piece_text, .switch.key_text .piece_text, .lightbox_text {
-  line-height: 1.9 !important;
-}
-
+ */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  TODO:    1 ▶ Specific Elements & Components
@@ -96,7 +94,7 @@ html {
 TODO: Error
 ◈──────────────────────────────────────────────────────◈ */
 .error {
-  font-size: 15rem;
+  font-size: 19rem;
   /*     
     color: white;
     background-color: red;
@@ -207,7 +205,7 @@ TODO: Margins
   margin-right: 20px;
 }
 
-p, dl, label {
+p, details, dl, label {
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: 20px;
@@ -243,20 +241,13 @@ TODO: Texts
 }
 
 html {
-  font-family: "2015_Cruiser_Italic";
+  font-family: Digital_Disk, "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
   color: black;
 }
 
-/* Elementos genéricos inline: */
-span, a, em, i, strong, b, u, abbr, dfn, sub, sup, var,
-p, ul, ol, li, dt, dd, details, summary,
-output, time, address, blockquote,
-q, cite, figcaption,
-form, label, input, textarea, select, button, fieldset, legend,
-table, tr, th, td,
-e {
-  font-size: 15rem;
+* {
+  font-size: 19rem;
 }
 
 div, header, nav, main, article, section, aside, footer {
@@ -268,8 +259,22 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: calc(70rem - (8 * 1rem));
+  margin-top: calc(7rem - 1rem + 16rem);
+  margin-bottom: calc(7rem - 1rem + 16rem);
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ccefff, #00aeff, #bdf7ff, #00a6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 h2 {
-  font-size: calc(58rem - (6 * 2rem));
+  font-size: calc(70rem - (8 * 2rem));
   margin-top: calc(7rem - 2rem + 16rem);
   margin-bottom: calc(7rem - 2rem + 16rem);
   margin-left: 20px;
@@ -283,7 +288,7 @@ h2 {
 }
 
 h3 {
-  font-size: calc(58rem - (6 * 3rem));
+  font-size: calc(70rem - (8 * 3rem));
   margin-top: calc(7rem - 3rem + 16rem);
   margin-bottom: calc(7rem - 3rem + 16rem);
   margin-left: 20px;
@@ -297,7 +302,7 @@ h3 {
 }
 
 h4 {
-  font-size: calc(58rem - (6 * 4rem));
+  font-size: calc(70rem - (8 * 4rem));
   margin-top: calc(7rem - 4rem + 16rem);
   margin-bottom: calc(7rem - 4rem + 16rem);
   margin-left: 20px;
@@ -311,7 +316,7 @@ h4 {
 }
 
 h5 {
-  font-size: calc(58rem - (6 * 5rem));
+  font-size: calc(70rem - (8 * 5rem));
   margin-top: calc(7rem - 5rem + 16rem);
   margin-bottom: calc(7rem - 5rem + 16rem);
   margin-left: 20px;
@@ -325,7 +330,7 @@ h5 {
 }
 
 h6 {
-  font-size: calc(58rem - (6 * 6rem));
+  font-size: calc(70rem - (8 * 6rem));
   margin-top: calc(7rem - 6rem + 16rem);
   margin-bottom: calc(7rem - 6rem + 16rem);
   margin-left: 20px;
@@ -609,13 +614,124 @@ pre {
   font-size: 17px;
 }
 
+/* 
+details {
+    border: 1px solid hsl(0, 0%, 67%);
+    border: 1px solid deepskyblue;
+    border-radius: 20px;
+    // padding: 5rem 12rem 5rem 16rem;
+    @extend %margins;
+
+    summary {
+        display: flex; // Use o Flex box aqui para garantir que o tamanho do X e permaneça o mesmo independentemente da fonte de texto.
+        align-items: center;
+
+            min-height: 40px;
+        // padding: 9rem 12rem 9rem 16rem;
+
+        font-weight: bold;
+        // margin: -8rem -8rem 0;
+        // padding: 8rem;
+        cursor: pointer;
+
+        > div {
+            display: list-item;
+            counter-increment: list-item 0;
+            // list-style: inside disclosure-closed;
+        
+            font-size: $font_size;
+            padding-left: 16px;
+            padding-right: 12px;
+            // padding-bottom: 1px;
+
+            color: deepskyblue;
+            // background: $color_text_hx;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            // background-clip: text;
+            // text-fill-color: transparent; 
+        }
+    }
+
+    > div {
+        font-size: $font_size;
+        padding: 9rem 12rem 9rem 16rem;
+    }
+}
+
+details[open] { 
+
+    color: white;
+    // background-color: deepskyblue;
+    background-image: linear-gradient(to bottom right, hsl(195, 100%, 65%), hsl(195, 100%, 40%));
+
+    > summary {
+        color: deepskyblue;
+        background: white;
+        border-radius: 19px;
+    }
+
+    > summary > div {
+            
+        list-style-type: disclosure-open;
+        -webkit-text-fill-color: initial;
+        text-fill-color: initial; 
+    }
+}
+ */
+details {
+  border: 1px solid DeepSkyBlue;
+  border-radius: calc(40px/2);
+  background-image: linear-gradient(to bottom right, #70dbff, #00b8f5);
+}
+
+details > summary:nth-of-type(1) {
+  line-height: 40px;
+  padding-left: 16px;
+  padding-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: calc((40px/2) - 1px);
+  color: DeepSkyBlue;
+  font-weight: bold;
+  background-color: white;
+  list-style-type: "▶ ";
+  cursor: pointer;
+}
+
+details > .content {
+  color: white;
+  font-size: 19rem;
+  padding: 9px 12px 9px 16px;
+}
+
+details ul {
+  margin-top: calc(16rem - 9px);
+  margin-bottom: calc(16rem - 9px);
+  margin-left: calc(calc(1 * 20px + 21px) - 20px);
+  margin-right: calc(calc(1 * 20px + 21px) - 20px);
+}
+
+details.type_2[open] {
+  background: 0;
+}
+
+details.type_2[open] > summary:nth-of-type(1) {
+  border: 1px solid DeepSkyBlue;
+  border-top-color: rgba(255, 255, 255, 0);
+  list-style-type: "▼ ";
+}
+
+details.type_2[open] > .content {
+  color: black;
+}
+
 /*  TODO:        2 ▶ Lists
 ◈──────────────────────────────────────────────────────◈ */
 ul, ol {
   margin-top: 16rem;
   margin-bottom: 16rem;
   margin-left: calc(1 * 20px + 21px);
-  margin-right: 20px;
+  margin-right: calc(1 * 20px + 21px);
 }
 
 ul > li + li, ol > li + li {
@@ -626,20 +742,38 @@ ul, dl {
   margin-left: calc(1 * 20px + 24px);
 }
 
+/* 
+ul, dl { list-style-image: url("../../images/icons/list_1.svg"); }
+ul ul, dl dl { list-style-image: url("../../images/icons/list_2.svg"); }
+ul ul ul, dl dl dl { list-style-image: url("../../images/icons/list_3.svg"); }
+ul ul ul ul, dl dl dl dl { list-style-image: url("../../images/icons/list_4.svg"); }
+*/
 ul, dl {
   list-style-image: url("../../images/icons/list_1.svg");
 }
 
 ul ul, dl dl {
-  list-style-image: url("../../images/icons/list_2.svg");
+  list-style-image: url("../../images/icons/list_4.svg");
 }
 
 ul ul ul, dl dl dl {
-  list-style-image: url("../../images/icons/list_3.svg");
+  list-style-image: url("../../images/icons/list_5.svg");
+}
+
+ul, dl {
+  list-style: none "➭ " outside;
+}
+
+ul ul, dl dl {
+  list-style: none "• " outside;
+}
+
+ul ul ul, dl dl dl {
+  list-style: none "‣ " outside;
 }
 
 ul ul ul ul, dl dl dl dl {
-  list-style-image: url("../../images/icons/list_4.svg");
+  list-style: none "- " outside;
 }
 
 dl > div {
@@ -672,7 +806,7 @@ dl > div:not(:nth-last-of-type(1)) {
 /*  TODO:    1 ▶ Classes
 ◈──────────────────────────────────────────────────────◈ */
 .font_size {
-  font-size: 15rem;
+  font-size: 19rem;
 }
 
 .font_monospace, .codeViewer2 .text dd code {
@@ -701,7 +835,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .mini_topic {
-  font-size: 15rem;
+  font-size: 19rem;
   background: 0;
   text-align: center;
   font-weight: bold;
@@ -709,7 +843,7 @@ dl > div:not(:nth-last-of-type(1)) {
 }
 
 .container_text {
-  font-size: 15rem;
+  font-size: 19rem;
   padding: 8px 13px 9px;
   border: 1px solid #cccccc;
   border-radius: 20px;
@@ -964,7 +1098,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 }
 
 .list_featured li div {
-  font-size: 15rem;
+  font-size: 19rem;
 }
 
 .list_featured li + li {
@@ -1032,6 +1166,13 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
   max-width: calc(100% - (2 * 20px));
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.gambiarraTemporaria {
+  display: block;
+  margin-top: -39px;
+  margin-bottom: -59px;
+  white-space: break-spaces;
 }
 
 /*  TODO:    1 ▶ Text Icons
@@ -1754,13 +1895,14 @@ TODO: Layout Sections
 }
 
 .header-nav .nav a {
-  height: 48px;
-  color: inherit;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 48px;
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 0px 0px 1px #005470;
+  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.15));
 }
 
 .header-nav .nav .logo {
@@ -1770,7 +1912,7 @@ TODO: Layout Sections
 .header-nav .nav .logo img {
   width: 22px;
   margin-right: 8px;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
 }
 
 .header-nav .nav li + li {
@@ -1778,7 +1920,7 @@ TODO: Layout Sections
 }
 
 .header-nav .nav .text_img, .header-nav .nav .text_img_size {
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 0px 2px #006b8f);
 }
 
 .header-nav .button-left {
@@ -1800,7 +1942,7 @@ TODO: Layout Sections
 }
 
 .header-nav .nav-menu-button img {
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 0px 2px #006b8f);
 }
 
 .header-nav .nav-menu {
@@ -1966,7 +2108,7 @@ TODO: Layout Sections
   .header-nav .nav-menu > ul > li:nth-last-of-type(1) a img {
     width: 48px;
     margin-right: 2px;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 0px 2px #006b8f);
   }
   .header-nav .nav-menu ul li div {
     display: none;
@@ -2050,7 +2192,7 @@ TODO: Layout Sections
   right: 9px;
   z-index: 1000;
   background: url(../../images/bgs/header.png) center/100% 100%;
-  font-size: 15rem;
+  font-size: 19rem;
   box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.28);
   /*
     border-radius: 0px;
@@ -2060,10 +2202,16 @@ TODO: Layout Sections
     */
 }
 
+.headerNav-button a {
+  width: inherit;
+  height: inherit;
+  filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.15));
+}
+
 .headerNav-button img {
   width: inherit;
   height: inherit;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 0px 2px #006b8f);
 }
 
 /*  TODO:    1 ▶ Footer
@@ -4913,7 +5061,7 @@ figure.outdoor img {
 }
 
 .lightbox_text {
-  font-size: 15rem;
+  font-size: 19rem;
   font-weight: bold;
   filter: drop-shadow(0px 0px 2px #007899);
 }

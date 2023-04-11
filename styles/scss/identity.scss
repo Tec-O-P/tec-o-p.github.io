@@ -642,13 +642,75 @@ TODO: Download Page
 TODO: Types Table
 ◈──────────────────────────────────────────────────────◈ */
 
+.types_interactions_box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.types_interactions {
+    margin-left: 0;
+    margin-right: 0;
+    margin-left: $margin_horizontal;
+    margin-right: $margin_horizontal;
+    margin-top:calc(2*#{$margin_vertical}) ;
+
+    .name th > *{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{margin-right: 8px;}
+    }
+
+    td + td {
+        border-width: 1px !important; 
+    }
+
+    .good .txt {
+        color: $color_text_token_green; 
+        //border: 1px solid $color_border_token_green;
+        //background-color: $bg_token_green;
+        color: hsl(120, 100%, 47%);
+    }
+
+    .bad .txt {
+        color: $color_text_token_red; 
+        //border: 1px solid $color_border_token_red;
+        //background-color: $bg_token_red;
+        color: red;
+    }
+
+    //.dmgTo_x0 {color: White;background-color: Black;}
+
+    .txt {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .type_icon {
+        width: 32px; // 48px 
+    }
+
+    .effect_icon {
+        width: 28px;
+    }
+}
+
+
+/*  
+◈──────────────────────────────────────────────────────◈
+TODO: Types Table
+◈──────────────────────────────────────────────────────◈ */
+
 .types_table_msg {
     @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
         display: none !important;
     }
 }
  
-.table_box {
+.types_table_box {
     display: none;
 
     @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
@@ -680,6 +742,10 @@ TODO: Types Table
    z-index: 1;
    border-bottom: 1px solid hsla(193,100%,50%, 0%);
 }
+
+.types_table tr {th, td {
+    padding: 6.5px;
+}}
 
 .types_table tr th {
     position: sticky;
@@ -725,7 +791,8 @@ TODO: Types Table
 }
 
 .types_table .type_icon {
-    width: 36.8px; // 48px 
+    width: 32px; // 36.8px; // 48px 
+    height: 32px; 
 }
 
 .types_table th, .types_table td {
@@ -737,7 +804,17 @@ TODO: Types Table
 }
 
 .types_table .effect_icon {
-    width: 28px;
+    width: 25px// 26px //28px;
+}
+
+.types_table {
+    .Robot, .Snow_Ice{
+        color: white;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .Snow_Ice { display: none; }
+    // .Robot { display: none; }
 }
 
 @media (pointer: coarse), (pointer: none) {
@@ -749,23 +826,23 @@ TODO: Types Table
     }
 }
 
-/*
-@media (pointer: coarse), (pointer: none) { // Ganbiarra necessária, pois os navegadores mobile n dão suporte à 'position: sticky'.
 
-    .types_table tr:nth-of-type(1), .types_table tr th, .types_table tr:nth-of-type(1) td {
-        position: static;  
-    }
+// @media (pointer: coarse), (pointer: none) { // Ganbiarra necessária, pois os navegadores mobile n dão suporte à 'position: sticky'.
 
-    .types_table .type_icon {
-        width: 24px;
-    }
+//     .types_table tr:nth-of-type(1), .types_table tr th, .types_table tr:nth-of-type(1) td {
+//         position: static;  
+//     }
 
-    .types_table .effect_icon {
-        width: 20px;
-    }
-}
+//     .types_table .type_icon {
+//         width: 24px;
+//     }
 
-*/
+//     .types_table .effect_icon {
+//         width: 20px;
+//     }
+// }
+
+/**/
 
 /*  
 ◈──────────────────────────────────────────────────────◈
