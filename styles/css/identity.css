@@ -458,67 +458,46 @@ TODO: Skills - Table
   font-size: 0;
   margin-left: calc(0.5 * 20px);
   margin-right: calc(0.5 * 20px);
+  text-align: center;
+  /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+  /* 
+    li { width: calc((100% - 2 * 10px)/1); } 
+
+    @media (min-width: 380px) { li { width: calc((100% - 4 * 10px)/2); } }
+
+    @media (min-width: 520px) { li { width: calc((100% - 6 * 10px)/3); } }
+
+    @media (min-width: 680px) { li { width: calc((100% - 8 * 10px)/4); } }
+
+    @media (min-width: 840px) { li { width: calc((100% - 10 * 10px)/5); } }
+
+    @media (min-width: 930px) { li { width: calc((100% - 12 * 10px)/6); } }
+
+    @media (min-width: 970px) { li { width: calc((100% - 14 * 10px)/7); } }
+
+    @media (min-width: 1110px) { li { width: calc((100% - 16 * 10px)/8); } }
+
+    @media (min-width: 1250px) { li { width: calc((100% - 18 * 10px)/9); } }
+ */
 }
 
 .skills_data_switchs_box li {
   display: inline-block;
-}
-
-.skills_data_switchs_box li {
-  width: calc((100% - 4 * 10px)/2);
+  width: 144px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.skills_data_switchs_box li + li {
-  margin-top: 16rem;
+.skills_data_switchs_box li {
+  margin-top: 16rem !important;
 }
 
 .skills_data_switchs_box .switch {
+  width: inherit;
   height: 42px;
   margin: 0;
-}
-
-@media (min-width: 410px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 6 * 10px)/3);
-  }
-}
-
-@media (min-width: 550px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 8 * 10px)/4);
-  }
-}
-
-@media (min-width: 690px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 10 * 10px)/5);
-  }
-}
-
-@media (min-width: 830px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 12 * 10px)/6);
-  }
-}
-
-@media (min-width: 970px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 14 * 10px)/7);
-  }
-}
-
-@media (min-width: 1110px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 16 * 10px)/8);
-  }
-}
-
-@media (min-width: 1250px) {
-  .skills_data_switchs_box li {
-    width: calc((100% - 18 * 10px)/9);
-  }
 }
 
 @media (min-width: 1920px) {
