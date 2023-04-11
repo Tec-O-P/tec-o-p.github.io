@@ -996,11 +996,10 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     font-size: 0;
     margin-left: calc(0.5 * #{$margin_horizontal});   
     margin-right: calc(0.5 * #{$margin_horizontal});
-    text-align: center;
-    
-    /* display: flex;
+    //text-align: center;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; */
+    justify-content: space-around;
 
     $switchs_margin_horizontal: 10px;
 

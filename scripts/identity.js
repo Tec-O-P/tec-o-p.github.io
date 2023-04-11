@@ -880,7 +880,7 @@ for (i = 1; i < SDSB_switchs.length; i++) {
 }
 
 /*  TODO:        2 ▶ Set Switches Widths
-◈──────────────────────────────────────────────────────◈ */
+◈──────────────────────────────────────────────────────◈
 
 function skills_data_switchs_width() {  
 
@@ -896,7 +896,7 @@ function skills_data_switchs_width() {
  
 skills_data_switchs_width()
 
-window.addEventListener('resize', skills_data_switchs_width)
+window.addEventListener('resize', skills_data_switchs_width) */
   
 /*  TODO:        2 ▶ Logic
 ◈──────────────────────────────────────────────────────◈ */
@@ -1063,9 +1063,9 @@ choice(skills_choice)
 
 
 /*  TODO:    1 ▶ Auto Table Full Screen
-◈──────────────────────────────────────────────────────◈ */
+◈──────────────────────────────────────────────────────◈
 
-skills_table_box.classList.toggle('skills_table_box_full'); document.body.classList.toggle('overflow_hidden')
+skills_table_box.classList.toggle('skills_table_box_full'); document.body.classList.toggle('overflow_hidden') */
 
 
 /*  TODO:    1 ▶ Replace Table Header 'plusTP' With '+TP'
