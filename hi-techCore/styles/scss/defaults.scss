@@ -11,34 +11,6 @@ TODO: Variables
 
 $font_default: 'Digital Disk', 'Times New Roman', Times, Georgia, serif;
 $font_size: 19rem; 
-
-.lineHeight {
-    // line-height: 1.5 !important;
-}
-/* 
-$font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
-$font_size: 15rem;
-
-.lineHeight {
-    line-height: 1.9 !important;
-}
-
-$font_default: 'Alternity';
-$font_size: 17rem; 
-
-.lineHeight {
-    line-height: 1.6764 !important;
-}
-
-$font_default: 'Chromia';
-$font_size: 18rem; 
-
-.lineHeight {
-    line-height: 1.6764 !important;
-}
- */
-
-
 $font_monospace: Courier, 'Courier New', monospace;
 $font_monospace_size: 17px;
 $font_small: 16rem;
@@ -142,7 +114,7 @@ $color_text_click: url(../../images/colors/text_click.png)  center /100% 100%;
 
 $bg_kbd: hsl(0, 0%, 86%);
  
-$textIcons_size: 21px;
+$textIcons_size: 19px;
 
 $widthOfSpace: 4px;
 
@@ -704,7 +676,7 @@ TODO: Texts
 
 /*  TODO:    1 ▶ Elements
 ◈──────────────────────────────────────────────────────◈ */
-
+/* 
 .TNR {
     font-family: 'Times New Roman'; 
     font-size: 19px;
@@ -722,7 +694,7 @@ TODO: Texts
     font-size: 19px;
     // text-transform: lowercase;
 }
-
+ */
 .courier {
     font-family: 'Courier';
     font-size: $font_monospace_size;
@@ -1497,23 +1469,15 @@ dl.noListStyle {
 //     } 
 // }  
 
-
-
-
- 
 //····································································◈ Entradas
 
 $icons: 
 
 // Classe "Arquivo.tipo" ∆Largura ∆Espaçamento y,
 
-textIcon_HNB_template "textIcon_menu_template.svg" 0px 6px 3px, 
+textIcon_HNB_template "textIcon_menu_template.svg" 0px 5px 4px, 
 textIcon_yes "textIcon_yes.svg" 1px 0px 0px, 
-textIcon_no "textIcon_no.svg" 0px 0px 0px,  
-
-// Ícones especiais:
-
-// description "textIcon_info" 0px -3px 0px,  
+textIcon_no "textIcon_no.svg" 0px 0px 0px,
 
 // Ícones de testes:
 
@@ -1556,7 +1520,7 @@ textIcon_template_uncommon "textIcon_template_moreWide.svg" 10px 10px 10px;
     }
 
     .#{$textIcon_ClassName}.right {
-        background-position-x: 100%;
+        background-position-x: 99%; /* Se deixar em 100% da bug no Chrome pra PC! */
         padding-left: 0;
         padding-right: calc(#{$textIcons_size} + #{$textIcon_widthAdjust} + #{$textIcon_distanceAdjust} + #{$widthOfSpace});
     }
@@ -1592,10 +1556,10 @@ textIcon_template_uncommon "textIcon_template_moreWide.svg" 10px 10px 10px;
 
 //····································································◈ Configurações Adicionais De Alguns Ícones Do Gerador
 
-/* abbr.description > button {
-    @extend .description.right;
-    @extend .description.right:empty;
-    @extend .description.noText;
+/* abbr.interrogation > button {
+    @extend .interrogation.right;
+    @extend .interrogation.right:empty;
+    @extend .interrogation.noText;
     color: blue;
     background-color: hsla(0, 0%, 0%, 0);
     margin-left: 0;
@@ -1621,7 +1585,7 @@ abbr > button:focus {
 a[href^="http"] {  // .textIcon_link {
     @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/anchor_web.svg');   
-    background-position: 100% 0;
+    background-position: 99% 0; /* Se deixar em 100% da bug no Chrome pra PC! */
     padding-right: calc(#{$textIcons_size} + 4px);
 }
 
@@ -1629,45 +1593,54 @@ a[href^="#"]:not([href="#"]) { // .textIcon_chain {
     @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/anchor_chain.svg');
     background-position: 100% 0;
-    padding-right: calc(#{$textIcons_size} + 5px);
+    padding-right: calc(#{$textIcons_size} + 6px);
 }
 
 a[download] { // .textIcon_download {
     @include textIcons_notFromGenerator;
-    background-image: url('../../images/icons/anchor_download.png'); // Não consegui fazer este ícone em SVG
-    background-position: 100% 0;
-    padding-right: calc(#{$textIcons_size} + 3px);
+    background-image: url('../../images/icons/anchor_download.svg'); // Não consegui fazer este ícone em SVG
+
+    background-position: 0% 0px;
+    padding-left: calc(#{$textIcons_size} + 5px);
+    /* background-position: 100% 0px;
+    padding-right: calc(#{$textIcons_size} + 3px); */
 }
 
 a[href^="mailto:"] {  // .textIcon_email {
     @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/anchor_email.svg');
-    background-position: 100% 0;
-    padding-right: calc(#{$textIcons_size} + 6px);
+
+    background-position: 0% 1px;
+    padding-left: calc(#{$textIcons_size} + 5px);
+    /* background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 6px); */
 }
 
 a[href^="tel:"] {  // .textIcon_phone {
     @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/anchor_phone.svg');
-    background-position: 100% 0;
-    padding-right: calc(#{$textIcons_size} + 4px);
+
+    background-position: 0% 0px;
+    padding-left: calc(#{$textIcons_size} + 4px);
+    /* background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 4px); */
 }
  
 /*  TODO:            3 ▶ Others
 ◈──────────────────────────────────────────────────────◈ */
 
-abbr.description > button { // .textIcon_info {
+abbr.interrogation > button { // .interrogation {
     @include textIcons_notFromGenerator;
     color: blue;
     background-color: hsla(0, 0%, 0%, 0);
-    background-image: url('../../images/icons/textIcon_info.svg');
+    background-image: url('../../images/icons/interrogation.png');
     background-position: 100% 0;
     padding-right: calc(#{$textIcons_size} + 1px);
     margin-left: 0;
     margin-right: 0;
 }
 
-abbr.description > button:focus {
+abbr.interrogation > button:focus {
     outline: 0px dotted DeepSkyBlue;
 }
  
