@@ -280,7 +280,9 @@ url(../../images/bgs/switch_button_icon_pill_shine_under.webp) center center / 2
 hsl(193, 100%, 83%);
 */
 
-$bg_button_type_normal_and_switch_type_button_shine_top: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4)); // Última alteração: +15% de opacidade.
+$mainShines: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.5)); // Última alteração: +10% de opacidade.
+
+$bg_button_type_normal_and_switch_type_button_shine_top: $mainShines;
  
 $bg_button_type_normal_and_switch_type_button_rounded_shine: url(../../images/bgs/switch_button_rounded_shine_above.svg) center center / 100% 100% no-repeat;  //Fazendo dessa forma (usando a função de gradiente radial) não funciona em todos os navegadores: radial-gradient(circle at 50% 10%, white -10%, rgba(255, 255, 255, 0.43) 52%, transparent 52%) center center / 100% 100% no-repeat; 
 
@@ -5005,7 +5007,7 @@ $box_shadow_element_type_button_blue
         z-index: 1; 
         width: 100%;
         height: 52%;
-        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4));
+        background: $mainShines;
     }
 
     li:nth-of-type(1) .choice_shine_top { 
@@ -5083,7 +5085,7 @@ $box_shadow_element_type_button_blue
         top: 0px;  
         z-index: 1; 
         height: 52%;
-        background: linear-gradient(to bottom, white, hsla(0, 0%, 100%, 0.4));
+        background: $mainShines; 
         border-radius: 1000px;
         
         $left: 9px;  
