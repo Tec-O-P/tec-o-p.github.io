@@ -1208,34 +1208,29 @@ span.ticket.black {
     }
 }
 
-ul.noListStyle, ol.noListStyle {
+.noListStyle {
+    
+    list-style: none; // Para <ul>, <ol>, <dl>
+    padding: 0; // Para <ul> e <ol>
+    margin-left: $margin_horizontal; // Para <ul>, <ol>, <dl>
 
-    list-style: none; 
-    padding: 0; 
-    margin-left: 20px;
-
-    li + li {
+    > li { // Para <ul> e <ol>
         margin-top: 0;
     }
-}
 
-dl.noListStyle {
-    list-style: none; 
-    margin-left: $margin_horizontal;
-
-    > div {
+    > div { // Para <dl>
         display: block;
     }
 
-    dt { 
+    dt {  // Para <dl>
         font-weight: normal; 
     }
 
-    dt, dd { 
+    dt, dd {  // Para <dl>
         display: block;
     }
 
-    > div:not(:nth-last-of-type(1)) {
+    > div:not(:nth-last-of-type(1)) { // Para <dl>
         margin-bottom: 0;
     }
 }

@@ -933,34 +933,29 @@ span.ticket.black {
   font-weight: normal;
 }
 
-ul.noListStyle, ul.codeViewer, ol.noListStyle, ol.codeViewer {
+.noListStyle, .codeViewer {
   list-style: none;
   padding: 0;
   margin-left: 20px;
 }
 
-ul.noListStyle li + li, ul.codeViewer li + li, ol.noListStyle li + li, ol.codeViewer li + li {
+.noListStyle > li, .codeViewer > li {
   margin-top: 0;
 }
 
-dl.noListStyle, dl.codeViewer {
-  list-style: none;
-  margin-left: 20px;
-}
-
-dl.noListStyle > div, dl.codeViewer > div {
+.noListStyle > div, .codeViewer > div {
   display: block;
 }
 
-dl.noListStyle dt, dl.codeViewer dt {
+.noListStyle dt, .codeViewer dt {
   font-weight: normal;
 }
 
-dl.noListStyle dt, dl.codeViewer dt, dl.noListStyle dd, dl.codeViewer dd {
+.noListStyle dt, .codeViewer dt, .noListStyle dd, .codeViewer dd {
   display: block;
 }
 
-dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-last-of-type(1)) {
+.noListStyle > div:not(:nth-last-of-type(1)), .codeViewer > div:not(:nth-last-of-type(1)) {
   margin-bottom: 0;
 }
 
