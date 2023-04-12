@@ -598,14 +598,11 @@ imgsNamesAsAlts(document.querySelectorAll('.skills_types_choice img'))
 
 function func_skills_types_choices(el) {
 
-    var skills_quantity = 0
-
     skills_table_rows_onlySkills.forEach(function (skill_row) {
 
         skill_row.style.display = 'none'
     
         var skill_types_imgs = skill_row.querySelectorAll(':scope .Type img') 
-
 
         var switch_show_only_internet_skills_on = 
         document.querySelector('.skills_switch_show_only_internet_skills').classList.contains('on')
@@ -621,7 +618,6 @@ function func_skills_types_choices(el) {
         if (el.querySelector('img') === null) { // Quando selecionar para mostrar todas as habilidades.
                 
             skill_row.style.display = 'table-row'
-            skills_quantity++
             
         } else { // Quando selecionar algum tipo.
 
@@ -636,7 +632,6 @@ function func_skills_types_choices(el) {
                     console.log(1)
 
                     skill_row.style.display = 'table-row'
-                    skills_quantity++
 
                     break
 
@@ -651,6 +646,16 @@ function func_skills_types_choices(el) {
 
         }
 
+    })
+
+    var skills_quantity = 0
+
+    skills_table_rows_onlySkills.forEach(function (skill_row) {
+
+        if (skill_row.style.display !== 'none' && !skill_row.classList.contains('hiddenSkill')) {
+            //csl.log(skill_row)
+            skills_quantity++
+        }
     })
 
     // document.querySelector('.skills_table_box').style.display = 'block'

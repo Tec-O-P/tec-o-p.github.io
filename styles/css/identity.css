@@ -364,19 +364,18 @@ TODO: Types Table
 ◈──────────────────────────────────────────────────────◈
 TODO: Skills - Table
 ◈──────────────────────────────────────────────────────◈ */
-@media (min-width: 1920px) {
+@media (min-width: 1900px) {
   .FULLHD_STC_conteiner {
     position: fixed;
     top: 174px;
-    left: 0;
+    left: 0px;
     z-index: 1000;
-    width: 300px;
+    width: 320px;
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 
-/*  */
 .skills_types_choice:not(.dropdown_open) {
   display: flex !important;
   align-items: center;
@@ -442,25 +441,37 @@ TODO: Skills - Table
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1360px) {
   .skills_types_choice.choice.dropdown.dropdown_open li:not(:nth-of-type(2)) {
-    width: 14.28%;
+    width: 9.091%;
+  }
+  .skills_types_choice.choice.dropdown.dropdown_open li:not(:nth-of-type(2)) a {
+    height: 120px !important;
+    flex-wrap: wrap;
+  }
+  .skills_types_choice.choice.dropdown.dropdown_open img {
+    width: 64px;
+    margin-top: 9px;
+  }
+  .skills_types_choice.choice.dropdown.dropdown_open span {
+    width: 100%;
+    text-align: center;
   }
 }
 
-@media (min-width: 1600px) {
-  .skills_types_choice.choice.dropdown.dropdown_open li:not(:nth-of-type(2)) {
-    width: 12.5%;
-  }
+.skills_data_switchs_box_centralizedBox {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skills_data_switchs_box {
-  font-size: 0;
-  margin-left: calc(0.5 * 20px);
-  margin-right: calc(0.5 * 20px);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  font-size: 0;
+  margin-left: calc(0.5 * 20px);
+  margin-right: calc(0.5 * 20px);
   /* 
     li { width: calc((100% - 2 * 10px)/1); } 
 
@@ -485,12 +496,9 @@ TODO: Skills - Table
 .skills_data_switchs_box li {
   display: inline-block;
   width: 144px;
+  margin-top: 16rem;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-.skills_data_switchs_box li {
-  margin-top: 16rem !important;
 }
 
 .skills_data_switchs_box .switch {
@@ -499,17 +507,17 @@ TODO: Skills - Table
   margin: 0;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1900px) {
   .skills_data_switchs_box {
     position: fixed;
-    right: 0;
+    right: 0px;
     z-index: 1;
-    width: calc((2 * 130px + 4 * 10px));
+    width: calc((2 * 140px + 4 * 10px));
     margin-left: 20px;
     margin-right: 20px;
   }
   .skills_data_switchs_box li {
-    width: 130px;
+    width: 140px;
   }
 }
 
@@ -532,7 +540,7 @@ TODO: Skills - Table
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1900px) {
   .skills_table_box {
     max-height: calc(100vh - 180px);
   }
