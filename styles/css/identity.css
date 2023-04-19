@@ -154,6 +154,21 @@ TODO: Slider
 
 /* 
 ────────────────────────────────────────────────────── 
+TODO: About Us Page
+◈──────────────────────────────────────────────────────◈ */
+.aboutUs_team .profile_img {
+  width: 100%;
+  max-width: 370px;
+  max-height: 370px;
+  border-radius: 1000px;
+}
+
+.aboutUs_team .profile_txt {
+  max-width: 370px;
+}
+
+/* 
+────────────────────────────────────────────────────── 
 TODO: Download Page
 ◈──────────────────────────────────────────────────────◈ */
 .download_buttons {
@@ -347,7 +362,7 @@ TODO: Types Table
   background-color: black;
 }
 
-.types_table .Snow_Ice {
+.types_table .Digital {
   display: none;
 }
 

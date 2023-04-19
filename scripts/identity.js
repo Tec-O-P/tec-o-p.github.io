@@ -120,14 +120,14 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <!--<li><a href="../pages/index.html"><span>Home</span></a><div><ul></ul></div></li>-->
 
-<li><a href="#"><span>News</span></a><div><ul></ul></div></li><!---->
+<!--<li><a href="#"><span>News</span></a><div><ul></ul></div></li>-->
 
 <li><a onclick="nav_menu_options(this)"><span>Game</span></a>
 
     <div>
         <ul>
             <li><a href="#"><span>History</span></a></li>
-            <li><a href="#"><span>Characters</span></a></li>
+            <!--<li><a href="#"><span>Characters</span></a></li>-->
             <li><a href="types.html"><span>Types</span></a></li>
             <li><a href="skills.html"><span>Skills</span></a></li>
         </ul>
@@ -135,7 +135,9 @@ document.querySelector('.nav-menu').innerHTML = `
 
 </li> 
 
-<li><a href="../hi-techCore/pages/index.html"><span>Hi-Tech Core</span></a><div><ul></ul></div></li><!---->
+<li><a href="aboutUs.html"><span>About Us</span></a><div><ul></ul></div></li><!---->
+
+<!--<li><a href="../hi-techCore/pages/index.html"><span>Hi-Tech Core</span></a><div><ul></ul></div></li>-->
 
 <!--<li><a href="download.html"><span>Download</span></a><div><ul></ul></div></li>-->
 

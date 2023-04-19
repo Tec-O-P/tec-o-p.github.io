@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- en -->
+<head>
+    <meta charset="utf-8">
+    <title>Tec OP</title>
+    <meta name = "apple-mobile-web-app-title" content = "Tec OP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="George Maxwell">
+    <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+    <link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+
+    <link href='../hi-techCore/styles/css/downloadFonts.css' rel='stylesheet'>  
+    <link href='../hi-techCore/styles/css/normalize.css' rel='stylesheet'>  
+    <link href='../hi-techCore/styles/css/gmes_normalize.css' rel='stylesheet'>
+    <link href='../hi-techCore/styles/css/defaults.css' rel='stylesheet'><!---->
+    <link href='../styles/css/identity.css' rel='stylesheet'>
+     
+</head>
+<body>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Header-nav
+    ────────────────────────────────────────────────────── --> 
+    
+    <header>
+
+        <div class="block-hack"></div> <!-- Hack necessário pois o Safari não aceita 'position: sticky'. -->
+
+        <div class="header-nav">
+            <div class="header-content">
+                <!-- <a href="" class="button-left"><img src="../images/icons/search.svg" alt="button"></a> -->
+
+                <nav class="nav">
+                
+                    <h1><a href="index.html" class="logo"><img src="../images/icons/logo.svg" alt="Logo" width="22px" height="22px">Tec OP</a></h1>
+                     
+                    <a class="nav-menu-button">
+                        <img src="../hi-techCore/images/icons/menu.svg" alt="Menu button" width="48px" height="48px">
+                        <img src="../hi-techCore/images/icons/menu_close.svg" alt="Menu button" width="48px" height="48px">
+                        <!-- <span>×</span> -->
+                    </a>
+
+                    <div class="nav-menu">
+                        <!-- Conteúdo no JS! -->
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+
+        <div class="headerNav-button">
+            <a>
+                <img src="../hi-techCore/images/icons/headerNav.svg" alt="Header-nav button">  
+            </a>        
+        </div>
+
+    </header>
+
+    <main>
+        
+        <article>
+
+            <div class="central">
+
+                <h2>Team</h2>
+
+                <p style="text-align: center;">(Just one person for while)</p>
+
+                <div class="aboutUs_team offset">
+
+                    <img class="center profile_img" src="../images/team/gmes.png" alt="George Maxwell Elpídio de Siqueira photo">
+
+                    <p class="center bold profile_txt" style="text-align: center;">George Maxwell Elpídio de Siqueira</p>
+
+                    <p class="center profile_txt" style="text-align: center;">Co-Founder and CEO, Developer, Web Designer, Game Designer, Graphic Designer, Writer<!-- , Composer -->, Typographer</p>
+                        
+                </div>
+
+                <div class="lb2"></div>
+
+                <hr> 
+
+            </div>
+            
+        </article>
+
+        <!--
+        <hr>
+
+        <aside>
+            <div class="central">
+                <p>&lt;aside></p>
+            </div>
+        </aside>
+        -->
+
+    </main>
+
+    <!--
+    ──────────────────────────────────────────────────────
+    TODO: Footer
+    ────────────────────────────────────────────────────── --> 
+
+    <footer></footer>
+
+    <!-- 
+        Importante: Mesmo com o atributo 'defer', os <script>'s devem ser colocados no 
+        final do arquivo HTML para garantir que a página seja renderizada corretamente.
+    -->
+
+    <script defer src="../hi-techCore/scripts/defaults.js"></script>
+    <script async src="../../Development/script.js"></script>
+    <script defer src="../scripts/identity.js"></script>
+
+</body> 
+</html>
