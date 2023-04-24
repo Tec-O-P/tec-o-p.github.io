@@ -2844,8 +2844,8 @@ var sliders = document.querySelectorAll('.slider')
 
 sliders.forEach(function (slider) {
 
-    var slider_naturalWidth = ((slider.firstElementChild.naturalWidth/0.93) + 4) + 'px'
-    var slider_naturalHeight = (slider.firstElementChild.naturalHeight + 4) + 'px'
+    var slider_naturalWidth = ((slider.firstElementChild.naturalWidth/0.93) + 4) + 'px' // 4px são das bordas
+    var slider_naturalHeight = (slider.firstElementChild.naturalHeight + 4) + 'px' // 4px são das bordas
 
     if (!(slider.style.maxWidth || slider.style.maxHeight)) {
             
@@ -2864,10 +2864,12 @@ sliders.forEach(function (slider) {
             document.querySelector('html').classList.add('overflow_hidden') 
                     
             var slider_width_initial = slider.style.width
+            // var slider_height_initial = slider.style.height
             var slider_maxWidth_initial = slider.style.maxWidth
             var slider_maxHeight_initial = slider.style.maxHeight
             
             slider.style.width = slider_naturalWidth
+            // slider.style.height = slider_naturalHeight
             slider.style.maxWidth = '100vw'
             slider.style.maxHeight = '100vh'
 
@@ -2881,6 +2883,7 @@ sliders.forEach(function (slider) {
                 this.remove()
             
                 slider.style.width = slider_width_initial
+                // slider.style.height = slider_height_initial
                 slider.style.maxWidth = slider_maxWidth_initial
                 slider.style.maxHeight = slider_maxHeight_initial
 

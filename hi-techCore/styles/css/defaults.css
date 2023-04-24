@@ -853,76 +853,82 @@ p.container_text {
   text-fill-color: transparent;
 }
 
-span.ticket {
+span.token {
   padding: 6px 8px;
   border-radius: 1000px;
 }
 
-span.ticket, span.ticket.blue {
+span.token, span.token.blue {
   border: 1px solid #29c9ff;
-  background: #fafeff;
+  background: #f5fcff;
   color: #00b0eb;
 }
 
-span.ticket.red {
+span.token.red {
   border: 1px solid #ff7a7a;
-  background: #fff5f5;
+  background: #fff0f0;
   color: #eb0000;
 }
 
-span.ticket.yellow {
+span.token.yellow {
   border: 1px solid #dbc900;
   background: #fefee7;
   color: yellow;
   color: #d6c100;
 }
 
-span.ticket.green {
-  border: 1px solid #00eb00;
-  background: #f5fff5;
+span.token.green {
+  border: 1px solid #00d600;
+  background: honeydew;
   color: #00d600;
 }
 
-span.ticket.pink {
+span.token.pink {
   border: 1px solid magenta;
-  background: #fff5ff;
-  color: magenta;
+  background: #fef6fe;
+  color: #fa00fa;
 }
 
-span.ticket.purple {
-  border: 1px solid #990099;
-  background: #faf0ff;
-  color: #990099;
+span.token.purple {
+  border: 1px solid #bd00bd;
+  background: #fcf5ff;
+  color: #bd00bd;
 }
 
-span.ticket.orange {
+span.token.orange {
   border: 1px solid #ffa600;
   background: #fff8eb;
   color: #f59f00;
 }
 
-span.ticket.brown {
+span.token.brown {
   border: 1px solid #c5621b;
   background: #fdf4ed;
   color: #c5621b;
 }
 
-span.ticket.cyan {
-  border: 1px solid #00e0e0;
+span.token.cyan {
+  border: 1px solid #00c2c2;
   background: azure;
-  color: #00cccc;
+  color: #00c2c2;
 }
 
-span.ticket.purple2 {
+span.token.purple2 {
   border: 1px solid #a495f3;
   background: #f6f5ff;
   color: #907ef1;
 }
 
-span.ticket.black {
-  border: 1px solid #858585;
+span.token.white {
+  border: 1px solid #a8a8a8;
+  background: white;
+  color: #a3a3a3;
+}
+
+span.token.black {
+  border: 1px solid #0a0a0a;
   background: #f7f7f7;
-  color: #858585;
+  color: #707070;
 }
 
 .dol {
@@ -3400,7 +3406,7 @@ a.button_full.text_below {
   .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
     filter: initial;
   }
   .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text, a.button_icon:hover .piece_text {
@@ -3480,7 +3486,7 @@ a.button_full.blue .piece_text, a.button_text.blue .piece_text {
   .switch.button_icon.blue.on .piece_text, button.button_icon.blue .piece_text, a.button_icon.blue .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
   }
 }
 
@@ -3537,7 +3543,7 @@ a.button_full.red .piece_text, a.button_text.red .piece_text {
 @media (pointer: fine) {
   .switch.button_icon.red.on .piece_text, button.button_icon.red .piece_text, a.button_icon.red .piece_text {
     border-color: #ff7a7a;
-    background: #fff5f5;
+    background: #fff0f0;
     color: #eb0000;
   }
 }
@@ -3665,8 +3671,8 @@ a.button_full.green .piece_text, a.button_text.green .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.green.on .piece_text, button.button_icon.green .piece_text, a.button_icon.green .piece_text {
-    border-color: #00eb00;
-    background: #f5fff5;
+    border-color: #00d600;
+    background: honeydew;
     color: #00d600;
   }
 }
@@ -3723,9 +3729,9 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.black.on .piece_text, button.button_icon.black .piece_text, a.button_icon.black .piece_text {
-    border-color: #858585;
+    border-color: #0a0a0a;
     background: #f7f7f7;
-    color: #858585;
+    color: #707070;
   }
 }
 
@@ -3837,25 +3843,25 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   .switch.image.blue.on .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
   }
   button.image .piece_text, a.image .piece_text,
   button.image.blue .piece_text, a.image.blue .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Red ------*/
   .switch.image.red.on .piece_text {
     color: #eb0000;
     border-color: #ff7a7a;
-    background: #fff5f5;
+    background: #fff0f0;
   }
   button.image.red .piece_text, a.image.red .piece_text {
     color: #eb0000;
     border-color: #ff7a7a;
-    background: #fff5f5;
+    background: #fff0f0;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Yellow ------*/
@@ -3873,24 +3879,24 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   /*------ Green ------*/
   .switch.image.green.on .piece_text {
     color: #00d600;
-    border-color: #00eb00;
-    background: #f5fff5;
+    border-color: #00d600;
+    background: honeydew;
   }
   button.image.green .piece_text, a.image.green .piece_text {
     color: #00d600;
-    border-color: #00eb00;
-    background: #f5fff5;
+    border-color: #00d600;
+    background: honeydew;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Black ------*/
   .switch.image.black.on .piece_text {
-    color: #858585;
-    border-color: #858585;
+    color: #707070;
+    border-color: #0a0a0a;
     background: #f7f7f7;
   }
   button.image.black .piece_text, a.image.black .piece_text {
-    color: #858585;
-    border-color: #858585;
+    color: #707070;
+    border-color: #0a0a0a;
     background: #f7f7f7;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
@@ -4645,14 +4651,18 @@ figure.outdoor img {
 
 .slider img, .slider picture {
   max-width: 94%;
+  max-height: calc(100vh - 4px);
 }
 
-@media (max-height: 501px) {
-  .slider img, .slider picture {
-    max-height: 100vh;
-  }
-}
+/* 
+@media (max-height: $screen_small_widthLimit) {
 
+    .slider img, .slider picture {
+
+        max-height: calc(100vh - 4px);
+    }
+}
+ */
 @media (min-width: 501px) {
   .slider {
     margin-left: 20px;
@@ -4667,6 +4677,24 @@ figure.outdoor img {
   .slider:hover {
     overflow-x: auto;
   }
+}
+
+.slider_fullScreen {
+  position: fixed;
+  z-index: 1300;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(217deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(127deg, rgba(224, 224, 224, 0.8), rgba(224, 224, 224, 0) 71%), linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
+}
+
+.slider_fullScreen .slider {
+  margin: 0;
+  border-radius: 0;
 }
 
 /* // Scrollbar anterior do slider

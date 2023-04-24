@@ -39,6 +39,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 $zIndex_nav: 1000;
 $zIndex_choice_d_open: 1100;
 $zIndex_lightbox: 1200;
+$zIndex_slider_fullScreen: 1300;
 $zIndex_error: 5000;
 
 //····································································◈ Colors And BG's Geral
@@ -118,51 +119,55 @@ $textIcons_size: 19px;
 
 $widthOfSpace: 4px;
 
-// Tickets:
+// Tokens:
 
-$color_border_ticket_blue: hsl(195, 100%, 58%);
-$bg_ticket_blue: hsl(195, 100%, 99%);
-$color_text_ticket_blue: hsl(195, 100%, 46%);
+$color_border_token_blue: hsl(195, 100%, 58%);
+$bg_token_blue: hsl(195, 100%, 98%);
+$color_text_token_blue: hsl(195, 100%, 46%);
 
-$color_border_ticket_red: hsl(0, 100%, 74%);
-$bg_ticket_red: hsl(0, 100%, 98%);
-$color_text_ticket_red: hsl(0, 100%, 46%); 
+$color_border_token_red: hsl(0, 100%, 74%);
+$bg_token_red: hsl(0, 100%, 97%);
+$color_text_token_red: hsl(0, 100%, 46%); 
 
-$color_border_ticket_yellow: hsl(55, 100%, 43%);
-$bg_ticket_yellow: hsl(60, 90%, 95%);
-$color_text_ticket_yellow: hsl(54, 100%, 42%);
+$color_border_token_yellow: hsl(55, 100%, 43%);
+$bg_token_yellow: hsl(60, 90%, 95%);
+$color_text_token_yellow: hsl(54, 100%, 42%);
 
-$color_border_ticket_green: hsl(120, 100%, 46%);
-$bg_ticket_green: hsl(120, 100%, 98%);
-$color_text_ticket_green: hsl(120, 100%, 42%);
+$color_border_token_green: hsl(120, 100%, 42%);
+$bg_token_green: hsl(120, 100%, 97%);
+$color_text_token_green: hsl(120, 100%, 42%);
 
-$color_border_ticket_pink: hsl(300, 100%, 50%);
-$bg_ticket_pink: hsl(300, 100%, 98%);
-$color_text_ticket_pink: hsl(300, 100%, 50%);
+$color_border_token_pink: hsl(300, 100%, 50%);
+$bg_token_pink: hsl(300, 85%, 98%);
+$color_text_token_pink: hsl(300, 100%, 49%);
 
-$color_border_ticket_purple: hsl(300, 100%, 30%);
-$bg_ticket_purple: hsl(280, 100%, 97%);
-$color_text_ticket_purple: hsl(300, 100%, 30%);
+$color_border_token_purple: hsl(300, 100%, 37%);
+$bg_token_purple: hsl(280, 100%, 98%);
+$color_text_token_purple: hsl(300, 100%, 37%);
 
-$color_border_ticket_orange: hsl(39, 100%, 50%);
-$bg_ticket_orange: hsl(39, 100%, 96%);
-$color_text_ticket_orange: hsl(39, 100%, 48%);
+$color_border_token_orange: hsl(39, 100%, 50%);
+$bg_token_orange: hsl(39, 100%, 96%);
+$color_text_token_orange: hsl(39, 100%, 48%);
 
-$color_border_ticket_brown: hsl(25, 76%, 44%);
-$bg_ticket_brown: hsl(25, 76%, 96%);
-$color_text_ticket_brown: hsl(25, 76%, 44%);
+$color_border_token_brown: hsl(25, 76%, 44%);
+$bg_token_brown: hsl(25, 76%, 96%);
+$color_text_token_brown: hsl(25, 76%, 44%);
 
-$color_border_ticket_cyan: hsl(180, 100%, 44%);
-$bg_ticket_cyan: hsl(180, 100%, 97%);
-$color_text_ticket_cyan: hsl(180, 100%, 40%);
+$color_border_token_cyan: hsl(180, 100%, 38%);
+$bg_token_cyan: hsl(180, 100%, 97%);
+$color_text_token_cyan: hsl(180, 100%, 38%);
 
-$color_border_ticket_purple2: hsl(249, 80%, 77%);
-$bg_ticket_purple2: hsl(249, 100%, 98%);
-$color_text_ticket_purple2: hsl(249, 80%, 72%);
+$color_border_token_purple2: hsl(249, 80%, 77%);
+$bg_token_purple2: hsl(249, 100%, 98%);
+$color_text_token_purple2: hsl(249, 80%, 72%);
 
-$color_border_ticket_black: hsl(0, 0%, 52%);
-$bg_ticket_black: hsl(0, 0%, 97%); 
-$color_text_ticket_black: hsl(0, 0%, 52%);
+$color_border_token_white: hsl(0, 0%, 66%); 
+$bg_token_white: hsl(0, 0%, 100%);
+$color_text_token_white: hsl(0, 0%, 64%); 
+
+$color_border_token_black: hsl(0, 0%, 4%);
+$bg_token_black: hsl(0, 0%, 97%); 
+$color_text_token_black: hsl(0, 0%, 44%);
 
 //····································································◈ Signs
 
@@ -301,25 +306,25 @@ $color_border_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 74%);
 $bg_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 96%); //linear-gradient(to bottom, white, hsl(193, 0%, 91%));
 $color_text_switch_type_button_icon_piece_text_floating_off: hsl(0, 0%, 67%); 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_ticket_blue;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_ticket_blue;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_ticket_blue; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_border_token_blue;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on: $bg_token_blue;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on: $color_text_token_blue; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_ticket_red;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_ticket_red;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_ticket_red; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_border_token_red;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $bg_token_red;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_red: $color_text_token_red; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_ticket_yellow;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_ticket_yellow;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_ticket_yellow; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_border_token_yellow;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $bg_token_yellow;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_yellow: $color_text_token_yellow; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_ticket_green;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_ticket_green;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_ticket_green; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_border_token_green;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $bg_token_green;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_green: $color_text_token_green; 
 
-$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_ticket_black;
-$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_ticket_black;
-$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_ticket_black; 
+$color_border_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_border_token_black;
+$bg_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $bg_token_black;
+$color_text_button_and_switch_both_type_button_icon_piece_text_floating_on_black: $color_text_token_black; 
 
 // --- Type Image ---
 
@@ -1115,88 +1120,95 @@ p.container_text { // Regra necessária, pois o tamanho do conteúdo do <p> é d
     text-fill-color: transparent;
 }
 
-span.ticket {
+span.token {
 
     padding: 6px 8px;
     border-radius: 1000px;
 }
 
-span.ticket, span.ticket.blue {
+span.token, span.token.blue {
 
-    border: 1px solid $color_border_ticket_blue;
-    background: $bg_ticket_blue;
-    color: $color_text_ticket_blue;
+    border: 1px solid $color_border_token_blue;
+    background: $bg_token_blue;
+    color: $color_text_token_blue;
 }
 
-span.ticket.red {
+span.token.red {
 
-    border: 1px solid $color_border_ticket_red;
-    background: $bg_ticket_red;
-    color: $color_text_ticket_red;        
+    border: 1px solid $color_border_token_red;
+    background: $bg_token_red;
+    color: $color_text_token_red;        
 } 
 
-span.ticket.yellow {
+span.token.yellow {
 
-    border: 1px solid $color_border_ticket_yellow;
-    background: $bg_ticket_yellow;
+    border: 1px solid $color_border_token_yellow;
+    background: $bg_token_yellow;
     color: hsl(60, 100%, 50%); // yellow
-    color: $color_text_ticket_yellow; 
+    color: $color_text_token_yellow; 
 }
 
-span.ticket.green {
+span.token.green {
 
-    border: 1px solid $color_border_ticket_green;
-    background: $bg_ticket_green;
-    color: $color_text_ticket_green;
+    border: 1px solid $color_border_token_green;
+    background: $bg_token_green;
+    color: $color_text_token_green;
 }
 
-span.ticket.pink {
+span.token.pink {
 
-    border: 1px solid $color_border_ticket_pink;
-    background: $bg_ticket_pink;
-    color: $color_text_ticket_pink;
+    border: 1px solid $color_border_token_pink;
+    background: $bg_token_pink;
+    color: $color_text_token_pink;
 }
 
-span.ticket.purple {
+span.token.purple {
 
-    border: 1px solid $color_border_ticket_purple;
-    background: $bg_ticket_purple;
-    color: $color_text_ticket_purple;
+    border: 1px solid $color_border_token_purple;
+    background: $bg_token_purple;
+    color: $color_text_token_purple;
 }
 
-span.ticket.orange {
+span.token.orange {
 
-    border: 1px solid $color_border_ticket_orange;
-    background: $bg_ticket_orange;
-    color: $color_text_ticket_orange;
+    border: 1px solid $color_border_token_orange;
+    background: $bg_token_orange;
+    color: $color_text_token_orange;
 }
 
-span.ticket.brown {
+span.token.brown {
 
-    border: 1px solid $color_border_ticket_brown;
-    background: $bg_ticket_brown;
-    color: $color_text_ticket_brown;
+    border: 1px solid $color_border_token_brown;
+    background: $bg_token_brown;
+    color: $color_text_token_brown;
 }
 
-span.ticket.cyan {
+span.token.cyan {
 
-    border: 1px solid $color_border_ticket_cyan;
-    background: $bg_ticket_cyan;
-    color: $color_text_ticket_cyan;
+    border: 1px solid $color_border_token_cyan;
+    background: $bg_token_cyan;
+    color: $color_text_token_cyan;
 }
 
-span.ticket.purple2 {
+span.token.purple2 {
 
-    border: 1px solid $color_border_ticket_purple2;
-    background: $bg_ticket_purple2;
-    color: $color_text_ticket_purple2;
+    border: 1px solid $color_border_token_purple2;
+    background: $bg_token_purple2;
+    color: $color_text_token_purple2;
 }
 
-span.ticket.black {
+span.token.white {
 
-    border: 1px solid $color_border_ticket_black;
-    background: $bg_ticket_black;
-    color: $color_text_ticket_black;        
+    border: 1px solid $color_border_token_white;
+    background: $bg_token_white;
+    color: $color_text_token_white;        
+}
+
+span.token.black {
+
+    border: 1px solid $color_border_token_black;
+    background: $bg_token_black;
+    color: $color_text_token_black;        
 }
 
 .dol { // Description Ordered Lists
@@ -1209,10 +1221,10 @@ span.ticket.black {
 }
 
 .noListStyle {
-    
-    list-style: none; // Para <ul>, <ol>, <dl>
+
+    list-style: none; // Para <ul>, <ol>, e <dl>
     padding: 0; // Para <ul> e <ol>
-    margin-left: $margin_horizontal; // Para <ul>, <ol>, <dl>
+    margin-left: $margin_horizontal; // Para <ul>, <ol>, e <dl>
 
     > li { // Para <ul> e <ol>
         margin-top: 0;
@@ -5204,16 +5216,17 @@ figure.outdoor img {
 .slider img, .slider picture {
 
     max-width: 94%;   
+    max-height: calc(100vh - 4px);
 }
-
+/* 
 @media (max-height: $screen_small_widthLimit) {
 
     .slider img, .slider picture {
 
-        max-height: 100vh;
+        max-height: calc(100vh - 4px);
     }
 }
-
+ */
 @media (min-width: $screen_small_widthLimit) {  
 
     .slider { 
@@ -5235,6 +5248,34 @@ figure.outdoor img {
         overflow-x: auto;
     }
 }
+
+.slider_fullScreen {
+
+    position: fixed;
+    z-index: $zIndex_slider_fullScreen;
+    top: 0;
+    left: 0;
+    // right: 0;
+    // bottom: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:  
+    linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 88%, 0) 71%),
+    linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
+    white;
+
+    .slider {
+        margin: 0; 
+        border-radius: 0;
+    }
+}
+
 
 // Slider scrollbar:
 
