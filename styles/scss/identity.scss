@@ -722,20 +722,23 @@ TODO: Types Table
 ◈──────────────────────────────────────────────────────◈
 TODO: Types Table
 ◈──────────────────────────────────────────────────────◈ */
-
+/* 
 .types_table_msg {
     @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
         display: none !important;
     }
 }
- 
+*/
+
 .types_table_box {
+    /* 
     display: none;
 
     @media (pointer: fine) and (min-width: $screen_small_widthLimit) and (min-height: $screen_small_widthLimit) {
         display: block;
     }
- 
+    */
+
     max-height: calc(100vh - #{$button_height} - (2 * #{$margin_vertical}));
     margin: auto;
     //margin-bottom: 63px;
