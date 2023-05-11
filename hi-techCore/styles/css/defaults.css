@@ -4261,7 +4261,11 @@ $box_shadow_element_type_button_blue
 
 .choice.dropdown > li span::after {
   content: "▼";
-  margin-left: 5rem;
+  /* font-size: $font_size; 
+            margin-left: 5rem; */
+  font-size: 22px;
+  margin-left: 6rem;
+  margin-bottom: 1px;
 }
 
 .choice.dropdown > li:not(:nth-of-type(1)) {
@@ -4438,7 +4442,11 @@ $box_shadow_element_type_button_blue
 
 .choice.dropdown.no_label > li:nth-of-type(2) span::after {
   content: "▼";
-  margin-left: 5rem;
+  /* font-size: $font_size; 
+            margin-left: 5rem; */
+  font-size: 22px;
+  margin-left: 6rem;
+  margin-bottom: 1px;
 }
 
 .choice.dropdown.no_label > li:nth-of-type(2) > a > img {

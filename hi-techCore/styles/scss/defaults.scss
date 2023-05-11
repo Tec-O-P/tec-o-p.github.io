@@ -4710,7 +4710,13 @@ $box_shadow_element_type_button_blue
 
         span::after { 
             content: "▼";
-            margin-left: 5rem;
+
+            /* font-size: $font_size; 
+            margin-left: 5rem; */
+
+            font-size: 22px;
+            margin-left: 6rem;
+            margin-bottom: 1px;
         }
     }
 
@@ -4939,7 +4945,13 @@ $box_shadow_element_type_button_blue
     
         span::after { 
             content: "▼";
-            margin-left: 5rem;
+
+            /* font-size: $font_size; 
+            margin-left: 5rem; */
+
+            font-size: 22px;
+            margin-left: 6rem;
+            margin-bottom: 1px;
         }
 
         > a > img {
