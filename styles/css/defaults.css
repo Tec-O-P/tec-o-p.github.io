@@ -7,28 +7,6 @@
 ◈──────────────────────────────────────────────────────◈
 TODO: Variables
 ◈──────────────────────────────────────────────────────◈ */
-/* 
-$font_default: 'Cyber-BoldBook'; // Só tem letras maiúsculas e não tem números.
-$font_size: 15rem;
-
-.lineHeight {
-    line-height: 1.9 !important;
-}
-
-$font_default: 'Alternity';
-$font_size: 17rem; 
-
-.lineHeight {
-    line-height: 1.6764 !important;
-}
-
-$font_default: 'Chromia';
-$font_size: 18rem; 
-
-.lineHeight {
-    line-height: 1.6764 !important;
-}
- */
 /* Padrão: 600-700px. */
 /* Apple: 16px em 320w, e 22px em 736w. */
 /*  TODO:    1 ▶ Specific Elements & Components
@@ -218,30 +196,32 @@ TODO: Texts
 ◈──────────────────────────────────────────────────────◈ */
 /*  TODO:    1 ▶ Elements
 ◈──────────────────────────────────────────────────────◈ */
+/* 
 .TNR {
-  font-family: 'Times New Roman';
-  font-size: 19px;
+    font-family: 'Times New Roman'; 
+    font-size: 19px;
 }
 
 .Cyber-BoldBook {
-  font-family: 'Cyber-BoldBook';
-  font-size: 15rem;
-  line-height: 1.8;
-  text-shadow: 0.2px 0px 0px;
-}
+    font-family: 'Cyber-BoldBook';
+    font-size: 15rem; // Era 14rem!!! (Mudar o tamanho dos caracteres que já criei)
+    line-height: 1.8; 
+    text-shadow: 0.2px 0px 0px; 
+} 
 
 .Myfont-Regular {
-  font-family: 'Myfont-Regular';
-  font-size: 19px;
+    font-family: 'Myfont-Regular';
+    font-size: 19px;
+    // text-transform: lowercase;
 }
-
+ */
 .courier {
   font-family: 'Courier';
   font-size: 17px;
 }
 
 html {
-  font-family: Digital_Disk, "Times New Roman", Times, Georgia, serif;
+  font-family: "Digital Disk", "Times New Roman", Times, Georgia, serif;
   font-size: 1px;
   color: black;
 }
@@ -873,76 +853,82 @@ p.container_text {
   text-fill-color: transparent;
 }
 
-span.ticket {
+span.token {
   padding: 6px 8px;
   border-radius: 1000px;
 }
 
-span.ticket, span.ticket.blue {
+span.token, span.token.blue {
   border: 1px solid #29c9ff;
-  background: #fafeff;
+  background: #f5fcff;
   color: #00b0eb;
 }
 
-span.ticket.red {
+span.token.red {
   border: 1px solid #ff7a7a;
-  background: #fff5f5;
+  background: #fff0f0;
   color: #eb0000;
 }
 
-span.ticket.yellow {
+span.token.yellow {
   border: 1px solid #dbc900;
   background: #fefee7;
   color: yellow;
   color: #d6c100;
 }
 
-span.ticket.green {
-  border: 1px solid #00eb00;
-  background: #f5fff5;
+span.token.green {
+  border: 1px solid #00d600;
+  background: honeydew;
   color: #00d600;
 }
 
-span.ticket.pink {
+span.token.pink {
   border: 1px solid magenta;
-  background: #fff5ff;
-  color: magenta;
+  background: #fef6fe;
+  color: #fa00fa;
 }
 
-span.ticket.purple {
-  border: 1px solid #990099;
-  background: #faf0ff;
-  color: #990099;
+span.token.purple {
+  border: 1px solid #bd00bd;
+  background: #fcf5ff;
+  color: #bd00bd;
 }
 
-span.ticket.orange {
+span.token.orange {
   border: 1px solid #ffa600;
   background: #fff8eb;
   color: #f59f00;
 }
 
-span.ticket.brown {
+span.token.brown {
   border: 1px solid #c5621b;
   background: #fdf4ed;
   color: #c5621b;
 }
 
-span.ticket.cyan {
-  border: 1px solid #00e0e0;
+span.token.cyan {
+  border: 1px solid #00c2c2;
   background: azure;
-  color: #00cccc;
+  color: #00c2c2;
 }
 
-span.ticket.purple2 {
+span.token.purple2 {
   border: 1px solid #a495f3;
   background: #f6f5ff;
   color: #907ef1;
 }
 
-span.ticket.black {
-  border: 1px solid #858585;
+span.token.white {
+  border: 1px solid #a8a8a8;
+  background: white;
+  color: #a3a3a3;
+}
+
+span.token.black {
+  border: 1px solid #0a0a0a;
   background: #f7f7f7;
-  color: #858585;
+  color: #707070;
 }
 
 .dol {
@@ -953,34 +939,29 @@ span.ticket.black {
   font-weight: normal;
 }
 
-ul.noListStyle, ul.codeViewer, ol.noListStyle, ol.codeViewer {
+.noListStyle, .codeViewer {
   list-style: none;
   padding: 0;
   margin-left: 20px;
 }
 
-ul.noListStyle li + li, ul.codeViewer li + li, ol.noListStyle li + li, ol.codeViewer li + li {
+.noListStyle > li, .codeViewer > li {
   margin-top: 0;
 }
 
-dl.noListStyle, dl.codeViewer {
-  list-style: none;
-  margin-left: 20px;
-}
-
-dl.noListStyle > div, dl.codeViewer > div {
+.noListStyle > div, .codeViewer > div {
   display: block;
 }
 
-dl.noListStyle dt, dl.codeViewer dt {
+.noListStyle dt, .codeViewer dt {
   font-weight: normal;
 }
 
-dl.noListStyle dt, dl.codeViewer dt, dl.noListStyle dd, dl.codeViewer dd {
+.noListStyle dt, .codeViewer dt, .noListStyle dd, .codeViewer dd {
   display: block;
 }
 
-dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-last-of-type(1)) {
+.noListStyle > div:not(:nth-last-of-type(1)), .codeViewer > div:not(:nth-last-of-type(1)) {
   margin-bottom: 0;
 }
 
@@ -1181,7 +1162,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 ◈──────────────────────────────────────────────────────◈ */
 .textIcon_HNB_template, .textIcon_HNB_template.left, .textIcon_HNB_template.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_HNB_template::selection, .textIcon_HNB_template.left::selection, .textIcon_HNB_template.right::selection {
@@ -1190,32 +1171,33 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_HNB_template, .textIcon_HNB_template.left {
   background-image: url("../../images/icons/textIcon_menu_template.svg");
-  background-position-y: 3px;
-  padding-left: calc(21px + 0px + 6px + 4px);
+  background-position-y: 4px;
+  padding-left: calc(19px + 0px + 5px + 4px);
 }
 
 .textIcon_HNB_template:empty, .textIcon_HNB_template.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_HNB_template.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + 6px + 4px);
+  padding-right: calc(19px + 0px + 5px + 4px);
 }
 
 .textIcon_HNB_template.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_HNB_template.noText, .textIcon_HNB_template.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_HNB_template.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_HNB_template.noText::before, .textIcon_HNB_template:empty::before,
@@ -1231,7 +1213,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_yes, .textIcon_yes.left, .textIcon_yes.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 1px) 21px;
+  background-size: calc(19px + 1px) 19px;
 }
 
 .textIcon_yes::selection, .textIcon_yes.left::selection, .textIcon_yes.right::selection {
@@ -1241,31 +1223,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_yes, .textIcon_yes.left {
   background-image: url("../../images/icons/textIcon_yes.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + 1px + 0px + 4px);
+  padding-left: calc(19px + 1px + 0px + 4px);
 }
 
 .textIcon_yes:empty, .textIcon_yes.left:empty {
-  padding-left: calc(21px + 1px);
+  padding-left: calc(19px + 1px);
 }
 
 .textIcon_yes.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 1px + 0px + 4px);
+  padding-right: calc(19px + 1px + 0px + 4px);
 }
 
 .textIcon_yes.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 1px);
+  padding-right: calc(19px + 1px);
 }
 
 .textIcon_yes.noText, .textIcon_yes.left.noText {
-  padding-left: calc(21px + 1px);
+  padding-left: calc(19px + 1px);
 }
 
 .textIcon_yes.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 1px);
+  padding-right: calc(19px + 1px);
 }
 
 .textIcon_yes.noText::before, .textIcon_yes:empty::before,
@@ -1281,7 +1264,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_no, .textIcon_no.left, .textIcon_no.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_no::selection, .textIcon_no.left::selection, .textIcon_no.right::selection {
@@ -1291,31 +1274,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_no, .textIcon_no.left {
   background-image: url("../../images/icons/textIcon_no.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + 0px + 0px + 4px);
+  padding-left: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_no:empty, .textIcon_no.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_no.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + 0px + 4px);
+  padding-right: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_no.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_no.noText, .textIcon_no.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_no.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_no.noText::before, .textIcon_no:empty::before,
@@ -1331,7 +1315,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template, .textIcon_template.left, .textIcon_template.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_template::selection, .textIcon_template.left::selection, .textIcon_template.right::selection {
@@ -1341,31 +1325,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template, .textIcon_template.left {
   background-image: url("../../images/icons/textIcon_template.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + 0px + 0px + 4px);
+  padding-left: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_template:empty, .textIcon_template.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + 0px + 4px);
+  padding-right: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_template.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template.noText, .textIcon_template.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template.noText::before, .textIcon_template:empty::before,
@@ -1381,7 +1366,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_moreWide, .textIcon_template_moreWide.left, .textIcon_template_moreWide.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 10px) 21px;
+  background-size: calc(19px + 10px) 19px;
 }
 
 .textIcon_template_moreWide::selection, .textIcon_template_moreWide.left::selection, .textIcon_template_moreWide.right::selection {
@@ -1391,31 +1376,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_moreWide, .textIcon_template_moreWide.left {
   background-image: url("../../images/icons/textIcon_template_moreWide.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + 10px + 0px + 4px);
+  padding-left: calc(19px + 10px + 0px + 4px);
 }
 
 .textIcon_template_moreWide:empty, .textIcon_template_moreWide.left:empty {
-  padding-left: calc(21px + 10px);
+  padding-left: calc(19px + 10px);
 }
 
 .textIcon_template_moreWide.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 10px + 0px + 4px);
+  padding-right: calc(19px + 10px + 0px + 4px);
 }
 
 .textIcon_template_moreWide.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 10px);
+  padding-right: calc(19px + 10px);
 }
 
 .textIcon_template_moreWide.noText, .textIcon_template_moreWide.left.noText {
-  padding-left: calc(21px + 10px);
+  padding-left: calc(19px + 10px);
 }
 
 .textIcon_template_moreWide.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 10px);
+  padding-right: calc(19px + 10px);
 }
 
 .textIcon_template_moreWide.noText::before, .textIcon_template_moreWide:empty::before,
@@ -1431,7 +1417,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_lessWide, .textIcon_template_lessWide.left, .textIcon_template_lessWide.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + -10px) 21px;
+  background-size: calc(19px + -10px) 19px;
 }
 
 .textIcon_template_lessWide::selection, .textIcon_template_lessWide.left::selection, .textIcon_template_lessWide.right::selection {
@@ -1441,31 +1427,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_lessWide, .textIcon_template_lessWide.left {
   background-image: url("../../images/icons/textIcon_template_lessWide.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + -10px + 0px + 4px);
+  padding-left: calc(19px + -10px + 0px + 4px);
 }
 
 .textIcon_template_lessWide:empty, .textIcon_template_lessWide.left:empty {
-  padding-left: calc(21px + -10px);
+  padding-left: calc(19px + -10px);
 }
 
 .textIcon_template_lessWide.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + -10px + 0px + 4px);
+  padding-right: calc(19px + -10px + 0px + 4px);
 }
 
 .textIcon_template_lessWide.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + -10px);
+  padding-right: calc(19px + -10px);
 }
 
 .textIcon_template_lessWide.noText, .textIcon_template_lessWide.left.noText {
-  padding-left: calc(21px + -10px);
+  padding-left: calc(19px + -10px);
 }
 
 .textIcon_template_lessWide.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + -10px);
+  padding-right: calc(19px + -10px);
 }
 
 .textIcon_template_lessWide.noText::before, .textIcon_template_lessWide:empty::before,
@@ -1481,7 +1468,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_moreSpace, .textIcon_template_moreSpace.left, .textIcon_template_moreSpace.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_template_moreSpace::selection, .textIcon_template_moreSpace.left::selection, .textIcon_template_moreSpace.right::selection {
@@ -1491,31 +1478,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_moreSpace, .textIcon_template_moreSpace.left {
   background-image: url("../../images/icons/textIcon_template.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + 0px + 10px + 4px);
+  padding-left: calc(19px + 0px + 10px + 4px);
 }
 
 .textIcon_template_moreSpace:empty, .textIcon_template_moreSpace.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_moreSpace.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + 10px + 4px);
+  padding-right: calc(19px + 0px + 10px + 4px);
 }
 
 .textIcon_template_moreSpace.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_moreSpace.noText, .textIcon_template_moreSpace.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_moreSpace.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_moreSpace.noText::before, .textIcon_template_moreSpace:empty::before,
@@ -1531,7 +1519,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_lessSpace, .textIcon_template_lessSpace.left, .textIcon_template_lessSpace.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_template_lessSpace::selection, .textIcon_template_lessSpace.left::selection, .textIcon_template_lessSpace.right::selection {
@@ -1541,31 +1529,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_lessSpace, .textIcon_template_lessSpace.left {
   background-image: url("../../images/icons/textIcon_template.svg");
   background-position-y: 0px;
-  padding-left: calc(21px + 0px + -10px + 4px);
+  padding-left: calc(19px + 0px + -10px + 4px);
 }
 
 .textIcon_template_lessSpace:empty, .textIcon_template_lessSpace.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_lessSpace.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + -10px + 4px);
+  padding-right: calc(19px + 0px + -10px + 4px);
 }
 
 .textIcon_template_lessSpace.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_lessSpace.noText, .textIcon_template_lessSpace.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_lessSpace.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_lessSpace.noText::before, .textIcon_template_lessSpace:empty::before,
@@ -1581,7 +1570,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_above, .textIcon_template_above.left, .textIcon_template_above.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_template_above::selection, .textIcon_template_above.left::selection, .textIcon_template_above.right::selection {
@@ -1591,31 +1580,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_above, .textIcon_template_above.left {
   background-image: url("../../images/icons/textIcon_template.svg");
   background-position-y: -10px;
-  padding-left: calc(21px + 0px + 0px + 4px);
+  padding-left: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_template_above:empty, .textIcon_template_above.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_above.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + 0px + 4px);
+  padding-right: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_template_above.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_above.noText, .textIcon_template_above.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_above.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_above.noText::before, .textIcon_template_above:empty::before,
@@ -1631,7 +1621,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_below, .textIcon_template_below.left, .textIcon_template_below.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 0px) 21px;
+  background-size: calc(19px + 0px) 19px;
 }
 
 .textIcon_template_below::selection, .textIcon_template_below.left::selection, .textIcon_template_below.right::selection {
@@ -1641,31 +1631,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_below, .textIcon_template_below.left {
   background-image: url("../../images/icons/textIcon_template.svg");
   background-position-y: 10px;
-  padding-left: calc(21px + 0px + 0px + 4px);
+  padding-left: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_template_below:empty, .textIcon_template_below.left:empty {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_below.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 0px + 0px + 4px);
+  padding-right: calc(19px + 0px + 0px + 4px);
 }
 
 .textIcon_template_below.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_below.noText, .textIcon_template_below.left.noText {
-  padding-left: calc(21px + 0px);
+  padding-left: calc(19px + 0px);
 }
 
 .textIcon_template_below.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 0px);
+  padding-right: calc(19px + 0px);
 }
 
 .textIcon_template_below.noText::before, .textIcon_template_below:empty::before,
@@ -1681,7 +1672,7 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 
 .textIcon_template_uncommon, .textIcon_template_uncommon.left, .textIcon_template_uncommon.right {
   background-repeat: no-repeat;
-  background-size: calc(21px + 10px) 21px;
+  background-size: calc(19px + 10px) 19px;
 }
 
 .textIcon_template_uncommon::selection, .textIcon_template_uncommon.left::selection, .textIcon_template_uncommon.right::selection {
@@ -1691,31 +1682,32 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
 .textIcon_template_uncommon, .textIcon_template_uncommon.left {
   background-image: url("../../images/icons/textIcon_template_moreWide.svg");
   background-position-y: 10px;
-  padding-left: calc(21px + 10px + 10px + 4px);
+  padding-left: calc(19px + 10px + 10px + 4px);
 }
 
 .textIcon_template_uncommon:empty, .textIcon_template_uncommon.left:empty {
-  padding-left: calc(21px + 10px);
+  padding-left: calc(19px + 10px);
 }
 
 .textIcon_template_uncommon.right {
-  background-position-x: 100%;
+  background-position-x: 99%;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
   padding-left: 0;
-  padding-right: calc(21px + 10px + 10px + 4px);
+  padding-right: calc(19px + 10px + 10px + 4px);
 }
 
 .textIcon_template_uncommon.right:empty {
   padding-left: 0;
-  padding-right: calc(21px + 10px);
+  padding-right: calc(19px + 10px);
 }
 
 .textIcon_template_uncommon.noText, .textIcon_template_uncommon.left.noText {
-  padding-left: calc(21px + 10px);
+  padding-left: calc(19px + 10px);
 }
 
 .textIcon_template_uncommon.right.noText {
   padding-left: 0;
-  padding-right: calc(21px + 10px);
+  padding-right: calc(19px + 10px);
 }
 
 .textIcon_template_uncommon.noText::before, .textIcon_template_uncommon:empty::before,
@@ -1729,10 +1721,10 @@ dl.noListStyle > div:not(:nth-last-of-type(1)), dl.codeViewer > div:not(:nth-las
   overflow: hidden;
 }
 
-/* abbr.description > button {
-    @extend .description.right;
-    @extend .description.right:empty;
-    @extend .description.noText;
+/* abbr.interrogation > button {
+    @extend .interrogation.right;
+    @extend .interrogation.right:empty;
+    @extend .interrogation.noText;
     color: blue;
     background-color: hsla(0, 0%, 0%, 0);
     margin-left: 0;
@@ -1748,59 +1740,66 @@ abbr > button:focus {
 ◈──────────────────────────────────────────────────────◈ */
 a[href^="http"] {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   background-image: url("../../images/icons/anchor_web.svg");
-  background-position: 100% 0;
-  padding-right: calc(21px + 4px);
+  background-position: 99% 0;
+  /* Se deixar em 100% da bug no Chrome pra PC! */
+  padding-right: calc(19px + 4px);
 }
 
 a[href^="#"]:not([href="#"]) {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   background-image: url("../../images/icons/anchor_chain.svg");
   background-position: 100% 0;
-  padding-right: calc(21px + 5px);
+  padding-right: calc(19px + 6px);
 }
 
 a[download] {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
-  background-image: url("../../images/icons/anchor_download.png");
-  background-position: 100% 0;
-  padding-right: calc(21px + 3px);
+  background-size: 19px 19px;
+  background-image: url("../../images/icons/anchor_download.svg");
+  background-position: 0% 0px;
+  padding-left: calc(19px + 5px);
+  /* background-position: 100% 0px;
+    padding-right: calc(19px + 3px); */
 }
 
 a[href^="mailto:"] {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   background-image: url("../../images/icons/anchor_email.svg");
-  background-position: 100% 0;
-  padding-right: calc(21px + 6px);
+  background-position: 0% 1px;
+  padding-left: calc(19px + 5px);
+  /* background-position: 100% 0;
+    padding-right: calc(19px + 6px); */
 }
 
 a[href^="tel:"] {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   background-image: url("../../images/icons/anchor_phone.svg");
-  background-position: 100% 0;
-  padding-right: calc(21px + 4px);
+  background-position: 0% 0px;
+  padding-left: calc(19px + 4px);
+  /* background-position: 100% 0;
+    padding-right: calc(19px + 4px); */
 }
 
 /*  TODO:            3 ▶ Others
 ◈──────────────────────────────────────────────────────◈ */
-abbr.description > button {
+abbr.interrogation > button {
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   color: blue;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("../../images/icons/textIcon_info.svg");
+  background-image: url("../../images/icons/interrogation.png");
   background-position: 100% 0;
-  padding-right: calc(21px + 1px);
+  padding-right: calc(19px + 1px);
   margin-left: 0;
   margin-right: 0;
 }
 
-abbr.description > button:focus {
+abbr.interrogation > button:focus {
   outline: 0px dotted DeepSkyBlue;
 }
 
@@ -1817,14 +1816,14 @@ abbr.description > button:focus {
     background-position: 100% 0;
     background-size: 22px 19px; 
     
-    padding-right: calc(21px + 8px);   
+    padding-right: calc(19px + 8px);   
 }
 */
 p.attention {
   color: red;
-  text-indent: calc(21px + 5px);
+  text-indent: calc(19px + 5px);
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   background-image: url("../../images/icons/attention.svg");
   background-position: 0 3px;
 }
@@ -1834,9 +1833,9 @@ div.attention {
 }
 
 div.attention p:nth-child(1) {
-  text-indent: calc(21px + 5px);
+  text-indent: calc(19px + 5px);
   background-repeat: no-repeat;
-  background-size: 21px 21px;
+  background-size: 19px 19px;
   background-image: url("../../images/icons/attention.svg");
   background-position: 0 3px;
 }
@@ -3025,7 +3024,7 @@ a.button_full .button_shine_top, a.button_text .button_shine_top, a.button_icon 
   content: '';
   position: absolute;
   z-index: 1;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5));
   top: 2px;
   left: 2px;
   width: calc(100% - 2 * 2px);
@@ -3407,7 +3406,7 @@ a.button_full.text_below {
   .switch.button_icon.on .piece_text, button.button_icon .piece_text, a.button_icon .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
     filter: initial;
   }
   .switch.button_icon:hover .piece_text, button.button_icon:hover .piece_text, a.button_icon:hover .piece_text {
@@ -3487,7 +3486,7 @@ a.button_full.blue .piece_text, a.button_text.blue .piece_text {
   .switch.button_icon.blue.on .piece_text, button.button_icon.blue .piece_text, a.button_icon.blue .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
   }
 }
 
@@ -3544,7 +3543,7 @@ a.button_full.red .piece_text, a.button_text.red .piece_text {
 @media (pointer: fine) {
   .switch.button_icon.red.on .piece_text, button.button_icon.red .piece_text, a.button_icon.red .piece_text {
     border-color: #ff7a7a;
-    background: #fff5f5;
+    background: #fff0f0;
     color: #eb0000;
   }
 }
@@ -3672,8 +3671,8 @@ a.button_full.green .piece_text, a.button_text.green .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.green.on .piece_text, button.button_icon.green .piece_text, a.button_icon.green .piece_text {
-    border-color: #00eb00;
-    background: #f5fff5;
+    border-color: #00d600;
+    background: honeydew;
     color: #00d600;
   }
 }
@@ -3730,9 +3729,9 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
 
 @media (pointer: fine) {
   .switch.button_icon.black.on .piece_text, button.button_icon.black .piece_text, a.button_icon.black .piece_text {
-    border-color: #858585;
+    border-color: #0a0a0a;
     background: #f7f7f7;
-    color: #858585;
+    color: #707070;
   }
 }
 
@@ -3844,25 +3843,25 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   .switch.image.blue.on .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
   }
   button.image .piece_text, a.image .piece_text,
   button.image.blue .piece_text, a.image.blue .piece_text {
     color: #00b0eb;
     border-color: #29c9ff;
-    background: #fafeff;
+    background: #f5fcff;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Red ------*/
   .switch.image.red.on .piece_text {
     color: #eb0000;
     border-color: #ff7a7a;
-    background: #fff5f5;
+    background: #fff0f0;
   }
   button.image.red .piece_text, a.image.red .piece_text {
     color: #eb0000;
     border-color: #ff7a7a;
-    background: #fff5f5;
+    background: #fff0f0;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Yellow ------*/
@@ -3880,24 +3879,24 @@ a.button_full.black .piece_text, a.button_text.black .piece_text {
   /*------ Green ------*/
   .switch.image.green.on .piece_text {
     color: #00d600;
-    border-color: #00eb00;
-    background: #f5fff5;
+    border-color: #00d600;
+    background: honeydew;
   }
   button.image.green .piece_text, a.image.green .piece_text {
     color: #00d600;
-    border-color: #00eb00;
-    background: #f5fff5;
+    border-color: #00d600;
+    background: honeydew;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
   /*------ Black ------*/
   .switch.image.black.on .piece_text {
-    color: #858585;
-    border-color: #858585;
+    color: #707070;
+    border-color: #0a0a0a;
     background: #f7f7f7;
   }
   button.image.black .piece_text, a.image.black .piece_text {
-    color: #858585;
-    border-color: #858585;
+    color: #707070;
+    border-color: #0a0a0a;
     background: #f7f7f7;
     box-shadow: inset 0px 0px 7px 1px transparent, 0px 7px 4px -2px transparent;
   }
@@ -4501,7 +4500,7 @@ $box_shadow_element_type_button_blue
   z-index: 1;
   width: 100%;
   height: 52%;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5));
 }
 
 .choice.horizontal li:nth-of-type(1) .choice_shine_top {
@@ -4555,7 +4554,7 @@ $box_shadow_element_type_button_blue
   top: 0px;
   z-index: 1;
   height: 52%;
-  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.4));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5));
   border-radius: 1000px;
   left: 9px;
   width: calc(100% - 2 * 9px);
@@ -4652,14 +4651,18 @@ figure.outdoor img {
 
 .slider img, .slider picture {
   max-width: 94%;
+  max-height: calc(100vh - 4px);
 }
 
-@media (max-height: 501px) {
-  .slider img, .slider picture {
-    max-height: 100vh;
-  }
-}
+/* 
+@media (max-height: $screen_small_widthLimit) {
 
+    .slider img, .slider picture {
+
+        max-height: calc(100vh - 4px);
+    }
+}
+ */
 @media (min-width: 501px) {
   .slider {
     margin-left: 20px;
@@ -4674,6 +4677,24 @@ figure.outdoor img {
   .slider:hover {
     overflow-x: auto;
   }
+}
+
+.slider_fullScreen {
+  position: fixed;
+  z-index: 1300;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(217deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(127deg, rgba(224, 224, 224, 0.8), rgba(224, 224, 224, 0) 71%), linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
+}
+
+.slider_fullScreen .slider {
+  margin: 0;
+  border-radius: 0;
 }
 
 /* // Scrollbar anterior do slider

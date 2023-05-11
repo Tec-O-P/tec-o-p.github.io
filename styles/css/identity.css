@@ -159,8 +159,7 @@ TODO: About Us Page
 .aboutUs_team .profile_img {
   width: 100%;
   max-width: 370px;
-  max-height: 370px;
-  border-radius: 1000px;
+  border-radius: 60px;
 }
 
 .aboutUs_team .profile_txt {
