@@ -5227,6 +5227,7 @@ figure.outdoor img {
  
 .slider img, .slider picture {
 
+    width: initial;
     max-width: 94%;   
     max-height: calc(100vh - 4px);
 }
