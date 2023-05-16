@@ -4638,8 +4638,8 @@ figure.outdoor img {
   bottom: 20px;
   font-weight: bold;
   padding: 0 6px;
-  border: 2px solid black;
   border-radius: 1000px;
+  text-shadow: -1px 0px 1px white, 0px -1px 1px white, 1px 0px 1px white, 0px 1px 1px white;
   cursor: pointer;
   opacity: 0;
 }
@@ -4712,6 +4712,23 @@ figure.outdoor img {
   justify-content: center;
   align-items: center;
   background: linear-gradient(217deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(127deg, rgba(224, 224, 224, 0.8), rgba(224, 224, 224, 0) 71%), linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
+}
+
+.gallery.border_radius_big {
+  border-radius: 0;
+}
+
+@media (min-width: calc(800px + 4px)) {
+  .gallery.border_radius_big {
+    border-radius: 40px;
+  }
+  .gallery.border_radius_big img {
+    border-radius: inherit;
+  }
+}
+
+.gallery_fullScreen.border_radius_big {
+  border-radius: 0;
 }
 
 /* 

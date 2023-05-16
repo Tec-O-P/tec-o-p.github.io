@@ -5189,9 +5189,10 @@ figure.outdoor img {
             bottom: 20px;
             font-weight: bold;
             padding: 0 6px;
-            border: 2px solid black;
+            // border: 2px solid black;
             border-radius: 1000px;
             // background-color: hsla(0, 0%, 100%, 0.13);
+            text-shadow: -1px 0px 1px white, 0px -1px 1px white, 1px 0px 1px white, 0px 1px 1px white;
             // filter: drop-shadow(0px 0px 6px white);
             cursor: pointer;
             opacity: 0;
@@ -5290,6 +5291,26 @@ figure.outdoor img {
     linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
     white;
 }
+
+.gallery.border_radius_big {
+
+    border-radius: 0;
+
+    @media (min-width: calc(#{$central_maxWidth} + 4px) ) { 
+
+        border-radius: $border_radius_big;
+
+        img {
+            border-radius: inherit;
+        }
+    }
+}
+
+.gallery_fullScreen.border_radius_big {
+
+    border-radius: 0;
+}
+
 
 /* 
 .gallery img {

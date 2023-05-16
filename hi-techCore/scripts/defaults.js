@@ -2847,7 +2847,7 @@ galleries.forEach(function (gallery) {
     var all_imgs = gallery.querySelectorAll(':scope > img')
 
     var i_last_img = all_imgs.length - 1
-
+    /* 
     gallery.insertAdjacentHTML('afterbegin', `
     <div class="painel">
         <button class="btn_back"><img src="../images/icons/arrowRounded_L.png"></button>
@@ -2856,6 +2856,7 @@ galleries.forEach(function (gallery) {
         <span class="order"><span class="actual">1</span>/<span class="total">?</span></span>
     </div>
     `)
+    */
 
     gallery.querySelector(':scope .total').textContent = all_imgs.length
 
