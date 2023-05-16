@@ -4609,6 +4609,8 @@ figure.outdoor img {
 .gallery {
   position: relative;
   display: block;
+  border-top: 2px solid DeepSkyBlue;
+  border-bottom: 2px solid DeepSkyBlue;
   /*   
     button {
         border: 0;
@@ -4687,6 +4689,21 @@ figure.outdoor img {
 
 .gallery > img:not(:nth-of-type(1)) {
   display: none;
+}
+
+.gallery_fullScreen {
+  position: fixed;
+  z-index: 1300;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(217deg, rgba(0, 191, 255, 0.8), rgba(0, 191, 255, 0) 71%), linear-gradient(127deg, rgba(224, 224, 224, 0.8), rgba(224, 224, 224, 0) 71%), linear-gradient(336deg, rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0) 71%), white;
 }
 
 /* 

@@ -39,6 +39,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 $zIndex_nav: 1000;
 $zIndex_choice_d_open: 1100;
 $zIndex_lightbox: 1200;
+$zIndex_gallery_fullScreen: 1300;
 $zIndex_slider_fullScreen: 1300;
 $zIndex_error: 5000;
 
@@ -5167,10 +5168,12 @@ figure.outdoor img {
 
 /*  TODO:    1 ▶ Galleries
 ◈──────────────────────────────────────────────────────◈ */
-
+ 
 .gallery {
     position: relative;
     display: block;
+    border-top: 2px solid $color_theme;
+    border-bottom: 2px solid $color_theme;
 
     .painel {
         display: flex;
@@ -5255,6 +5258,28 @@ figure.outdoor img {
         top: 2px;
         left: 2px; 
     } */
+}
+
+.gallery_fullScreen {
+
+    position: fixed;
+    z-index: $zIndex_gallery_fullScreen;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    margin: 0; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:  
+    linear-gradient(217deg, hsla(195, 100%, 50%, 0.8), hsla(195, 100%, 50%, 0) 71%),
+    linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 88%, 0) 71%),
+    linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
+    white;
 }
 
 /* 

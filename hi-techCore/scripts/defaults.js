@@ -2919,6 +2919,52 @@ galleries.forEach(function (gallery) {
         }
         // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
     })
+
+    // Gallery Full Screen:
+
+    gallery.querySelector(':scope .btn_fullScreen').addEventListener('click', function(evt) {
+
+        // if (this.parentElement.parentElement.classList.contains('gallery_fullScreen')) {
+            
+            // this.parentElement.parentElement.classList.toggle('gallery_fullScreen')
+
+        // } else {
+
+            this.parentElement.parentElement.classList.toggle('gallery_fullScreen')
+
+            document.querySelector('html').classList.toggle('overflow_hidden')
+
+            /* 
+            
+            var gallery_width_initial = gallery.style.width
+            var gallery_maxWidth_initial = gallery.style.maxWidth
+            var gallery_maxHeight_initial = gallery.style.maxHeight
+            
+            gallery.style.width = gallery_naturalWidth
+            gallery.style.maxWidth = '100vw'
+            gallery.style.maxHeight = '100vh'
+
+            var div_gallery_fullScreen = document.createElement('div')
+
+            div_gallery_fullScreen.classList.add('gallery_fullScreen')
+
+            div_gallery_fullScreen.addEventListener('click', function(evt) {
+            
+                this.insertAdjacentElement('afterend', this.firstElementChild)
+                this.remove()
+            
+                gallery.style.width = gallery_width_initial
+                gallery.style.maxWidth = gallery_maxWidth_initial
+                gallery.style.maxHeight = gallery_maxHeight_initial
+
+                document.querySelector('html').classList.remove('overflow_hidden')
+            })
+
+            this.insertAdjacentElement('beforebegin', div_gallery_fullScreen)
+
+            div_gallery_fullScreen.insertAdjacentElement('afterbegin', this) */
+        // }
+    })
 }) 
 
 function animation_showOrder(duration, gallery) {
