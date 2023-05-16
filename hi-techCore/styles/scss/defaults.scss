@@ -5185,18 +5185,19 @@ figure.outdoor img {
 
         .order {
             position: absolute;
+            // color: hsl(0, 0%, 50%);
             bottom: 20px;
             font-weight: bold;
             padding: 0 6px;
             border: 2px solid black;
             border-radius: 1000px;
             // background-color: hsla(0, 0%, 100%, 0.13);
-            filter: drop-shadow(0px 0px 6px white);
+            // filter: drop-shadow(0px 0px 6px white);
             cursor: pointer;
             opacity: 0;
         }
 
-        $btns_laterais_width: 12%;
+        $btns_laterais_width: 14%;
         $btn_middle_width: calc(100% - 2 * #{$btns_laterais_width});
 
         .btn_back, .btn_next {
@@ -5207,7 +5208,7 @@ figure.outdoor img {
 
             img {
                 width: 26px; // Min: 8%;
-                opacity: 0.4;
+                opacity: 0.5;
                 filter: drop-shadow(0px 0px 7px white);
             }
         }
@@ -5241,10 +5242,17 @@ figure.outdoor img {
 
     > img {
         max-width: 100%;
+        max-height: 100%;
     }
 
     > img:not(:nth-of-type(1)) {
         display: none;
+    }
+
+    @media (min-width: calc(#{$central_maxWidth} + 4px) ) { 
+
+        border-left: 2px solid $color_theme;
+        border-right: 2px solid $color_theme;
     }
     
     /*   
@@ -5268,6 +5276,7 @@ figure.outdoor img {
     left: 0;
     width: 100vw;
     height: 100vh;
+    border: 0;
     border-radius: 0;
     margin: 0; 
 

@@ -2848,6 +2848,15 @@ galleries.forEach(function (gallery) {
 
     var i_last_img = all_imgs.length - 1
 
+    gallery.insertAdjacentHTML('afterbegin', `
+    <div class="painel">
+        <button class="btn_back"><img src="../images/icons/arrowRounded_L.png"></button>
+        <button class="btn_fullScreen"><!-- <img src="../images/icons/click_to_max_img.svg"> --></button>
+        <button class="btn_next"><img src="../images/icons/arrowRounded_R.png"></button>
+        <span class="order"><span class="actual">1</span>/<span class="total">?</span></span>
+    </div>
+    `)
+
     gallery.querySelector(':scope .total').textContent = all_imgs.length
 
     gallery.querySelector(':scope .btn_next').addEventListener('click', function(evt) {

@@ -4640,13 +4640,12 @@ figure.outdoor img {
   padding: 0 6px;
   border: 2px solid black;
   border-radius: 1000px;
-  filter: drop-shadow(0px 0px 6px white);
   cursor: pointer;
   opacity: 0;
 }
 
 .gallery .painel .btn_back, .gallery .painel .btn_next {
-  width: 12%;
+  width: 14%;
   height: 100%;
   margin: 0;
   background: 0;
@@ -4654,12 +4653,12 @@ figure.outdoor img {
 
 .gallery .painel .btn_back img, .gallery .painel .btn_next img {
   width: 26px;
-  opacity: 0.4;
+  opacity: 0.5;
   filter: drop-shadow(0px 0px 7px white);
 }
 
 .gallery .painel .btn_fullScreen {
-  width: calc(100% - 2 * 12%);
+  width: calc(100% - 2 * 14%);
   height: 100%;
   margin: 0;
   background: 0;
@@ -4685,10 +4684,18 @@ figure.outdoor img {
 
 .gallery > img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .gallery > img:not(:nth-of-type(1)) {
   display: none;
+}
+
+@media (min-width: calc(800px + 4px)) {
+  .gallery {
+    border-left: 2px solid DeepSkyBlue;
+    border-right: 2px solid DeepSkyBlue;
+  }
 }
 
 .gallery_fullScreen {
@@ -4698,6 +4705,7 @@ figure.outdoor img {
   left: 0;
   width: 100vw;
   height: 100vh;
+  border: 0;
   border-radius: 0;
   margin: 0;
   display: flex;
