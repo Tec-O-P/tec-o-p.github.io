@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <!---->
     <link href='../styles/css/downloadFonts.css' rel='stylesheet'><!--  Deve ficar antes de qualquer CSS -->
-    <script src="mouseRadar.js"></script><!--  Deve ficar antes de qualquer CSS -->
+    <!-- <script src="../../../Development/mouseRadar.js"></script>Deve ficar antes de qualquer CSS --> 
     <link href='../styles/css/normalize.css' rel='stylesheet'>  
     <link href='../styles/css/gmes_normalize.css' rel='stylesheet'>
     <link href='../styles/css/defaults.css' rel='stylesheet'>
@@ -1023,7 +1023,22 @@
                 <hr>
 
                 <p>Galeria:</p>
-                
+
+                <div class="gallery">
+                    <div class="painel">
+                        <button class="btn_back"><img src="../images/icons/arrowRounded_L.png"></button>
+                        <button class="btn_fullScreen"><!-- <img src="../images/icons/click_to_max_img.svg"> --></button>
+                        <button class="btn_next"><img src="../images/icons/arrowRounded_R.png"></button>
+                        <span class="order"><span class="actual">1</span>/<span class="total">?</span></span>
+                    </div>
+
+                    <img src="../images/exs/grassland_(1920×1080).png" alt="">
+                    <img src="../images/exs/Earth_(1920×1080).jpg" alt="">
+                    <img src="../images/exs/1920×1080.png" alt="">
+                    <img src="../images/exs/black_1920×1080.png" alt="">
+                </div>
+
+<!--                 
                 <div class="gallery">
                     <a href=""><img src="../images/exs/landscape.png" alt=" "></a>
                     <a href=""><img src="../images/exs/landscape.png" alt=" "></a>
@@ -1049,7 +1064,7 @@
                     <a href=""><img src="../images/exs/landscape.png" alt=" "></a>
                     <a href=""><img src="../images/exs/landscape.png" alt=" "></a>
                 </div>
-
+ -->
                 <hr>
 
             </div>
@@ -1057,6 +1072,8 @@
                 <section>
 
                     <h2 class="hidden">Slider</h2>
+
+                    <p>Obs.: Ñ usar o Slider pq buga no celular!</p>
 
                     <p>Obs.: O Slider não fica muito legal dependendo da proporção da tela.</p>
 
@@ -5937,7 +5954,7 @@
           
                 <div class="lb4"></div>
 
-                <p>==================================================================</p>
+                <p>=================================</p>
 
                 <h2>Testes</h2>
 
@@ -6176,7 +6193,7 @@ var bigCode = document.querySelector('pre code')
     <div class="lb4"></div>
 
 
-    <p>=============================================================================</p>
+    <p>=================================</p>
 
     <!-- <p>P1</p>
     <p>P2</p>
@@ -6506,7 +6523,7 @@ var bigCode = document.querySelector('pre code')
         final do arquivo HTML para garantir que a página seja renderizada corretamente.
     -->
 
-    <script async src="../../../Development/console.js"></script>
+    <!-- <script async src="../../../Development/console.js"></script> -->
     <script defer src="../scripts/defaults.js"></script> 
     <script defer src="../scripts/identity.js"></script>
 

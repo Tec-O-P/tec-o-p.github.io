@@ -17,8 +17,3 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
     font-family: "7 Segments Display";
     src: url("../../fonts/7_Segments_Display.otf");
 }
-
-@font-face {
-    font-family: "Myfont-Regular";
-    src: url("../../fonts/Myfont_Regular.otf");
-}

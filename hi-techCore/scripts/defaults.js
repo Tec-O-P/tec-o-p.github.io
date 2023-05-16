@@ -2834,6 +2834,171 @@ document.querySelectorAll('.choice').forEach(function ($choice) {
     }
 })
 
+// getComputedStyle($piece_icon).getPropertyValue('display')
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: Gallery
+◈──────────────────────────────────────────────────────◈ */
+
+var galleries = document.querySelectorAll('.gallery')
+
+galleries.forEach(function (gallery) {
+
+    var all_imgs = gallery.querySelectorAll(':scope > img')
+
+    var i_last_img = all_imgs.length - 1
+
+    gallery.querySelector(':scope .total').textContent = all_imgs.length
+
+    gallery.querySelector(':scope .btn_next').addEventListener('click', function(evt) {
+
+        for (i = 0; i < all_imgs.length; i++) {
+        
+            if (getComputedStyle(all_imgs[i]).getPropertyValue('display') !== 'none') {
+
+
+                // csl.log(typeof getComputedStyle(all_imgs[i]).getPropertyValue('display'))
+
+                
+                if (i === i_last_img) {
+                        
+                    all_imgs[i].style.display = 'none'
+                    all_imgs[0].style.display = 'initial'
+
+                    gallery.querySelector(':scope .actual').textContent = 1
+
+                } else {
+                        
+                    all_imgs[i].style.display = 'none'
+                    all_imgs[i + 1].style.display = 'initial'
+
+                    gallery.querySelector(':scope .actual').textContent = i + 2
+                }
+
+                // gallery.querySelector(':scope .order').opacity = 1
+
+                animation_showOrder(Math.PI, gallery)
+
+                break
+            }
+        }
+        // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
+    })
+
+    gallery.querySelector(':scope .btn_back').addEventListener('click', function(evt) {
+
+        for (i = 0; i < all_imgs.length; i++) {
+        
+            if (getComputedStyle(all_imgs[i]).getPropertyValue('display') !== 'none') {
+                
+                if (i === 0) {
+                        
+                    all_imgs[0].style.display = 'none'
+                    all_imgs[i_last_img].style.display = 'initial'
+
+                    gallery.querySelector(':scope .actual').textContent = i_last_img + 1
+
+                    // csl.log(i, i_last_img, '-x-')
+
+                } else {
+
+                    ib = all_imgs.length - i
+                        
+                    all_imgs[i].style.display = 'none'
+                    all_imgs[i - 1].style.display = 'initial'
+
+                    gallery.querySelector(':scope .actual').textContent = i
+
+                    // csl.log(i, i - 1, '---')
+                }
+
+                animation_showOrder(Math.PI, gallery) // gallery.querySelector(':scope .order').opacity = 1
+
+                break
+            }
+        }
+        // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
+    })
+}) 
+
+function animation_showOrder(duration, gallery) {
+
+    var  timestamp_firstRepetition
+            
+    function step(timestamp) {
+        
+        if (timestamp_firstRepetition === undefined) { 
+            timestamp_firstRepetition = timestamp  
+        }
+        
+        var elapsed = timestamp - timestamp_firstRepetition
+
+        var elapsed_seconds = elapsed/1000
+
+        if (isNaN(duration)) { 
+            var $t = elapsed_seconds 
+        } else { 
+            var $t = Math.min(elapsed_seconds, duration) 
+        }
+        
+//---------------------------------------------------------------------------------------
+
+gallery.querySelector(':scope .order').style.opacity = Math.sin($t)
+
+//---------------------------------------------------------------------------------------
+
+        if (isNaN(duration)) { 
+            window.requestAnimationFrame(step) 
+        } else { 
+            if ($t < duration) { 
+                window.requestAnimationFrame(step) 
+            } 
+        }
+    }
+
+    window.requestAnimationFrame(step)
+}
+/* 
+animation_clickToMaxImg(Math.PI)
+
+function animation_clickToMaxImg(duration) {
+
+    var  timestamp_firstRepetition
+            
+    function step(timestamp) {
+        
+        if (timestamp_firstRepetition === undefined) { 
+            timestamp_firstRepetition = timestamp  
+        }
+        
+        var elapsed = timestamp - timestamp_firstRepetition
+
+        var elapsed_seconds = elapsed/1000
+
+        if (isNaN(duration)) { 
+            var $t = elapsed_seconds 
+        } else { 
+            var $t = Math.min(elapsed_seconds, duration) 
+        }
+        
+//---------------------------------------------------------------------------------------
+
+document.querySelector('.gallery .btn_fullScreen img').style.opacity = Math.sin($t)
+
+//---------------------------------------------------------------------------------------
+
+        if (isNaN(duration)) { 
+            window.requestAnimationFrame(step) 
+        } else { 
+            if ($t < duration) { 
+                window.requestAnimationFrame(step) 
+            } 
+        }
+    }
+
+    window.requestAnimationFrame(step)
+}
+ */
 
 /*
 ◈──────────────────────────────────────────────────────◈
