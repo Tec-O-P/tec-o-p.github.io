@@ -122,7 +122,7 @@ document.querySelector('.nav-menu').innerHTML = `
 
 <!--<li><a href="#"><span>News</span></a><div><ul></ul></div></li>-->
 
-<li><a onclick="nav_menu_options(this)"><span>Game</span></a>
+<li><a onclick="nav_menu_options(this)"><span>Gameplay</span></a>
 
     <div>
         <ul>
