@@ -295,6 +295,7 @@ TODO: Types Table
 
 .types_table tr th, .types_table tr td {
   padding: 6.5px;
+  font-size: 18px;
 }
 
 .types_table tr th {
@@ -360,6 +361,10 @@ TODO: Types Table
 .types_table .Robot, .types_table .Snow_Ice {
   color: white;
   background-color: black;
+}
+
+.types_table th.Robot {
+  background-color: #f0fcff;
 }
 
 .types_table .Digital {

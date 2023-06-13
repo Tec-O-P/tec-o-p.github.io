@@ -766,9 +766,12 @@ TODO: Types Table
    border-bottom: 1px solid hsla(193,100%,50%, 0%);
 }
 
-.types_table tr {th, td {
-    padding: 6.5px;
-}}
+.types_table tr {
+    th, td {
+        padding: 6.5px;
+        font-size: 18px;
+    }
+}
 
 .types_table tr th {
     position: sticky;
@@ -834,6 +837,10 @@ TODO: Types Table
     .Robot, .Snow_Ice{
         color: white;
         background-color: rgb(0, 0, 0);
+    }
+
+    th.Robot {
+        background-color: hsl(193,100%,97%);
     }
 
     .Digital { display: none; }
