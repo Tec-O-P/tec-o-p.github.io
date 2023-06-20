@@ -194,58 +194,120 @@ TODO: Download Page
 
 /*  
 ◈──────────────────────────────────────────────────────◈
-TODO: Types Table
+TODO: Types Interactions
 ◈──────────────────────────────────────────────────────◈ */
+.types_interactions_switchs .switch {
+  width: 230px;
+}
+
 .types_interactions_box {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  /* .Robot { 
+        display: none; 
+    } */
 }
 
-.types_interactions {
+.types_interactions_box .type_interactions {
   margin-left: 0;
   margin-right: 0;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: calc(2*16rem);
+  /* .good .txt {
+            color: $color_text_token_green; 
+            color: hsl(120, 100%, 47%);
+        }
+
+        .bad .txt {
+            color: $color_text_token_red; 
+            color: red;
+        } */
 }
 
-.types_interactions .name th > * {
+.types_interactions_box .type_interactions .name th > * {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.types_interactions .name th > * img {
+.types_interactions_box .type_interactions .name th > * img {
   margin-right: 8px;
 }
 
-.types_interactions td + td {
+.types_interactions_box .type_interactions tr:hover {
+  background: 0 !important;
+}
+
+.types_interactions_box .type_interactions .info {
+  border-bottom: 1px solid DeepSkyBlue;
+}
+
+.types_interactions_box .type_interactions .info th {
+  width: 50%;
+}
+
+.types_interactions_box .type_interactions .info th:nth-of-type(1) {
+  border-right: 1px solid DeepSkyBlue;
+}
+
+.types_interactions_box .type_interactions td + td {
   border-width: 1px !important;
 }
 
-.types_interactions .good .txt {
-  color: #00d600;
-  color: #00f000;
-}
-
-.types_interactions .bad .txt {
-  color: #eb0000;
-  color: red;
-}
-
-.types_interactions .txt {
+.types_interactions_box .type_interactions .txt {
   display: block;
-  margin-bottom: 8px;
+  width: max-content;
+  -moz-width: fit-content;
+  width: fit-content;
+  margin: 6px auto 12px;
 }
 
-.types_interactions .type_icon {
+.types_interactions_box .type_interactions .type_icon {
   width: 32px;
+  margin: 0 2px;
 }
 
-.types_interactions .effect_icon {
+.types_interactions_box .type_interactions .effect_icon {
   width: 28px;
+}
+
+.types_interactions_box .Template {
+  display: none;
+}
+
+.type_interactions.SimplifiedMode .info th {
+  width: 182px;
+}
+
+.type_interactions.SimplifiedMode .good .attacking {
+  background-image: linear-gradient(to right, rgba(235, 251, 255, 0), #ebffeb 5% 95%, #ebffeb);
+}
+
+.type_interactions.SimplifiedMode .good .defending {
+  background-image: linear-gradient(to right, #ebffeb, #ebffeb 5% 95%, rgba(235, 251, 255, 0));
+}
+
+.type_interactions.SimplifiedMode .bad .attacking {
+  background-image: linear-gradient(to right, rgba(255, 235, 235, 0), #ffeeee 5% 95%, #ffeeee);
+}
+
+.type_interactions.SimplifiedMode .bad .defending {
+  background-image: linear-gradient(to right, #ffeeee, #ffeeee 5% 95%, rgba(255, 235, 235, 0));
+}
+
+.type_interactions.SimplifiedMode .interaction {
+  display: inline;
+}
+
+.type_interactions.SimplifiedMode .interaction .txt {
+  display: none;
+}
+
+.type_interactions.SimplifiedMode .interaction .type_icon {
+  margin: 3px 2px -3px;
 }
 
 /*  
@@ -259,7 +321,7 @@ TODO: Types Table
     }
 }
 */
-.types_table_box {
+.offensive_types_table_box, .types_table_box {
   /* 
     display: none;
 
@@ -276,9 +338,16 @@ TODO: Types Table
 }
 
 @media (min-width: 501px) {
-  .types_table_box {
+  .offensive_types_table_box, .types_table_box {
+    width: max-content;
+    -moz-width: fit-content;
+    width: fit-content;
     max-width: calc(100% - (2 * 20px) - 3px);
   }
+}
+
+.offensive_types_table_box {
+  display: none;
 }
 
 .types_table {
@@ -358,7 +427,7 @@ TODO: Types Table
   width: 25px;
 }
 
-.types_table .Robot, .types_table .Snow_Ice {
+.types_table .Robot {
   color: white;
   background-color: black;
 }
@@ -380,6 +449,31 @@ TODO: Types Table
 }
 
 /**/
+.types_table_effects {
+  margin: auto;
+  max-width: 524px;
+}
+
+.types_table_effects ul {
+  list-style: none;
+  content: "\200B";
+}
+
+.types_table_effects li {
+  display: flex;
+  align-items: center;
+}
+
+.types_table_effects li .effect_icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 4px;
+}
+
+.types_table_effects li span {
+  margin-right: 6px;
+}
+
 /*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Skills - Table
