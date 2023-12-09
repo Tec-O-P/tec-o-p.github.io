@@ -1,9 +1,3 @@
-/*
-┌──────────────────────────────────────────────────────┐
-│                                                   gmes-defaults.js                                                   │
-└──────────────────────────────────────────────────────◈ */
-
-
 /* 
 var inst = {
 
@@ -42,170 +36,61 @@ var _ = '───────────────────────�
 
 var __ = '◈───────────────────────────────────────────────────◈'
 
+var charLB = `
+` // Caractere de quebra de linha (line break).
+
 var $is_cellphone = innerWidth <= 500 || innerHeight <= 500
 
 var $is_mobile = innerWidth <= 1366 && innerHeight <= 1366
 
 var $color_theme = 'DeepSkyBlue' // VÍNCULO: Váriável SCSS
 
-/*
-◈──────────────────────────────────────────────────────◈
-TODO: Error Function
-◈──────────────────────────────────────────────────────◈ */
-
-function error(errorMessage) {
-    
-  var errorTag = document.createElement('div')
-
-   errorTag.classList.add('error')
-
-    errorTag.textContent = errorMessage
-
-    document.body.appendChild(errorTag)
-
-    errorTag.addEventListener('click', function(evt) {
-
-        evt.currentTarget.classList.toggle('top')
-    })
-
-    console.error('Error Spot')
-}
-
+// var $margin_vertical = '16px'
+// var $margin_horizontal = '20px'
 
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: CSL Function
+TODO: Is At Framework
 ◈──────────────────────────────────────────────────────◈ */
 
-var csl = {
-
-    log: function() {
+if (document.querySelector('h1 a')) {
     
-        for (csl_index = 0; csl_index < arguments.length; csl_index++) {
+    var isAtFramework = (document.querySelector('h1 a').childNodes[1].textContent === 'Framework')
+
+    var URL_begin
+
+    if (isAtFramework) {
         
-            console.log(arguments[csl_index])
-        }
+        URL_begin = '..'
 
-        return this
-    },
-
-    bold: function() {
-    
-        for (csl_index = 0; csl_index < arguments.length; csl_index++) {
+    } else {
         
-            console.log()
-    
-            console.log('%c'+ arguments[csl_index] +'%c', 'font-weight: bold', '')
-        }
-
-        return this
-    },
-
-    category: function(arg) {
-    
-        console.log('%c'+ arg +'%c', 'font-size: 12px; font-weight: normal; color: hsl(195, 100%, 46%); background-color: hsl(195, 100%, 97%); border: 1px solid hsl(195, 100%, 58%); border-radius: 40px; padding: 2px 6px; margin: 1px 0 2px', '')
-
-        return this
-    },
-
-    group1: function() {
-
-        console.group(arguments[0])
-    
-        return this
-    },
-
-    group1Collapsed: function() {
-
-        console.groupCollapsed(arguments[0])
-
-        return this
-    },
-
-    group2: function() {
-
-        console.group('%c'+ arguments[0] +'%c', 'font-size: 12px; font-weight: normal; color: hsl(195, 100%, 46%); background-color: hsl(195, 100%, 97%); border: 1px solid hsl(195, 100%, 58%); border-radius: 40px; padding: 2px 6px; margin: 1px 0 2px', '')
-    
-        return this
-    },
-
-    group2Collapsed: function() {
-
-        console.groupCollapsed('%c'+ arguments[0] +'%c', 'font-size: 12px; font-weight: normal; color: hsl(195, 100%, 46%); background-color: hsl(195, 100%, 97%); border: 1px solid hsl(195, 100%, 58%); border-radius: 40px; padding: 2px 6px; margin: 1px 0 2px', '')
-
-        return this
-    },
-
-    groupEnd: function() {
-    
-        console.groupEnd()
-    
-        for (csl_index = 0; csl_index < arguments.length; csl_index++) {
-        
-            console.log(arguments[csl_index])
-        }
-
-        return this
-    },
-
-    topic: function(arg) {
-    
-        this.log(__, arg, __)
-
-        return this
-    },
-    
-    ticket: function(input, color) {
-    
-        console.log('%c'+ input +'%c', 'font-size: 11px; color: hsl(195, 100%, 100%); background-color: '+ color +'; padding: 2px 5px; border-radius: 10px; font-weight: bold; ', '')
-    }, 
-
-    dl: function() {
-    
-        for (csl_dl_index = 0; csl_dl_index < arguments.length; csl_dl_index++) {
-
-            if ((csl_dl_index % 3) === 0) {
-
-                console.log('')
-                
-            } else if ((csl_dl_index % 3) === 1)  {
-
-                console.log('%c'+ arguments[csl_dl_index] +'%c', 'font-weight: bold', '')
-                
-            } else if ((csl_dl_index % 3) === 2)  {
-
-                console.log(arguments[csl_dl_index])
-
-            } else {
-
-                console.error(arguments[csl_dl_index])
-            }
-        }
+        URL_begin = '../framework'
     }
 }
 
-//csl.error('Error', 'Input: '+ input, 'Input type: '+ typeof input)
-
-
-/* Teste: */// csl.log(1, 'a', true, [2, 'b', false])
-
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: Wait Function
+TODO: Displays Codes Of Character Entity References In HTML
 ◈──────────────────────────────────────────────────────◈ */
 
-function wait(t) { // t em segundos
+var charEntityRefs = document.querySelectorAll('.charEntityRef')
 
-    t = t * 1000
-
-    t0 = performance.now()
+if (charEntityRefs) {
+    charEntityRefs.forEach(function (ref) {
     
-    while(performance.now() - t0 <= t) {  }
+        if (ref.textContent === ' ') { ref.textContent = '&nbsp;' }
+        ref.textContent = ref.textContent.replace('<', '&lt;')
+        ref.textContent = ref.textContent.replace('>', '&gt;')
+        ref.textContent = ref.textContent.replace('"', '&quot;')
+        ref.textContent = ref.textContent.replace("'", '&apos;')
+        if (ref.textContent === '&') { ref.textContent = '&amp;' }
+    })
 }
 
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: (OFF) <details>
+TODO: <details> [OFF]
 ◈──────────────────────────────────────────────────────◈ */
 /* 
 var allDetails = document.querySelectorAll('details')
@@ -231,109 +116,28 @@ allDetails.forEach(function (details) {
 
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: smart()
+TODO: Smart Selector [OFF]
 ◈──────────────────────────────────────────────────────◈ */
-/* 
-function smart() {
 
-    //csl.log(runCodeAsString(arguments[0])) 
+/*** SS(referenceElement, CSSselectorsList) ***/    
 
-    var tagsAsString = arguments[0]
-    var tags = runCodeAsString(arguments[0])
-    csl.log(_, tagsAsString, tags, _)
-    var commandsAsString = arguments[1]
-    var tagIsNotList = (tags.length === undefined)
-    
-    if (tagIsNotList) {
+SS = function(referenceElement, CSSselectorsList) {
 
-        runCodeAsString(tagsAsString + commandsAsString)
-        
-    } else {
-        
-        // try {
-                
-                for (i = 0; i < tags.length; i++) {
-                    
-                    // runCodeAsString(tagsAsString +' + [i] + '+ commandsAsString)
+    if ((arguments.length === 0) || (arguments.length === 1)) {
 
-                    runCodeAsString(`csl.log(${tags[i]})`)
-                }
-                
-
-                // tags.forEach(function (tag) {
-                
-                //     // runCodeAsString(tagsAsString +' + [i] + '+ commandsAsString)
-
-                //     runCodeAsString(`csl.log(tag)`)
-
-                //     //csl.log(tag)
-                // })
-                
-
-
-            
-
-            console.log('Ok!')
-                
-                // for (i = 0; i < 3; i++) {
-                    
-                //     runCodeAsString(`csl.log(i)`)
-                // }
-            
-        // } catch (e) { console.error(e) }
+        CSSselectorsList = arguments[0]
+        referenceElement = null
     }
-}
-
-var e = document.createElement('e')
-e.textContent = 'E'
-document.body.append(e)
-
-var e = document.createElement('e')
-e.textContent = 'E'
-document.body.append(e)
-
-var e = document.createElement('e')
-e.textContent = 'E'
-document.body.append(e)
-
-var es = document.querySelectorAll('e')
-
-// csl.log(e.length)
-// csl.log(es)
-
-smart(`es`, `.style.color = 'deepSkyblue'`)
- */
-
-
-/*  TODO:    1 ▶ Tests
-◈──────────────────────────────────────────────────────◈ */
-/* 
-inputs = [
-    
-]
-
-inputs.forEach(function (input) {
-
-    
-})
-*/
-
-/*
-◈──────────────────────────────────────────────────────◈
-TODO: Smart Selector
-◈──────────────────────────────────────────────────────◈ */
-
-// Nodelists Live E Static
-
-/*** targets(listOfSelectors, referenceElement) ***/    
-/* 
-targets = function(listOfSelectors, referenceElement) {
 
     var refElement = referenceElement || document
 
-    var elements = refElement.querySelectorAll(':scope '+ listOfSelectors)
+    var elements = refElement.querySelectorAll(':scope '+ CSSselectorsList)
 
-    if (elements.length === 1) {
+    if (elements.length === 0) {
+
+        return document.createElement('fake')
+
+    } else if (elements.length === 1) {
 
         return elements[0]
 
@@ -342,1553 +146,69 @@ targets = function(listOfSelectors, referenceElement) {
     }
 }
 
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: Highlight
+◈──────────────────────────────────────────────────────◈ */
 
+var highlights = document.querySelectorAll('.highlight')
 
+if (highlights) {
+    
+    highlights.forEach(function (ht) {
 
-targets('.box > p:nth-of-type(2)').style.color = 'red'
+        var txt = ht.textContent
 
-var box2 = targets('.box2')
-targets('p:nth-of-type(3)', box2).style.fontWeight = 'bold'
- */
-// targets('.box p:nth-of-type(2)').style.textDecoration = 'underline'
+        if (typeof txt === 'string') {
+            
+            if (txt[0] === `'` && txt[txt.length - 1] === `'`) {
+                
+                ht.textContent = txt.slice(1, txt.length - 1)
+            }
+        }
 
+        ht.style.display = 'inline'
+    })
+}
 
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: Elemenctor (Elementador)
+TODO: Labels
 ◈──────────────────────────────────────────────────────◈ */
 
-/*  
+var labelTags = document.querySelectorAll('.example_1, .example_2, .oneObs, .obsGroup, .attention_1, .attention_2')
 
-Falta implementar:
-
-- Append()
-
-- ... .prop += ...
-
-- Não dar erro quando for tentar executar algo nos elementos do slot e não encontrar nenhum, apenas mostrar um aviso (agrupando todos os avisos deste tipo), e somente mostrar se estiver em desenvolvimento.
-
-- document.createElement()
-
-- intervalo do for
-
-- for dentro do for
-
-Documentação
-
-> Informações principais (Inacabado)
-
->> Elemenctor.each()
-
-O método Elemenctor.each() aplica o encadeamento (como string) em seu argumento em cada um dos elementos do slot. 
-
-elemenctor.each(chainingAsString, interval1, interval2, ...)
-
-interval = [startIndex, endIndex]
-
-end = collection.length - 1
-
-Por padrão, o valor de startIndex é 0, e o de endIndex é end.
-
-elemenctor.each(chainingAsString) 
-<=> elemenctor.each(chainingAsString, [ , ]) 
-<=> elemenctor.each(chainingAsString, [0 , ]) 
-<=> elemenctor.each(chainingAsString, [ , end]) 
-<=> elemenctor.each(chainingAsString, [0 , end]) 
-<=> for (i = 0; i < collection.length; i++) { chaining }
-
-elemenctor.each(chainingAsString, [startIndex, endIndex]) 
-<=> for (i = startIndex; i < endIndex + 1; i++) { chaining }
-
-elemenctor.each(chainingAsString, [startIndex, end]) 
-<=> for (i = startIndex; i < collection.length; i++) { chaining }
-
-elemenctor.each(chainingAsString, [end, endIndex]) 
-<=> for (i = collection.length - 1; i < endIndex + 1; i++) { chaining }
-
-elemenctor.each(chainingAsString, [end, end]) 
-<=> for (i = collection.length - 1; i < collection.length; i++) { chaining }
-
-elemenctor.each(chainingAsString, ['last - 2', end]) 
-<=> for (i = collection.length - 3; i < collection.length; i++) { chaining }
-// Obs: var x = -5; runCodeAsString(('last + '+ x).replace(end, '8')) => 3
-
->> Outros
-
-seleciona 1+ elementos do documento HTML que correspondem ao seletor, ou grupo de seletores CSS especificados. Este método aceita lista de seletores (vários seletores separados com vírgulas)
-
-Este método retorna um objeto NodeList com os elementos especificados, estes elementos também são objetos.
-
-Caso não haja nenhuma correspondência com os elementos especificados, um NodeList vazio é retornado. 
-
-Para acessar o n-ésimo elemento de um NodeList, faz-se NodeList[n-1], onde o 1º nó filho é atribuído ao índice 0.
-
-querySelectorAll() retorna um NodeList static (estático), o que isso significa será explicado mais adiante.
-
-Obs.: Se os seletores especificados incluem um pseudo-elemento CSS, a lista retornada será vazia.
-
-Obs.: Assim como em document.querySelector(), caracteres que não fazem parte da sintaxe CSS padrão devem ser escapados usando um caractere de barra invertida ('\').
-
-> Observações:
-
-- Ao criar uma instância de objeto da classe Elemenctor com o prefixo 'ect_', será criada automaticamente uma variável com o mesmo nome mas sem o prefixo, porém, a variável só será criada se ela já não tiver sido declarada, ou se tiver sido declarada sem nenhum valor. Esta variável criada sem o prefixo terá como valor uma referência à propriedade 'slot' da instância criada.
-
-- Não use ect_obj.slot.length ou obj.length pois podem dar erro dependendo do caso, use ect_obj.length.
-
-- Se deseja alterar o valor da propriedade slot de uma instância de Elemenctor, faça 'ect_obj.slot = ...', não faça 'obj = ...', pois isso mudará o valor apenas dessa variável, não da propriedade slot da instância.
-
-- O encadeamento de membros do método each() pode iniciar com ou sem um ponto (.).
-
-- A entrada do método each() aceita métodos apenas se o método estiver no final do encadeamento.
-
-- O método each() não aceita números octodecimais com a sintaxe antiga (p. ex., 010).
-
-- O método each() aceita no máximo 7 snippets por instrução.
-
- */
-
-function newElemenctor(objName, CSSselectorsList, referenceElement) {
+if (labelTags) {
     
-    class Elemenctor {
-        constructor(CSSselectorsList, referenceElement) {
-
-            var referenceElement = referenceElement || document
-
-            var selectedElements = referenceElement.querySelectorAll(':scope '+ CSSselectorsList)
-
-            this._slot = (function() {
-                
-                if (selectedElements.length === 0) {
-        
-                    return null // Valor padrão do JavaScript
-                    
-                } else if (selectedElements.length === 1) {
-                    
-                    return selectedElements[0]
-
-                } else if (selectedElements.length > 1) {
-                    
-                    return selectedElements
-                }
-
-            })()
-
-            this.length = selectedElements.length
-        }
-
-        get slot(){ return this._slot }
-
-        set slot(value) { // !!! 
-            
-            /* {1, 2} Obs.:
-            document.querySelector('notExistElement') // null
-            document.querySelector('notExistElement').length // Error
-            document.querySelectorAll('notExistElement') // []
-            document.querySelectorAll('notExistElement').length // 0
-            document.querySelectorAll('notExistElement')[0] // undefined
-            */
-
-            //····································································◈ Update value !!!
-
-            // csl.log(_, value, _)
-
-            if (value.length === 0) { // {1}
-
-                this._slot = null
-
-            } else if (value.length === 1) {
-
-                this._slot = value[0]
-
-            } else if (value.length > 1) {
-
-                this._slot = value
-            }
-
-            //····································································◈ Update length
-
-            var slotIsNotList = !((this._slot instanceof NodeList) || (this._slot instanceof HTMLCollection))
-
-            if (slotIsNotList) { // {2}
-
-                if (this.slot instanceof Node) {
-                    
-                    this.length = 1
-
-                } else {
-                    
-                    this.length = 0
-                }
-
-            } else {
-                
-                this.length = this._slot.length
-            }
-        }
-
-        each() {
-
-            var numberOfCodes = arguments.length
-
-            if (numberOfCodes === 1) {
-
-                var outFromAllCodes
-                
-            } else if (numberOfCodes > 1) {
-                
-                var outFromAllCodes = []
-            }
-
-            for (var each_code_i = 0; each_code_i < numberOfCodes; each_code_i++) {
-
-                var inputCodeAsString = arguments[each_code_i]
-
-                //····································································◈ Execution Steps
-                {
-                
-                csl.group2(`Execution Steps: obj.each('`+ inputCodeAsString.trim() +`')`)
-
-                csl.dl('', 'inputCodeAsString', inputCodeAsString) 
-        
-                var codeAsString = initialAdjusts(inputCodeAsString)
-                csl.dl('','codeAsString = initialAdjusts(inputCodeAsString)', codeAsString) 
-
-                var jokerCharsWithIndexes = getJokerCharacters(codeAsString)
-                csl.dl('','jokerCharsWithIndexes = getJokerCharacters(codeAsString)', jokerCharsWithIndexes) 
-
-                var snippetsAsStringWithData = sliceCode(codeAsString, jokerCharsWithIndexes)
-                csl.dl('','snippetsAsStringWithData = \nsliceCode(codeAsString, jokerCharsWithIndexes)', snippetsAsStringWithData) 
-
-                var readySnippets = revertStringTypeOfValues(snippetsAsStringWithData)
-                csl.dl('','readySnippets = \nrevertStringTypeOfValues(snippetsAsStringWithData)', readySnippets) 
-
-                var outFrom1Code = run(readySnippets, this.slot)
-                csl.dl('','outFrom1Code = run(readySnippets, this.slot)',outFrom1Code, '')
-
-                csl.groupEnd()   
-                
-
-                /*
-                var codeAsString = initialAdjusts(inputCodeAsString)
-
-                var jokerCharsWithIndexes = getJokerCharacters(codeAsString)
-
-                var snippetsAsStringWithData = sliceCode(codeAsString, jokerCharsWithIndexes)
-
-                var readySnippets = revertStringTypeOfValues(snippetsAsStringWithData)
-
-                var outFrom1Code = run(readySnippets, this.slot)
-                */
-
-
-
-                if (numberOfCodes === 1) {
-
-                    outFromAllCodes = outFrom1Code
-                    
-                } else if (numberOfCodes > 1) {
-                    
-                    outFromAllCodes.push(outFrom1Code)
-                }
-
-                }
-
-                //····································································◈ Functions
-                    
-                function initialAdjusts(inputCodeAsString) {
-                    
-                    var codeAsString = inputCodeAsString.trim()
-
-                    if (codeAsString[0] === '.') { // Retirar o 1º caractere se este for um ponto (.).
-                        codeAsString = codeAsString.slice(1)
-                    }
-
-                    return codeAsString
-                }
-
-                function getJokerCharacters (codeAsString) {  // !!!
-                    
-                    // String para testar esta função: `     .Isso.é.uma.stg(d)["test.d"].unit = " 'Todas "+ as. +"[sntxs]' d= stg ${em} aspas."     `
-
-                    var jokerCharsWithIndexes = []
-
-                    var checkingSingleQuoteStg = false
-                    var checkingDoubleQuoteStg = false
-                    var checkingBacktickQuoteStg = false // Crase é backtick em inglês
-                    
-                    var checkingStg = false
-                    var equalsCharacterFound = false
-                    var openParenthesesCharacterFound = false
-
-                    for (i = 0; i < codeAsString.length; i++) {
-                            
-                        if((codeAsString[i] === "'") && (!checkingDoubleQuoteStg) && (!checkingBacktickQuoteStg)) { // Verificar aspas simples
-
-                            checkingSingleQuoteStg = !checkingSingleQuoteStg
-                            checkingStg = !checkingStg
-                        } 
-                        
-                        if((codeAsString[i] === '"') && (!checkingSingleQuoteStg) && (!checkingBacktickQuoteStg)) { // Verificar aspas duplas
-
-                            checkingDoubleQuoteStg = !checkingDoubleQuoteStg
-                            checkingStg = !checkingStg
-                        } 
-                        
-                        if((codeAsString[i] === '`') && (!checkingSingleQuoteStg) && (!checkingDoubleQuoteStg)) {  // Verificar crase
-
-                            checkingBacktickQuoteStg = !checkingBacktickQuoteStg
-                            checkingStg = !checkingStg
-                        } 
-
-                        if(!checkingStg) {
-
-                            if ((codeAsString[i] === '=') && (!openParenthesesCharacterFound)) {
-                                
-                                equalsCharacterFound = true
-
-                                jokerCharsWithIndexes.push({ character: codeAsString[i], index: i })   
-                            
-                            } else if ((codeAsString[i] === '(') && (!equalsCharacterFound)) { 
-                                
-                                openParenthesesCharacterFound = true
-
-                                jokerCharsWithIndexes.push({ character: codeAsString[i], index: i })   
-
-                            } else if ((codeAsString[i] === ',') && openParenthesesCharacterFound) { 
-
-                                jokerCharsWithIndexes.push({ character: codeAsString[i], index: i })   
-
-                            } else if ((codeAsString[i] === ')') && openParenthesesCharacterFound) { 
-                                
-                                openParenthesesCharacterFound = false
-
-                                jokerCharsWithIndexes.push({ character: codeAsString[i], index: i })   
-
-                            } else if ((!equalsCharacterFound) && (!openParenthesesCharacterFound)) {
-                                
-                                if ((codeAsString[i] === '.') || (codeAsString[i] === '[') || (codeAsString[i] === ']')) {
-
-                                    jokerCharsWithIndexes.push({ character: codeAsString[i], index: i })   
-                                }
-                            }
-                        }
-                    }
-
-                    return jokerCharsWithIndexes
-                }
-
-                function sliceCode(codeAsString, jokerCharsWithIndexes) {
-                    
-                    var snippets = []
-
-                    var jokerChars_qtParentheses = 0
-
-                    jokerCharsWithIndexes.forEach(function (jokerCharWithIndex) {
-                    
-                        if (jokerCharWithIndex.character === '(') {
-
-                            jokerChars_qtParentheses++
-                        }
-                    })
-
-                    var numberOfSnippets = (jokerCharsWithIndexes.length + 1) - jokerChars_qtParentheses
-
-                    for (i = 0; i < numberOfSnippets; i++) {
-
-                        var snippet = { }
-                            
-                        if (i === 0) {
-
-                            if (jokerCharsWithIndexes.length > 0) {
-
-                                snippet.self = codeAsString.slice(0, jokerCharsWithIndexes[i].index).trim()
-
-                            } else if (jokerCharsWithIndexes.length === 0) {
-
-                                snippet.self = codeAsString
-                            }
-
-                            snippet.isValue = false
-                            
-                        } else if (i === jokerCharsWithIndexes.length) {
-
-                            snippet.self = codeAsString.slice(jokerCharsWithIndexes[i - 1].index + 1).trim()
-
-                            if ((jokerCharsWithIndexes[jokerCharsWithIndexes.length - 1].character === ')') || (jokerCharsWithIndexes[jokerCharsWithIndexes.length - 1].character === '=')) {
-                                
-                                snippet.isValue = true
-
-                            } else {
-                                
-                                snippet.isValue = false
-                            }
-
-                        } else {
-
-                            snippet.self = codeAsString.slice(jokerCharsWithIndexes[i - 1].index + 1, jokerCharsWithIndexes[i].index).trim()
-
-                            if (jokerCharsWithIndexes[i - 1].character === '.') {
-                                
-                                snippet.isValue = false
-
-                            } else {
-
-                                snippet.isValue = true
-                            }
-                        }
-
-                        snippets.push(snippet)
-                    }
-
-                    return snippets
-                }
-
-                function revertStringTypeOfValues(snippetsAsStringWithData) {
-                    
-                    readySnippets = [ ]
-
-                    snippetsAsStringWithData.forEach(function (snippetAsStringWithData, i) {
-                    
-                        if (snippetAsStringWithData.isValue === true) {
-
-                            // console.log(i, snippetAsStringWithData.self)
-
-                            readySnippets.push(runCodeAsString(snippetAsStringWithData.self)) 
-
-                        } else {
-                            
-                            readySnippets.push(snippetAsStringWithData.self) 
-                        }
-                    })
-
-        /* 
-                    snippets_stringType.forEach(function (snippet) {
-                    
-                        if (   
-                            (snippet[0] === '-') || (snippet[0] === '.') || 
-                            (snippet[0] === '0') || (snippet[0] === '1') || (snippet[0] === '2') || (snippet[0] === '3') || (snippet[0] === '4') || 
-                            (snippet[0] === '5') || (snippet[0] === '6') || (snippet[0] === '7') || (snippet[0] === '8') || (snippet[0] === '9')   
-                        ) {
-                            
-                            readySnippets.push({ snippet: Number(snippet), type: 'number value' })
-
-                        } else if(
-                            ((snippet[0] === "'") && (snippet[snippet.length - 1] === "'")) || // Aspas simples
-                            ((snippet[0] === '"') && (snippet[snippet.length - 1] === '"')) || // Aspas duplas
-                            ((snippet[0] === '`') && (snippet[snippet.length - 1] === '`')) // Crases
-                        ) {
-
-                            if ((snippet[0] === "'") && (snippet[snippet.length - 1] === "'")) { // Retira aspas simples
-                            
-                                snippet = snippet.slice(1, -1)
-            
-                            } else if ((snippet[0] === '"') && (snippet[snippet.length - 1] === '"')) { // Retira aspas duplas
-                                
-                                snippet = snippet.slice(1, -1)
-            
-                            } else if ((snippet[0] === '`') && (snippet[snippet.length - 1] === '`')) { // Retira crases
-                                
-                                snippet = snippet.slice(1, -1)
-                            }
-                            
-                            readySnippets.push({ snippet: snippet, type: 'string value' })
-
-                        } else if((snippet === 'true') || (snippet === 'false')) {  // O objeto Boolean não foi usado aqui para criar o valor booleano pois pode causar resultados inesperados.
-
-                            if (snippet === 'true') {
-                                
-                                readySnippets.push({ snippet: true, type: 'boolean value' })
-                                
-                            } else {
-
-                                readySnippets.push({ snippet: false, type: 'boolean value' })
-                            }
-
-                        } else if((snippet[0] === '[') && (snippet[snippet.length - 1] === ']')) {
-
-                            // "[1, 'a', true]" 
-
-                            snippet = snippet.slice(1, -1)
-
-                            // "1, 'a', true"
-
-                            snippet = snippet.split(',')
-
-                            // ["1", " 'a'", " true"]
-
-                            snippet.forEach(function (item) { item.trim() })
-
-                            // ["1", "'a'", "true"]
-
-                            
-                            // snippet = revertStringTypeOfValues(snippet)
-
-                            // console.log('[Log]: ')
-                            // console.log(snippet)
-                            // console.log('Ok!')
-                            
-
-                            readySnippets.push({ snippet: snippet, type: 'array value' })
-                            //readySnippets.push({ snippet: JSON.parse(snippet), type: 'array value' })
-
-                        } 
-                        // else if() {
-                            
-                        //     readySnippets.push('object value')
-
-                        // } else if() {
-                            
-                        //     // /ab+c/
-                        //     readySnippets.push('regexp value')
-
-                        // }  
-                        else { // Nome/palavra reservada <=> Palavra-chave ou variável
-                            
-                            // readySnippets.push('reserved word')
-                            readySnippets.push({ snippet: snippet, type: "isn't value" })
-                        }
-                    })
-        */
-                    return readySnippets
-                }
-
-                function run(readySnippets, slot) {
-
-                    var slotIsList = !(slot.length === undefined)
-
-                    var $ = readySnippets
-
-                    var propertyValue
-
-                    var outFrom1Code
-            
-                    if (!slotIsList) {
-
-                        outFrom1Code = buildInstruction(slot)
-                        
-                    } else {
-
-                        outFrom1Code = [ ]
-
-                        for (var each_code_run_i = 0; each_code_run_i < slot.length; each_code_run_i++) {
-
-                            outFrom1Code.push(buildInstruction(slot[each_code_run_i]))
-                        }
-                    }
-
-                    function buildInstruction(slot) {
-                        {
-                        var JCWI = jokerCharsWithIndexes
-                        
-                        if (readySnippets.length === 1) {
-                            
-                            propertyValue = slot[$[0]]
-
-                        } else if (readySnippets.length === 2) {
-
-                            if (JCWI[0].character === '.') {
-                                
-                                propertyValue =  slot [$[0]] [$[1]]
-
-                            } else if (JCWI[0].character === '=') {
-
-                                propertyValue =  slot [$[0]] = $[1]
-                                
-                            } else if (JCWI[0].character === '(') {
-                                
-                                propertyValue = slot [$[0]] ($[1])
-                            }
-
-                        } else if (readySnippets.length === 3) {
-
-                            if (JCWI[1].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]]
-
-                            } else if (JCWI[1].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] = $[2]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',')) {
-
-                                propertyValue = slot[$[0]] ($[1], $[2])
-
-                            } else if (JCWI[1].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] ($[2])
-                            }  
-
-                        } else if (readySnippets.length === 4) {
-
-                            if (JCWI[2].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]]
-
-                            } else if (JCWI[2].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] = $[3]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3])
-
-                            } else if (JCWI[2].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3])
-                            }
-
-                        } else if (readySnippets.length === 5) {
-
-                            if (JCWI[3].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]]
-
-                            } else if (JCWI[3].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] = $[4]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4])
-
-                            } else if (JCWI[3].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4])
-                            }
-
-                        } else if (readySnippets.length === 6) {
-
-                            if (JCWI[4].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]]
-
-                            } else if (JCWI[4].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] = $[5]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4], $[5])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4], $[5])
-
-                            } else if ( (JCWI[3].character === '(') && 
-                                            (JCWI[4].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4], $[5])
-
-                            } else if (JCWI[4].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] ($[5])
-                            }
-
-                        } else if (readySnippets.length === 7) {
-
-                            if (JCWI[5].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]]
-
-                            } else if (JCWI[5].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] = $[6]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5], $[6])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4], $[5], $[6])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4], $[5], $[6])
-
-                            } else if ( (JCWI[3].character === '(') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4], $[5], $[6])
-
-                            } else if ( (JCWI[4].character === '(') && 
-                                            (JCWI[5].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] ($[5], $[6])
-
-                            } else if (JCWI[5].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] ($[6])
-                            }
-
-                        } else if (readySnippets.length === 8) {
-
-                            if (JCWI[6].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]]
-
-                            } else if (JCWI[6].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] = $[7]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5], $[6], $[7])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4], $[5], $[6], $[7])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4], $[5], $[6], $[7])
-
-                            } else if ( (JCWI[3].character === '(') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4], $[5], $[6], $[7])
-
-                            } else if ( (JCWI[4].character === '(') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] ($[5], $[6], $[7])
-
-                            } else if ( (JCWI[5].character === '(') && 
-                                            (JCWI[6].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] ($[6], $[7])
-
-                            } else if (JCWI[6].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] ($[7])
-                            }
-
-                        } else if (readySnippets.length === 9) {
-
-                            if (JCWI[7].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]]
-
-                            } else if (JCWI[7].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] = $[8]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5], $[6], $[7], $[8])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4], $[5], $[6], $[7], $[8])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4], $[5], $[6], $[7], $[8])
-
-                            } else if ( (JCWI[3].character === '(') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4], $[5], $[6], $[7], $[8])
-
-                            } else if ( (JCWI[4].character === '(') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] ($[5], $[6], $[7], $[8])
-
-                            } else if ( (JCWI[5].character === '(') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] ($[6], $[7], $[8])
-
-                            } else if ( (JCWI[6].character === '(') && 
-                                            (JCWI[7].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] ($[7], $[8])
-
-                            } else if (JCWI[7].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] ($[8])
-                            }
-
-                        } else if (readySnippets.length === 10) {
-
-                            if (JCWI[8].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]] [$[9]]
-
-                            } else if (JCWI[8].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]] = $[9]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[3].character === '(') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[4].character === '(') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] ($[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[5].character === '(') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] ($[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[6].character === '(') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] ($[7], $[8], $[9])
-
-                            } else if ( (JCWI[7].character === '(') && 
-                                            (JCWI[8].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] ($[8], $[9])
-
-                            } else if (JCWI[8].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]] ($[9])
-                            }
-                            
-                        } else if (readySnippets.length === 11) {
-
-                            if (JCWI[9].character === '.') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]] [$[9]] [$[10]]
-
-                            } else if (JCWI[9].character === '=') {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]] [$[9]] = $[10]
-                                
-                            } else if ( (JCWI[0].character === '(') && 
-                                            (JCWI[1].character === ',') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[1].character === '(') && 
-                                            (JCWI[2].character === ',') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] ($[1], $[2], $[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[2].character === '(') && 
-                                            (JCWI[3].character === ',') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] ($[2], $[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[3].character === '(') && 
-                                            (JCWI[4].character === ',') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] ($[3], $[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[4].character === '(') && 
-                                            (JCWI[5].character === ',') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] ($[4], $[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[5].character === '(') && 
-                                            (JCWI[6].character === ',') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] ($[5], $[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[6].character === '(') && 
-                                            (JCWI[7].character === ',') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] ($[6], $[7], $[8], $[9])
-
-                            } else if ( (JCWI[7].character === '(') && 
-                                            (JCWI[8].character === ',') && 
-                                            (JCWI[9].character === ',')) {
-                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] ($[7], $[8], $[9])
-
-                            } else if ( (JCWI[8].character === '(') && 
-                                            (JCWI[9].character === ',')) {
-
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] ($[8], $[9])
-
-                            } else if (JCWI[9].character === '(') {
-                                
-                                propertyValue = slot[$[0]] [$[1]] [$[2]] [$[3]] [$[4]] [$[5]] [$[6]] [$[7]] [$[8]] ($[9])
-                            }
-                            
-                        }
-                        }
-/* 
-                        function buildMethod() {
-                            
-                            // csl.log(_, $, _)
-                            
-                            if ((JCWI[0].character === '(') && (JCWI[1].character === ',')) {
-                                
-                                return slot[$[0]] ($[1], $[2])
-
-                            } else {
-                                
-                                return slot[$[0]] [$[1]] ($[2])
-                            }
-                        }
-
-                        function buildMethod_OLD(snippets, qtSnippetsInsideParentheses) {
-                
-                            var qtSnippets = snippets.length
-                            
-                            var $ = snippets
-                
-                            var stg = `slot`
-                            
-                            for (var i = 0; i < (qtSnippets - qtSnippetsInsideParentheses); i++) {
-                
-                                stg += `[$[`+ i +`]]`
-                            }
-                
-                            stg += `(`
-                
-                            for (var i = (qtSnippets - qtSnippetsInsideParentheses); i < qtSnippets; i++) {
-                            
-                                if (i !== (qtSnippets - qtSnippetsInsideParentheses)) {
-                                    stg += `,`
-                                }
-                
-                                stg += `$[`+ i +`]`
-                            }
-                
-                            stg += `)`
-                            
-                            csl.log(_, slot, $, stg, _)
-
-                            return runCodeAsString(stg)
-
-                            // return Function('"use strict";return (' + stg + ')')()
-
-                            // return Function('"use strict";return (' + stg + ')')()( newElemenctor, each )
-
-                            // return eval?.("'use strict';(" + stg + ")")
-                        }
- */
-                        return propertyValue
-                    }
-
-                    return outFrom1Code
-                }
-            }
-
-            return outFromAllCodes
-        }
-    }
-
-    {
-    var obj =  window[objName] = new Elemenctor(CSSselectorsList, referenceElement)
-
-    var objHasPrefix = (objName.slice(0, 4) === 'ect_') 
-
-    var objWithoutPrefixIsFree = theVariableIsFree(objName.slice(4))
+    labelTags.forEach(function (labelTag) {
     
-    if (objHasPrefix) {
+        var label = labelTag.querySelector(':scope > .label')
 
-        if (objWithoutPrefixIsFree) {
-        
-            window[''+objName.slice(4)+''] = window[objName].slot
+        if (label) {
+            if ((label.textContent[label.textContent.length - 1] === ':') && (label.textContent[label.textContent.length - 2] === '.')) {
             
-        } else {
-            
-            console.warn(`A new variable '`+ objName.slice(4) +`' was not created because it has already been declared and has a value.`)
-        }
-    }
+                label.textContent = label.textContent.slice(0, label.textContent.length - 2)
+            }
 
-    return obj
-    }
-}
-
-
-/*  TODO:        2 ▶ Tests
-◈──────────────────────────────────────────────────────◈ */
-
-//····································································◈ Variables
-{
-var ectTests_p = document.querySelector('.ectTests p')
-
-/*  
-var ect_span1 = new Elemenctor('.c_span1', ectTests_p)
-var ect_span2to4 = new Elemenctor('.ectTests .c_span2, .ectTests .c_span3')
-var ect_span3 = new Elemenctor('.ectTests .c_span3')
-var ect_span4 = new Elemenctor('.ectTests .c_span4')
-var ect_span1to4 = new Elemenctor('.ectTests .c_span1, .ectTests .c_span2, .ectTests .c_span3, .ectTests .c_span4')
-var ect_span5 = new Elemenctor('.ectTests .c_span5')
-var ect_span5to6 = new Elemenctor('.ectTests .c_span5, .ectTests .c_span6')
-var ect_notExistSpan = new Elemenctor('.ectTests .c_notExistSpan')
-*/
-
-newElemenctor('ect_notExistSpan', '.ectTests .c_notExistSpan')
-newElemenctor('ect_span1', '.c_span1', ectTests_p)
-newElemenctor('ect_span2', '.ectTests .c_span2')
-newElemenctor('ect_span3', '.ectTests .c_span3')
-newElemenctor('ect_span4', '.ectTests .c_span4')
-newElemenctor('ect_span5', '.ectTests .c_span5')
-newElemenctor('ect_span6', '.ectTests .c_span6')
-newElemenctor('ect_span7', '.ectTests .c_span7')
-newElemenctor('ect_span10', '.ectTests .c_span10')
-newElemenctor('ect_span14', '.ectTests .c_span14')
-newElemenctor('ect_span20', '.ectTests .c_span20')
-newElemenctor('ect_span1to4', '.ectTests .c_span1, .ectTests .c_span2, .ectTests .c_span3, .ectTests .c_span4')
-newElemenctor('ect_span2to4', '.ectTests .c_span2, .ectTests .c_span3, .ectTests .c_span4')
-newElemenctor('ect_span3to5', '.ectTests .c_span3, .ectTests .c_span4, .ectTests .c_span5')
-newElemenctor('ect_span5to6', '.ectTests .c_span5, .ectTests .c_span6')
-newElemenctor('ect_span10to12', '.ectTests .c_span10, .ectTests .c_span11, .ectTests .c_span12')
-
-newElemenctor('ect_img1', '.ectTests .c_img1')
-newElemenctor('ect_img2', '.ectTests .c_img2')
-
-newElemenctor('ect_box1', '.ectTests .box1')
-newElemenctor('ect_box2', '.ectTests .box2')
-newElemenctor('ect_box3', '.ectTests .box3')
-newElemenctor('ect_box4', '.ectTests .box4')
-newElemenctor('ect_box5', '.ectTests .box5')
-newElemenctor('ect_box6', '.ectTests .box6')
-newElemenctor('ect_box7', '.ectTests .box7')
-newElemenctor('ect_box8', '.ectTests .box8')
-newElemenctor('ect_box9', '.ectTests .box9')
-// newElemenctor('ect_box10', '.ectTests .box10')
-
-newElemenctor('ect_ball1', '.ectTests .ball1')
-newElemenctor('ect_ball2', '.ectTests .ball2')
-newElemenctor('ect_ball3', '.ectTests .ball3')
-newElemenctor('ect_ball4', '.ectTests .ball4')
-newElemenctor('ect_ball5', '.ectTests .ball5')
-newElemenctor('ect_ball6', '.ectTests .ball6')
-newElemenctor('ect_ball7', '.ectTests .ball7')
-newElemenctor('ect_ball8', '.ectTests .ball8')
-newElemenctor('ect_ball9', '.ectTests .ball9')
-newElemenctor('ect_ball10', '.ectTests .ball10')
-
-newElemenctor('ect_ball_1_1', '.ectTests .ball_1_1')
-newElemenctor('ect_ball_1_2', '.ectTests .ball_1_2')
-newElemenctor('ect_ball_1_3', '.ectTests .ball_1_3')
-newElemenctor('ect_ball_1_4', '.ectTests .ball_1_4')
-newElemenctor('ect_ball_1_5', '.ectTests .ball_1_5')
-newElemenctor('ect_ball_1_6', '.ectTests .ball_1_6')
-newElemenctor('ect_ball_1_7', '.ectTests .ball_1_7')
-newElemenctor('ect_ball_1_8', '.ectTests .ball_1_8')
-newElemenctor('ect_ball_1_9', '.ectTests .ball_1_9')
-newElemenctor('ect_ball_1_10', '.ectTests .ball_1_10')
-
-newElemenctor('ect_ball_2_1', '.ectTests .ball_2_1')
-newElemenctor('ect_ball_2_2', '.ectTests .ball_2_2')
-newElemenctor('ect_ball_2_3', '.ectTests .ball_2_3')
-newElemenctor('ect_ball_2_4', '.ectTests .ball_2_4')
-newElemenctor('ect_ball_2_5', '.ectTests .ball_2_5')
-newElemenctor('ect_ball_2_6', '.ectTests .ball_2_6')
-newElemenctor('ect_ball_2_7', '.ectTests .ball_2_7')
-newElemenctor('ect_ball_2_8', '.ectTests .ball_2_8')
-newElemenctor('ect_ball_2_9', '.ectTests .ball_2_9')
-newElemenctor('ect_ball_2_10', '.ectTests .ball_2_10')
-
-newElemenctor('ect_ball_3_1', '.ectTests .ball_3_1')
-newElemenctor('ect_ball_3_2', '.ectTests .ball_3_2')
-newElemenctor('ect_ball_3_3', '.ectTests .ball_3_3')
-newElemenctor('ect_ball_3_4', '.ectTests .ball_3_4')
-newElemenctor('ect_ball_3_5', '.ectTests .ball_3_5')
-newElemenctor('ect_ball_3_6', '.ectTests .ball_3_6')
-newElemenctor('ect_ball_3_7', '.ectTests .ball_3_7')
-newElemenctor('ect_ball_3_8', '.ectTests .ball_3_8')
-newElemenctor('ect_ball_3_9', '.ectTests .ball_3_9')
-newElemenctor('ect_ball_3_10', '.ectTests .ball_3_10')
-
-newElemenctor('ect_ball_4_1', '.ectTests .ball_4_1')
-newElemenctor('ect_ball_4_2', '.ectTests .ball_4_2')
-newElemenctor('ect_ball_4_3', '.ectTests .ball_4_3')
-newElemenctor('ect_ball_4_4', '.ectTests .ball_4_4')
-newElemenctor('ect_ball_4_5', '.ectTests .ball_4_5')
-newElemenctor('ect_ball_4_6', '.ectTests .ball_4_6')
-newElemenctor('ect_ball_4_7', '.ectTests .ball_4_7')
-newElemenctor('ect_ball_4_8', '.ectTests .ball_4_8')
-newElemenctor('ect_ball_4_9', '.ectTests .ball_4_9')
-newElemenctor('ect_ball_4_10', '.ectTests .ball_4_10')
-
-newElemenctor('ect_ball_5_1', '.ectTests .ball_5_1')
-newElemenctor('ect_ball_5_2', '.ectTests .ball_5_2')
-newElemenctor('ect_ball_5_3', '.ectTests .ball_5_3')
-newElemenctor('ect_ball_5_4', '.ectTests .ball_5_4')
-newElemenctor('ect_ball_5_5', '.ectTests .ball_5_5')
-newElemenctor('ect_ball_5_6', '.ectTests .ball_5_6')
-newElemenctor('ect_ball_5_7', '.ectTests .ball_5_7')
-newElemenctor('ect_ball_5_8', '.ectTests .ball_5_8')
-newElemenctor('ect_ball_5_9', '.ectTests .ball_5_9')
-newElemenctor('ect_ball_5_10', '.ectTests .ball_5_10')
-
-newElemenctor('ect_ball_6_1', '.ectTests .ball_6_1')
-newElemenctor('ect_ball_6_2', '.ectTests .ball_6_2')
-newElemenctor('ect_ball_6_3', '.ectTests .ball_6_3')
-newElemenctor('ect_ball_6_4', '.ectTests .ball_6_4')
-newElemenctor('ect_ball_6_5', '.ectTests .ball_6_5')
-newElemenctor('ect_ball_6_6', '.ectTests .ball_6_6')
-newElemenctor('ect_ball_6_7', '.ectTests .ball_6_7')
-newElemenctor('ect_ball_6_8', '.ectTests .ball_6_8')
-newElemenctor('ect_ball_6_9', '.ectTests .ball_6_9')
-newElemenctor('ect_ball_6_10', '.ectTests .ball_6_10')
-
-newElemenctor('ect_ball_7_1', '.ectTests .ball_7_1')
-newElemenctor('ect_ball_7_2', '.ectTests .ball_7_2')
-newElemenctor('ect_ball_7_3', '.ectTests .ball_7_3')
-newElemenctor('ect_ball_7_4', '.ectTests .ball_7_4')
-newElemenctor('ect_ball_7_5', '.ectTests .ball_7_5')
-newElemenctor('ect_ball_7_6', '.ectTests .ball_7_6')
-newElemenctor('ect_ball_7_7', '.ectTests .ball_7_7')
-newElemenctor('ect_ball_7_8', '.ectTests .ball_7_8')
-newElemenctor('ect_ball_7_9', '.ectTests .ball_7_9')
-newElemenctor('ect_ball_7_10', '.ectTests .ball_7_10')
-
-newElemenctor('ect_ball_8_1', '.ectTests .ball_8_1')
-newElemenctor('ect_ball_8_2', '.ectTests .ball_8_2')
-newElemenctor('ect_ball_8_3', '.ectTests .ball_8_3')
-newElemenctor('ect_ball_8_4', '.ectTests .ball_8_4')
-newElemenctor('ect_ball_8_5', '.ectTests .ball_8_5')
-newElemenctor('ect_ball_8_6', '.ectTests .ball_8_6')
-newElemenctor('ect_ball_8_7', '.ectTests .ball_8_7')
-newElemenctor('ect_ball_8_8', '.ectTests .ball_8_8')
-newElemenctor('ect_ball_8_9', '.ectTests .ball_8_9')
-newElemenctor('ect_ball_8_10', '.ectTests .ball_8_10')
-
-newElemenctor('ect_ball_9_1', '.ectTests .ball_9_1')
-newElemenctor('ect_ball_9_2', '.ectTests .ball_9_2')
-newElemenctor('ect_ball_9_3', '.ectTests .ball_9_3')
-newElemenctor('ect_ball_9_4', '.ectTests .ball_9_4')
-newElemenctor('ect_ball_9_5', '.ectTests .ball_9_5')
-newElemenctor('ect_ball_9_6', '.ectTests .ball_9_6')
-newElemenctor('ect_ball_9_7', '.ectTests .ball_9_7')
-newElemenctor('ect_ball_9_8', '.ectTests .ball_9_8')
-newElemenctor('ect_ball_9_9', '.ectTests .ball_9_9')
-newElemenctor('ect_ball_9_10', '.ectTests .ball_9_10')
-
-newElemenctor('ect_ball_10_1', '.ectTests .ball_10_1')
-newElemenctor('ect_ball_10_2', '.ectTests .ball_10_2')
-newElemenctor('ect_ball_10_3', '.ectTests .ball_10_3')
-newElemenctor('ect_ball_10_4', '.ectTests .ball_10_4')
-newElemenctor('ect_ball_10_5', '.ectTests .ball_10_5')
-newElemenctor('ect_ball_10_6', '.ectTests .ball_10_6')
-newElemenctor('ect_ball_10_7', '.ectTests .ball_10_7')
-newElemenctor('ect_ball_10_8', '.ectTests .ball_10_8')
-newElemenctor('ect_ball_10_9', '.ectTests .ball_10_9')
-newElemenctor('ect_ball_10_10', '.ectTests .ball_10_10')
-}
-//····································································◈ Método each()
-/* 
-        ect_box1.each(`append(ball_1_1)`)
-        ect_box2.each(`append(ball_2_1, ball_2_2)`)
-        ect_box3.each(`append(ball_3_1, ball_3_2, ball_3_3)`)
-        ect_box4.each(`append(ball_4_1, ball_4_2, ball_4_3, ball_4_4)`)
-        ect_box5.each(`append(ball_5_1, ball_5_2, ball_5_3, ball_5_4, ball_5_5)`)
-        ect_box6.each(`append(ball_6_1, ball_6_2, ball_6_3, ball_6_4, ball_6_5, ball_6_6)`)
-        ect_box7.each(`append(ball_7_1, ball_7_2, ball_7_3, ball_7_4, ball_7_5, ball_7_6, ball_7_7)`)
-        ect_box8.each(`append(ball_8_1, ball_8_2, ball_8_3, ball_8_4, ball_8_5, ball_8_6, ball_8_7, ball_8_8)`)
-        ect_box9.each(`append(ball_9_1, ball_9_2, ball_9_3, ball_9_4, ball_9_5, ball_9_6, ball_9_7, ball_9_8, ball_9_9)`)
-        // ect_box10.each(`append(ball_10_1, ball_10_2, ball_10_3, ball_10_4, ball_10_5, ball_10_6, ball_10_7, ball_10_8, ball_10_9, ball_10_10)`)
-        // box.append(ball1, ball2, ball3, ball4, ball5, ball6, ball7, ball8, ball9, ball10)
- */
-
-/* 
-        // var $ = ['append', ball1, ball2]
-
-        // var slot = document.querySelector('.ectTests .box')
-
-        // buildMethod($, 2)
-
-        // function buildMethod(snippets, qtSnippetsInsideParentheses) {
+            if (label.textContent[label.textContent.length - 1] === ':') {
                 
-        //     var qtSnippets = snippets.length
-            
-        //     var $ = snippets
+                label.textContent = label.textContent.slice(0, label.textContent.length - 1)
+            }
+        }
 
-        //     var stg = `slot`
-            
-        //     for (var i = 0; i < (qtSnippets - qtSnippetsInsideParentheses); i++) {
-
-        //         stg += `[$[`+ i +`]]`
-        //     }
-
-        //     stg += `(`
-
-        //     for (var i = (qtSnippets - qtSnippetsInsideParentheses); i < qtSnippets; i++) {
-            
-        //         if (i !== (qtSnippets - qtSnippetsInsideParentheses)) {
-        //             stg += `,`
-        //         }
-
-        //         stg += `$[`+ i +`]`
-        //     }
-
-        //     stg += `)`
-
-        //     csl.log(_, slot, $, stg, _)
-
-        //     return runCodeAsString(stg)
-        // }
- */
-
-
-/* 
-csl.log(_).group1('Método each()')
-{
-    csl.log('').group1('Special Cases')
-
-        var v = 'Azure'; 
-        ect_span1.each(`
-        .style.backgroundColor = v      `)
-
-        ect_span2.each('style.backgroundColor = "Seashell"')
-        ect_span3.each('style.backgroundColor = `PapayaWhip`')
-        ect_span4.each("style.backgroundColor = 'hsl(180, 65%, 91%)'")
-        ect_span5.each("style.backgroundColor = `hsl(271, 68%, 96%)`")
-        ect_span6.each(`style.backgroundColor = 'hsl(271, 68%, 96%)'`)
-        ect_span7.each(`style.backgroundColor = "hsl(29, 76%, 94%)"`)
-
-        ect_img1.each(`style.opacity = .4`)
-        ect_img2.each(`style.filter = 'hue-rotate(calc(80deg + 80deg))'`)
-
-    csl.groupEnd('')
-
-    csl.log('').group1('Applying 1 instruction')
-
-        //··································◈ 1 Snippet per instruction
-
-        csl.bold('', '1 Snippet per instruction:', '')
-
-        //·················◈ Applying to 1 element
-
-        csl.log('span4.textContent: '+ ect_span4.each('textContent'))
-
-        //·················◈ Applying to 2+ elements
-
-        csl.log(ect_span2to4.each('hidden'))
-
-        //··································◈ 2 Snippets per instruction
-
-        csl.bold('', '2 Snippets per instruction:', '')
-
-        //·················◈ Applying to 1 element
- 
-        csl.log(ect_span1.each("style.color"))
-        ect_span1.each(`textContent = span1.textContent + '∆'`)
-        csl.log(ect_span1.each('hasChildNodes()'))
-        csl.log(ect_span1.each(`getAttribute('class')`))
-        
-        //·················◈ Applying to 2+ elements
-
-        csl.log(ect_span1to4.each("style.color"))
-        ect_span2to4.each(`className = span3.className + ' rounded'`)
-        csl.log(ect_span2to4.each('hasChildNodes()'))
-        csl.log(ect_span2to4.each(`getAttribute('style')`))
-
-        //··································◈ 3 Snippets per instruction
-
-        csl.bold('', '3 Snippets per instruction:', '')
-
-        //·················◈ Applying to 1 element
-
-        csl.log(ect_span1.each("parentElement.style.lineHeight"))
-        ect_span1.each(`style.backgroundColor = 'Azure'`)
-        csl.log(ect_span1.each('parentElement.hasChildNodes()'))
-        csl.log(ect_span1.each(`parentElement.getAttribute('style')`))
-        ect_span1.each(`insertAdjacentText('beforeend', '+')`)
-
-        //·················◈ Applying to 2+ elements
-
-        csl.log(ect_span3to5.each("parentElement.style.lineHeight"))
-        ect_span3to5.each("style.textDecoration = 'underline'")
-        csl.log(ect_span3to5.each('parentElement.hasChildNodes()'))
-        csl.log(ect_span3to5.each(`parentElement.getAttribute('style')`))
-        ect_span3to5.each(`insertAdjacentText('beforeend', '+')`)
-
-        //··································◈ 4+ Snippets per instruction
-
-        csl.bold('', '4+ Snippets per instruction:', '')
-
-        //·················◈ Applying to 1 element
-
-        ect_span3.each(`parentElement.insertAdjacentHTML('beforeend', '<span class="spans">A</span> ')`)
-
-        csl.log(ect_span20.each('parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement'))
-
-        //·················◈ Applying to 2+ elements
-
-        ect_span3to5.each(`parentElement.insertAdjacentHTML('beforeend', '<span class="spans">B</span> ')`)
-
-    csl.log('').groupEnd('')
-
-    csl.group1('Applying 2+ instructions')
-
-        ect_span10.each(`
-        style.fontWeight = 'bold'`, 
-        `style.fontStyle = 'italic'`, 
-        `style.textDecoration = 'underline'`)
-
-        ect_span10to12.each(`
-        style.borderRadius = '10px'`, 
-        `style.borderWidth = '3px'`, 
-        `style.borderStyle = 'double'`)
-
-    csl.groupEnd('')
+        labelTag.style.display = 'block'
+    })
 }
-csl.groupEnd(_)
 
-//····································································◈
+var labelTags_ex3 = document.querySelectorAll('.example_3')
 
-csl.group1Collapsed('Mudando o slot (testando o valor e length do slot, inicialmente e seus setters:)')
-{
-    csl.log('', '- Slot vazio inicialmente (ect_notExistSpan):', '')
-
-    csl.log(ect_notExistSpan)
-
-    ect_notExistSpan.slot = document.querySelectorAll('.ectTests .c_span2, .ectTests .c_span3')
-    csl.log(ect_notExistSpan)
-
-    ect_notExistSpan.slot = document.querySelectorAll('.ectTests .c_span5')
-    csl.log(ect_notExistSpan)
-
-    ect_notExistSpan.slot = document.querySelectorAll('notExistElement')
-    csl.log(ect_notExistSpan)
-
-    csl.log('', '- Slot com 1 elemento inicialmente (ect_span5):', '')
-
-    csl.log(ect_span5)
-
-    ect_span5.slot = document.querySelectorAll('.ectTests .c_span2, .ectTests .c_span3')
-    csl.log(ect_span5)
-
-    ect_span5.slot = document.querySelectorAll('.ectTests .c_span5')
-    csl.log(ect_span5)
-
-    ect_span5.slot = document.querySelectorAll('notExistElement')
-    csl.log(ect_span5)
-
-    csl.log('', '- Slot com 2+ elementos inicialmente (ect_span5to6):', '')
-
-    csl.log(ect_span5to6)
-
-    ect_span5to6.slot = document.querySelectorAll('.ectTests .c_span2, .ectTests .c_span3')
-    csl.log(ect_span5to6, ect_span5to6.slot[0], ect_span5to6.slot[1])
-
-    ect_span5to6.slot = document.querySelectorAll('.ectTests .c_span5')
-    csl.log(ect_span5to6)
-
-    ect_span5to6.slot = document.querySelectorAll('notExistElement')
-    csl.log(ect_span5to6, '')
+if (labelTags_ex3) {
+    
+    labelTags_ex3.forEach(function (labelTag) {
+    
+        labelTag.style.display = 'block'
+    })
 }
-csl.groupEnd(_)
-
-//····································································◈
-
-csl.group1Collapsed('Teste de escopo de um objeto Elemenctor')
-{
-    csl.log('', `Acessando 'ect_span13' e 'span13' globalmente (eles foram definidos dentro de uma função):`, ``)
-
-    try { csl.log(ect_span13) } catch (e) { console.error(e) }
-    try { csl.log(span13) } catch (e) { console.error(e) }
-
-    csl.log('', `Acessando 'ect_span13' e 'span13' localmente (ou seja, acessando dentro da função em que eles foram definidos):`, ``)
-
-    accessingEct_span13AndSpan13()
-
-    function accessingEct_span13AndSpan13() {
-        
-        newElemenctor('ect_span13', '.ectTests .c_span13')
-
-        csl.log(ect_span13)
-        csl.log(span13)
-    }
-}
-csl.groupEnd(_)
-
-//····································································◈ 
-
-var span8 = 1 // !!!
-
-newElemenctor('ect_span8', '.ectTests .c_span8')
-
-csl.log(ect_span8, span8, _)
-
-//····································································◈ 
-
-csl.log('Encadeando a função de criar um objeto elemenctor:')
-
-newElemenctor('ect_span9', '.ectTests .c_span9').slot = 
-document.querySelectorAll('.ectTests .c_span5, .ectTests .c_span9')
-
-csl.log(ect_span9)*/
-/* */
-
-/*
-◈──────────────────────────────────────────────────────◈
-TODO: Lightning X
-◈──────────────────────────────────────────────────────◈ */
-
-var LX = document.querySelectorAll('.lightningX')
 
 /*  
 ◈──────────────────────────────────────────────────────◈
@@ -1902,7 +222,7 @@ document.querySelectorAll('.noText').forEach(function (item) {
 
 /*  
 ◈──────────────────────────────────────────────────────◈
-TODO: <abbr> C/ A Classe 'interrogation'
+TODO: <abbr> - Classe 'interrogation'
 ◈──────────────────────────────────────────────────────◈ */
 
 document.querySelectorAll('abbr.interrogation').forEach(function (abbr) {
@@ -1942,6 +262,19 @@ for (i = 0; i < switches.length; i++) {
     }
 }
 */
+
+var switches = document.querySelectorAll('.switch')
+
+if (switches) {
+    
+    switches.forEach(function (swt) {
+    
+        swt.addEventListener('click', function() {
+        
+            switch_event(swt)
+        })
+    })
+}
 
 
 /*  TODO:    1 ▶ Switches, Buttons, And Anchors All Type Button
@@ -2613,15 +946,15 @@ function update_switches_buttons_and_anchors($switches_or_buttons_or_anchors, ty
             $swt_or_btn_or_a.classList.remove('key_text')
             $swt_or_btn_or_a.classList.remove('inverted')
             
-            if (type_number == 01) { $swt_or_btn_or_a.classList.add('button_full') }
-            if (type_number == 02) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('text_below') }
-            if (type_number == 03) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('pill') }
-            if (type_number == 04) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('pill'); $swt_or_btn_or_a.classList.add('text_below') }
-            if (type_number == 05) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('rounded') }
-            if (type_number == 06) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('rounded'); $swt_or_btn_or_a.classList.add('text_below') }
-            if (type_number == 07) { $swt_or_btn_or_a.classList.add('button_text')  }
-            if (type_number == 08) { $swt_or_btn_or_a.classList.add('button_text'); $swt_or_btn_or_a.classList.add('pill') }
-            if (type_number == 09) { $swt_or_btn_or_a.classList.add('button_text'); $swt_or_btn_or_a.classList.add('rounded') }
+            if (type_number == 1) { $swt_or_btn_or_a.classList.add('button_full') }
+            if (type_number == 2) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('text_below') }
+            if (type_number == 3) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('pill') }
+            if (type_number == 4) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('pill'); $swt_or_btn_or_a.classList.add('text_below') }
+            if (type_number == 5) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('rounded') }
+            if (type_number == 6) { $swt_or_btn_or_a.classList.add('button_full'); $swt_or_btn_or_a.classList.add('rounded'); $swt_or_btn_or_a.classList.add('text_below') }
+            if (type_number == 7) { $swt_or_btn_or_a.classList.add('button_text')  }
+            if (type_number == 8) { $swt_or_btn_or_a.classList.add('button_text'); $swt_or_btn_or_a.classList.add('pill') }
+            if (type_number == 9) { $swt_or_btn_or_a.classList.add('button_text'); $swt_or_btn_or_a.classList.add('rounded') }
             if (type_number == 10) { $swt_or_btn_or_a.classList.add('button_icon')  }
             if (type_number == 11) { $swt_or_btn_or_a.classList.add('button_icon'); $swt_or_btn_or_a.classList.add('pill') }
             if (type_number == 12) { $swt_or_btn_or_a.classList.add('button_icon'); $swt_or_btn_or_a.classList.add('rounded') }
@@ -2653,186 +986,208 @@ window.addEventListener('resize', update_switches_buttons_and_anchors_resize)
 TODO: Choices 
 ◈──────────────────────────────────────────────────────◈ */
 
-var choice_anchorClicked = null
-var choice_anchorClickedBefore = null /* <- Variável necessária para 
-salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
-desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao seu 
-valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
-opção que aparece em um 'dropdown' quando ele está fechado.
-*/
- 
-var dropdown_open = false
+var choices = document.querySelectorAll('.choice')
 
-function choice(arg) {
+if (choices) {
 
-    var dropdown_liClicked = null
+    //····································································◈ Logic
+        
+    var choice_anchorClicked = null
+    var choice_anchorClickedBefore = null /* <- Variável necessária para 
+    salvar o valor de 'choice_anchorClicked' antes de se clicar em uma opção 
+    desabilitada, já que ao fazer isso, ela será alterada, e depois retorná-la ao seu 
+    valor anterior. Isso é necessário, pois 'choice_anchorClicked' determina a 
+    opção que aparece em um 'dropdown' quando ele está fechado.
+    */
+    
+    var dropdown_open = false
 
-    if(arg.classList.contains('dropdown')) {
+    function choice(arg) {
 
-        if(arg.classList.contains('dropdown_open')) {
+        var dropdown_liClicked = null
 
-                for(var i = 0; i < arg.children.length; i++) { 
+        if(arg.classList.contains('dropdown')) {
 
-                    if(arg.children[i].children[0] === choice_anchorClicked) {
+            if(arg.classList.contains('dropdown_open')) {
 
-                        dropdown_liClicked = arg.children[i]
-                        break
+                    for(var i = 0; i < arg.children.length; i++) { 
+
+                        if(arg.children[i].children[0] === choice_anchorClicked) {
+
+                            dropdown_liClicked = arg.children[i]
+                            break
+                        }
                     }
+
+                if(choice_anchorClicked !== 'disabled') {
+
+                    for(var i = 0; i < arg.children.length; i++) { 
+
+                        arg.children[i].style = 'display: none'
+                    }
+
+                    if(dropdown_liClicked !==  null) {
+
+                        dropdown_liClicked.style = 'display: inline-flex'
+
+                    } else {
+
+                        arg.children[0].style = 'display: inline-flex'
+                    }
+
+
+
+                    var $shine = document.createElement('div') 
+
+                    $shine.classList.add('choice_shine_top')
+                
+                    arg.insertAdjacentElement('afterbegin', $shine)
                 }
 
+            } else {
+
+                if(arg.classList.contains('disabled')) { 
+                    
+                    return 
+                }
+
+                
+
+                var $shine = arg.querySelector(':scope .choice_shine_top') 
+
+                if ($shine !== null) {
+
+                    $shine.remove()
+                }
+
+
+
+                arg.children[0].style = 'display: none'
+                
+                for(var i = 1; i < arg.children.length; i++) { 
+
+                    arg.children[i].style = 'display: inline-flex'
+                } 
+
+                if(choice_anchorClicked !== null) {
+                    
+                    for(var i = 1; i < arg.children.length - 1; i++) { 
+
+                        arg.children[i].children[0].classList.remove('on')
+                    }
+
+                    choice_anchorClicked.classList.add('on')
+                }
+            }
+                
             if(choice_anchorClicked !== 'disabled') {
 
-                for(var i = 0; i < arg.children.length; i++) { 
+                document.querySelector('html').classList.toggle('overflow_hidden')
+                arg.classList.toggle('dropdown_open')
 
-                    arg.children[i].style = 'display: none'
-                }
+            } else {
+                choice_anchorClicked = choice_anchorClickedBefore
+            }
 
-                if(dropdown_liClicked !==  null) {
+        } else {
 
-                    dropdown_liClicked.style = 'display: inline-flex'
+            if(choice_anchorClicked === null || choice_anchorClicked === 'disabled') { return }
 
-                } else {
+            for(var i = 0; i < arg.children.length; i++) { 
 
-                    arg.children[0].style = 'display: inline-flex'
-                }
+                arg.children[i].children[0].classList.remove('on')
+            }
 
+            choice_anchorClicked.classList.add('on')
 
+            choice_anchorClicked = null
+        }
+    }
+
+    function choice_option(arg) { 
+
+        if(arg.classList.contains('disabled')) { 
+
+            choice_anchorClickedBefore = choice_anchorClicked
+
+            choice_anchorClicked = 'disabled'
+
+        } else {
+            choice_anchorClicked =  arg
+        }
+    }
+
+    /* Espaço no final ('li' invisível) do menu dos dropdowns: */
+
+    var allChoicesD = document.querySelectorAll('.dropdown')
+
+    for(var i = 0; i < allChoicesD.length; i++) { 
+
+    var e = document.createElement("li")
+
+        allChoicesD[i].appendChild(e)
+    }
+
+    choices.forEach(function ($choice) {
+
+        //····································································◈ Events
+
+        $choice.addEventListener('click', function(evt) {
+
+            choice($choice)
+        })
+
+        var options_anchors = $choice.querySelectorAll(':scope > li > a')
+
+        options_anchors.forEach(function (option_anchor) {
+        
+            option_anchor.addEventListener('click', function(evt) {
+            
+                choice_option(option_anchor)
+            })
+        })
+
+        //····································································◈ Shine
+
+        if($choice.classList.contains('horizontal')) {
+
+            var $shine = document.createElement('div') 
+
+            $shine.classList.add('choice_shine_top')
+
+            $choice.querySelector(':scope li:nth-of-type(1)').insertAdjacentElement('afterbegin', $shine)
+
+            var $choice_parts = $choice.querySelectorAll(':scope a') 
+            
+            $choice_parts.forEach(function (part) {
 
                 var $shine = document.createElement('div') 
 
                 $shine.classList.add('choice_shine_top')
             
-                arg.insertAdjacentElement('afterbegin', $shine)
-            }
-
-        } else {
-
-            if(arg.classList.contains('disabled')) { 
-                
-                return 
-            }
-
-            
-
-            var $shine = arg.querySelector(':scope .choice_shine_top') 
-
-            if ($shine !== null) {
-
-                $shine.remove()
-            }
-
-
-
-            arg.children[0].style = 'display: none'
-            
-            for(var i = 1; i < arg.children.length; i++) { 
-
-                arg.children[i].style = 'display: inline-flex'
-            } 
-
-            if(choice_anchorClicked !== null) {
-                
-                for(var i = 1; i < arg.children.length - 1; i++) { 
-
-                    arg.children[i].children[0].classList.remove('on')
-                }
-
-                choice_anchorClicked.classList.add('on')
-            }
-        }
-            
-        if(choice_anchorClicked !== 'disabled') {
-
-            document.querySelector('html').classList.toggle('overflow_hidden')
-            arg.classList.toggle('dropdown_open')
-
-        } else {
-            choice_anchorClicked = choice_anchorClickedBefore
+                part.insertAdjacentElement('afterbegin', $shine)
+            })
         }
 
-    } else {
-
-        if(choice_anchorClicked === null || choice_anchorClicked === 'disabled') { return }
-
-        for(var i = 0; i < arg.children.length; i++) { 
-
-            arg.children[i].children[0].classList.remove('on')
-        }
-
-        choice_anchorClicked.classList.add('on')
-
-        choice_anchorClicked = null
-    }
-}
-
-function choice_option(arg) { 
-
-    if(arg.classList.contains('disabled')) { 
-
-        choice_anchorClickedBefore = choice_anchorClicked
-
-        choice_anchorClicked = 'disabled'
-
-    } else {
-        choice_anchorClicked =  arg
-    }
-}
-
-/* Espaço no final ('li' invisível) do menu dos dropdowns: */
-
-var allChoicesD = document.querySelectorAll('.dropdown')
-
-for(var i = 0; i < allChoicesD.length; i++) { 
-
-var e = document.createElement("li")
-
-    allChoicesD[i].appendChild(e)
-}
-
-
-/*  TODO:    1 ▶ Shine
-◈──────────────────────────────────────────────────────◈ */
-
-document.querySelectorAll('.choice').forEach(function ($choice) {
-
-    if($choice.classList.contains('horizontal')) {
-
-        var $shine = document.createElement('div') 
-
-        $shine.classList.add('choice_shine_top')
-
-        $choice.querySelector(':scope li:nth-of-type(1)').insertAdjacentElement('afterbegin', $shine)
-
-        var $choice_parts = $choice.querySelectorAll(':scope a') 
-        
-        $choice_parts.forEach(function (part) {
+        if($choice.classList.contains('vertical')) {
 
             var $shine = document.createElement('div') 
 
             $shine.classList.add('choice_shine_top')
-        
-            part.insertAdjacentElement('afterbegin', $shine)
-        })
-    }
 
-    if($choice.classList.contains('vertical')) {
+            $choice.querySelector(':scope li:nth-of-type(1)').insertAdjacentElement('afterbegin', $shine) 
+        }
 
-        var $shine = document.createElement('div') 
+        if($choice.classList.contains('dropdown')) {
 
-        $shine.classList.add('choice_shine_top')
+            var $shine = document.createElement('div') 
 
-        $choice.querySelector(':scope li:nth-of-type(1)').insertAdjacentElement('afterbegin', $shine) 
-    }
+            $shine.classList.add('choice_shine_top')
 
-    if($choice.classList.contains('dropdown')) {
-
-        var $shine = document.createElement('div') 
-
-        $shine.classList.add('choice_shine_top')
-
-        $choice.insertAdjacentElement('afterbegin', $shine)
-    }
-})
+            $choice.insertAdjacentElement('afterbegin', $shine)
+        }
+    })
+}
 
 // getComputedStyle($piece_icon).getPropertyValue('display')
 /*
@@ -2840,142 +1195,183 @@ document.querySelectorAll('.choice').forEach(function ($choice) {
 TODO: Gallery
 ◈──────────────────────────────────────────────────────◈ */
 
-var galleries = document.querySelectorAll('.gallery')
+window.addEventListener("load", function() { // Bug fix: No Safari às vezes as imagens são carregadas depois que o JS é executado.
 
-galleries.forEach(function (gallery) {
+    var galleries = document.querySelectorAll('.gallery')
 
-    var all_imgs = gallery.querySelectorAll(':scope > img')
+    if (galleries) {
 
-    var i_last_img = all_imgs.length - 1
-    /* 
-    gallery.insertAdjacentHTML('afterbegin', `
-    <div class="painel">
-        <button class="btn_back"><img src="../images/icons/arrowRounded_L.png"></button>
-        <button class="btn_fullScreen"><!-- <img src="../images/icons/click_to_max_img.svg"> --></button>
-        <button class="btn_next"><img src="../images/icons/arrowRounded_R.png"></button>
-        <span class="order"><span class="actual">1</span>/<span class="total">?</span></span>
-    </div>
-    `)
-    */
+        galleries.forEach(function (gallery) {
 
-    gallery.querySelector(':scope .total').textContent = all_imgs.length
+            gallery.insertAdjacentHTML('afterbegin', 
+            `
+            <div class="painel">
+                <button class="btn_back"><img src="${URL_begin}/images/icons/arrowRounded_L.png"></button>
+                <button class="btn_fullScreen"><!-- <img src="${URL_begin}/images/icons/click_to_max_img.svg"> --> </button>
+                <button class="btn_next"><img src="${URL_begin}/images/icons/arrowRounded_R.png"></button>
+                <span class="order"><span class="actual">1</span>/<span class="total">?</span></span>
+            </div>
+            `)
 
-    gallery.querySelector(':scope .btn_next').addEventListener('click', function(evt) {
+            var all_imgs = gallery.querySelectorAll(':scope > img')
 
-        for (i = 0; i < all_imgs.length; i++) {
-        
-            if (getComputedStyle(all_imgs[i]).getPropertyValue('display') !== 'none') {
-
-
-                // csl.log(typeof getComputedStyle(all_imgs[i]).getPropertyValue('display'))
-
-                
-                if (i === i_last_img) {
-                        
-                    all_imgs[i].style.display = 'none'
-                    all_imgs[0].style.display = 'initial'
-
-                    gallery.querySelector(':scope .actual').textContent = 1
-
-                } else {
-                        
-                    all_imgs[i].style.display = 'none'
-                    all_imgs[i + 1].style.display = 'initial'
-
-                    gallery.querySelector(':scope .actual').textContent = i + 2
-                }
-
-                // gallery.querySelector(':scope .order').opacity = 1
-
-                animation_showOrder(Math.PI, gallery)
-
-                break
-            }
-        }
-        // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
-    })
-
-    gallery.querySelector(':scope .btn_back').addEventListener('click', function(evt) {
-
-        for (i = 0; i < all_imgs.length; i++) {
-        
-            if (getComputedStyle(all_imgs[i]).getPropertyValue('display') !== 'none') {
-                
-                if (i === 0) {
-                        
-                    all_imgs[0].style.display = 'none'
-                    all_imgs[i_last_img].style.display = 'initial'
-
-                    gallery.querySelector(':scope .actual').textContent = i_last_img + 1
-
-                    // csl.log(i, i_last_img, '-x-')
-
-                } else {
-
-                    ib = all_imgs.length - i
-                        
-                    all_imgs[i].style.display = 'none'
-                    all_imgs[i - 1].style.display = 'initial'
-
-                    gallery.querySelector(':scope .actual').textContent = i
-
-                    // csl.log(i, i - 1, '---')
-                }
-
-                animation_showOrder(Math.PI, gallery) // gallery.querySelector(':scope .order').opacity = 1
-
-                break
-            }
-        }
-        // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
-    })
-
-    // Gallery Full Screen:
-
-    gallery.querySelector(':scope .btn_fullScreen').addEventListener('click', function(evt) {
-
-        // if (this.parentElement.parentElement.classList.contains('gallery_fullScreen')) {
+            var imgsBox = document.createElement('div')
             
-            // this.parentElement.parentElement.classList.toggle('gallery_fullScreen')
+            imgsBox.classList.add('imgsBox')
 
-        // } else {
+            gallery.insertAdjacentElement('beforeend', imgsBox)
 
-            this.parentElement.parentElement.classList.toggle('gallery_fullScreen')
-
-            document.querySelector('html').classList.toggle('overflow_hidden')
-
-            /* 
+            all_imgs.forEach(function (img) {
             
-            var gallery_width_initial = gallery.style.width
-            var gallery_maxWidth_initial = gallery.style.maxWidth
-            var gallery_maxHeight_initial = gallery.style.maxHeight
-            
-            gallery.style.width = gallery_naturalWidth
-            gallery.style.maxWidth = '100vw'
-            gallery.style.maxHeight = '100vh'
-
-            var div_gallery_fullScreen = document.createElement('div')
-
-            div_gallery_fullScreen.classList.add('gallery_fullScreen')
-
-            div_gallery_fullScreen.addEventListener('click', function(evt) {
-            
-                this.insertAdjacentElement('afterend', this.firstElementChild)
-                this.remove()
-            
-                gallery.style.width = gallery_width_initial
-                gallery.style.maxWidth = gallery_maxWidth_initial
-                gallery.style.maxHeight = gallery_maxHeight_initial
-
-                document.querySelector('html').classList.remove('overflow_hidden')
+                imgsBox.insertAdjacentElement('beforeend', img)
             })
 
-            this.insertAdjacentElement('beforebegin', div_gallery_fullScreen)
+            all_imgs.forEach(function (img) { // Definindo o tamanho das imagens e cujos nomes terminam com '_x#'.
 
-            div_gallery_fullScreen.insertAdjacentElement('afterbegin', this) */
-        // }
-    })
-}) 
+                setSizeImgs(img)
+            })
+
+            var i_last_img = all_imgs.length - 1
+
+            gallery.querySelector(':scope .total').textContent = all_imgs.length
+
+            gallery.querySelector(':scope .btn_next').addEventListener('click', function(evt) {
+
+                for (i = 0; i < all_imgs.length; i++) {
+                
+                    if (getComputedStyle(all_imgs[i]).getPropertyValue('display') !== 'none') {
+
+
+                        // csl.log(typeof getComputedStyle(all_imgs[i]).getPropertyValue('display'))
+
+                        
+                        if (i === i_last_img) {
+                                
+                            all_imgs[i].style.display = 'none'
+                            all_imgs[0].style.display = 'initial'
+
+                            gallery.querySelector(':scope .actual').textContent = 1
+
+                        } else {
+                                
+                            all_imgs[i].style.display = 'none'
+                            all_imgs[i + 1].style.display = 'initial'
+
+                            gallery.querySelector(':scope .actual').textContent = i + 2
+                        }
+
+                        // gallery.querySelector(':scope .order').opacity = 1
+
+                        animation_showOrder(Math.PI, gallery)
+
+                        break
+                    }
+                }
+                // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
+            })
+
+            gallery.querySelector(':scope .btn_back').addEventListener('click', function(evt) {
+
+                for (i = 0; i < all_imgs.length; i++) {
+                
+                    if (getComputedStyle(all_imgs[i]).getPropertyValue('display') !== 'none') {
+                        
+                        if (i === 0) {
+                                
+                            all_imgs[0].style.display = 'none'
+                            all_imgs[i_last_img].style.display = 'initial'
+
+                            gallery.querySelector(':scope .actual').textContent = i_last_img + 1
+
+                            // csl.log(i, i_last_img, '-x-')
+
+                        } else {
+
+                            ib = all_imgs.length - i
+                                
+                            all_imgs[i].style.display = 'none'
+                            all_imgs[i - 1].style.display = 'initial'
+
+                            gallery.querySelector(':scope .actual').textContent = i
+
+                            // csl.log(i, i - 1, '---')
+                        }
+
+                        animation_showOrder(Math.PI, gallery) // gallery.querySelector(':scope .order').opacity = 1
+
+                        break
+                    }
+                }
+                // csl.log(gallery, this, evt.target, gallery.querySelector(':scope img'))
+            })
+
+            //····································································◈ Gallery Full Screen:
+
+            gallery.querySelector(':scope .btn_fullScreen').addEventListener('click', function(evt) {
+
+                // if (this.parentElement.parentElement.classList.contains('gallery_fullScreen')) {
+                    
+                    // this.parentElement.parentElement.classList.toggle('gallery_fullScreen')
+
+                // } else {
+
+                    this.parentElement.parentElement.classList.toggle('gallery_fullScreen')
+
+                    document.querySelector('html').classList.toggle('overflow_hidden')
+
+                    /* 
+                    
+                    var gallery_width_initial = gallery.style.width
+                    var gallery_maxWidth_initial = gallery.style.maxWidth
+                    var gallery_maxHeight_initial = gallery.style.maxHeight
+                    
+                    gallery.style.width = gallery_naturalWidth
+                    gallery.style.maxWidth = '100vw'
+                    gallery.style.maxHeight = '100vh'
+
+                    var div_gallery_fullScreen = document.createElement('div')
+
+                    div_gallery_fullScreen.classList.add('gallery_fullScreen')
+
+                    div_gallery_fullScreen.addEventListener('click', function(evt) {
+                    
+                        this.insertAdjacentElement('afterend', this.firstElementChild)
+                        this.remove()
+                    
+                        gallery.style.width = gallery_width_initial
+                        gallery.style.maxWidth = gallery_maxWidth_initial
+                        gallery.style.maxHeight = gallery_maxHeight_initial
+
+                        document.querySelector('html').classList.remove('overflow_hidden')
+                    })
+
+                    this.insertAdjacentElement('beforebegin', div_gallery_fullScreen)
+
+                    div_gallery_fullScreen.insertAdjacentElement('afterbegin', this) */
+                // }
+            })
+
+            //····································································◈ Fazer os galleries aparecer
+
+            // Bug fix: Coloquei os galleries ocultos inicialmente via CSS, e coloquei para o exibi-los usando JavaScript 
+            // logo assim que forem manipulados por ele. Isso é necessário porque o JavaScript demora um pouco para ser 
+            // executado, o que faz com que o HTML seja exibido brevemente antes de ser manipulado pelo JavaScript.
+
+            /* if (gallery.classList.contains('center')) {
+                
+                gallery.style.display = 'flex' 
+                
+            } else {
+            
+                gallery.style.display = 'block' 
+            } */
+
+            // gallery.style.display = 'flex' 
+            gallery.style.display = 'block' 
+        }) 
+    }
+});
+
 
 function animation_showOrder(duration, gallery) {
 
@@ -3257,52 +1653,275 @@ function lightbox_close(arg) {
 
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: Code Viewer
+TODO: Code Example
 ◈──────────────────────────────────────────────────────◈ */
 
-document.querySelectorAll('.codeViewer').forEach(function (codeViewer) {
+var codeExs = document.querySelectorAll('.codeEx')
 
-    var assets = codeViewer.querySelector(':scope .assets')
-    var assets_dts = codeViewer.querySelectorAll(':scope .assets > div > dt')
-    var assets_btns = codeViewer.querySelectorAll(':scope .assets > div > dt button')
-    var assets_dds = codeViewer.querySelectorAll(':scope .assets > div > dd')
+if (codeExs) {
+    codeExs.forEach(function (codeEx) {
 
-    var assets_dts_container = document.createElement('div')
-    assets_dts_container.classList.add('assets_dts_container')
+        var header = codeEx.querySelector(':scope > .header')
 
-    if(assets !== null) {
-        assets.prepend(assets_dts_container)
+        // var imgs = codeEx.querySelectorAll(':scope > .assets > .box_noCode img')
+        var imgs = codeEx.querySelectorAll(':scope img')
 
-        assets_dts.forEach(function (assets_dt) {
-        
-            assets_dts_container.append(assets_dt)
+        var assets = codeEx.querySelector(':scope > .assets')
+        var assets_dts = codeEx.querySelectorAll(':scope > .assets > .label_code, :scope > .assets > .label_noCode')
+        var assets_btns = codeEx.querySelectorAll(':scope > .assets > .label_code > button, :scope > .assets > .label_noCode > button')
+        var assets_dds = codeEx.querySelectorAll(':scope > .assets > .box_code, :scope > .assets > .box_noCode')
+
+        var codes = codeEx.querySelectorAll(':scope > .assets > .box_code > pre > code')
+
+        var run = codeEx.querySelector(':scope > .run')
+        var run_dts = codeEx.querySelectorAll(':scope > .run > .rendering_label, :scope > .run > .console_label')
+        var run_btns = codeEx.querySelectorAll(':scope > .run > .rendering_label > button, :scope > .run > .console_label > button')
+        var run_dds = codeEx.querySelectorAll(':scope > .run > .rendering_output, :scope > .run > .console_output')
+
+        var btns = codeEx.querySelectorAll(':scope > .assets > .label_code > button, :scope > .assets > .label_noCode > button, :scope > .run > .rendering_label > button, :scope .run > .console_label > button')
+
+        //····································································◈ 'header':
+
+        if (header) {
+
+            //··································◈ Ocultando o '-' e o ':' do 'header':
+
+            header.childNodes.forEach(function (node) {
+            
+                if (node.textContent.trim().slice(-1) === ':') {
+                    node.textContent = node.textContent.slice(0, node.textContent.length - 1)
+                }
+            
+                if ((node.textContent.trim() === '-') || (node.textContent.trim() === ':')) {
+                    node.textContent = ''
+                }
+            })
+
+            //··································◈ Envolver o conteúdo do rótulo do exemplo em um <span> extra: 
+
+            // header.firstElementChild.innerHTML = '<span>'+ header.firstElementChild.textContent +'</span>' // Desta forma buga, pois faz com que as referências de identidade de caracteres sejam identificadas como códigos ao invés de simples textos.
+
+            var stg = header.firstElementChild.textContent
+
+            var span = document.createElement('span')
+
+            header.firstElementChild.innerHTML = ''
+
+            header.firstElementChild.append(span)
+
+            header.firstElementChild.firstElementChild.textContent = stg
+        }
+
+        //····································································◈ Definindo o tamanho das imagens cujos nomes terminam com '_x#':
+
+        imgs.forEach(function (img) {
+
+            setSizeImgs(img)
         })
-    }
-    
-    assets_dts_container.addEventListener('click', function(evt) {
 
-        assets_btns.forEach(function (assets_btn) {
+        //····································································◈ Criando e colocando <span>s dentro dos <button>s das etiquetas (<dt>s):
+
+        btns.forEach(function (btn) {
         
-            assets_btn.classList.remove('on')
-            evt.target.classList.add('on')
+            var btn_innerHTML = btn.innerHTML
+
+            btn.innerHTML = '<span>'+ btn_innerHTML +'</span>'
         })
 
-        assets_dds.forEach(function (assets_dd) {
-        
-            assets_dd.style.display = 'none'
-        })
+        //····································································◈ Configuração das etiquetas (<dt>s) do 'assets':
 
-        assets_btns.forEach(function (assets_btn, i) {
-        
-            if (evt.target === assets_btn) {
+        var assets_dts_container = document.createElement('div')
+        assets_dts_container.classList.add('assets_dts_container')
 
-                assets_dds[i].style.display = 'block'
+        if(assets !== null) {
+
+            assets.prepend(assets_dts_container)
+
+            assets_dts.forEach(function (assets_dt) {
+            
+                assets_dts_container.append(assets_dt)
+            })
+        }
+
+        if (assets_dts.length === 1) {
+            codeEx.querySelector(':scope > .assets > .assets_dts_container > dt > button').style.cursor = 'initial'
+        }
+
+        if (assets_dts.length > 1) {
+
+            // assets_dts_container.style.cursor = 'pointer'
+
+            codeEx.querySelector(':scope > .assets > .assets_dts_container > dt > button').classList.add('on')
+            
+            assets_dts_container.addEventListener('click', function(evt) {
+
+                assets_btns.forEach(function (assets_btn) {
+                
+                    assets_btn.classList.remove('on')
+
+                    if (evt.target.tagName === "SPAN") { evt.target.parentElement.classList.add('on') }
+                    if (evt.target.tagName === "BUTTON") { evt.target.classList.add('on') }
+                })
+
+                assets_dds.forEach(function (assets_dd) {
+                
+                    assets_dd.style.display = 'none'
+                })
+
+                assets_btns.forEach(function (assets_btn, i) {
+                
+                    if ((evt.target.parentElement === assets_btn) || (evt.target === assets_btn)) {
+
+                        assets_dds[i].style.display = 'block'
+                    }
+                })
+            })
+        }
+
+        //····································································◈ Configuração das caixas de código (<dd class="box_code">s) do 'assets':
+
+        codes.forEach(function (code) {
+        
+            var codeTxt = code.textContent
+
+            codeTxt = codeTxt.trimEnd()
+
+            // csl.log(codeTxt)
+
+            if (codeTxt[0] === charLB) {
+                codeTxt = codeTxt.slice(1, codeTxt.length)
             }
-        })
-    })
 
-    codeViewer.style.display = 'block' // Bug fix: Coloquei os 'codeViewer's ocultos inicialmente via CSS, e coloquei para o exibi-los usando JavaScript logo assim que forem manipulados por ele. Isso é necessário porque o JavaScript demora um pouco para ser executado, o que faz com que o HTML seja exibido brevemente antes de ser manipulado pelo JavaScript.
-})
+            // csl.log(codeTxt)
+
+            var qtSpaces = 0
+
+            for (i = 0; codeTxt[i] === ' '; i++) {
+            
+                qtSpaces += 1
+
+                // csl.log(codeTxt[i])
+            }
+
+            // csl.log(qtSpaces)
+
+            var codeTxtLines = codeTxt.split(charLB)
+
+            codeTxt = ''
+
+            code.innerHTML = null
+
+            codeTxtLines.forEach(function (codeTxtLine) {
+            
+                codeTxtLine = codeTxtLine.slice(qtSpaces, codeTxtLine.length)
+
+                var span = document.createElement('span')
+            
+                span.textContent = codeTxtLine + charLB
+                
+                codeTxtLine = span
+
+                code.appendChild(codeTxtLine)
+
+                // console.log(codeTxtLine)
+            })
+        })
+
+        //····································································◈ Corrigindo os textos nas caixas de código (<dd class="box_code">s) do 'assets':
+
+        var codeLineTags = codeEx.querySelectorAll(':scope > .assets > .box_code > pre > code *')
+        
+        codeLineTags.forEach(function (codeLineTag) {
+
+            //··································◈ Corrigindo as URLs dos arquivos:
+        
+            while(codeLineTag.textContent.indexOf('_x2') !== -1) {
+        
+                codeLineTag.textContent = codeLineTag.textContent.replace('_x2', '')
+            }
+        
+            /* while(codeLineTag.textContent.indexOf('pages/') !== -1) {
+        
+                codeLineTag.textContent = codeLineTag.textContent.replace('pages/', '')
+            } */
+        
+            while(codeLineTag.textContent.indexOf('../images/exs/') !== -1) {
+        
+                codeLineTag.textContent = codeLineTag.textContent.replace('../images/exs/', '')
+            }
+        
+            while(codeLineTag.textContent.indexOf('../images/icons/') !== -1) {
+        
+                codeLineTag.textContent = codeLineTag.textContent.replace('../images/icons/', '../framework/images/icons/')
+            }
+
+            //··································◈ Corrigindo as minhas referências de entidade de caracteres:
+        
+            /*   */ while(codeLineTag.textContent.indexOf('$nbsp;') !== -1) { codeLineTag.textContent = codeLineTag.textContent.replace('$nbsp;', '&nbsp;') }
+            /* < */ while(codeLineTag.textContent.indexOf('$lt;') !== -1) { codeLineTag.textContent = codeLineTag.textContent.replace('$lt;', '&lt;') }
+            /* > */ while(codeLineTag.textContent.indexOf('$gt;') !== -1) { codeLineTag.textContent = codeLineTag.textContent.replace('$gt;', '&gt;') }
+            /* " */ while(codeLineTag.textContent.indexOf('$quot;') !== -1) { codeLineTag.textContent = codeLineTag.textContent.replace('$quot;', '&quot;') }
+            /* ' */ while(codeLineTag.textContent.indexOf('$apos;') !== -1) { codeLineTag.textContent = codeLineTag.textContent.replace('$apos;', '&apos;') }
+            /* & */ while(codeLineTag.textContent.indexOf('$amp;') !== -1) { codeLineTag.textContent = codeLineTag.textContent.replace('$amp;', '&amp;') }
+        })
+
+        //····································································◈ Configuração das etiquetas (<dt>s) do 'run':
+
+        var run_dts_container = document.createElement('div')
+        run_dts_container.classList.add('run_dts_container')
+
+        if(run !== null) {
+
+            run.prepend(run_dts_container)
+
+            run_dts.forEach(function (run_dt) {
+            
+                run_dts_container.append(run_dt)
+            })
+        }
+
+        if (run_dts.length === 1) {
+            codeEx.querySelector(':scope > .run > .run_dts_container > dt > button').style.cursor = 'initial'
+        }
+
+        if (run_dts.length > 1) {
+                
+            codeEx.querySelector(':scope > .run > .run_dts_container > dt > button').classList.add('on')
+            
+            run_dts_container.addEventListener('click', function(evt) {
+
+                run_btns.forEach(function (run_btn) {
+                
+                    run_btn.classList.remove('on')
+                    
+                    if (evt.target.tagName === "SPAN") { evt.target.parentElement.classList.add('on') }
+                    if (evt.target.tagName === "BUTTON") { evt.target.classList.add('on') }
+                })
+
+                run_dds.forEach(function (run_dd) {
+                
+                    run_dd.style.display = 'none'
+                })
+
+                run_btns.forEach(function (run_btn, i) {
+                
+                    if ((evt.target.parentElement === run_btn) || (evt.target === run_btn)) {
+
+                        run_dds[i].style.display = 'block'
+                    }
+                })
+            })
+        }
+
+        //····································································◈ Fazer os 'codeEx's aparecer
+
+        // Bug fix: Coloquei os 'codeEx's ocultos inicialmente via CSS, e coloquei para o exibi-los usando JavaScript 
+        // logo assim que forem manipulados por ele. Isso é necessário porque o JavaScript demora um pouco para ser 
+        // executado, o que faz com que o HTML seja exibido brevemente antes de ser manipulado pelo JavaScript.
+        codeEx.style.display = 'block' 
+    })
+}
+
 
 
 
@@ -3318,63 +1937,263 @@ div.addEventListener('click', function fct(evt) {
  */
 /*  
 ◈──────────────────────────────────────────────────────◈
-TODO: Button Hide
+TODO: Temporary Elements
 ◈──────────────────────────────────────────────────────◈ */
 
-var all_button_hide = document.querySelectorAll('.button_hide')
+/*  TODO:    1 ▶ Temporary Message
+◈──────────────────────────────────────────────────────◈ */
 
-for(var i = 0; i < all_button_hide.length; i++) {
+var temporaryMsgs = document.querySelectorAll('.temporaryMsg')
 
-    all_button_hide[i].setAttribute('onclick', 'button_hide(this)')
+if (temporaryMsgs) {
+    temporaryMsgs.forEach(function (temporaryMsg) {
+
+        // var box = document.createElement('div')
+        var btn = document.createElement('span')
+
+        // box.classList.add('temporaryMsgBox')
+        btn.classList.add('temporaryHideBtn')
+
+        // temporaryMsg.insertAdjacentElement('beforebegin', box)
+
+        // box.insertAdjacentElement('afterbegin', temporaryMsg)
+
+        temporaryMsg.insertAdjacentElement('afterbegin', btn)
+
+        btn.addEventListener('click', function() { 
+            
+            localStorage.setItem(this.parentNode.id, this.parentNode.id)
+        
+            this.parentNode.style = 'display: none'
+         })
+
+        //Show alll no clicked:
+
+        if(temporaryMsg.id !== localStorage.getItem(temporaryMsg.id)) {
+
+            temporaryMsg.style = 'display: block' 
+        }
+    })
 }
 
-function button_hide(arg) {
+/*  TODO:    1 ▶ Temporary Div
+◈──────────────────────────────────────────────────────◈ */
 
-    localStorage.setItem(arg.parentNode.id, arg.parentNode.id)
-    
-    arg.parentNode.style = 'display: none'
-} 
+var temporaryDivs = document.querySelectorAll('.temporaryDiv')
 
-//Show alll no clicked:
+if (temporaryDivs) {
 
-for(var i = 0; i < all_button_hide.length; i++) {
+    function button_hide(arg) {
 
-    if(all_button_hide[i].parentNode.id !== localStorage.getItem(all_button_hide[i].parentNode.id)) {
+        localStorage.setItem(arg.parentNode.id, arg.parentNode.id)
+        
+        arg.parentNode.style = 'display: none'
+    } 
 
-        all_button_hide[i].parentNode.style = 'display: block' 
-    }
-} 
+    temporaryDivs.forEach(function (temporaryDiv) {
+
+        // var btn = temporaryDiv.querySelector(':scope .button_hide')
+
+        var btn = document.createElement('span')
+        btn.classList.add('temporaryHideBtn')
+
+        temporaryDiv.insertAdjacentElement('afterbegin', btn)
+
+        btn.addEventListener('click', function() { 
+            
+            localStorage.setItem(this.parentNode.id, this.parentNode.id)
+        
+            this.parentNode.style = 'display: none'
+         })
+
+        //Show alll no clicked:
+
+        if(temporaryDiv.id !== localStorage.getItem(temporaryDiv.id)) {
+
+            temporaryDiv.style = 'display: block' 
+        }
+    })
+}
 
 /*
 ◈──────────────────────────────────────────────────────◈
-TODO: The Variable Is Free
+TODO: Functions
+◈──────────────────────────────────────────────────────◈ */
+
+/*  TODO:    1 ▶ Error
+◈──────────────────────────────────────────────────────◈ */
+
+function error(errorMessage) {
+    
+    var errorTag = document.createElement('div')
+  
+    errorTag.classList.add('error')
+  
+    errorTag.textContent = errorMessage
+
+    document.body.appendChild(errorTag)
+
+    errorTag.addEventListener('click', function(evt) {
+
+        evt.currentTarget.classList.toggle('top')
+    })
+
+    console.error('Error Spot')
+}
+
+/*  TODO:    1 ▶ CSL
+◈──────────────────────────────────────────────────────◈ */
+
+var csl = {
+
+    log: function() {
+    
+        for (csl_index = 0; csl_index < arguments.length; csl_index++) {
+        
+            console.log(arguments[csl_index])
+        }
+
+        return this
+    },
+
+    bold: function() {
+    
+        for (csl_index = 0; csl_index < arguments.length; csl_index++) {
+        
+            console.log()
+    
+            console.log('%c'+ arguments[csl_index] +'%c', 'font-weight: bold', '')
+        }
+
+        return this
+    },
+
+    category: function(arg) {
+    
+        console.log('%c'+ arg +'%c', 'font-size: 12px; font-weight: normal; color: hsl(195, 100%, 46%); background-color: hsl(195, 100%, 97%); border: 1px solid hsl(195, 100%, 58%); border-radius: 40px; padding: 2px 6px; margin: 1px 0 2px', '')
+
+        return this
+    },
+
+    group1: function() {
+
+        console.group(arguments[0])
+    
+        return this
+    },
+
+    group1Collapsed: function() {
+
+        console.groupCollapsed(arguments[0])
+
+        return this
+    },
+
+    group2: function() {
+
+        console.group('%c'+ arguments[0] +'%c', 'font-size: 12px; font-weight: normal; color: hsl(195, 100%, 46%); background-color: hsl(195, 100%, 97%); border: 1px solid hsl(195, 100%, 58%); border-radius: 40px; padding: 2px 6px; margin: 1px 0 2px', '')
+    
+        return this
+    },
+
+    group2Collapsed: function() {
+
+        console.groupCollapsed('%c'+ arguments[0] +'%c', 'font-size: 12px; font-weight: normal; color: hsl(195, 100%, 46%); background-color: hsl(195, 100%, 97%); border: 1px solid hsl(195, 100%, 58%); border-radius: 40px; padding: 2px 6px; margin: 1px 0 2px', '')
+
+        return this
+    },
+
+    groupEnd: function() {
+    
+        console.groupEnd()
+    
+        for (csl_index = 0; csl_index < arguments.length; csl_index++) {
+        
+            console.log(arguments[csl_index])
+        }
+
+        return this
+    },
+
+    topic: function(arg) {
+    
+        this.log(__, arg, __)
+
+        return this
+    },
+    
+    ticket: function(input, color) {
+    
+        console.log('%c'+ input +'%c', 'font-size: 11px; color: hsl(195, 100%, 100%); background-color: '+ color +'; padding: 2px 5px; border-radius: 10px; font-weight: bold; ', '')
+    }, 
+
+    dl: function() {
+    
+        for (csl_dl_index = 0; csl_dl_index < arguments.length; csl_dl_index++) {
+
+            if ((csl_dl_index % 3) === 0) {
+
+                console.log('')
+                
+            } else if ((csl_dl_index % 3) === 1)  {
+
+                console.log('%c'+ arguments[csl_dl_index] +'%c', 'font-weight: bold', '')
+                
+            } else if ((csl_dl_index % 3) === 2)  {
+
+                console.log(arguments[csl_dl_index])
+
+            } else {
+
+                console.error(arguments[csl_dl_index])
+            }
+        }
+    }
+}
+
+//csl.error('Error', 'Input: '+ input, 'Input type: '+ typeof input)
+
+
+/* Teste: */// csl.log(1, 'a', true, [2, 'b', false])
+
+/*  TODO:    1 ▶ Wait
+◈──────────────────────────────────────────────────────◈ */
+
+function wait(t) { // t em segundos
+
+    t = t * 1000
+
+    t0 = performance.now()
+    
+    while(performance.now() - t0 <= t) {  }
+}
+
+/*  TODO:    1 ▶ Variable Is Free
 ◈──────────────────────────────────────────────────────◈ */
 
 // Esta função retornará true se a variável não tiver sido declarada, ou se tiver sido declarada sem nenhum valor
 
-function theVariableIsFree(variableNameAsString) {
+function varIsFree(variableNameAsString) {
     
     return (typeof window[variableNameAsString] === 'undefined')
 }
 
 //····································································◈ Tests
 /*
-// var testando_theVariableIsFree_1 // Esta variável não é para ser definida no teste, ou seja, a mantenha comentada
+// var testando_varIsFree_1 // Esta variável não é para ser definida no teste, ou seja, a mantenha comentada
 
-var testando_theVariableIsFree_2
+var testando_varIsFree_2
 
-var testando_theVariableIsFree_3 = 'Ok'
+var testando_varIsFree_3 = 'Ok'
 
 csl.log(_,
-    '[Log]: '+ theVariableIsFree('testando_theVariableIsFree_1'),
-    '[Log]: '+ theVariableIsFree('testando_theVariableIsFree_2'),
-    '[Log]: '+ theVariableIsFree('testando_theVariableIsFree_3'),
+    '[Log]: '+ varIsFree('testando_varIsFree_1'),
+    '[Log]: '+ varIsFree('testando_varIsFree_2'),
+    '[Log]: '+ varIsFree('testando_varIsFree_3'),
 _)
 */
 
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Is-A-Number Function
+/*  TODO:    1 ▶ Is-A-Number
 ◈──────────────────────────────────────────────────────◈ */
 
 /* 
@@ -3650,10 +2469,7 @@ console.log(6 + Number(x))
 4
  */
 
-
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Get File Name
+/*  TODO:    1 ▶ Get File Name
 ◈──────────────────────────────────────────────────────◈ */
 
 function getFileName(url, withType) { // withType é opcional, booleano, e false se omitido.
@@ -3673,7 +2489,7 @@ function getFileName(url, withType) { // withType é opcional, booleano, e false
 
     } else {
         
-        var index_dot = url.indexOf(".")
+        var index_dot = url.lastIndexOf(".")
 
         filename = url.slice(0, index_dot)        
     }
@@ -3681,9 +2497,12 @@ function getFileName(url, withType) { // withType é opcional, booleano, e false
     return filename
 }
 
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Get Image Filename
+/* Testes:
+
+csl.log(_, getFileName("../images/exs/earth_$1.5.jpg", true), getFileName("../images/exs/earth_$1.5.jpg"))
+ */
+
+/*  TODO:    1 ▶ Get Image Filename
 ◈──────────────────────────────────────────────────────◈ */
 
 function getImgName(img) {
@@ -3699,16 +2518,23 @@ function getImgName(img) {
         index_bar = img_src.indexOf("/")
     }
 
-    var index_dot = img_src.indexOf(".")
+    var index_dot = img_src.lastIndexOf(".")
 
     img_src = img_src.slice(0, index_dot)
 
     return img_src   
 }
 
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Image Filename as ALT Attribute Value
+/* Testes: 
+
+var img = document.createElement('img')
+
+img.src = "../images/exs/earth2_$1.5.jpg"
+
+csl.log(_, getImgName(img))
+*/
+
+/*  TODO:    1 ▶ Image Filename as ALT Attribute Value
 ◈──────────────────────────────────────────────────────◈ */
 
 function imgsNamesAsAlts(imgs) {
@@ -3734,9 +2560,7 @@ function imgsNamesAsAlts(imgs) {
     }
 }
 
-/*
-◈──────────────────────────────────────────────────────◈
-TODO: Sequential Text Generator
+/*  TODO:    1 ▶ Sequential Text Generator
 ◈──────────────────────────────────────────────────────◈ */
 
 // Ex: sequentialTextGenerator(1, 8, "`p:nth-of-type(${i}) { background: url('images/file_${i}.png'); }`")
@@ -3753,6 +2577,56 @@ function sequentialTextGenerator(firstIndex, lastIndex, string) {
 
         document.body.append(div)
     }
+}
+
+/*  TODO:    1 ▶ Set The Size Of Images
+◈──────────────────────────────────────────────────────◈ */
+
+// Definindo o tamanho das imagens cujos nomes terminam com '_x#':
+
+function setSizeImgs(img) {
+
+    var stgKey = '_x'
+    var hasStgKey = (getImgName(img).lastIndexOf(stgKey) !== -1)
+    var substringAfterStgKey = getImgName(img).slice(getImgName(img).lastIndexOf(stgKey) + stgKey.length)
+    var afterStgKeyIsNumber = isAN(substringAfterStgKey)
+
+    if (hasStgKey && afterStgKeyIsNumber) {
+
+        var n = substringAfterStgKey
+
+        /* 
+        console.log(getImgName(img))
+
+        console.log(n)
+        */
+
+        img.style.width = (img.naturalWidth / n) +'px'
+
+        /* 
+        csl.log(`(${img.style.width} * ${img.naturalHeight}px) / ${img.naturalWidth}px = 
+        ${(img.style.width * img.naturalHeight) / img.naturalWidth}`)
+        */
+    }
+}
+
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: <iframe> - Atributo 'src' [Fica no final]
+◈──────────────────────────────────────────────────────◈ */
+/* 
+Para melhorar a velocidade, define-se o atributo 'src' do iframe com JavaScript após 
+o carregamento do conteúdo principal. Isso diminui o tempo de carregamento da 
+página principal tornando-a utilizável mais cedo (uma importante métrica de SEO).
+*/
+
+var iframes = document.querySelectorAll('iframe')
+
+if (iframes) {
+    iframes.forEach(function (iframe) {
+    
+        iframe.src = iframe.textContent
+    })
 }
 
 /*
@@ -4137,19 +3011,7 @@ inputs.forEach(function (input) {
 })
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ------------------------------------------------------------------------------------------------------------
 
 
 

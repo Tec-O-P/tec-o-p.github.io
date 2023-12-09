@@ -1,9 +1,4 @@
 /*
-┌──────────────────────────────────────────────────────┐
-│                                                    fw_identity.css                                                    │
-└──────────────────────────────────────────────────────◈ */
-
-/*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Framework - Variables
 ◈──────────────────────────────────────────────────────◈ */
@@ -121,27 +116,17 @@ TODO: Choice Examples
 
 $font_size: 19rem; 
 
-.choice_example_1, .choice_example_2, .choice_example_3 {
+.choice_ex_1, .choice_ex_2, .choice_ex_3 {
 
     > :not(:nth-child(1)) {
         display: none;
     }
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
+.choice_ex_1 > div, .choice_ex_2 > div, .choice_ex_3 > div {
 
     font-size: $font_size; 
 }
-
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Syntaxes
-◈──────────────────────────────────────────────────────◈ */
-
-sc1 { color: red; }
-sc2 { color: blue; }
-sc3 { color: green; }
-sc4 { color: purple; }
 
 /*  
 ◈──────────────────────────────────────────────────────◈
@@ -158,3 +143,6 @@ TODO: Display
     color: white; 
     background: hsl(0, 0%, 37%);
 }
+
+/*──────────────────────────────────────────────────────*/
+

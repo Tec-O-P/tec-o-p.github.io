@@ -1,8 +1,3 @@
-/*
-┌──────────────────────────────────────────────────────┐
-│                                                   gmes-identity.js                                                    │
-└──────────────────────────────────────────────────────◈ */
-
 /*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Framework Demos
@@ -21,9 +16,9 @@ function choice_option_5(arg){ if(arg.parentNode.parentNode.classList.contains('
 
 // Choice - Example 1 functions:
 
-function choice_example_1_Action_1() {
+function choice_ex_1_Action_1() {
 
-    var choice_divsExample_1 = document.querySelector('.choice_example_1').children
+    var choice_divsExample_1 = document.querySelector('.choice_ex_1').children
 
     for(var i = 0; i < choice_divsExample_1.length; i++) {
 
@@ -33,9 +28,9 @@ function choice_example_1_Action_1() {
     document.querySelector('.choice_divsExample_1_div_1').style = 'display: block'
 }
 
-function choice_example_1_Action_2() {
+function choice_ex_1_Action_2() {
 
-    var choice_divsExample_1 = document.querySelector('.choice_example_1').children
+    var choice_divsExample_1 = document.querySelector('.choice_ex_1').children
 
     for(var i = 0; i < choice_divsExample_1.length; i++) {
 
@@ -45,9 +40,9 @@ function choice_example_1_Action_2() {
     document.querySelector('.choice_divsExample_1_div_2').style = 'display: block'
 }
 
-function choice_example_1_Action_3() {
+function choice_ex_1_Action_3() {
 
-    var choice_divsExample_1 = document.querySelector('.choice_example_1').children
+    var choice_divsExample_1 = document.querySelector('.choice_ex_1').children
 
     for(var i = 0; i < choice_divsExample_1.length; i++) {
 
@@ -59,9 +54,9 @@ function choice_example_1_Action_3() {
 
 // Choice - Example 2 functions:
 
-function choice_example_2_Action_1() {
+function choice_ex_2_Action_1() {
 
-    var choice_divsExample_2 = document.querySelector('.choice_example_2').children
+    var choice_divsExample_2 = document.querySelector('.choice_ex_2').children
 
     for(var i = 0; i < choice_divsExample_2.length; i++) {
 
@@ -71,9 +66,9 @@ function choice_example_2_Action_1() {
     document.querySelector('.choice_divsExample_2_div_1').style = 'display: block'
 }
 
-function choice_example_2_Action_2() {
+function choice_ex_2_Action_2() {
 
-    var choice_divsExample_2 = document.querySelector('.choice_example_2').children
+    var choice_divsExample_2 = document.querySelector('.choice_ex_2').children
 
     for(var i = 0; i < choice_divsExample_2.length; i++) {
 
@@ -83,9 +78,9 @@ function choice_example_2_Action_2() {
     document.querySelector('.choice_divsExample_2_div_2').style = 'display: block'
 }
 
-function choice_example_2_Action_3() {
+function choice_ex_2_Action_3() {
 
-    var choice_divsExample_2 = document.querySelector('.choice_example_2').children
+    var choice_divsExample_2 = document.querySelector('.choice_ex_2').children
 
     for(var i = 0; i < choice_divsExample_2.length; i++) {
 
@@ -192,6 +187,27 @@ function func_change_btns_color() {
     })
 } 
 
+
+/*  TODO:    1 ▶ Smart Selector
+◈──────────────────────────────────────────────────────◈ */
+
+// console.log(SS('none')) // O elemento <none> não existe.
+// console.log(SS('none').tagName === 'FAKE')
+
+SS('none').style.color = 'red' // Não dá erro apesar de não ter selecionado nada.
+
+// console.log(SS('.SS_box1 > p::first-line')) // Tentando selecionar um pseudo-elemento.
+
+var CSSselector = '.SS_box1 > p:nth-of-type(2)'
+SS(CSSselector).style.color = 'blue'
+
+var ps = SS('.SS_box1 > p:nth-of-type(1), .SS_box1 > p:nth-of-type(3)')
+ps.forEach(function (p) { p.style.color = 'lime' })
+
+var SS_box2 = SS('.SS_box2')
+SS(SS_box2, 'p:nth-of-type(1)').style.color = 'red'
+
+
 /*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Header-nav
@@ -207,7 +223,7 @@ var nav_expand = 565 // VÍNCULO: Váriável SCSS
 document.querySelector('.nav-menu').innerHTML = `
 
 <ul>
-<li><a onclick="nav_menu_options(this)"><span>Link 1</span></a>
+<li><a onclick="nav_menu_options(this)"><span>Link</span></a>
 
     <div>
         <ul>
@@ -608,3 +624,4 @@ update_switches_buttons_and_anchors(document.querySelectorAll('footer a'))
 ◈──────────────────────────────────────────────────────◈
 TODO: ...
 ◈──────────────────────────────────────────────────────◈ */
+

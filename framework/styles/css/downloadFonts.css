@@ -1,8 +1,3 @@
-/*
-┌──────────────────────────────────────────────────────┐
-│                                               downloadFonts.css                                                 │
-└──────────────────────────────────────────────────────◈ */
-
 /* 
 Os códigos abaixo devem ficar  no início do CSS, antes de qualquer CSS,
 pois as fontes precisam ser importadas antes de serem usadas no site.
@@ -12,6 +7,11 @@ pois as fontes precisam ser importadas antes de serem usadas no site.
 @font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Bold.otf"); font-weight: bold; font-style: normal; }
 @font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Italic.otf"); font-weight: normal; font-style: italic; }
 @font-face { font-family: "Digital Disk"; src: url("../../fonts/Digital_Disk_Bold_Italic.otf"); font-weight: bold; font-style: italic; }
+
+@font-face { font-family: "Verdial"; src: url("../../fonts/Verdial_Regular.otf"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Verdial"; src: url("../../fonts/Verdial_Bold.otf"); font-weight: bold; font-style: normal; }
+@font-face { font-family: "Verdial"; src: url("../../fonts/Verdial_Italic.otf"); font-weight: normal; font-style: italic; }
+@font-face { font-family: "Verdial"; src: url("../../fonts/Verdial_Bold_Italic.otf"); font-weight: bold; font-style: italic; }
 
 @font-face {
     font-family: "7 Segments Display";

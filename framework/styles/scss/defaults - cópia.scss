@@ -648,16 +648,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Syntaxes Elements
-◈──────────────────────────────────────────────────────◈ */
-
-sc1 { color: red; }
-sc2 { color: blue; }
-sc3 { color: green; }
-sc4 { color: purple; }
        
 /*  
 ◈──────────────────────────────────────────────────────◈
@@ -851,10 +841,6 @@ a {
     text-decoration: none;
 } 
 
-a[href^="http"] { 
-    word-break: break-all;
-}
-
 @for $i from 1 through 6 {
 
 	h#{$i} { 
@@ -911,13 +897,6 @@ strong, b, em, i {
     text-decoration: underline;
 }
 
-mark {
-    // color: $color_text;
-    // color: initial;
-    color: inherit;
-    background: 0;
-}
-
 abbr {
     text-decoration: none !important;
     font-variant: none; // Evita o estilo 'font-variant: small-caps' de alguns navegadores
@@ -947,7 +926,7 @@ code, samp {
 
     font-size: $font_size; 
     font-family: $font_default;
-    text-align: left;
+    text-align: justify;
 }
 
 pre {
@@ -1146,14 +1125,6 @@ dl {
 /*  TODO:        2 ▶ Simple
 ◈──────────────────────────────────────────────────────◈ */
 
-.font_default {
-    font-family: $font_default;
-}
-
-.font_default_2 {
-    font-family: $font_default_2;
-}
-
 .font_size {
     font-size: $font_size; 
 }
@@ -1205,8 +1176,6 @@ dl {
 
 .highlight {
 
-    display: none;
-
     background: $color_text_highlight;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1224,20 +1193,6 @@ dl {
     background: $bg_token_blue;
     color: $color_text_token_blue;
 } */
-
-.highlight2 {
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: hsl(195, 100%, 100%); 
-    background-color: deepSkyBlue; 
-    padding: 0px 7px; 
-    border: 1px solid $bg_html;
-    border-radius: 14px;
-    text-indent: 0;
-    word-break: break-all;
-}
 
 .mini_topic {
 
@@ -1512,15 +1467,15 @@ span.token.black {
     }
 
     > li::before {  // Para <ul>
-        content: initial; 
+        content: "" 
     }
 
     dt::before { // Para <dl>
-        content: initial;  
+        content: "" 
     } 
 
     dt::after { // Para <dl>
-        content: initial; 
+        content: '';
     }
 
     dt, dd {  // Para <dl>
@@ -1619,7 +1574,7 @@ span.token.black {
     }
 
     a[href^="#"]:not([href="#"]) {
-        padding-left: 0px;
+        padding-right: 0px;
         background: 0;
     }
 
@@ -1805,21 +1760,15 @@ abbr > button:focus {
 a[href^="http"] {  // .textIcon_link {
     @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/anchor_web.svg');   
-
-    background-position: 0% 0px;
-    padding-left: calc(#{$textIcons_size} + 6px);
-    // background-position: 99% 0; /* Se deixar em 100% da bug no Chrome pra PC! */
-    // padding-right: calc(#{$textIcons_size} + 4px);
+    background-position: 99% 0; /* Se deixar em 100% da bug no Chrome pra PC! */
+    padding-right: calc(#{$textIcons_size} + 4px);
 }
 
 a[href^="#"]:not([href="#"]) { // .textIcon_chain {
     @include textIcons_notFromGenerator;
     background-image: url('../../images/icons/anchor_chain.svg');
-
-    background-position: 0% 0px;
-    padding-left: calc(#{$textIcons_size} + 4px);
-    /* background-position: 100% 0;
-    padding-right: calc(#{$textIcons_size} + 6px); */
+    background-position: 100% 0;
+    padding-right: calc(#{$textIcons_size} + 6px);
 }
 
 a[download] { // .textIcon_download {
@@ -5414,9 +5363,8 @@ figure.outdoor img {
 ◈──────────────────────────────────────────────────────◈ */
  
 .gallery {
-
-    display: none;
     position: relative;
+    display: block;
     border-top: 2px solid $color_theme;
     border-bottom: 2px solid $color_theme;
 
@@ -5486,16 +5434,13 @@ figure.outdoor img {
         }
     }
 
-    .imgsBox {
+    > img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-        img {
-            max-width: 100%;
-            max-height: calc(100vh - 4px);
-        }
-
-        img:not(:nth-of-type(1)) {
-            display: none;
-        }
+    > img:not(:nth-of-type(1)) {
+        display: none;
     }
 
     @media (min-width: calc(#{$central_maxWidth} + 4px) ) { 
@@ -5523,13 +5468,13 @@ figure.outdoor img {
     z-index: $zIndex_gallery_fullScreen;
     top: 0;
     left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
+    width: 100vw;
+    height: 100vh;
     border: 0;
     border-radius: 0;
     margin: 0; 
 
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -5538,14 +5483,6 @@ figure.outdoor img {
     linear-gradient(127deg, hsla(0, 0%, 88%, 0.8), hsla(0, 0%, 88%, 0) 71%),
     linear-gradient(336deg, hsla(180, 100%, 50%, 0.8), hsla(180, 100%, 50%, 0) 71%),
     white;
-
-    .imgsBox img {
-        max-height: 100%;
-        // max-width: 100vw;
-        // max-height: 100vh;
-        // max-width: initial;
-        // max-height: initial;
-    }
 }
 
 .gallery.border_radius_big {
@@ -5557,7 +5494,7 @@ figure.outdoor img {
         border-radius: $border_radius_big;
 
         img {
-            border-radius: $border_radius_big;
+            border-radius: inherit;
         }
     }
 }
@@ -5565,11 +5502,6 @@ figure.outdoor img {
 .gallery_fullScreen.border_radius_big {
 
     border-radius: 0;
-
-    .imgsBox img {
-            
-        border-radius: 0;
-    }
 }
 
 
@@ -6563,19 +6495,7 @@ a.button_full.center, a.button_text.center, a.button_icon.center, a.image.center
     width: max-content; -moz-width: fit-content; width: -moz-fit-content; width: fit-content; /* <- Declarações necessárias 
     para garantir que o Firefox funcione como se suportasse 'width: fit-content'. (Ao menos 1 delas deve funcionar.) */
 }
-/* 
-.gallery.center {
 
-    // display: flex !important;
-    display: none !important;
-}
-
-.gallery.gallery_fullScreen.center {
-
-    display: flex !important;
-    margin: 0 !important; 
-}
- */
 // ----------------------
 
 .line {
