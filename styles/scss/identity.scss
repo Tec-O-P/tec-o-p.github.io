@@ -1,8 +1,4 @@
 //@import '../../framework/styles/scss/defaults.scss';
-/*
-┌──────────────────────────────────────────────────────┐
-│                                                  gmes-identity.css                                                  │
-└──────────────────────────────────────────────────────◈ */
 
 /*  
 ◈──────────────────────────────────────────────────────◈
@@ -534,7 +530,7 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
             border-radius: $border_radius_default;
         }
 
-        p:nth-of-Type(2) {
+        p:nth-of-type(2) {
             //clear: both;
         }
 
@@ -924,8 +920,24 @@ TODO: Types Table
         background-color: hsl(193,100%,97%);
     }
 
-    .Digital { display: none; }
+    // .Digital { display: none; }
     // .Robot { display: none; }
+
+    th.metalMark1 {
+        background-color: black;
+    }
+
+    /* th.lightMark1 {
+        background-color: black;
+    } */
+
+    /* th.magicMark1 {
+        background-color: black;
+    }
+
+    th.magicMark2 {
+        background-color: silver;
+    } */
 }
 
 @media (pointer: coarse), (pointer: none) {
@@ -963,6 +975,10 @@ TODO: Types Table
     ul {
         list-style: none;
         content: "\200B"; // Correção de bug de "list-style: none" do Safari
+        
+        > li::before { 
+            content: "" 
+        }
     }
 
     li {
@@ -1069,7 +1085,7 @@ $STC_and_SDSB_FULLHD_margin_horizontal: 20px;
     // @media (min-width: 1600px) { li:not(:nth-of-type(2)) { width: 12.5%; } }
     @media (min-width: 1360px) { 
 
-        li:not(:nth-of-type(2)) { width: 9.091%; }
+        li:not(:nth-of-type(2)) { width: 9.09%; }
 
         li:not(:nth-of-type(2)) a {
             height: 120px !important;

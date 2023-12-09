@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/*
-┌──────────────────────────────────────────────────────┐
-│                                                  gmes-identity.css                                                  │
-└──────────────────────────────────────────────────────◈ */
 /*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Framework - Variables
@@ -427,6 +423,19 @@ TODO: Types Table
   width: 25px;
 }
 
+.types_table {
+  /* th.lightMark1 {
+        background-color: black;
+    } */
+  /* th.magicMark1 {
+        background-color: black;
+    }
+
+    th.magicMark2 {
+        background-color: silver;
+    } */
+}
+
 .types_table .Robot {
   color: white;
   background-color: black;
@@ -436,8 +445,8 @@ TODO: Types Table
   background-color: #f0fcff;
 }
 
-.types_table .Digital {
-  display: none;
+.types_table th.metalMark1 {
+  background-color: black;
 }
 
 @media (pointer: coarse), (pointer: none) {
@@ -457,6 +466,10 @@ TODO: Types Table
 .types_table_effects ul {
   list-style: none;
   content: "\200B";
+}
+
+.types_table_effects ul > li::before {
+  content: "";
 }
 
 .types_table_effects li {
@@ -557,7 +570,7 @@ TODO: Skills - Table
 
 @media (min-width: 1360px) {
   .skills_types_choice.choice.dropdown.dropdown_open li:not(:nth-of-type(2)) {
-    width: 9.091%;
+    width: 9.09%;
   }
   .skills_types_choice.choice.dropdown.dropdown_open li:not(:nth-of-type(2)) a {
     height: 120px !important;

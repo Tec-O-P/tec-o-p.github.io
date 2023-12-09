@@ -1,9 +1,5 @@
 @charset "UTF-8";
 /*
-┌──────────────────────────────────────────────────────┐
-│                                                    fw_identity.css                                                    │
-└──────────────────────────────────────────────────────◈ */
-/*  
 ◈──────────────────────────────────────────────────────◈
 TODO: Framework - Variables
 ◈──────────────────────────────────────────────────────◈ */
@@ -102,32 +98,12 @@ TODO: Switches, <button>'s, <a>'s Change Color
 ◈──────────────────────────────────────────────────────◈
 TODO: Choice Examples
 ◈──────────────────────────────────────────────────────◈ */
-.choice_example_1 > :not(:nth-child(1)), .choice_example_2 > :not(:nth-child(1)), .choice_example_3 > :not(:nth-child(1)) {
+.choice_ex_1 > :not(:nth-child(1)), .choice_ex_2 > :not(:nth-child(1)), .choice_ex_3 > :not(:nth-child(1)) {
   display: none;
 }
 
-.choice_example_1 > div, .choice_example_2 > div, .choice_example_3 > div {
+.choice_ex_1 > div, .choice_ex_2 > div, .choice_ex_3 > div {
   font-size: 19rem;
-}
-
-/*  
-◈──────────────────────────────────────────────────────◈
-TODO: Syntaxes
-◈──────────────────────────────────────────────────────◈ */
-sc1 {
-  color: red;
-}
-
-sc2 {
-  color: blue;
-}
-
-sc3 {
-  color: green;
-}
-
-sc4 {
-  color: purple;
 }
 
 /*  
@@ -144,3 +120,5 @@ TODO: Display
   color: white;
   background: #5e5e5e;
 }
+
+/*──────────────────────────────────────────────────────*/

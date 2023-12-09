@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Hit Types</title>
+<meta charset="utf-8">
+<meta name = "apple-mobile-web-app-title" content = "Tec OP">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="George Maxwell">
+<meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+<link rel="shortcut icon" href="../images/icons/favicon.ico" type="image/x-icon">
+
+<link href='../framework/styles/css/downloadFonts.css' rel='stylesheet'>  
+<link href='../framework/styles/css/normalize.css' rel='stylesheet'>  
+<link href='../framework/styles/css/gmes_normalize.css' rel='stylesheet'>
+<link href='../framework/styles/css/defaults.css' rel='stylesheet'><!---->
+<link href='../styles/css/identity.css' rel='stylesheet'>
+
+<script src="..//framework/scripts/development.js"></script>
+<style>
+
+.hitTypes_table tr:nth-of-type(2):hover {
+
+    background-color: transparent;
+}
+
+/* .Underground, */ .Floor {
+
+    display: none;
+}
+
+.hitType_Explosion {
+
+    display: none;
+}
+
+</style>
+</head>
+<body>
+
+<table class="hitTypes_table type_2">
+    <!-- <tr><th>Hit Type</th><th>Considers User ACC</th><th>Considers Target FEV/DEV</th><th>Hits Characters Of Types</th><th>Hits Underground</th><th>Hits Flying</th><th>Counterattacked By</th>
+    <!-- Exemplos: . -->
+    </tr> -->
+
+    <tr><th rowspan="2">Hit Type</th><th colspan="2">Considers</th><th rowspan="2">Counterattacked By</th><th colspan="3">Hits</th>
+    <!-- Exemplos: . -->
+    </tr>
+    <tr style="border-bottom: 1px solid deepskyblue;"><th>User ACC</th><th>Target FEV/DEV</th><th>Types</th><th class="Underground">Underground</th><th class="Floor">Floor</th><th>Flying</th>
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Near - Atk</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Near Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes, if flying</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Near - Assist</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes, if flying</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Near - Ghost Atk</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Near Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes, if flying</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Projectile</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Projectile Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Blast</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Ghost Blast</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Ghost Assist</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Inevitable</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: Míssil seguidor, habilidades instantâneas como de gravidade, habilidades dos parceiros de longa distância, ataques surpresa. -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Always</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Weather</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: Sunny Day, Rain, Blizzard, Darkness. -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Eruption</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: Magma Eruption, Geyser. -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Lightspeed</td>
+        <td class="User_ACC">Yes</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: Light, Lightning. -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Surround</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Terrain</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">×</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr class="hitType_Explosion">
+        <td class="Hit_Type Explosion">Explosion</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">×</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Wave</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">FEV</td>
+        <td class="Counterattacked_by">Blast Counter</td>
+        <td class="Types_Of_Characters">All</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Virus</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">DEV</td>
+        <td class="Counterattacked_by">Digital Counter</td>
+        <td class="Types_Of_Characters">Cybernetic, Digital, Machine</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Data</td> <!-- Ex.: Deepfake -->
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">DEV</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">Cybernetic, Digital, Machine</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: . -->
+    </tr>
+    <tr>
+        <td class="Hit_Type">Vaccine</td>
+        <td class="User_ACC">×</td>
+        <td class="Target_FEV_ou_DEV">×</td>
+        <td class="Counterattacked_by">×</td>
+        <td class="Types_Of_Characters">Cybernetic, Digital, Machine</td>
+        <td class="Underground">Yes</td>
+        <td class="Floor">Yes</td>
+        <td class="Flying">Yes</td>
+    
+    <!-- Exemplos: Usar uma habilidade em algum aliado sem que ele desvie ou contra-ataque. -->
+    </tr>
+</table>
+
+<script src="script.js"></script>
+<script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
