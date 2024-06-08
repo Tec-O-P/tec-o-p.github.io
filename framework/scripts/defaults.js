@@ -284,7 +284,16 @@ function screen_modeChanged() {
 TODO: Windows
 ◈──────────────────────────────────────────────────────◈ */
 
-principalWindowStyle = 'hologram'
+if (isAtFramework) {
+    
+    principalWindowStyle = 'highTech'
+
+} else {
+    
+    principalWindowStyle = 'hologram'
+}
+
+// principalWindowStyle = 'hologram'
 
 // Não use a janela no estilo 'highTech_2' pois fica bugando e não tem o que fazer para consertar isso, já tentei de tudo, 
 // aconteça o que acontecer não tente consertar esta merda, você só vai perder o seu tempo!!!!
