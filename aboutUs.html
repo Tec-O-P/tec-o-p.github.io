@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US"> <!-- pt, pt-BR, en -->
+<head>
+    <meta charset="utf-8">
+    <title>Tec OP</title>
+    <meta name = "apple-mobile-web-app-title" content = "Tec OP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="George Maxwell Elpídio de Siqueira">
+    <meta name="description" content="Descrição da página. Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da página pode ajudar a tornar a página mais alta nas pesquisas realizadas nos mecanismos de busca.">
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+
+    <link href="framework/styles/css/downloadFonts.css" rel="stylesheet">  
+    <link href="framework/styles/css/normalize.css" rel="stylesheet">  
+    <link href="framework/styles/css/gmes_normalize.css" rel="stylesheet">
+    <link href="framework/styles/css/defaults.css" rel="stylesheet">
+    <link href="styles/css/identity.css" rel="stylesheet">
+     
+</head>
+<body>
+
+    <!--
+    ◈──────────────────────────────────────────────────────◈
+    TODO: Header
+    ◈──────────────────────────────────────────────────────◈ -->
+    
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="images/icons/logo.svg" alt="Logo" width="22px" height="22px"><span>Tec OP</span>
+            </a>
+        </h1>
+    </header>
+    
+    <!--
+    ◈──────────────────────────────────────────────────────◈
+    TODO: Navigation
+    ◈──────────────────────────────────────────────────────◈ -->
+    
+    <nav>
+        <div class="box">
+
+            <ul class="menuList">
+                <li><a href="index.html"><span>Home</span></a></li>
+                <li class="directory"><button><span>Game</span></button>
+                
+                    <ul>
+                        <li><a href="types.html"><span>Types</span></a></li>
+                        <li><a href="skills.html"><span>Skills</span></a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="aboutUs.html"><span>About Us</span></a></li>
+            </ul>
+    
+        </div>
+    </nav>
+   
+    <!--
+    ◈──────────────────────────────────────────────────────◈
+    TODO: Main
+    ◈──────────────────────────────────────────────────────◈ -->
+
+    <main>
+        
+        <article>
+
+            <div class="central">
+
+                <h2>Team</h2>
+
+                <p style="text-align: center;">(Just one person for while)</p>
+
+                <div class="aboutUs_team offset">
+
+                    <img class="center profile_img" src="images/team/gmes.jpg" alt="George Maxwell Elpídio de Siqueira photo">
+
+                    <p class="center bold profile_txt" style="text-align: center;">George Maxwell Elpídio de Siqueira</p>
+
+                    <p class="center profile_txt" style="text-align: center;">Founder and CEO, Developer, Web Designer, Game Designer, Graphic Designer, Screenwriter, Typographer<!-- , Composer, Translator --></p>
+                        
+                </div>
+
+                <div class="lb2"></div>
+
+                <hr> 
+
+            </div>
+            
+        </article>
+
+        <!--
+        <hr>
+
+        <aside>
+            <div class="central">
+                <p>&lt;aside></p>
+            </div>
+        </aside>
+        -->
+
+    </main>
+
+    <!--
+    ◈──────────────────────────────────────────────────────◈
+    TODO: Footer
+    ◈──────────────────────────────────────────────────────◈ --> 
+
+    <footer>
+        <div class="central footer_content">
+
+            <address>
+            
+                <!--<p>Contactthe author of this page:</p>-->
+                <!--<p>Página escrita por <a href="#"> Chris Mills</a>.</p>-->
+                <!--  <ul>
+                        <li>Phone: <a href="tel:+6824258804">(68) 2425-8804</a></li>
+                        <li>E-mail: <a href="mailto:support@company.com.br">support@company.com.br</a></p></li>
+                        </ul>-->
+                <!--<p>Follow us on:</p>-->
+            
+                    <ul class="footer_icons">
+    
+                        <!-- Footer anterior: -->
+                        <!--  
+                        <li><a href="mailto:support@company.com.br"><img src="framework/images/icons/mail.svg" alt=""></a></li>  
+                        <li><a href="#"><img src="framework/images/icons/youtube.svg" alt=""></a></li> 
+                        <li><a href="#"><img src="framework/images/icons/twitch.svg" alt=""></a></li>
+                        <li><a href="#"><img src="framework/images/icons/instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="framework/images/icons/facebook.svg" alt=""></a></li>  
+                        <li><a href="#"><img src="framework/images/icons/twitter.svg" alt=""></a></li> 
+                        -->
+    
+                        <!-- Footer novo: -->
+    
+                        <li>
+                            <a href="mailto:support@company.com.br" class="button_icon rounded"> 
+                                <img class="piece_icon" src="framework/images/icons/email.svg" alt=""> 
+                            </a> 
+                        </li> 
+    
+                        <li>
+                            <a class="button_icon rounded green" onclick="lightbox('(68) 2425-8804')"> 
+                                <img class="piece_icon" src="framework/images/icons/whatsapp.svg" alt="" style="padding-top: 1px;">
+                            </a> 
+                        </li> 
+    
+                        <li>
+                            <a href="#" class="button_icon rounded red"> 
+                                <img class="piece_icon" src="framework/images/icons/youtube.svg" alt="">
+                            </a> 
+                        </li> 
+    
+                        <!-- 
+                        <li>
+                            <a href="#" class="button_icon rounded"> 
+                                <img class="piece_icon" src="framework/images/icons/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        -->
+    
+                        <li>
+                            <a href="#" class="button_icon rounded yellow"> 
+                                <img class="piece_icon" src="framework/images/icons/instagram.svg" alt="">
+                            </a> 
+                        </li> 
+                    </ul>
+            
+                <!--<p>If you see any bugs, please <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.</p> -->
+            
+            </address> 
+            
+            <p class="copyright">© Copyright 2750 <!--by nobody./-->Company Inc. All rights reversed.</p>
+            
+        </div>
+    </footer>
+    
+   <script src="framework/scripts/defaults.js"></script>
+   <script src="scripts/identity.js"></script>
+
+</body> 
+</html>
