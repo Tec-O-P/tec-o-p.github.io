@@ -167,28 +167,42 @@ body {
         @extend ._webkit_mainScrollbar_track;
     }
     */
+  /* Comentei este código apenas por que acho que a barra de rolagem principal da página fica mais bonita sem isso.
+    
+    @media (min-width: calc(800px + 18px)) {
+
+        @if($enableAlternativeScrollbarStyle == true){
+            
+            // Está no elemento <html>.
+        }
+
+        &::-webkit-scrollbar { // Entire bar
+        
+            width: 15px;
+        }
+        
+        &::-webkit-scrollbar-thumb { // Bar pointer 
+        
+            border-top: 1px solid hsl(195, 100%, 70%);
+            border-left: 1px solid hsl(195, 100%, 70%);
+            box-shadow: none; // Bug fix: A sombra fica bugando no Chrome.
+        }
+        
+        &::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+        
+            border-color: hsl(195, 100%, 82%);
+            box-shadow: none; // Bug fix: A sombra fica bugando no Chrome.
+        }
+        
+        &::-webkit-scrollbar-track { // Bar background
+        
+            border: 0;
+        }
+    } */
 }
 
 body {
   background: linear-gradient(to bottom, white calc(100% - 20px), rgba(255, 255, 255, 0)) 0 0/100% calc(100% - 56px - 56px) no-repeat;
-}
-
-@media (min-width: calc(800px + 18px)) {
-  body::-webkit-scrollbar {
-    width: 15px;
-  }
-  body::-webkit-scrollbar-thumb {
-    border-top: 1px solid #66d9ff;
-    border-left: 1px solid #66d9ff;
-    box-shadow: none;
-  }
-  body::-webkit-scrollbar-thumb:hover {
-    border-color: #a3e8ff;
-    box-shadow: none;
-  }
-  body::-webkit-scrollbar-track {
-    border: 0;
-  }
 }
 
 /*  

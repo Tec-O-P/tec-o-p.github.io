@@ -684,6 +684,8 @@ body {
     }
     */
 
+    /* Comentei este código apenas por que acho que a barra de rolagem principal da página fica mais bonita sem isso.
+    
     @media (min-width: calc(#{$central_maxWidth} + 18px)) {
 
         @if($enableAlternativeScrollbarStyle == true){
@@ -713,7 +715,7 @@ body {
         
             border: 0;
         }
-    } 
+    } */
 }
 
 /*  
