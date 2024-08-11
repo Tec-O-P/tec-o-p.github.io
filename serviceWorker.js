@@ -1,7 +1,7 @@
 
 self.addEventListener('install', e => {
     e.waitUntil(
-        caches.open('tecOP').then(function(cache) {
+        caches.open('tec-op').then(function(cache) {
             return cache.addAll([
             '/',
             '/framework/styles/css/downloadFonts.css',
