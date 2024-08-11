@@ -843,16 +843,22 @@ if (skills_table) {
 
 }
 
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: Client Side Storing Files
+◈──────────────────────────────────────────────────────◈ */
 
+/*  TODO:    1 ▶ HTML, CSS and JS files (Service Worker e Cache)
+◈──────────────────────────────────────────────────────◈ */
 
+// Registra o service worker para controlar o funcionamento do site offline.
 
-
-
-
-
-
-// Register service worker to control making site work offline
 if('serviceWorker' in navigator) {
 
-    navigator.serviceWorker.register('/scripts/serviceWorker.js').then(() => console.log('Service Worker Registered'))
+    navigator.serviceWorker.register('/scripts/serviceWorker.js').then(() => console.log('Service Worker Registrado'))
 }
+
+/*  TODO:    1 ▶ Images and videos files (API IndexedDB)
+◈──────────────────────────────────────────────────────◈ */
+
+// ...
