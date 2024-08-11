@@ -1366,6 +1366,11 @@ span.token.black, .example_1 > .black.label, .oneObs > .black.label, .attention_
   border-top-width: 0px;
 }
 
+.menuList .img {
+  display: block !important;
+  margin: 0;
+}
+
 .menuList.imgs_noText_V.list_ON, .menuList.imgs_noText_VH.list_ON, .menuList.imgs_textAside_V.list_ON, .menuList.imgs_textBelow_V.list_ON, .menuList.imgs_textBelow_VH.list_ON {
   min-width: auto;
 }
@@ -2696,7 +2701,7 @@ header h1 a span {
 header {
   position: relative;
   top: calc((-2 * 48px));
-  z-index: 1100;
+  z-index: 1000;
   transition: top 1s 0.3s;
 }
 
@@ -2709,7 +2714,7 @@ header.show {
 nav {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1100;
   top: 0;
   bottom: 0;
   left: 0;
@@ -2740,7 +2745,7 @@ button.button_icon.nav_openBtn {
   position: fixed !important;
   bottom: calc((-1 * 56px) - 2px);
   left: calc((100% / 2) - (56px / 2));
-  z-index: 1000;
+  z-index: 1100;
   margin: 0;
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.13));
   transition-property: bottom;

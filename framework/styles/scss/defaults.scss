@@ -35,8 +35,8 @@ $hr_stop: calc(#{$central_maxWidth} + 60px);
 //····································································◈ z-index's
 
 $zIndex_nav_openBtn_base: -1;
-$zIndex_nav: 1000;
-$zIndex_header: 1100;
+$zIndex_header: 1000;
+$zIndex_nav: 1100;
 $zIndex_choice_d_open: 1200;
 $zIndex_lightbox: 1300;
 $zIndex_gallery_fullScreen: 1400;
@@ -1764,6 +1764,11 @@ span.token.black {
     li.borderTopWidth_0px { // Bug Fix: Esta classe é aplicada via JavaScript.
 
         border-top-width: 0px;
+    }
+
+    .img {
+        display: block !important;
+        margin: 0;
     }
 
     &.imgs_noText_V.list_ON, &.imgs_noText_VH.list_ON, &.imgs_textAside_V.list_ON, &.imgs_textBelow_V.list_ON, &.imgs_textBelow_VH.list_ON {

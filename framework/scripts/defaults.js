@@ -283,7 +283,7 @@ function screen_modeChanged() {
 ◈──────────────────────────────────────────────────────◈
 TODO: Windows
 ◈──────────────────────────────────────────────────────◈ */
-
+/* 
 if (isAtFramework) {
     
     principalWindowStyle = 'highTech'
@@ -292,8 +292,8 @@ if (isAtFramework) {
     
     principalWindowStyle = 'hologram'
 }
-
-// principalWindowStyle = 'hologram'
+ */
+principalWindowStyle = 'hologram'
 
 // Não use a janela no estilo 'highTech_2' pois fica bugando e não tem o que fazer para consertar isso, já tentei de tudo, 
 // aconteça o que acontecer não tente consertar esta merda, você só vai perder o seu tempo!!!!
@@ -996,17 +996,24 @@ TODO: Header
 
 { //····································································◈ Tornar a logo maiúscula
 
-    document.querySelector('h1 a span').textContent = document.querySelector('h1 a span').textContent.toUpperCase()
+    if (document.querySelector('h1 a span')) {
 
-    document.querySelector('h1 a span').style.marginBottom = '2px'
+        document.querySelector('h1 a span').textContent = document.querySelector('h1 a span').textContent.toUpperCase()
+
+        document.querySelector('h1 a span').style.marginBottom = '2px'
+    }
 }
 
 var header = document.querySelector('header')
 
-window.addEventListener("load", function() {
+if (header) {
+    
+    window.addEventListener("load", function() {
 
-    header.classList.add('show')
-})
+        header.classList.add('show')
+    })    
+}
+
 
 /*  
 ◈──────────────────────────────────────────────────────◈
