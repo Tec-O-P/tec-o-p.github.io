@@ -842,3 +842,17 @@ if (skills_table) {
     })
 
 }
+
+
+
+
+
+
+
+
+
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.register('/scripts/serviceWorker.js').then(() => console.log('Service Worker Registered'));
+}
