@@ -1,4 +1,4 @@
-//@import '../../framework/styles/scss/defaults.scss';
+//@import '../../framework/styles/scss/defaults.scss'; 
 
 /*  
 ◈──────────────────────────────────────────────────────◈
@@ -932,9 +932,9 @@ TODO: Types Table
     .Digital { display: none; }
     .Robot { display: none; }
 
-    th.metalMark1 {
-        background-color: black;
-    }
+    // th.metalMark1 {
+    //     background-color: black;
+    // }
 
     /* th.lightMark1 {
         background-color: black;
@@ -1004,6 +1004,16 @@ TODO: Types Table
             margin-right: 6px;
         }
     }
+}
+
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: Protection Skills
+◈──────────────────────────────────────────────────────◈ */
+
+.protectionSkills .type_icon {
+    width: 32px;
+    margin: 0 2px;
 }
 
 /*  

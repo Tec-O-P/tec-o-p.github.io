@@ -449,10 +449,6 @@ TODO: Types Table
   display: none;
 }
 
-.types_table th.metalMark1 {
-  background-color: black;
-}
-
 @media (pointer: coarse), (pointer: none) {
   .table_box {
     height: 100%;
@@ -489,6 +485,15 @@ TODO: Types Table
 
 .types_table_effects li span {
   margin-right: 6px;
+}
+
+/*
+◈──────────────────────────────────────────────────────◈
+TODO: Protection Skills
+◈──────────────────────────────────────────────────────◈ */
+.protectionSkills .type_icon {
+  width: 32px;
+  margin: 0 2px;
 }
 
 /*  

@@ -167,28 +167,42 @@ body {
         @extend ._webkit_mainScrollbar_track;
     }
     */
+  /* Comentei este código apenas por que acho que a barra de rolagem principal da página fica mais bonita sem isso.
+    
+    @media (min-width: calc(800px + 18px)) {
+
+        @if($enableAlternativeScrollbarStyle == true){
+            
+            // Está no elemento <html>.
+        }
+
+        &::-webkit-scrollbar { // Entire bar
+        
+            width: 15px;
+        }
+        
+        &::-webkit-scrollbar-thumb { // Bar pointer 
+        
+            border-top: 1px solid hsl(195, 100%, 70%);
+            border-left: 1px solid hsl(195, 100%, 70%);
+            box-shadow: none; // Bug fix: A sombra fica bugando no Chrome.
+        }
+        
+        &::-webkit-scrollbar-thumb:hover { // Bar pointer hover
+        
+            border-color: hsl(195, 100%, 82%);
+            box-shadow: none; // Bug fix: A sombra fica bugando no Chrome.
+        }
+        
+        &::-webkit-scrollbar-track { // Bar background
+        
+            border: 0;
+        }
+    } */
 }
 
 body {
   background: linear-gradient(to bottom, white calc(100% - 20px), rgba(255, 255, 255, 0)) 0 0/100% calc(100% - 56px - 56px) no-repeat;
-}
-
-@media (min-width: 800px) {
-  body::-webkit-scrollbar {
-    width: 15px;
-  }
-  body::-webkit-scrollbar-thumb {
-    border-top: 1px solid #66d9ff;
-    border-left: 1px solid #66d9ff;
-    box-shadow: none;
-  }
-  body::-webkit-scrollbar-thumb:hover {
-    border-color: #a3e8ff;
-    box-shadow: none;
-  }
-  body::-webkit-scrollbar-track {
-    border: 0;
-  }
 }
 
 /*  
@@ -1350,6 +1364,11 @@ span.token.black, .example_1 > .black.label, .oneObs > .black.label, .attention_
 
 .menuList li.borderTopWidth_0px {
   border-top-width: 0px;
+}
+
+.menuList .img {
+  display: block !important;
+  margin: 0;
 }
 
 .menuList.imgs_noText_V.list_ON, .menuList.imgs_noText_VH.list_ON, .menuList.imgs_textAside_V.list_ON, .menuList.imgs_textBelow_V.list_ON, .menuList.imgs_textBelow_VH.list_ON {
@@ -2635,7 +2654,7 @@ header {
   font-weight: bold;
   box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.16);
-  border-top: 1px solid #6bdaff;
+  border-top: 1px solid #57d5ff;
   width: calc(100% - (2 * 20px));
   max-width: calc(800px);
   padding: 0 8px;
@@ -2643,7 +2662,7 @@ header {
   margin-top: calc(48px / 2);
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid #6bdaff;
+  border-bottom: 1px solid #57d5ff;
   background: url(../../images/bgs/clearBlue.png) center/100% 100%;
 }
 
@@ -2669,7 +2688,7 @@ header h1 a {
 header h1 a img {
   width: 22px;
   margin-bottom: 3px;
-  margin-right: 8px;
+  margin-right: 7px;
   filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
 }
 
@@ -2682,7 +2701,7 @@ header h1 a span {
 header {
   position: relative;
   top: calc((-2 * 48px));
-  z-index: 1100;
+  z-index: 1000;
   transition: top 1s 0.3s;
 }
 
@@ -2695,7 +2714,7 @@ header.show {
 nav {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1100;
   top: 0;
   bottom: 0;
   left: 0;
@@ -2726,7 +2745,7 @@ button.button_icon.nav_openBtn {
   position: fixed !important;
   bottom: calc((-1 * 56px) - 2px);
   left: calc((100% / 2) - (56px / 2));
-  z-index: 1000;
+  z-index: 1100;
   margin: 0;
   filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.13));
   transition-property: bottom;
