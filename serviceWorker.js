@@ -10,6 +10,10 @@ self.addEventListener('install', e => {
             '/framework/styles/css/defaults.css',
             '/framework/scripts/defaults.js',
             '/index.html',
+            '/types.html',
+            '/skills.html',
+            '/aboutUs.html',
+            '/images/team/gmes.jpg',
             '/styles/css/defaults.css',
             '/styles/css/identity.css',
             '/scripts/identity.js'
