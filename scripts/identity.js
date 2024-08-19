@@ -855,7 +855,7 @@ TODO: Client Side Storing Files
 
 if('serviceWorker' in navigator) {
 
-    navigator.serviceWorker.register('/scripts/serviceWorker.js').then(() => console.log('Service Worker Registrado'))
+    navigator.serviceWorker.register('/serviceWorker.js').then(() => console.log('Service Worker Registrado!!!'))
 }
 
 /*  TODO:    1 ▶ Images and videos files (API IndexedDB)
