@@ -24,6 +24,16 @@ self.addEventListener('install', e => {
                 '/styles/css/types_table.css',
                 '/scripts/identity.js',
 
+                // '/framework/fonts/7_Segments_Display.otf',
+                '/framework/fonts/Digital_Disk_Bold_Italic.otf',
+                '/framework/fonts/Digital_Disk_Bold.otf',
+                '/framework/fonts/Digital_Disk_Italic.otf',
+                '/framework/fonts/Digital_Disk_Regular.otf',
+                // '/framework/fonts/Verdial_Bold_Italic.otf',
+                // '/framework/fonts/Verdial_Bold.otf',
+                // '/framework/fonts/Verdial_Italic.otf',
+                // '/framework/fonts/Verdial_Regular.otf',
+
                 '/framework/images/bgs/clearBlue.png',
                 '/framework/images/bgs/switch_button_rounded_shine_above.svg',
                 '/framework/images/icons/menu.png',
